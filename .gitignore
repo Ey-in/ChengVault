@@ -1,0 +1,29 @@
+build*/
+dist/
+.toolchain/
+.cache/
+tmp/
+*.user
+*.tmp
+*.gcda
+*.gcno
+__pycache__/
+
+# Reproducible large input/output fixtures stay on disk for inspection. Commit
+# the compact measured JSON summaries, not several GiB of benchmark data.
+/evidence/benchmark/run-*/
+/evidence/network/run-*/
+/evidence/deployment/run-*/
+/evidence/deployment/**/run-*/
+# Raw compiler intermediates remain locally inspectable; compact JSON, HTML,
+# logs and source digests are tracked as the reproducible coverage evidence.
+/evidence/coverage/gcov-text/
+# Retain raw replay fixtures locally; the final video, screenshots and measured
+# JSON are deliberately committed separately from regenerated input objects.
+/evidence/demo/run-*/data/
+/evidence/demo/run-*/*.mp4
+/evidence/demo/run-20261017-162357/
+/evidence/metadata-times/run-*/
+
+# Video is delivered separately, not in the code repository.
+/演示视频/
