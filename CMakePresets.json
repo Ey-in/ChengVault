@@ -1,0 +1,10 @@
+{
+  "version": 6,
+  "configurePresets": [
+    {"name":"windows-release","generator":"Ninja","binaryDir":"${sourceDir}/build-release","cacheVariables":{"CMAKE_BUILD_TYPE":"Release","CMAKE_CXX_COMPILER":"$env{CHENGVAULT_TOOLCHAIN}/bin/g++.exe","CMAKE_PREFIX_PATH":"$env{CHENGVAULT_TOOLCHAIN}"}},
+    {"name":"windows-debug","inherits":"windows-release","binaryDir":"${sourceDir}/build-debug","cacheVariables":{"CMAKE_BUILD_TYPE":"Debug"}},
+    {"name":"windows-coverage","inherits":"windows-debug","binaryDir":"${sourceDir}/build-coverage","cacheVariables":{"CHENGVAULT_COVERAGE":"ON"}}
+  ],
+  "buildPresets":[{"name":"release","configurePreset":"windows-release"},{"name":"debug","configurePreset":"windows-debug"},{"name":"coverage","configurePreset":"windows-coverage"}],
+  "testPresets":[{"name":"release","configurePreset":"windows-release","output":{"outputOnFailure":true}},{"name":"coverage","configurePreset":"windows-coverage","output":{"outputOnFailure":true}}]
+}
