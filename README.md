@@ -17,11 +17,7 @@ Windows 10/11 x64、NTFS、C++20 与 Qt 6 Widgets 的课程数据备份项目。
 
 首次使用见 [用户手册](docs/user-manual.md)。网络账户与设备配置见 [网络说明](docs/network.md)。特殊文件权限条件见 [NTFS 支持说明](docs/ntfs-support.md)。
 
-八页客户端统一采用深色侧栏、暖白工作区与绿色操作按钮，图标和首页插图由 Qt 原生绘制。
-新版界面证据位于 `evidence/ui-refresh`：20 项功能回归通过，并另行检查键盘焦点、长路径、密码遮蔽、滚动弹窗及实际 DPR 2/3 布局。
-课程功能用例数量不重复累计这些界面观察。可用 `pwsh -File scripts/validate-ui.ps1` 在不切换用户桌面的隔离桌面复现检查。
-
-三人模块分工见 `docs/team-work-plan.csv`；完整的 7 页接手、个人 Git 提交与剩余验收指南位于交付根目录的 `报告文档/ChengVault三人分工与提交指南.docx` 和 PDF。
+客户端为八页 Qt Widgets 界面；界面回归与高 DPI 截图见 `evidence/ui-refresh`，复现入口为 `scripts/validate-ui.ps1`。
 
 ## 功能与独立实现
 
@@ -40,7 +36,7 @@ Windows 10/11 x64、NTFS、C++20 与 Qt 6 Widgets 的课程数据备份项目。
 | 网络 | 账户、设备授权、配额、元数据目录、认证加密传输、块增量与断点续传 |
 | 新增扩展 | 自主 GF(256) RS(12,10)，每组修复最多两个已定位损坏分片 |
 
-Qt/Win32 提供界面、JSON、文件访问、线程、套接字、文件事件、随机源和本机凭据存储。计分算法不调用第三方归档、压缩、密码或纠错库。Qt 自身依赖的 zlib、zstd 等 DLL 属于界面/网络基础设施依赖，不被本项目调用来完成备份压缩。部署包附实际 DLL 导入关系与原始许可证，详见 [依赖声明](docs/third-party-notices.md)。
+Qt/Win32 提供界面、JSON、文件访问、线程、套接字、文件事件、随机源和本机凭据存储。核心算法不调用第三方归档、压缩、密码或纠错库。Qt 自身依赖的 zlib、zstd 等 DLL 属于界面/网络基础设施依赖，运行时不调用来完成备份压缩。部署包附实际 DLL 导入关系与原始许可证，详见 [依赖声明](docs/third-party-notices.md)。
 
 ## 从源码构建
 
@@ -67,17 +63,17 @@ Qt/Win32 提供界面、JSON、文件访问、线程、套接字、文件事件�
 
 `package.ps1` 收集四个程序、Qt 插件、PE 递归 DLL 依赖、文档和许可证。`-SourceBundle` 额外从当前 Git 提交生成源码 ZIP 与历史 bundle；先提交最终代码，避免源码包与运行包版本不同。
 
-运行 `scripts/verify-package.ps1 -SourceBundle` 可核对运行目录与 ZIP 的全部摘要、四个程序与部署实测证据、源码 ZIP 与当前 Git 提交的每个文件字节，以及历史 bundle。它将结果写入 `dist/package-verification.json`，遇到版本或内容不一致会失败。运行包内置的 `verification/external-acceptance.ps1` 用于第二台 Windows 和真实局域网复验，操作见 [外部验收说明](docs/external-acceptance.md)。
+运行 `scripts/verify-package.ps1 -SourceBundle` 可核对运行目录与 ZIP 的全部摘要、四个程序与部署实测证据、源码 ZIP 与当前 Git 提交的每个文件字节，以及历史 bundle。它将结果写入 `dist/package-verification.json`，遇到版本或内容不一致会失败。运行包内置的 `verification/external-acceptance.ps1` 用于独立 Windows 和真实局域网复验，操作见 [外部验收说明](docs/external-acceptance.md)。
 
-`deployment-smoke.ps1` 将子进程 PATH 限定为 Windows 系统目录，验证实际发布 GUI、CLI、Server，以及使用相同运行依赖的 GUI 自动化和独立 Agent。当前本机验证全部通过；另一台独立 Windows 机器的复验仍需小组完成。
+`deployment-smoke.ps1` 将子进程 PATH 限定为 Windows 系统目录，验证实际发布 GUI、CLI、Server，以及使用相同运行依赖的 GUI 自动化和独立 Agent。当前本机验证全部通过；独立 Windows 机器、符号链接和双机局域网复验均已完成。
 
-## 已记录的实测示例
+## 实测结果
 
-2026-10-17 的独立进程网络测试中，8 MiB 数据首次上传的密文对象负载为 8,393,519 字节，重复上传为 0 字节，单字节修改后上传 1,051,913 字节（一个数据块和一个清单）。重复上传仍有 2,689 字节控制报文，未把网络流量说成完全为零。
+2026-10-25 最终自动测试为核心 591、GUI 20、后台 5，合计 616 通过、0 失败、0 跳过；行覆盖 3694/3786=97.6%，原始 GCC 分支 8184/14446=56.7%，辅助 86.5%，判定 75.6%。两台真实 Windows 主机的局域网验收为 PASS_TWO_MACHINE_LAN；独立 Windows 机器和符号链接验收均完成。
 
-默认性能测试完成 1 GiB 归档/恢复、增量对比、5000 小文件及超过 4 GiB 的 PAX 稀疏文件。1 GiB 数据集包含重复块，其存储比例同时反映去重和压缩，不代表普通文件的通用压缩率。完整时长、峰值内存、输入说明及结果见 `evidence/benchmark-results.json`、`evidence/network-smoke-results.json`。
+性能测试覆盖 1 GiB 数据、5000 个小文件和逻辑长度超过 4 GiB 的稀疏文件。1 GiB 数据集包含重复块，存储比例同时反映去重和压缩，不代表普通文件的通用压缩率。测试记录见 `evidence/test-results.json`、`evidence/coverage/summary.json`；性能记录见 `evidence/benchmark-results.json`、`evidence/network-smoke-results.json`；局域网记录见 `evidence/lan/20261025-two-machine/`。
 
-## 目录与课程交付
+## 目录结构
 
 ```text
 include/chengvault/     公共接口
@@ -92,6 +88,4 @@ evidence/              实际执行结果
 dist/                  便携运行包、源码包及 Git 历史
 ```
 
-报告保存在 `D:\soft-project\报告文档`，答辩材料保存在 `D:\soft-project\PPT`。提交前按 [交付检查单](docs/delivery-checklist.md) 补齐真实成员信息、lg.team 记录、成员 Git 提交、证书、考勤及视频链接。
-
-Windows 命名管道不是 NTFS 中可按 Linux FIFO 方式还原的目录树节点；本项目不宣称支持 Linux 管道或设备节点。符号链接创建可能需要开发者模式或权限。变化筛选依据元数据；恢复是文件级安全替换，不是全目录事务，不提供 VSS 一致性快照。
+仅支持 Windows 10/11 x64 与 NTFS；Linux FIFO 和设备节点不映射，符号链接需要开发者模式或权限，恢复是文件级安全替换而不是全目录事务。详见 [NTFS 支持说明](docs/ntfs-support.md)。
