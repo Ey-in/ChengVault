@@ -1,0 +1,25 @@
+PASS SCH-01 interval advances injected clock
+PASS SCH-02 zero interval clamps to one second
+PASS SCH-03 negative interval cannot loop immediately
+PASS SCH-04 daily future time stays same date
+PASS SCH-05 daily elapsed time moves next date
+PASS SCH-06 exact boundary schedules next day
+PASS SCH-07 weekly weekday is correct
+PASS SCH-08 invalid weekday rejected
+PASS SCH-09 invalid clock rejected
+PASS SCH-10 unknown schedule mode rejected
+PASS SCH-11 task serialization omits password
+PASS SCH-12 plan roundtrip retains filters
+PASS SCH-13 cancellation checkpoint aborts work
+PASS SCH-14 real Windows write event is detected
+PASS SCH-15 monitor shutdown cancels pending I/O
+PASS SCH-16 atomic JSON I/O and malformed JSON failure
+PASS SCH-17 task key protected by current-user DPAPI
+PASS SCH-18 persisted overdue job runs without GUI
+PASS SCH-19 missed execution catches up and retention keeps two
+PASS SCH-20 disabled job produces no snapshot
+PASS SCH-21 realtime write creates a new complete version
+PASS SCH-22 missing source schedules bounded retry
+PASS SCH-23 task removal persists
+PASS SCH-24 job path traversal rejected
+Passed 24, failed 0, skipped 0

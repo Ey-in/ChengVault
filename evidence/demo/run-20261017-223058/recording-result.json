@@ -1,0 +1,21 @@
+{
+  "timestampUtc": "2026-10-17T14:31:45.6736703Z",
+  "runDirectory": "D:\\soft-project\\ChengVault\\evidence\\demo\\run-20261017-223058",
+  "videoPath": "D:\\soft-project\\ChengVault\\evidence\\demo\\run-20261017-223058\\ChengVault-真实运行演示.mp4",
+  "durationSeconds": 44.5,
+  "fullyDecoded": true,
+  "frames": [
+    "01-backup-configuration.png",
+    "02-encrypted-archive-created.png",
+    "03-redundancy-generated.png",
+    "04-damage-rejected.png",
+    "05-damaged-shards-located.png",
+    "06-archive-repaired.png",
+    "07-password-restore.png",
+    "08-hashes-match.png"
+  ],
+  "passed": 20,
+  "failed": 0,
+  "executableSha256": "cd8b738cf7a54a07690496bb4e8c731dcf297c2becd05cddd5272a3ee219884f",
+  "videoSha256": "600301cd3c5b88f531c0b9105fa6227c2ad9da18b40f49c70490b87318301e5d"
+}

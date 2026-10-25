@@ -1,0 +1,17 @@
+任务编号,负责人,复核人,阶段,具体工作,现有代码文件
+A01,刘子健,许珂瑞,初始模块搭建,负责GUI与CLI交互 基本备份恢复 NTFS类型和元数据 全部筛选 两种归档,src/gui/main_window.cpp;src/gui/main_window.hpp;src/gui/theme.cpp;src/gui/theme.hpp;src/apps/gui_main.cpp;src/apps/cli_main.cpp;src/platform/filesystem.cpp;src/core/archive.cpp;include/chengvault/filesystem.hpp;include/chengvault/archive.hpp
+B01,许珂瑞,符若晨,初始模块搭建,负责两种压缩 两种密码及认证派生 RS纠错 公共安全基础和算法测试,src/core/compression.cpp;src/core/crypto.cpp;src/core/repair.cpp;src/core/common.cpp;include/chengvault/compression.hpp;include/chengvault/crypto.hpp;include/chengvault/repair.hpp;include/chengvault/common.hpp;tests/algorithms_tests.cpp;tests/test_main.cpp;tests/test_support.hpp
+C01,符若晨,刘子健,初始模块搭建,负责版本仓库 定时实时与后台 网络用户和设备管理 传输与增量 发布,src/core/repository.cpp;src/core/scheduler.cpp;src/core/network.cpp;src/apps/agent_main.cpp;src/apps/server_main.cpp;include/chengvault/repository.hpp;include/chengvault/scheduler.hpp;include/chengvault/network.hpp
+A02,刘子健,许珂瑞,补充提交,接手A的测试；实际复现问题后改进交互或恢复边界并附回归,tests/filesystem_tests.cpp;tests/filesystem_adversarial_tests.cpp;tests/gui_smoke.cpp
+B02,许珂瑞,符若晨,补充提交,从实际覆盖报告补有独立预期的安全边界测试，发现缺陷再修复,tests/algorithms_tests.cpp;scripts/coverage.ps1;scripts/collect_gcov.py;scripts/quality.ps1;scripts/comment_audit.py
+C02,符若晨,刘子健,补充提交,接手调度网络测试，复验后修真实诊断或并发问题并附回归,tests/scheduler_tests.cpp;tests/background_process.cpp;tests/network_repository_tests.cpp;tests/network_repository_cases.hpp
+A03,刘子健,符若晨,剩余验收,在新UI与第二台独立Windows复验基本备份恢复和部署,scripts/deployment-smoke.ps1;scripts/validate-ui.ps1
+A05,刘子健,许珂瑞,剩余验收,获授权并具备权限后复验符号链接与严格元数据，B复核权限安全,scripts/symlink-acceptance.ps1;scripts/metadata-time-smoke.ps1
+C03,符若晨,许珂瑞,剩余验收,组织两台真实Windows机器LAN服务端客户端验收,scripts/external-acceptance.ps1;scripts/network-smoke.ps1;docs/external-acceptance.md
+B04,许珂瑞,刘子健,剩余验收,按最终成员改动重测覆盖和回归，如实保留原始分支未达75%的差距,scripts/coverage.ps1;scripts/collect_gcov.py;docs/quality-and-coverage.md
+C04,符若晨,许珂瑞,现有交付接手,负责构建测试和发布入口，复验后台与淘汰后剩余版本,CMakeLists.txt;scripts/bootstrap.ps1;scripts/build.ps1;scripts/test.ps1;scripts/package.ps1;scripts/verify-package.ps1
+A04,刘子健,许珂瑞,现有文档接手,负责需求设计和界面文档；集成真实审查后的分支并同步图文,scripts/build_report.py;docs/requirements.md;docs/manifest.md;docs/ntfs-support.md;docs/uml
+B05,许珂瑞,符若晨,现有文档接手,负责算法测试安全论述与追踪关系，准备代码问答,docs/algorithms.md;docs/traceability.csv;docs/quality-and-coverage.md
+C05,符若晨,刘子健,现有交付接手,统筹PPT视频和最终交付；三人各写本人模块讲稿,scripts/build_presentation.mjs;scripts/record-demo.ps1;docs/delivery-checklist.md
+ALL01,刘子健/许珂瑞/符若晨,三人交叉复核,个人记录,本人账号克隆分支提交 维护lg.team 填身份 补证书考勤AI说明,docs/team-work-plan.csv;各自真实任务和评审记录
+ALL02,刘子健/许珂瑞/符若晨,三人交叉复核,答辩,各讲已分配模块，互问完整恢复链路和本人真实修改,各自模块源码 测试与分段讲稿

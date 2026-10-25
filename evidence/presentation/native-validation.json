@@ -1,0 +1,140 @@
+{
+  "slides": 20,
+  "nativePowerPointOpened": true,
+  "pdfExported": true,
+  "imagesExported": true,
+  "timestampUtc": "2026-10-17T22:28:49.722444+08:00",
+  "pdfPageCount": 20,
+  "changedPages": [
+    3,
+    16
+  ],
+  "pixelIdenticalToPreviousReviewedPages": [
+    1,
+    2,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    17,
+    18,
+    19,
+    20
+  ],
+  "reviewedPages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "visualReview": "PASS; pages 3 and 16 viewed after native PowerPoint export; remaining 18 pages pixel-identical to the previously reviewed delivery",
+  "pptxSha256": "edbc0eacaa5710ed9585adc1defe281573adc231663434c9554df7bb171948f1",
+  "pdfSha256": "dc3ad0818818de216277d84ad02ce217a5e0ba0faae40e969585234f8e1394dd",
+  "previousReviewedPptxSha256": "68385738cd3f688f538ae2fa31a620039cf204f5931685a6e5054f28f7595b8e",
+  "pageImageHashes": [
+    {
+      "file": "slide-01.png",
+      "sha256": "1a72052c0cb4a2bf0ab3c27f16ab6212518d0a4f773876c1fc6ddca17d963df4"
+    },
+    {
+      "file": "slide-02.png",
+      "sha256": "6037e82e0e7dfb2ffda33666c4524dd84ba47b76c550afbe1a77e4a89a29d0ee"
+    },
+    {
+      "file": "slide-03.png",
+      "sha256": "510ce8a1ea69bdf6e1f571cd5e0902174c57a3955cf8906ea45e755c0ed1d532"
+    },
+    {
+      "file": "slide-04.png",
+      "sha256": "399fb9150e086f2f5068b51ae5660fb8511f3584b7d822e0e09b391a674575a8"
+    },
+    {
+      "file": "slide-05.png",
+      "sha256": "c6a2eb178557dc75b27d7ee22cf84ee2fcb2144f1270f06d9d810292d6d40408"
+    },
+    {
+      "file": "slide-06.png",
+      "sha256": "2dafe2d5a0288100b5c5affcb5c20de2874bbf848da599c60ae5de60a3a7c3bf"
+    },
+    {
+      "file": "slide-07.png",
+      "sha256": "1811c386f0e76bfbc224301088626c54cb61df2a4ea681710e8d803215efdfee"
+    },
+    {
+      "file": "slide-08.png",
+      "sha256": "ee46910ada14d275aad7b10415f5170ac7366a91fdec3d2d26504bda5a482ce1"
+    },
+    {
+      "file": "slide-09.png",
+      "sha256": "4b255fdcffd8a4a96e4c9eecee64ef0844ce3b1b17c47ddfc36b6a15f3c1d2c2"
+    },
+    {
+      "file": "slide-10.png",
+      "sha256": "8c7a3500d8a9591a32a0fb1bb3f046966bfd01a36f39aab2835567bb1a422774"
+    },
+    {
+      "file": "slide-11.png",
+      "sha256": "0a5bfd76807e4dc57492e2ab92fe8dd2541e1cd088116b16a6154d5bed4d025d"
+    },
+    {
+      "file": "slide-12.png",
+      "sha256": "1789c3a70a03446142c5d0f9458c1eefbadc8e834b873754989df2b7d3d7af6c"
+    },
+    {
+      "file": "slide-13.png",
+      "sha256": "f0479c67a648d32ef3b05deeb6113b22477673c676a0ebb9136c25db91612bf2"
+    },
+    {
+      "file": "slide-14.png",
+      "sha256": "386a4f768b051c85b1a54c08fecd506c8bab04f72fdc80e5f2c876fe25b66820"
+    },
+    {
+      "file": "slide-15.png",
+      "sha256": "f7557ea9728b3f8dd42d337514e57c4e2cf80e3736aa4b4acbf2f2de789a5f38"
+    },
+    {
+      "file": "slide-16.png",
+      "sha256": "98892851dc0e75d4a675628f675dcc2fba128e255547c8e9fd93ae2e312792c9"
+    },
+    {
+      "file": "slide-17.png",
+      "sha256": "b0505fefba9329fa486f7f5521059253149ded3710cc753d8f80be81bb3d2e70"
+    },
+    {
+      "file": "slide-18.png",
+      "sha256": "fe21f84aaeea3b96ddb47457dc883f16c939a3d1c9be6903222120f182f0d417"
+    },
+    {
+      "file": "slide-19.png",
+      "sha256": "a487c7d2df94a467372fc0226e0cf03ea3223c8138944bb3ab0f9beead1ca280"
+    },
+    {
+      "file": "slide-20.png",
+      "sha256": "beac4f4af5715cbb96d954ce09bb7c30c8b70fcd37e3676527778b49100af550"
+    }
+  ]
+}

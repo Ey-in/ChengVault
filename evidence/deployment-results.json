@@ -1,0 +1,99 @@
+{
+  "timestampUtc": "2026-10-17T14:29:17.4909695Z",
+  "runtimeDirectory": "D:\\soft-project\\ChengVault\\dist\\ChengVault-1.0-windows-x64",
+  "evidenceDirectory": "D:\\soft-project\\ChengVault\\evidence\\deployment\\run-20261017-222851-46a6d903",
+  "applicationHashes": [
+    {
+      "name": "ChengVault.exe",
+      "sha256": "33dd221f94db215a39cda7f9ee525753a2d2d7135551e7678182a3441a489249"
+    },
+    {
+      "name": "ChengVaultCli.exe",
+      "sha256": "2e944096b14b00a3cf29fb32ab741d555264b837e14b59ec4274ae0dc0703603"
+    },
+    {
+      "name": "ChengVaultAgent.exe",
+      "sha256": "08f0d212105a1ae9cc3bca5891bbae767ed268a5c398299b8260686fc0e94064"
+    },
+    {
+      "name": "ChengVaultServer.exe",
+      "sha256": "986723a7c30e54e80eb4098cc30cdc337459dda658dd90f42a26734a267eb36d"
+    }
+  ],
+  "childPath": "C:\\Windows;C:\\Windows\\System32",
+  "clearedPluginEnvironment": true,
+  "independentMachine": false,
+  "testHarnessOnlyExtraDll": "Qt6Test.dll",
+  "records": [
+    {
+      "name": "runtime-gui",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 2231,
+      "executable": "D:\\soft-project\\ChengVault\\dist\\ChengVault-1.0-windows-x64\\ChengVault.exe",
+      "sha256": "33dd221f94db215a39cda7f9ee525753a2d2d7135551e7678182a3441a489249"
+    },
+    {
+      "name": "runtime-backup",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 394,
+      "executable": "D:\\soft-project\\ChengVault\\dist\\ChengVault-1.0-windows-x64\\ChengVaultCli.exe",
+      "sha256": "2e944096b14b00a3cf29fb32ab741d555264b837e14b59ec4274ae0dc0703603"
+    },
+    {
+      "name": "runtime-verify",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 279,
+      "executable": "D:\\soft-project\\ChengVault\\dist\\ChengVault-1.0-windows-x64\\ChengVaultCli.exe",
+      "sha256": "2e944096b14b00a3cf29fb32ab741d555264b837e14b59ec4274ae0dc0703603"
+    },
+    {
+      "name": "runtime-restore",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 279,
+      "executable": "D:\\soft-project\\ChengVault\\dist\\ChengVault-1.0-windows-x64\\ChengVaultCli.exe",
+      "sha256": "2e944096b14b00a3cf29fb32ab741d555264b837e14b59ec4274ae0dc0703603"
+    },
+    {
+      "name": "runtime-two-account-network",
+      "passed": true,
+      "cases": 18,
+      "report": "D:\\soft-project\\ChengVault\\evidence\\deployment\\run-20261017-222851-46a6d903\\network\\run-20261017-222854-01216578\\network-results.json"
+    },
+    {
+      "name": "ChengVaultGuiTests",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 6050,
+      "executable": "D:\\soft-project\\ChengVault\\tmp\\deployment-7624c312968a4366b34da182d91d9542\\validation\\ChengVaultGuiTests.exe",
+      "sha256": "cd8b738cf7a54a07690496bb4e8c731dcf297c2becd05cddd5272a3ee219884f"
+    },
+    {
+      "name": "ChengVaultGuiTests-cases",
+      "passed": true,
+      "cases": 20,
+      "failed": 0,
+      "skipped": 0,
+      "report": "D:\\soft-project\\ChengVault\\evidence\\deployment\\run-20261017-222851-46a6d903\\ChengVaultGuiTests.json"
+    },
+    {
+      "name": "ChengVaultBackgroundTests",
+      "passed": true,
+      "exitCode": 0,
+      "durationMs": 8741,
+      "executable": "D:\\soft-project\\ChengVault\\tmp\\deployment-7624c312968a4366b34da182d91d9542\\validation\\ChengVaultBackgroundTests.exe",
+      "sha256": "ff7a42ca24adc8d9f7a879eaf15d702c1b5581eb8b4379be121dc7457272fe6e"
+    },
+    {
+      "name": "ChengVaultBackgroundTests-cases",
+      "passed": true,
+      "cases": 5,
+      "failed": 0,
+      "skipped": 0,
+      "report": "D:\\soft-project\\ChengVault\\evidence\\deployment\\run-20261017-222851-46a6d903\\ChengVaultBackgroundTests.json"
+    }
+  ]
+}

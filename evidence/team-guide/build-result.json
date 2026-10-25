@@ -1,0 +1,17 @@
+{
+  "document": "D:\\soft-project\\报告文档\\ChengVault三人分工与提交指南.docx",
+  "sha256": "e0eacf097d9412668042794cb7952f0267bddb75e8249ed67f77c49af976de79",
+  "taskCount": 16,
+  "members": [
+    "A",
+    "B",
+    "C"
+  ],
+  "coverageSource": "evidence/coverage/summary.json",
+  "renderReviewRequired": true,
+  "taskPlan": {
+    "written": false,
+    "reason": "Existing task plan retained",
+    "path": "D:\\soft-project\\ChengVault\\docs\\team-work-plan.csv"
+  }
+}
