@@ -1,0 +1,367 @@
+{
+  "schemaVersion": 1,
+  "reviewedAtUtc": "2026-10-17T14:28:44Z",
+  "status": "PASS",
+  "scope": "UI screenshot visual review only; excluded from the 610 course functional PASS count.",
+  "method": "22 screenshots from the 14:25 capture were individually inspected using view_image at original resolution. The final 14:27 capture changed only the shared header badge sizing and filter-dialog body background; ten final screenshots listed as finalDirectVisualReview=true were reopened at original resolution to verify these changes and all six interaction views. Other final images retain the preceding full-layout review; their final hashes are recorded without claiming an additional full visual pass.",
+  "finalValidationTimestampUtc": "2026-10-17T14:27:43.0808078Z",
+  "executables": {
+    "productionGuiSha256": "33dd221f94db215a39cda7f9ee525753a2d2d7135551e7678182a3441a489249",
+    "guiTestsSha256": "cd8b738cf7a54a07690496bb4e8c731dcf297c2becd05cddd5272a3ee219884f"
+  },
+  "environment": {
+    "minimum": {
+      "logicalWidth": 1040,
+      "logicalHeight": 720,
+      "devicePixelRatio": 2,
+      "pngWidth": 2080,
+      "pngHeight": 1440,
+      "qtScaleFactor": "1"
+    },
+    "highDpi": {
+      "logicalWidth": 1040,
+      "logicalHeight": 720,
+      "devicePixelRatio": 3,
+      "pngWidth": 3120,
+      "pngHeight": 2160,
+      "qtScaleFactor": "1.5"
+    },
+    "resolvedApplicationFont": "Microsoft YaHei UI",
+    "note": "QT_SCALE_FACTOR=1.5 multiplied the host DPR=2 to actual DPR=3. This is not a separate physical 150%-scaled monitor or independent computer test."
+  },
+  "findings": [
+    {
+      "status": "RESOLVED",
+      "issue": "ComboBox arrow invisible in first 14:23 capture",
+      "evidence": "Visible chevrons confirmed in backup, filter time selector and administration operation selector in corrected and final captures."
+    },
+    {
+      "status": "RESOLVED",
+      "issue": "First optional-review process exited with access violation after saving observations",
+      "evidence": "Final validation.json records GUI functional regression and all three capture processes exitCode=0. The JSON observations alone were not treated as successful process completion."
+    },
+    {
+      "status": "PASS",
+      "issue": "Final compact header badge and warm filter background",
+      "evidence": "Final minimum/high-dpi overview and repair/settings spot checks show centered compact badge; both filter positions retain readable controls and fixed action buttons."
+    }
+  ],
+  "limitations": [
+    "This review assesses the captured viewport; long pages deliberately continue below the viewport via vertical scrolling.",
+    "Some lower task/repository table areas are outside minimum/high-dpi initial screenshots. The default-size pages are separately reviewed by the root agent.",
+    "Keyboard movement, dialog rejection and password echo modes are supported by the 32 optional observations in interaction/review.json; screenshots do not replace behavior assertions.",
+    "No network request or account mutation was performed by the optional dialog review."
+  ],
+  "precedingFullVisualReviewArtifacts": [
+    {
+      "file": "interaction/01-long-path-focus.png",
+      "sha256": "c87a7d0ceba5ccccc8ef905c7cc8548f08aabcfd7f740d77f2a429d752c4df09",
+      "modifiedUtc": "2026-10-17T14:25:49.2987549Z"
+    },
+    {
+      "file": "interaction/01-tab-focus.png",
+      "sha256": "05d6b2c5b4346244765cb58678131823a874cc43d164d32d26f89c977d6d4366",
+      "modifiedUtc": "2026-10-17T14:25:49.3650248Z"
+    },
+    {
+      "file": "interaction/02-long-error-layout-sample.png",
+      "sha256": "da277d916d2b2dcb0d047fa253f0a9a9ad95271ef7d4052a18da23ca87825a71",
+      "modifiedUtc": "2026-10-17T14:25:49.4702831Z"
+    },
+    {
+      "file": "interaction/03-filter-dialog-scrolled.png",
+      "sha256": "6eed776c8f3c22e3e4958b39fa7484bc40d191bd35d9eb032c3c09129b1e504e",
+      "modifiedUtc": "2026-10-17T14:25:49.6415623Z"
+    },
+    {
+      "file": "interaction/03-filter-dialog.png",
+      "sha256": "f5250c90680fa45b688264e835e7d8b4cd5682d9056fd815466bf25ba4f03a13",
+      "modifiedUtc": "2026-10-17T14:25:49.5944628Z"
+    },
+    {
+      "file": "interaction/04-administration-dialog.png",
+      "sha256": "097bdac093c1905b83513a4b44040685ffeaa272785a299503357ab14832077d",
+      "modifiedUtc": "2026-10-17T14:25:49.7724285Z"
+    },
+    {
+      "file": "minimum/automation.png",
+      "sha256": "6bd325dcf2e424d4a3bc1835865e6660ff382e8b486b38643145f99a3f99140f",
+      "modifiedUtc": "2026-10-17T14:25:54.3609094Z"
+    },
+    {
+      "file": "minimum/backup.png",
+      "sha256": "f7c5520208a6be75c5bdf28b47766251672c7dae78771a555509ffb67636b9b7",
+      "modifiedUtc": "2026-10-17T14:25:54.2008835Z"
+    },
+    {
+      "file": "minimum/logs.png",
+      "sha256": "996e99f96182c95cc9e15e896146d205a15796b1129c328b7b1e899cac2ef950",
+      "modifiedUtc": "2026-10-17T14:25:54.5886599Z"
+    },
+    {
+      "file": "minimum/network.png",
+      "sha256": "2e080a395fd6d0d19ebd616600b2372382f04e5cc2f1f44453f3cc4692e66415",
+      "modifiedUtc": "2026-10-17T14:25:54.4435574Z"
+    },
+    {
+      "file": "minimum/overview.png",
+      "sha256": "3f8cf052198adfe095d28e32c2e99fb4afe36d88ae0de4e7cf3b5f62cb83f7d2",
+      "modifiedUtc": "2026-10-17T14:25:54.1198352Z"
+    },
+    {
+      "file": "minimum/repair.png",
+      "sha256": "6e3a2b947ec8776357cd75f5cd818824c79cab00b02fa625b2c2fa6bf0ba136e",
+      "modifiedUtc": "2026-10-17T14:25:54.5266717Z"
+    },
+    {
+      "file": "minimum/restore.png",
+      "sha256": "c39a3f8d436ea5b57f41f77531b53e4c733326872f100fdc09d5743f8991aa87",
+      "modifiedUtc": "2026-10-17T14:25:54.2717771Z"
+    },
+    {
+      "file": "minimum/settings.png",
+      "sha256": "319a7d78f8ed34f949cbd9a75e26207835b88b33fbd44f3e0a74000ce0d7252d",
+      "modifiedUtc": "2026-10-17T14:25:54.6597269Z"
+    },
+    {
+      "file": "high-dpi/automation.png",
+      "sha256": "026af01d8bfe90c10b08ae241c5008d5f4d6886185bf256854b0fc5c2a046d59",
+      "modifiedUtc": "2026-10-17T14:25:56.6029813Z"
+    },
+    {
+      "file": "high-dpi/backup.png",
+      "sha256": "e97f31490317c4f7afa12abc0d83bad81c2b54d51bb569be63c74fe564a9bc4f",
+      "modifiedUtc": "2026-10-17T14:25:56.2847775Z"
+    },
+    {
+      "file": "high-dpi/logs.png",
+      "sha256": "0406c4c7caa53ea3dcc5c09b462ea6720b6698321baf96e19d914240af1994a4",
+      "modifiedUtc": "2026-10-17T14:25:57.1524038Z"
+    },
+    {
+      "file": "high-dpi/network.png",
+      "sha256": "e61e29b8a5d379ed0fd5d3a908853b09604a98963a16618a52c5e0c38bb3d5cb",
+      "modifiedUtc": "2026-10-17T14:25:56.7957459Z"
+    },
+    {
+      "file": "high-dpi/overview.png",
+      "sha256": "a15ca1be8254f2b01b619d46bd9d601c0301e05b3c0d3c21efcb66b943ca1414",
+      "modifiedUtc": "2026-10-17T14:25:56.1168150Z"
+    },
+    {
+      "file": "high-dpi/repair.png",
+      "sha256": "cc51c16f4c852addb08b2f92d114884bb47c3e0668197fa8be5431915ac9dddb",
+      "modifiedUtc": "2026-10-17T14:25:56.9894226Z"
+    },
+    {
+      "file": "high-dpi/restore.png",
+      "sha256": "3492fcb3fce71e4352c71629746f8e2c117a7532772ef7897755cfbbf74e8eb5",
+      "modifiedUtc": "2026-10-17T14:25:56.4420889Z"
+    },
+    {
+      "file": "high-dpi/settings.png",
+      "sha256": "756e7e9f7dc3a03ee9ee674efbd250362857d14cfe8870c0ccde1b7e20603ee1",
+      "modifiedUtc": "2026-10-17T14:25:57.3314486Z"
+    }
+  ],
+  "finalArtifacts": [
+    {
+      "file": "interaction/01-long-path-focus.png",
+      "sha256": "d56492c6dbb8158f2c41e7a5ff20ec1d7442fb833e8ba3215441adf9f9f50fd6",
+      "modifiedUtc": "2026-10-17T14:27:34.8612332Z",
+      "width": 2080,
+      "height": 1440,
+      "finalDirectVisualReview": true,
+      "finding": "长中文路径保持输入焦点并水平滚动到尾部；备份密码为圆点；下拉箭头清晰。"
+    },
+    {
+      "file": "interaction/01-tab-focus.png",
+      "sha256": "8142a53a23bdc88c55b4252ee3db92ee461eec0a0154888d56688b9386768e54",
+      "modifiedUtc": "2026-10-17T14:27:34.9388934Z",
+      "width": 2080,
+      "height": 1440,
+      "finalDirectVisualReview": true,
+      "finding": "焦点从路径输入移到浏览按钮，可见绿色边框；密码保持遮蔽。"
+    },
+    {
+      "file": "interaction/02-long-error-layout-sample.png",
+      "sha256": "fb8b0caf4ea19b62b78a7f7ca5e8c4258ef908117cbbc194104a6b4d8a5a9bc2",
+      "modifiedUtc": "2026-10-17T14:27:35.0082504Z",
+      "width": 2080,
+      "height": 1440,
+      "finalDirectVisualReview": true,
+      "finding": "明确标注未执行操作的长错误排版样例中间省略，未挤走底部操作按钮。"
+    },
+    {
+      "file": "interaction/03-filter-dialog-scrolled.png",
+      "sha256": "c3357118ce3a580ca149f5435425a8a7a29286ee20cdc472ce8af7b9024025d1",
+      "modifiedUtc": "2026-10-17T14:27:35.2301417Z",
+      "width": 1520,
+      "height": 1300,
+      "finalDirectVisualReview": true,
+      "finding": "滚动到底后时间下拉箭头和变化清单按钮完整；底部按钮固定可见。"
+    },
+    {
+      "file": "interaction/03-filter-dialog.png",
+      "sha256": "bb63cf617aee55b1d7cac64126b0ae32b89d456f50275f6b461d4b5ffc9f08cb",
+      "modifiedUtc": "2026-10-17T14:27:35.1705215Z",
+      "width": 1520,
+      "height": 1300,
+      "finalDirectVisualReview": true,
+      "finding": "暖白滚动区域和说明协调；底部重置、应用规则、取消全部完整。"
+    },
+    {
+      "file": "interaction/04-administration-dialog.png",
+      "sha256": "097bdac093c1905b83513a4b44040685ffeaa272785a299503357ab14832077d",
+      "modifiedUtc": "2026-10-17T14:27:35.3605169Z",
+      "width": 1280,
+      "height": 1240,
+      "finalDirectVisualReview": true,
+      "finding": "操作下拉箭头和两密码/密钥输入框完整，确认和取消按钮未裁切。"
+    },
+    {
+      "file": "minimum/automation.png",
+      "sha256": "ca184b5095ef7612bc0743cbc387284232b2c45025bcdbc5c2313d74529eaa82",
+      "modifiedUtc": "2026-10-17T14:27:39.7032207Z",
+      "width": 2080,
+      "height": 1440,
+      "finalDirectVisualReview": false,
+      "finding": "七项计划字段和四项任务操作完整；下部任务清单通过页面滚动访问。"
+    },
+    {
+      "file": "minimum/backup.png",
+      "sha256": "0f41e7626c8d7d9784078dd6754108441967521c081c636a1e3c7e1b768b6299",
+      "modifiedUtc": "2026-10-17T14:27:39.5375451Z",
+      "width": 2080,
+      "height": 1440,
+      "finalDirectVisualReview": false,
+      "finding": "四个下拉箭头可见；双列表单未横向溢出；开始备份固定在底部。"
+    },
+    {
+      "file": "minimum/logs.png",
+      "sha256": "9a3df384ef2f7a34e6da837b3bebe5eb131477d7d5b17ca456f8e2b8564dcd04",
+      "modifiedUtc": "2026-10-17T14:27:39.9464610Z",
+      "width": 2080,
+      "height": 1440,
+      "finalDirectVisualReview": false,
+      "finding": "读取和导出按钮完整；空日志提示和输入区域可读。"
+    },
+    {
+      "file": "minimum/network.png",
+      "sha256": "b5886202ca1d28ce82abd3aa17b71398de0425007b8508eea1a90ce56e13d873",
+      "modifiedUtc": "2026-10-17T14:27:39.7855795Z",
+      "width": 2080,
+      "height": 1440,
+      "finalDirectVisualReview": false,
+      "finding": "服务器、账户和设备字段可读；四个操作按钮及四列表头无横向裁切。"
+    },
+    {
+      "file": "minimum/overview.png",
+      "sha256": "8bc8baf2e3ca32eb3a5097bae0424d1f9579bf55555a4091899576ca01ee5819",
+      "modifiedUtc": "2026-10-17T14:27:39.4711428Z",
+      "width": 2080,
+      "height": 1440,
+      "finalDirectVisualReview": true,
+      "finding": "八项导航和四张任务卡片显示完整；标题、说明和插图无重叠。"
+    },
+    {
+      "file": "minimum/repair.png",
+      "sha256": "c4b4f502d0e7be40a059de25cd238603ee4a5c80073bb011275f60d2b8e04889",
+      "modifiedUtc": "2026-10-17T14:27:39.8679307Z",
+      "width": 2080,
+      "height": 1440,
+      "finalDirectVisualReview": true,
+      "finding": "三条路径输入、三个操作按钮及四步说明完整；纠错能力边界文字准确。"
+    },
+    {
+      "file": "minimum/restore.png",
+      "sha256": "3bcdb215addc709b79adbfa882a612104c9d8682861dec0d7b06282ab9e3fbc2",
+      "modifiedUtc": "2026-10-17T14:27:39.6204681Z",
+      "width": 2080,
+      "height": 1440,
+      "finalDirectVisualReview": false,
+      "finding": "读取操作按钮与三列表头可读；空状态位于表头下方且不遮挡。"
+    },
+    {
+      "file": "minimum/settings.png",
+      "sha256": "213f8fc9eae5b14af952f25e84d02eec6b028bc79d9313b59ad28a6606fb7723",
+      "modifiedUtc": "2026-10-17T14:27:40.0171429Z",
+      "width": 2080,
+      "height": 1440,
+      "finalDirectVisualReview": false,
+      "finding": "复选框、后台启动按钮和说明段落可读；长段落正常换行。"
+    },
+    {
+      "file": "high-dpi/automation.png",
+      "sha256": "39e8ab7ce35a0f6231a550035c721d928ce6169f863ca0fae376e942856f734e",
+      "modifiedUtc": "2026-10-17T14:27:42.3570994Z",
+      "width": 3120,
+      "height": 2160,
+      "finalDirectVisualReview": false,
+      "finding": "七项计划字段和四项任务操作完整；下部任务清单通过页面滚动访问。"
+    },
+    {
+      "file": "high-dpi/backup.png",
+      "sha256": "6736147e8d321898b6f0204330a8aed2192e834e459880559ee620be620240be",
+      "modifiedUtc": "2026-10-17T14:27:41.9283746Z",
+      "width": 3120,
+      "height": 2160,
+      "finalDirectVisualReview": false,
+      "finding": "四个下拉箭头可见；双列表单未横向溢出；开始备份固定在底部。"
+    },
+    {
+      "file": "high-dpi/logs.png",
+      "sha256": "6a1fe85e7f5a7d4e7d28e3449caa44ea9e0936cf37c9a10eee32cff1ccafc0c7",
+      "modifiedUtc": "2026-10-17T14:27:42.8466664Z",
+      "width": 3120,
+      "height": 2160,
+      "finalDirectVisualReview": false,
+      "finding": "读取和导出按钮完整；空日志提示和输入区域可读。"
+    },
+    {
+      "file": "high-dpi/network.png",
+      "sha256": "230d51dec71034c6827df7502412de1c5518993e2b50851853ae409a22e23adf",
+      "modifiedUtc": "2026-10-17T14:27:42.5212821Z",
+      "width": 3120,
+      "height": 2160,
+      "finalDirectVisualReview": false,
+      "finding": "服务器、账户和设备字段可读；四个操作按钮及四列表头无横向裁切。"
+    },
+    {
+      "file": "high-dpi/overview.png",
+      "sha256": "17a3ec211a760c3269eb63a5487af8f028fb6e2b11a2e979d0527a6297bbda8c",
+      "modifiedUtc": "2026-10-17T14:27:41.7497922Z",
+      "width": 3120,
+      "height": 2160,
+      "finalDirectVisualReview": true,
+      "finding": "八项导航和四张任务卡片显示完整；标题、说明和插图无重叠。"
+    },
+    {
+      "file": "high-dpi/repair.png",
+      "sha256": "1cd605f2108f5bc6a82eb86dc0deaee21994e1972424774b299b897f84edc552",
+      "modifiedUtc": "2026-10-17T14:27:42.6857679Z",
+      "width": 3120,
+      "height": 2160,
+      "finalDirectVisualReview": false,
+      "finding": "三条路径输入、三个操作按钮及四步说明完整；纠错能力边界文字准确。"
+    },
+    {
+      "file": "high-dpi/restore.png",
+      "sha256": "aae32735e4ed01fdc6bfcdb54fef0b9f74106ca6d9c7b8448d7df9582f56ecad",
+      "modifiedUtc": "2026-10-17T14:27:42.1420461Z",
+      "width": 3120,
+      "height": 2160,
+      "finalDirectVisualReview": false,
+      "finding": "读取操作按钮与三列表头可读；空状态位于表头下方且不遮挡。"
+    },
+    {
+      "file": "high-dpi/settings.png",
+      "sha256": "47e1c7708a0a5c92457b0336232e41c66d881b59a3d0342e044f38e353caa3a3",
+      "modifiedUtc": "2026-10-17T14:27:43.0034561Z",
+      "width": 3120,
+      "height": 2160,
+      "finalDirectVisualReview": true,
+      "finding": "复选框、后台启动按钮和说明段落可读；长段落正常换行。"
+    }
+  ]
+}

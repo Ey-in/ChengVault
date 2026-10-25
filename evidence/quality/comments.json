@@ -1,10 +1,10 @@
 {
   "scope": "Original production C++ in src and include; tests are not production code",
-  "totalLines": 8433,
-  "nonblankLines": 8327,
-  "commentLines": 1705,
-  "commentPercentPhysical": 20.22,
-  "commentPercentNonblank": 20.48,
+  "totalLines": 8472,
+  "nonblankLines": 8366,
+  "commentLines": 1716,
+  "commentPercentPhysical": 20.25,
+  "commentPercentNonblank": 20.51,
   "files": [
     {
       "file": "include/chengvault/archive.hpp",
@@ -17,12 +17,12 @@
     },
     {
       "file": "include/chengvault/common.hpp",
-      "totalLines": 98,
-      "nonblankLines": 90,
-      "commentLines": 22,
-      "codeLines": 69,
-      "commentPercentPhysical": 22.45,
-      "commentPercentNonblank": 24.44
+      "totalLines": 101,
+      "nonblankLines": 93,
+      "commentLines": 24,
+      "codeLines": 70,
+      "commentPercentPhysical": 23.76,
+      "commentPercentNonblank": 25.81
     },
     {
       "file": "include/chengvault/compression.hpp",
@@ -71,12 +71,12 @@
     },
     {
       "file": "include/chengvault/repository.hpp",
-      "totalLines": 66,
-      "nonblankLines": 64,
-      "commentLines": 29,
-      "codeLines": 36,
-      "commentPercentPhysical": 43.94,
-      "commentPercentNonblank": 45.31
+      "totalLines": 68,
+      "nonblankLines": 66,
+      "commentLines": 30,
+      "codeLines": 37,
+      "commentPercentPhysical": 44.12,
+      "commentPercentNonblank": 45.45
     },
     {
       "file": "include/chengvault/scheduler.hpp",
@@ -98,12 +98,12 @@
     },
     {
       "file": "src/apps/cli_main.cpp",
-      "totalLines": 183,
-      "nonblankLines": 182,
+      "totalLines": 184,
+      "nonblankLines": 183,
       "commentLines": 37,
-      "codeLines": 146,
-      "commentPercentPhysical": 20.22,
-      "commentPercentNonblank": 20.33
+      "codeLines": 147,
+      "commentPercentPhysical": 20.11,
+      "commentPercentNonblank": 20.22
     },
     {
       "file": "src/apps/gui_main.cpp",
@@ -125,12 +125,12 @@
     },
     {
       "file": "src/core/archive.cpp",
-      "totalLines": 738,
-      "nonblankLines": 736,
+      "totalLines": 737,
+      "nonblankLines": 735,
       "commentLines": 150,
-      "codeLines": 588,
-      "commentPercentPhysical": 20.33,
-      "commentPercentNonblank": 20.38
+      "codeLines": 587,
+      "commentPercentPhysical": 20.35,
+      "commentPercentNonblank": 20.41
     },
     {
       "file": "src/core/common.cpp",
@@ -179,12 +179,12 @@
     },
     {
       "file": "src/core/repository.cpp",
-      "totalLines": 389,
-      "nonblankLines": 375,
-      "commentLines": 86,
-      "codeLines": 291,
-      "commentPercentPhysical": 22.11,
-      "commentPercentNonblank": 22.93
+      "totalLines": 400,
+      "nonblankLines": 386,
+      "commentLines": 89,
+      "codeLines": 299,
+      "commentPercentPhysical": 22.25,
+      "commentPercentNonblank": 23.06
     },
     {
       "file": "src/core/scheduler.cpp",
@@ -197,12 +197,12 @@
     },
     {
       "file": "src/gui/main_window.cpp",
-      "totalLines": 1426,
-      "nonblankLines": 1420,
+      "totalLines": 1431,
+      "nonblankLines": 1425,
       "commentLines": 189,
-      "codeLines": 1232,
-      "commentPercentPhysical": 13.25,
-      "commentPercentNonblank": 13.31
+      "codeLines": 1237,
+      "commentPercentPhysical": 13.21,
+      "commentPercentNonblank": 13.26
     },
     {
       "file": "src/gui/main_window.hpp",
@@ -233,12 +233,12 @@
     },
     {
       "file": "src/platform/filesystem.cpp",
-      "totalLines": 1286,
-      "nonblankLines": 1281,
-      "commentLines": 269,
-      "codeLines": 1015,
-      "commentPercentPhysical": 20.92,
-      "commentPercentNonblank": 21.0
+      "totalLines": 1304,
+      "nonblankLines": 1299,
+      "commentLines": 274,
+      "codeLines": 1028,
+      "commentPercentPhysical": 21.01,
+      "commentPercentNonblank": 21.09
     }
   ]
 }

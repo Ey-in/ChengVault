@@ -1,6 +1,12 @@
 {
   "formatCheckedFiles": 36,
-  "formatNoncompliantFiles": [],
+  "formatNoncompliantFiles": [
+    "src\\apps\\cli_main.cpp",
+    "src\\platform\\filesystem.cpp",
+    "include\\chengvault\\common.hpp",
+    "tests\\filesystem_tests.cpp",
+    "tests\\network_repository_tests.cpp"
+  ],
   "cppcheckExit": 0,
   "cppcheckFindingCount": 7,
   "cppcheckErrorCount": 0,
@@ -8,9 +14,9 @@
   "cppcheckStyleCount": 5,
   "cppcheckPerformanceCount": 2,
   "reviewNotes": "docs/quality-and-coverage.md; original findings remain in cppcheck.xml",
-  "commentPercentPhysical": 20.22,
-  "commentPercentNonblank": 20.48,
+  "commentPercentPhysical": 20.25,
+  "commentPercentNonblank": 20.51,
   "commentThresholdExclusive": 20,
   "commentPass": true,
-  "generatedAtUtc": "2026-10-17T14:27:22.2446362Z"
+  "generatedAtUtc": "2026-10-25T16:15:06.0855515Z"
 }

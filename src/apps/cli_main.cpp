@@ -66,6 +66,7 @@ QJsonObject execute(const QString &command, const QCommandLineParser &parser) {
         // A repository instance is scoped to one command and owns its key.
         const QString repositoryPath = arg("repo");
         cv::require(!repositoryPath.isEmpty(), "MISSING_REPOSITORY", "请指定 --repo");
+        cv::require(!password.isEmpty(), "REPOSITORY_PASSWORD_EMPTY", "仓库密码不能为空");
         cv::Repository repository(repositoryPath, password);
         if (command == "repo-backup") {
             plan.destination = repositoryPath;

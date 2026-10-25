@@ -1,6 +1,6 @@
 {
     "applicationFont": "Microsoft YaHei UI",
-    "devicePixelRatio": 2,
+    "devicePixelRatio": 1.5,
     "height": 720,
     "logicalDpi": 96,
     "resolvedApplicationFont": "Microsoft YaHei UI",

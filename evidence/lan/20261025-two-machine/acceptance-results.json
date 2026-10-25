@@ -1,0 +1,352 @@
+{
+  "timestampUtc": "2026-10-25T10:31:07.5435973Z",
+  "result": "PASS_TWO_MACHINE_LAN",
+  "clientHost": {
+    "machineIdSha256": "c796493330fc72d174e71dfda6df6ab2ebbbe14414be739b913e3323aaa2f130",
+    "hostName": "<redacted-client-host>",
+    "os": "Microsoft Windows NT 10.0.26200.0",
+    "fileSystem": "NTFS"
+  },
+  "serverHost": {
+    "machineIdSha256": "35c8fd52abfdc1022052970cf225561f0acafe2f0694380427818553169faa2e",
+    "hostName": "<redacted-server-host>",
+    "os": "Microsoft Windows NT 10.0.26200.0",
+    "fileSystem": "NTFS"
+  },
+  "serverAddress": "192.168.0.100",
+  "port": 48484,
+  "differentMachines": true,
+  "independentWindowsVerified": true,
+  "realLanVerified": true,
+  "originKnown": true,
+  "clientSourceCommit": "local-build",
+  "serverSourceCommit": "local-build",
+  "clientApplicationHashes": [
+    {
+      "name": "ChengVault.exe",
+      "sha256": "4429eebf28171ba678bada7e7bac13f9f375ee9490e1569435f48533abbf5bc6"
+    },
+    {
+      "name": "ChengVaultCli.exe",
+      "sha256": "6651c9d6fed64c310558bcaf1634fdad3212dae8ead4b7db1a1405b94d9f928b"
+    },
+    {
+      "name": "ChengVaultAgent.exe",
+      "sha256": "d8226aeed8182a2b52ea2110bff926bda26a4373629b1d6d1a1b90d222f771af"
+    },
+    {
+      "name": "ChengVaultServer.exe",
+      "sha256": "9602349fcf3e984782799d4e84647d83d89699908a33ac6cffc85cde1077b549"
+    }
+  ],
+  "serverApplicationHashes": [
+    {
+      "name": "ChengVault.exe",
+      "sha256": "4429eebf28171ba678bada7e7bac13f9f375ee9490e1569435f48533abbf5bc6"
+    },
+    {
+      "name": "ChengVaultCli.exe",
+      "sha256": "6651c9d6fed64c310558bcaf1634fdad3212dae8ead4b7db1a1405b94d9f928b"
+    },
+    {
+      "name": "ChengVaultAgent.exe",
+      "sha256": "d8226aeed8182a2b52ea2110bff926bda26a4373629b1d6d1a1b90d222f771af"
+    },
+    {
+      "name": "ChengVaultServer.exe",
+      "sha256": "9602349fcf3e984782799d4e84647d83d89699908a33ac6cffc85cde1077b549"
+    }
+  ],
+  "cleanChildPath": "C:\\WINDOWS;C:\\WINDOWS\\System32",
+  "records": [
+    {
+      "name": "portable-gui",
+      "passed": true,
+      "exitCode": 0,
+      "expectedError": "",
+      "actualError": null,
+      "durationMs": 2316,
+      "result": null
+    },
+    {
+      "name": "portable-pax-aes-huffman-backup",
+      "passed": true,
+      "exitCode": 0,
+      "expectedError": "",
+      "actualError": null,
+      "durationMs": 646,
+      "result": {
+        "bytes": 8388608,
+        "details": {
+          "cipher": "aes256",
+          "compression": "huffman",
+          "entries": 3,
+          "format": "pax"
+        },
+        "files": 1,
+        "output": "D:/acceptance-client-2/client-20261025-183048-8006f617/portable-aes-pax.cva",
+        "storedBytes": 8401621,
+        "success": true,
+        "warnings": []
+      }
+    },
+    {
+      "name": "portable-archive-verify",
+      "passed": true,
+      "exitCode": 0,
+      "expectedError": "",
+      "actualError": null,
+      "durationMs": 611,
+      "result": {
+        "bytes": 8388608,
+        "details": {
+          "format": "tar",
+          "verifiedChunks": 8
+        },
+        "files": 1,
+        "output": "D:\\acceptance-client-2\\client-20261025-183048-8006f617\\portable-aes-pax.cva",
+        "storedBytes": 8401621,
+        "success": true,
+        "warnings": []
+      }
+    },
+    {
+      "name": "portable-archive-restore",
+      "passed": true,
+      "exitCode": 0,
+      "expectedError": "",
+      "actualError": null,
+      "durationMs": 602,
+      "result": {
+        "bytes": 8388608,
+        "details": {
+          "entries": 3,
+          "format": "tar",
+          "metadataStrict": true
+        },
+        "files": 1,
+        "output": "D:/acceptance-client-2/client-20261025-183048-8006f617/local-restored",
+        "storedBytes": 0,
+        "success": true,
+        "warnings": []
+      }
+    },
+    {
+      "name": "local-initial-snapshot",
+      "passed": true,
+      "exitCode": 0,
+      "expectedError": "",
+      "actualError": null,
+      "durationMs": 501,
+      "result": {
+        "bytes": 8388608,
+        "details": {
+          "compression": "none",
+          "createdUtc": "2026-10-25T10:30:53.334Z",
+          "id": "aa02b5e2-0e7a-4bed-85da-45eba6888f9f",
+          "newBytes": 8389808,
+          "newChunks": 8,
+          "reusedChunks": 0,
+          "snapshotId": "aa02b5e2-0e7a-4bed-85da-45eba6888f9f"
+        },
+        "files": 1,
+        "output": "D:/acceptance-client-2/client-20261025-183048-8006f617/repository",
+        "storedBytes": 8389808,
+        "success": true,
+        "warnings": []
+      }
+    },
+    {
+      "name": "network-initial-upload",
+      "passed": true,
+      "exitCode": 0,
+      "expectedError": "",
+      "actualError": null,
+      "durationMs": 5273,
+      "result": {
+        "bytes": 8394171,
+        "details": {
+          "payloadBytes": 8394171,
+          "receivedBytes": 5005,
+          "repositoryId": "7972f325-5ab7-4257-a241-21d2883d1df5",
+          "resumedBytes": 0,
+          "reusedObjects": 0,
+          "sentBytes": 11200392,
+          "uploadedObjects": 10
+        },
+        "files": 10,
+        "output": "7972f325-5ab7-4257-a241-21d2883d1df5",
+        "storedBytes": 8394171,
+        "success": true,
+        "warnings": []
+      }
+    },
+    {
+      "name": "network-repeat-upload",
+      "passed": true,
+      "exitCode": 0,
+      "expectedError": "",
+      "actualError": null,
+      "durationMs": 471,
+      "result": {
+        "bytes": 0,
+        "details": {
+          "payloadBytes": 0,
+          "receivedBytes": 805,
+          "repositoryId": "7972f325-5ab7-4257-a241-21d2883d1df5",
+          "resumedBytes": 0,
+          "reusedObjects": 10,
+          "sentBytes": 2692,
+          "uploadedObjects": 0
+        },
+        "files": 0,
+        "output": "7972f325-5ab7-4257-a241-21d2883d1df5",
+        "storedBytes": 0,
+        "success": true,
+        "warnings": []
+      }
+    },
+    {
+      "name": "local-one-byte-changed-snapshot",
+      "passed": true,
+      "exitCode": 0,
+      "expectedError": "",
+      "actualError": null,
+      "durationMs": 415,
+      "result": {
+        "bytes": 8388608,
+        "details": {
+          "compression": "none",
+          "createdUtc": "2026-10-25T10:30:59.502Z",
+          "id": "7eb42e19-dc38-4816-9c9d-efb0d4fdc439",
+          "newBytes": 1048726,
+          "newChunks": 1,
+          "reusedChunks": 7,
+          "snapshotId": "7eb42e19-dc38-4816-9c9d-efb0d4fdc439"
+        },
+        "files": 1,
+        "output": "D:/acceptance-client-2/client-20261025-183048-8006f617/repository",
+        "storedBytes": 1048726,
+        "success": true,
+        "warnings": []
+      }
+    },
+    {
+      "name": "network-incremental-upload",
+      "passed": true,
+      "exitCode": 0,
+      "expectedError": "",
+      "actualError": null,
+      "durationMs": 1236,
+      "result": {
+        "bytes": 1052565,
+        "details": {
+          "payloadBytes": 1052565,
+          "receivedBytes": 1531,
+          "repositoryId": "7972f325-5ab7-4257-a241-21d2883d1df5",
+          "resumedBytes": 0,
+          "reusedObjects": 10,
+          "sentBytes": 1407350,
+          "uploadedObjects": 2
+        },
+        "files": 2,
+        "output": "7972f325-5ab7-4257-a241-21d2883d1df5",
+        "storedBytes": 1052565,
+        "success": true,
+        "warnings": []
+      }
+    },
+    {
+      "name": "bob-list-isolated",
+      "passed": true,
+      "exitCode": 0,
+      "expectedError": "",
+      "actualError": null,
+      "durationMs": 371,
+      "result": {
+        "repositories": []
+      }
+    },
+    {
+      "name": "bob-download-rejected",
+      "passed": true,
+      "exitCode": 1,
+      "expectedError": "REMOTE_MISSING",
+      "actualError": "REMOTE_MISSING",
+      "durationMs": 423,
+      "result": null
+    },
+    {
+      "name": "alice-download",
+      "passed": true,
+      "exitCode": 0,
+      "expectedError": "",
+      "actualError": null,
+      "durationMs": 5032,
+      "result": {
+        "bytes": 9446736,
+        "details": {
+          "receivedBytes": 12602172,
+          "repositoryId": "7972f325-5ab7-4257-a241-21d2883d1df5",
+          "sentBytes": 6914
+        },
+        "files": 12,
+        "output": "D:/acceptance-client-2/client-20261025-183048-8006f617/download",
+        "storedBytes": 0,
+        "success": true,
+        "warnings": []
+      }
+    },
+    {
+      "name": "downloaded-repository-verify",
+      "passed": true,
+      "exitCode": 0,
+      "expectedError": "",
+      "actualError": null,
+      "durationMs": 370,
+      "result": {
+        "bytes": 9437184,
+        "details": {
+          "chunks": 9,
+          "snapshots": 2
+        },
+        "files": 9,
+        "output": "",
+        "storedBytes": 0,
+        "success": true,
+        "warnings": []
+      }
+    },
+    {
+      "name": "downloaded-snapshot-strict-restore",
+      "passed": true,
+      "exitCode": 0,
+      "expectedError": "",
+      "actualError": null,
+      "durationMs": 504,
+      "result": {
+        "bytes": 8388608,
+        "details": {
+          "entries": 3,
+          "metadataStrict": true
+        },
+        "files": 1,
+        "output": "D:/acceptance-client-2/client-20261025-183048-8006f617/remote-restored",
+        "storedBytes": 0,
+        "success": true,
+        "warnings": []
+      }
+    },
+    {
+      "name": "restored-content-and-incremental-byte-counters",
+      "passed": true,
+      "sha256": "9c76ac65e48f80121c6d96dc26a792f3656e110278f7f421741bbcb2b8268ea9",
+      "initialPayloadBytes": 8394171,
+      "repeatPayloadBytes": 0,
+      "incrementalPayloadBytes": 1052565,
+      "initialWireBytes": 11200392,
+      "repeatWireBytes": 2692,
+      "incrementalWireBytes": 1407350
+    }
+  ]
+}

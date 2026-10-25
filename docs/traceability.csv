@@ -319,7 +319,7 @@ TC317,E02,src/platform/filesystem.cpp,fs.metadata.invalid-groupSid-preserves-fil
 TC318,E02,src/platform/filesystem.cpp,fs.metadata.invalid-daclBase64-preserves-file,安全,非法元数据 daclBase64；目标 a.txt 预置 unchanged；清单 daclBase64 设 invalid，显式覆盖仅恢复该文件。,ACL_INVALID；原文件保持，临时文件清理。,PASS,37,evidence/test-results.json,软件测试报告 2 功能测试,NTFS 元数据
 TC319,E02,src/platform/filesystem.cpp,fs.metadata.null-dacl-roundtrip,系统功能,NULL DACL；清单 daclNull=true 并移除 DACL 字节，恢复并重新捕获。,NULL DACL 实际保持，警告为空。,PASS,54,evidence/test-results.json,软件测试报告 2 功能测试,NTFS 元数据
 TC320,E02,src/platform/filesystem.cpp,fs.metadata.foreign-owner-strict,安全,严格属主拒绝；清单 ownerSid=S-1-5-18，以禁用特权的受限令牌恢复。,METADATA_PERMISSION；不发布目标文件。,PASS,32,evidence/test-results.json,软件测试报告 2 功能测试,NTFS 元数据
-TC321,E02,src/platform/filesystem.cpp,fs.metadata.foreign-owner-warning,安全,宽松属主警告；同样恢复 SYSTEM 属主但 strictMetadata=false。,数据文件存在，结果含明确警告；不宣称属主恢复成功。,PASS,36,evidence/test-results.json,软件测试报告 2 功能测试,NTFS 元数据
+TC321,E02,src/platform/filesystem.cpp,fs.metadata.foreign-owner-warning,安全,宽松属主警告；同样恢复 SYSTEM 属主但 strictMetadata=false。,数据文件存在，结果含明确警告；不能认定属主恢复成功。,PASS,36,evidence/test-results.json,软件测试报告 2 功能测试,NTFS 元数据
 TC322,E04,src/platform/filesystem.cpp,fs.filter.hardlink-type-selects-both-names,白盒单元,硬链接对象筛选；建立 a.txt 与 z-link.txt 硬链接，types=hardlink，extensions=txt。,两名称均选中，fileCount=2，b.bin 不恢复。,PASS,42,evidence/test-results.json,软件测试报告 2 功能测试,类型筛选
 TC323,E10,src/core/archive.cpp,archive.adversarial.index.magic,安全,索引：索引 magic 首字节改为 X；生成真实归档并修改内层；重新封装有效非加密外层后，索引 magic 首字节改为 X，调用恢复。,INDEX_MAGIC；恢复根目录未创建。,PASS,61,evidence/test-results.json,软件测试报告 2 功能测试,索引打包解包
 TC324,E10,src/core/archive.cpp,archive.adversarial.index.manifest-too-large,安全,索引：清单长度设 64 MiB+1；生成真实归档并修改内层；重新封装有效非加密外层后，清单长度设 64 MiB+1，调用恢复。,MANIFEST_SIZE；恢复根目录未创建。,PASS,59,evidence/test-results.json,软件测试报告 2 功能测试,索引打包解包
@@ -446,7 +446,7 @@ TC444,E01,src/platform/filesystem.cpp,fs.ntfs.file-and-directory-ads,系统功�
 TC445,E01,src/platform/filesystem.cpp,fs.ntfs.sparse-over-4gib,性能,超过 4 GiB 稀疏文件；建立 2^32+123 字节稀疏文件，只写末尾 TAIL。,存储数据小于 1 MiB；恢复长度、SPARSE 标志和尾部字节正确。,PASS,86,evidence/test-results.json,软件测试报告 2 功能测试,NTFS 特殊文件
 TC446,E01,src/platform/filesystem.cpp,fs.ntfs.junction-no-recursion,系统功能,目录联接；Junction 指向 nested；捕获、恢复并读取属性。,清单无联接下重复子树；恢复后仍是重解析点。,PASS,75,evidence/test-results.json,软件测试报告 2 功能测试,NTFS 特殊文件
 TC447,B02,src/platform/filesystem.cpp,fs.restore.reparse-escape-rejected,安全,重解析点逃逸；使恢复根目录成为指向 outside 的 Junction。,恢复失败且 outside 中没有新建备份树。,PASS,34,evidence/test-results.json,软件测试报告 2 功能测试,指定位置恢复
-TC448,E01,src/platform/filesystem.cpp,fs.ntfs.symbolic-file-and-directory-links,环境权限,符号链接；建立相对文件与目录符号链接，备份后恢复。,链接保持 REPARSE_POINT，文件链接读取与原始目标一致；无权限则跳过。,SKIP；Windows 未授予创建符号链接权限；未计为通过,,evidence/test-results.json,软件测试报告 2 功能测试,NTFS 特殊文件
+TC448,E01,src/platform/filesystem.cpp,fs.ntfs.symbolic-file-and-directory-links,环境权限,符号链接；建立相对文件与目录符号链接，备份后恢复。,链接保持 REPARSE_POINT，文件链接读取与原始目标一致；无权限则跳过。,PASS,0,evidence/test-results.json,软件测试报告 2 功能测试,NTFS 特殊文件
 TC449,E10,src/core/archive.cpp,archive.roundtrip.indexed.none.none,集成,indexed none none；用 indexed 打包、none 压缩及 none 加密，执行 inspect、verify、restore。,完整目录树和文件字节一致，读取器识别正确内部格式。,PASS,125,evidence/test-results.json,软件测试报告 2 功能测试,索引打包解包
 TC450,E10,src/core/archive.cpp,archive.roundtrip.indexed.none.aes256,集成,indexed none aes256；用 indexed 打包、none 压缩及 aes256 加密，执行 inspect、verify、restore。,完整目录树和文件字节一致，读取器识别正确内部格式。,PASS,824,evidence/test-results.json,软件测试报告 2 功能测试,索引打包解包
 TC451,E10,src/core/archive.cpp,archive.roundtrip.indexed.none.chacha20,集成,indexed none chacha20；用 indexed 打包、none 压缩及 chacha20 加密，执行 inspect、verify、restore。,完整目录树和文件字节一致，读取器识别正确内部格式。,PASS,780,evidence/test-results.json,软件测试报告 2 功能测试,索引打包解包
@@ -585,6 +585,11 @@ TC583,E17,src/core/scheduler.cpp,SCH-41 missing autostart binary leaves registry
 TC584,E17,src/core/scheduler.cpp,SCH-42 inaccessible profile does not escape timer callback,异常健壮性,配置目录不可访问；以已有普通文件作为 CHENGVAULT_DATA_HOME，再 tick。,异常不逃出定时回调，原文件字节保持。,PASS,11,evidence/test-results.json,软件测试报告 2 功能测试,定时及淘汰
 TC585,E17,src/core/scheduler.cpp,SCH-43 profile lost during completion does not crash agent,异常健壮性,完成时失去配置目录；任务运行后切换配置目录为普通文件，执行完成回调。,Agent 不崩溃；原任务仍为 running，不能伪记成功。,PASS,49,evidence/test-results.json,软件测试报告 2 功能测试,定时及淘汰
 TC586,E17,src/core/scheduler.cpp,SCH-44 negative retry counter cannot schedule a busy loop,边界健壮性,重试负数边界；failures=-2147483647 且密钥无效后运行。,计数归一到 1，nextRun 晚于当前时间，不形成忙循环。,PASS,92,evidence/test-results.json,软件测试报告 2 功能测试,定时及淘汰
+TC587,E23,src/core/repository.cpp,repository.empty-password-rejected,安全,空密码初始化仓库；不写配置。,REPOSITORY_PASSWORD_EMPTY；原目录不变。,PASS,0,evidence/test-results.json,软件测试报告 2 功能测试,版本仓库
+TC588,E23,src/core/repository.cpp,repository.empty-password-preserves-existing,安全,已有快照时尝试空密码换密钥。,拒绝操作；原仓库仍可打开。,PASS,547,evidence/test-results.json,软件测试报告 2 功能测试,版本仓库
+TC589,E23,src/core/repository.cpp,repository.manifest-size-limit,异常健壮性,构造超过 64 MiB 的清单。,写入前拒绝；不发布快照。,PASS,192,evidence/test-results.json,软件测试报告 2 功能测试,版本仓库
+TC590,E06,src/platform/filesystem.cpp,fs.filter.invalid-time-field,异常健壮性,timeField 设为 createdx 并预览。,FILTER_TIME_FIELD；不执行扫描。,PASS,10,evidence/test-results.json,软件测试报告 2 功能测试,时间筛选
+TC591,E06,src/platform/filesystem.cpp,fs.filter.valid-time-fields,白盒单元,分别使用 created、accessed、modified 预览。,按对应时间字段筛选。,PASS,16,evidence/test-results.json,软件测试报告 2 功能测试,时间筛选
 GUI01,E16,src/gui/main_window.cpp,GUI-Page-1 renders at minimum size,GUI与部署兼容性,启动真实窗口，执行对应控件或备份/恢复/修复交互，检查状态与结果。,窗口渲染和功能断言均满足该测试定义。,PASS,66,evidence/gui-test-results.json,软件测试报告 7 GUI和部署复验,真实窗口操作及GUI关闭后后台继续备份
 GUI02,E16,src/gui/main_window.cpp,GUI-Page-2 renders at minimum size,GUI与部署兼容性,启动真实窗口，执行对应控件或备份/恢复/修复交互，检查状态与结果。,窗口渲染和功能断言均满足该测试定义。,PASS,19,evidence/gui-test-results.json,软件测试报告 7 GUI和部署复验,真实窗口操作及GUI关闭后后台继续备份
 GUI03,E16,src/gui/main_window.cpp,GUI-Page-3 renders at minimum size,GUI与部署兼容性,启动真实窗口，执行对应控件或备份/恢复/修复交互，检查状态与结果。,窗口渲染和功能断言均满足该测试定义。,PASS,16,evidence/gui-test-results.json,软件测试报告 7 GUI和部署复验,真实窗口操作及GUI关闭后后台继续备份

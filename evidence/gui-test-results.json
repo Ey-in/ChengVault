@@ -3,66 +3,66 @@
         {
             "category": "GUI与部署兼容性",
             "detail": "",
-            "durationMs": 66,
+            "durationMs": 30,
             "name": "GUI-Page-1 renders at minimum size",
             "result": "PASS",
-            "timestamp": "2026-10-17T14:27:30.856Z"
+            "timestamp": "2026-10-25T16:12:21.618Z"
         },
         {
             "category": "GUI与部署兼容性",
             "detail": "",
-            "durationMs": 19,
+            "durationMs": 13,
             "name": "GUI-Page-2 renders at minimum size",
             "result": "PASS",
-            "timestamp": "2026-10-17T14:27:30.876Z"
+            "timestamp": "2026-10-25T16:12:21.633Z"
         },
         {
             "category": "GUI与部署兼容性",
             "detail": "",
-            "durationMs": 16,
+            "durationMs": 9,
             "name": "GUI-Page-3 renders at minimum size",
             "result": "PASS",
-            "timestamp": "2026-10-17T14:27:30.892Z"
+            "timestamp": "2026-10-25T16:12:21.643Z"
         },
         {
             "category": "GUI与部署兼容性",
             "detail": "",
-            "durationMs": 18,
+            "durationMs": 9,
             "name": "GUI-Page-4 renders at minimum size",
             "result": "PASS",
-            "timestamp": "2026-10-17T14:27:30.911Z"
+            "timestamp": "2026-10-25T16:12:21.652Z"
         },
         {
             "category": "GUI与部署兼容性",
             "detail": "",
-            "durationMs": 19,
+            "durationMs": 9,
             "name": "GUI-Page-5 renders at minimum size",
             "result": "PASS",
-            "timestamp": "2026-10-17T14:27:30.931Z"
+            "timestamp": "2026-10-25T16:12:21.662Z"
         },
         {
             "category": "GUI与部署兼容性",
             "detail": "",
-            "durationMs": 18,
+            "durationMs": 9,
             "name": "GUI-Page-6 renders at minimum size",
             "result": "PASS",
-            "timestamp": "2026-10-17T14:27:30.950Z"
+            "timestamp": "2026-10-25T16:12:21.670Z"
         },
         {
             "category": "GUI与部署兼容性",
             "detail": "",
-            "durationMs": 16,
+            "durationMs": 9,
             "name": "GUI-Page-7 renders at minimum size",
             "result": "PASS",
-            "timestamp": "2026-10-17T14:27:30.967Z"
+            "timestamp": "2026-10-25T16:12:21.670Z"
         },
         {
             "category": "GUI与部署兼容性",
             "detail": "",
-            "durationMs": 26,
+            "durationMs": 8,
             "name": "GUI-Page-8 renders at minimum size",
             "result": "PASS",
-            "timestamp": "2026-10-17T14:27:30.994Z"
+            "timestamp": "2026-10-25T16:12:21.689Z"
         },
         {
             "category": "安全",
@@ -70,98 +70,98 @@
             "durationMs": 0,
             "name": "GUI-passwords use masked controls",
             "result": "PASS",
-            "timestamp": "2026-10-17T14:27:30.995Z"
+            "timestamp": "2026-10-25T16:12:21.689Z"
         },
         {
             "category": "系统功能",
             "detail": "",
-            "durationMs": 374,
+            "durationMs": 265,
             "name": "GUI-create encrypted archive through real button",
             "result": "PASS",
-            "timestamp": "2026-10-17T14:27:31.388Z"
+            "timestamp": "2026-10-25T16:12:21.952Z"
         },
         {
             "category": "集成",
             "detail": "",
-            "durationMs": 243,
+            "durationMs": 188,
             "name": "GUI-inspect decrypts and displays manifest",
             "result": "PASS",
-            "timestamp": "2026-10-17T14:27:31.631Z"
+            "timestamp": "2026-10-25T16:12:22.151Z"
         },
         {
             "category": "系统功能",
             "detail": "",
-            "durationMs": 333,
+            "durationMs": 202,
             "name": "GUI-restore unpack decompress decrypt roundtrip",
             "result": "PASS",
-            "timestamp": "2026-10-17T14:27:31.964Z"
+            "timestamp": "2026-10-25T16:12:22.353Z"
         },
         {
             "category": "异常健壮性",
             "detail": "",
-            "durationMs": 288,
+            "durationMs": 199,
             "name": "GUI-existing-file conflict reports failure",
             "result": "PASS",
-            "timestamp": "2026-10-17T14:27:32.252Z"
+            "timestamp": "2026-10-25T16:12:22.543Z"
         },
         {
             "category": "安全",
             "detail": "",
-            "durationMs": 236,
+            "durationMs": 199,
             "name": "GUI-wrong-password reports authentication failure",
             "result": "PASS",
-            "timestamp": "2026-10-17T14:27:32.489Z"
+            "timestamp": "2026-10-25T16:12:22.752Z"
         },
         {
             "category": "集成",
             "detail": "",
-            "durationMs": 92,
+            "durationMs": 77,
             "name": "GUI-generate repair sidecar using real button",
             "result": "PASS",
-            "timestamp": "2026-10-17T14:27:32.582Z"
+            "timestamp": "2026-10-25T16:12:22.830Z"
         },
         {
             "category": "安全",
             "detail": "",
-            "durationMs": 263,
+            "durationMs": 197,
             "name": "GUI-damaged encrypted archive is rejected",
             "result": "PASS",
-            "timestamp": "2026-10-17T14:27:32.845Z"
+            "timestamp": "2026-10-25T16:12:23.028Z"
         },
         {
             "category": "集成",
             "detail": "",
-            "durationMs": 295,
+            "durationMs": 222,
             "name": "GUI-repair damaged archive to new file",
             "result": "PASS",
-            "timestamp": "2026-10-17T14:27:33.141Z"
+            "timestamp": "2026-10-25T16:12:23.251Z"
         },
         {
             "category": "集成",
             "detail": "",
-            "durationMs": 529,
+            "durationMs": 515,
             "name": "GUI-repaired encrypted archive restores with original password",
             "result": "PASS",
-            "timestamp": "2026-10-17T14:27:33.671Z"
+            "timestamp": "2026-10-25T16:12:23.767Z"
         },
         {
             "category": "系统功能",
             "detail": "",
-            "durationMs": 130,
+            "durationMs": 56,
             "name": "GUI-compare restored file hashes in production workflow",
             "result": "PASS",
-            "timestamp": "2026-10-17T14:27:33.801Z"
+            "timestamp": "2026-10-25T16:12:23.823Z"
         },
         {
             "category": "GUI与部署兼容性",
             "detail": "",
-            "durationMs": 953,
+            "durationMs": 444,
             "name": "GUI-real pages screenshot export",
             "result": "PASS",
-            "timestamp": "2026-10-17T14:27:34.755Z"
+            "timestamp": "2026-10-25T16:12:24.261Z"
         }
     ],
-    "date": "2026-10-17T14:27:35Z",
+    "date": "2026-10-25T16:12:24Z",
     "failed": 0,
     "passed": 20,
     "skipped": 0

@@ -38,7 +38,6 @@ namespace {
 // Unencrypted checksums detect accidents but do not hide file information.
 // An encrypted header intentionally reveals algorithms and bounded KDF settings.
 // Algorithm choice and storage byte counts are returned for measured reporting.
-constexpr qint64 ManifestLimit = 64LL * 1024 * 1024;
 constexpr quint32 EnvelopeLimit = 4 * 1024 * 1024;
 const QByteArray OuterMagic("CVARCH2\n", 8), IndexMagic("CVIDX01\n", 8);
 struct Location {

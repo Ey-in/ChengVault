@@ -1,77 +1,77 @@
 {
-  "timestampUtc": "2026-10-17T14:29:02.1225407Z",
-  "runDirectory": "D:\\soft-project\\ChengVault\\evidence\\deployment\\run-20261017-222851-46a6d903\\network\\run-20261017-222854-01216578",
+  "timestampUtc": "2026-10-21T07:44:18.1276659Z",
+  "runDirectory": "D:\\Codes\\soft-project\\ChengVault\\evidence\\deployment\\run-20261021-154405-72a006aa\\network\\run-20261021-154411-ccc649d9",
   "runtimeOnly": true,
-  "childPath": "C:\\Windows;C:\\Windows\\System32",
+  "childPath": "C:\\WINDOWS;C:\\WINDOWS\\System32",
   "cliSha256": "2e944096b14b00a3cf29fb32ab741d555264b837e14b59ec4274ae0dc0703603",
   "serverSha256": "986723a7c30e54e80eb4098cc30cdc337459dda658dd90f42a26734a267eb36d",
   "records": [
     {
       "name": "alice-create",
-      "timestampUtc": "2026-10-17T14:28:55.2401143Z",
+      "timestampUtc": "2026-10-21T07:44:12.3983549Z",
       "exitCode": 0,
       "expectedFailure": false,
       "passed": true,
-      "durationMs": 345,
-      "peakWorkingSetBytes": 13082624,
+      "durationMs": 392,
+      "peakWorkingSetBytes": 15790080,
       "peakWorkingSetSamplingMs": 100,
       "result": null
     },
     {
       "name": "alice-device",
-      "timestampUtc": "2026-10-17T14:28:55.3638590Z",
+      "timestampUtc": "2026-10-21T07:44:12.4979825Z",
       "exitCode": 0,
       "expectedFailure": false,
       "passed": true,
-      "durationMs": 96,
+      "durationMs": 88,
       "peakWorkingSetBytes": null,
       "peakWorkingSetSamplingMs": 100,
       "result": null
     },
     {
       "name": "bob-create",
-      "timestampUtc": "2026-10-17T14:28:55.6088082Z",
+      "timestampUtc": "2026-10-21T07:44:12.7398427Z",
       "exitCode": 0,
       "expectedFailure": false,
       "passed": true,
-      "durationMs": 230,
-      "peakWorkingSetBytes": 13099008,
+      "durationMs": 237,
+      "peakWorkingSetBytes": 15826944,
       "peakWorkingSetSamplingMs": 100,
       "result": null
     },
     {
       "name": "bob-device",
-      "timestampUtc": "2026-10-17T14:28:55.6949781Z",
+      "timestampUtc": "2026-10-21T07:44:12.8370393Z",
       "exitCode": 0,
       "expectedFailure": false,
       "passed": true,
-      "durationMs": 71,
+      "durationMs": 92,
       "peakWorkingSetBytes": null,
       "peakWorkingSetSamplingMs": 100,
       "result": null
     },
     {
       "name": "local-initial-backup",
-      "timestampUtc": "2026-10-17T14:28:56.3953575Z",
+      "timestampUtc": "2026-10-21T07:44:13.3935290Z",
       "exitCode": 0,
       "expectedFailure": false,
       "passed": true,
-      "durationMs": 543,
-      "peakWorkingSetBytes": 18550784,
+      "durationMs": 432,
+      "peakWorkingSetBytes": 19333120,
       "peakWorkingSetSamplingMs": 100,
       "result": {
         "bytes": 8388608,
         "details": {
           "compression": "none",
-          "createdUtc": "2026-10-17T14:28:56.369Z",
-          "id": "2629af1f-72e0-48fe-81a2-cc9d07de298c",
+          "createdUtc": "2026-10-21T07:44:13.339Z",
+          "id": "f06d8c99-f9c2-4c33-a290-ab894611a32c",
           "newBytes": 8389808,
           "newChunks": 8,
           "reusedChunks": 0,
-          "snapshotId": "2629af1f-72e0-48fe-81a2-cc9d07de298c"
+          "snapshotId": "f06d8c99-f9c2-4c33-a290-ab894611a32c"
         },
         "files": 1,
-        "output": "D:/soft-project/ChengVault/evidence/deployment/run-20261017-222851-46a6d903/network/run-20261017-222854-01216578/repository",
+        "output": "D:/Codes/soft-project/ChengVault/evidence/deployment/run-20261021-154405-72a006aa/network/run-20261021-154411-ccc649d9/repository",
         "storedBytes": 8389808,
         "success": true,
         "warnings": []
@@ -79,53 +79,53 @@
     },
     {
       "name": "network-initial-upload",
-      "timestampUtc": "2026-10-17T14:28:57.2373587Z",
+      "timestampUtc": "2026-10-21T07:44:14.1266939Z",
       "exitCode": 0,
       "expectedFailure": false,
       "passed": true,
-      "durationMs": 822,
-      "peakWorkingSetBytes": 28225536,
+      "durationMs": 728,
+      "peakWorkingSetBytes": 29417472,
       "peakWorkingSetSamplingMs": 100,
       "result": {
-        "bytes": 8393519,
+        "bytes": 8393607,
         "details": {
-          "payloadBytes": 8393519,
+          "payloadBytes": 8393607,
           "receivedBytes": 5005,
-          "repositoryId": "65da9601-1168-42b0-ac2e-ae2eef9a5973",
+          "repositoryId": "c6596e84-8329-4b2f-8848-aac6b584bc8c",
           "resumedBytes": 0,
           "reusedObjects": 0,
-          "sentBytes": 11199521,
+          "sentBytes": 11199637,
           "uploadedObjects": 10
         },
         "files": 10,
-        "output": "65da9601-1168-42b0-ac2e-ae2eef9a5973",
-        "storedBytes": 8393519,
+        "output": "c6596e84-8329-4b2f-8848-aac6b584bc8c",
+        "storedBytes": 8393607,
         "success": true,
         "warnings": []
       }
     },
     {
       "name": "network-repeat-upload",
-      "timestampUtc": "2026-10-17T14:28:57.5890408Z",
+      "timestampUtc": "2026-10-21T07:44:14.4262968Z",
       "exitCode": 0,
       "expectedFailure": false,
       "passed": true,
-      "durationMs": 338,
-      "peakWorkingSetBytes": 14553088,
+      "durationMs": 295,
+      "peakWorkingSetBytes": 15826944,
       "peakWorkingSetSamplingMs": 100,
       "result": {
         "bytes": 0,
         "details": {
           "payloadBytes": 0,
           "receivedBytes": 805,
-          "repositoryId": "65da9601-1168-42b0-ac2e-ae2eef9a5973",
+          "repositoryId": "c6596e84-8329-4b2f-8848-aac6b584bc8c",
           "resumedBytes": 0,
           "reusedObjects": 10,
           "sentBytes": 2689,
           "uploadedObjects": 0
         },
         "files": 0,
-        "output": "65da9601-1168-42b0-ac2e-ae2eef9a5973",
+        "output": "c6596e84-8329-4b2f-8848-aac6b584bc8c",
         "storedBytes": 0,
         "success": true,
         "warnings": []
@@ -133,26 +133,26 @@
     },
     {
       "name": "local-changed-backup",
-      "timestampUtc": "2026-10-17T14:28:58.0597931Z",
+      "timestampUtc": "2026-10-21T07:44:14.8346551Z",
       "exitCode": 0,
       "expectedFailure": false,
       "passed": true,
-      "durationMs": 451,
-      "peakWorkingSetBytes": 19415040,
+      "durationMs": 400,
+      "peakWorkingSetBytes": 20189184,
       "peakWorkingSetSamplingMs": 100,
       "result": {
         "bytes": 8388608,
         "details": {
           "compression": "none",
-          "createdUtc": "2026-10-17T14:28:58.024Z",
-          "id": "00352aa8-d4e5-4d10-8af1-0bffbe48937b",
+          "createdUtc": "2026-10-21T07:44:14.791Z",
+          "id": "e939f33d-3c16-437f-bc96-4b6817ea5f9e",
           "newBytes": 1048726,
           "newChunks": 1,
           "reusedChunks": 7,
-          "snapshotId": "00352aa8-d4e5-4d10-8af1-0bffbe48937b"
+          "snapshotId": "e939f33d-3c16-437f-bc96-4b6817ea5f9e"
         },
         "files": 1,
-        "output": "D:/soft-project/ChengVault/evidence/deployment/run-20261017-222851-46a6d903/network/run-20261017-222854-01216578/repository",
+        "output": "D:/Codes/soft-project/ChengVault/evidence/deployment/run-20261021-154405-72a006aa/network/run-20261021-154411-ccc649d9/repository",
         "storedBytes": 1048726,
         "success": true,
         "warnings": []
@@ -160,60 +160,60 @@
     },
     {
       "name": "network-incremental-upload",
-      "timestampUtc": "2026-10-17T14:28:58.4804872Z",
+      "timestampUtc": "2026-10-21T07:44:15.1942071Z",
       "exitCode": 0,
       "expectedFailure": false,
       "passed": true,
-      "durationMs": 408,
-      "peakWorkingSetBytes": 28143616,
+      "durationMs": 354,
+      "peakWorkingSetBytes": 29392896,
       "peakWorkingSetSamplingMs": 100,
       "result": {
-        "bytes": 1051913,
+        "bytes": 1052001,
         "details": {
-          "payloadBytes": 1051913,
+          "payloadBytes": 1052001,
           "receivedBytes": 1531,
-          "repositoryId": "65da9601-1168-42b0-ac2e-ae2eef9a5973",
+          "repositoryId": "c6596e84-8329-4b2f-8848-aac6b584bc8c",
           "resumedBytes": 0,
           "reusedObjects": 10,
-          "sentBytes": 1406479,
+          "sentBytes": 1406595,
           "uploadedObjects": 2
         },
         "files": 2,
-        "output": "65da9601-1168-42b0-ac2e-ae2eef9a5973",
-        "storedBytes": 1051913,
+        "output": "c6596e84-8329-4b2f-8848-aac6b584bc8c",
+        "storedBytes": 1052001,
         "success": true,
         "warnings": []
       }
     },
     {
       "name": "alice-list",
-      "timestampUtc": "2026-10-17T14:28:58.7257156Z",
+      "timestampUtc": "2026-10-21T07:44:15.4425485Z",
       "exitCode": 0,
       "expectedFailure": false,
       "passed": true,
-      "durationMs": 233,
-      "peakWorkingSetBytes": 14086144,
+      "durationMs": 244,
+      "peakWorkingSetBytes": 16470016,
       "peakWorkingSetSamplingMs": 100,
       "result": {
         "repositories": [
           {
-            "id": "65da9601-1168-42b0-ac2e-ae2eef9a5973",
+            "id": "c6596e84-8329-4b2f-8848-aac6b584bc8c",
             "objects": 12,
-            "size": 9445432,
+            "size": 9445608,
             "snapshots": 2,
-            "updatedUtc": "2026-10-17T14:28:58.444Z"
+            "updatedUtc": "2026-10-21T07:44:15.144Z"
           }
         ]
       }
     },
     {
       "name": "bob-list",
-      "timestampUtc": "2026-10-17T14:28:58.9857064Z",
+      "timestampUtc": "2026-10-21T07:44:15.7009103Z",
       "exitCode": 0,
       "expectedFailure": false,
       "passed": true,
-      "durationMs": 250,
-      "peakWorkingSetBytes": 15470592,
+      "durationMs": 254,
+      "peakWorkingSetBytes": 16465920,
       "peakWorkingSetSamplingMs": 100,
       "result": {
         "repositories": []
@@ -221,22 +221,22 @@
     },
     {
       "name": "alice-download",
-      "timestampUtc": "2026-10-17T14:28:59.9532827Z",
+      "timestampUtc": "2026-10-21T07:44:16.4156779Z",
       "exitCode": 0,
       "expectedFailure": false,
       "passed": true,
-      "durationMs": 952,
-      "peakWorkingSetBytes": 20131840,
+      "durationMs": 708,
+      "peakWorkingSetBytes": 21319680,
       "peakWorkingSetSamplingMs": 100,
       "result": {
-        "bytes": 9445432,
+        "bytes": 9445608,
         "details": {
-          "receivedBytes": 12600436,
-          "repositoryId": "65da9601-1168-42b0-ac2e-ae2eef9a5973",
+          "receivedBytes": 12600668,
+          "repositoryId": "c6596e84-8329-4b2f-8848-aac6b584bc8c",
           "sentBytes": 6911
         },
         "files": 12,
-        "output": "D:/soft-project/ChengVault/evidence/deployment/run-20261017-222851-46a6d903/network/run-20261017-222854-01216578/download",
+        "output": "D:/Codes/soft-project/ChengVault/evidence/deployment/run-20261021-154405-72a006aa/network/run-20261021-154411-ccc649d9/download",
         "storedBytes": 0,
         "success": true,
         "warnings": []
@@ -244,12 +244,12 @@
     },
     {
       "name": "download-verify",
-      "timestampUtc": "2026-10-17T14:29:00.3569750Z",
+      "timestampUtc": "2026-10-21T07:44:16.7580285Z",
       "exitCode": 0,
       "expectedFailure": false,
       "passed": true,
-      "durationMs": 391,
-      "peakWorkingSetBytes": 17915904,
+      "durationMs": 338,
+      "peakWorkingSetBytes": 19124224,
       "peakWorkingSetSamplingMs": 100,
       "result": {
         "bytes": 9437184,
@@ -266,20 +266,20 @@
     },
     {
       "name": "download-snapshots",
-      "timestampUtc": "2026-10-17T14:29:00.6611921Z",
+      "timestampUtc": "2026-10-21T07:44:17.0112460Z",
       "exitCode": 0,
       "expectedFailure": false,
       "passed": true,
-      "durationMs": 289,
-      "peakWorkingSetBytes": 12763136,
+      "durationMs": 249,
+      "peakWorkingSetBytes": 15835136,
       "peakWorkingSetSamplingMs": 100,
       "result": {
         "snapshots": [
           {
             "compression": "none",
-            "createdUtc": "2026-10-17T14:28:58.024Z",
+            "createdUtc": "2026-10-21T07:44:14.791Z",
             "fileCount": 1,
-            "id": "00352aa8-d4e5-4d10-8af1-0bffbe48937b",
+            "id": "e939f33d-3c16-437f-bc96-4b6817ea5f9e",
             "newBytes": 1048726,
             "newChunks": 1,
             "reusedChunks": 7,
@@ -287,9 +287,9 @@
           },
           {
             "compression": "none",
-            "createdUtc": "2026-10-17T14:28:56.369Z",
+            "createdUtc": "2026-10-21T07:44:13.339Z",
             "fileCount": 1,
-            "id": "2629af1f-72e0-48fe-81a2-cc9d07de298c",
+            "id": "f06d8c99-f9c2-4c33-a290-ab894611a32c",
             "newBytes": 8389808,
             "newChunks": 8,
             "reusedChunks": 0,
@@ -300,12 +300,12 @@
     },
     {
       "name": "download-restore",
-      "timestampUtc": "2026-10-17T14:29:01.4170482Z",
+      "timestampUtc": "2026-10-21T07:44:17.6277619Z",
       "exitCode": 0,
       "expectedFailure": false,
       "passed": true,
-      "durationMs": 741,
-      "peakWorkingSetBytes": 18345984,
+      "durationMs": 611,
+      "peakWorkingSetBytes": 19103744,
       "peakWorkingSetSamplingMs": 100,
       "result": {
         "bytes": 8388608,
@@ -314,7 +314,7 @@
           "metadataStrict": true
         },
         "files": 1,
-        "output": "D:/soft-project/ChengVault/evidence/deployment/run-20261017-222851-46a6d903/network/run-20261017-222854-01216578/restored",
+        "output": "D:/Codes/soft-project/ChengVault/evidence/deployment/run-20261021-154405-72a006aa/network/run-20261021-154411-ccc649d9/restored",
         "storedBytes": 0,
         "success": true,
         "warnings": []
@@ -322,35 +322,35 @@
     },
     {
       "name": "bob-forbidden-download",
-      "timestampUtc": "2026-10-17T14:29:01.7372024Z",
+      "timestampUtc": "2026-10-21T07:44:17.8813632Z",
       "exitCode": 1,
       "expectedFailure": true,
       "passed": true,
-      "durationMs": 277,
-      "peakWorkingSetBytes": 14450688,
+      "durationMs": 234,
+      "peakWorkingSetBytes": 16719872,
       "peakWorkingSetSamplingMs": 100,
       "result": null
     },
     {
       "name": "wrong-login-password",
-      "timestampUtc": "2026-10-17T14:29:02.0134665Z",
+      "timestampUtc": "2026-10-21T07:44:18.1048472Z",
       "exitCode": 1,
       "expectedFailure": true,
       "passed": true,
-      "durationMs": 263,
-      "peakWorkingSetBytes": 15597568,
+      "durationMs": 219,
+      "peakWorkingSetBytes": 15347712,
       "peakWorkingSetSamplingMs": 100,
       "result": null
     },
     {
       "name": "network-transfer-comparison",
       "passed": true,
-      "initialPayloadBytes": 8393519,
+      "initialPayloadBytes": 8393607,
       "repeatPayloadBytes": 0,
-      "incrementalPayloadBytes": 1051913,
-      "initialFramedBytes": 11199521,
+      "incrementalPayloadBytes": 1052001,
+      "initialFramedBytes": 11199637,
       "repeatFramedBytes": 2689,
-      "incrementalFramedBytes": 1406479
+      "incrementalFramedBytes": 1406595
     }
   ]
 }

@@ -1,15 +1,15 @@
-# NTFS 类型与元数据支持及复验
+﻿# NTFS 类型与元数据支持及复验
 
-本项目面向 Windows 10/11 x64 与 NTFS。Windows 系统调用负责读取或建立
+ChengVault面向 Windows 10/11 x64 与 NTFS。Windows 系统调用负责读取或建立
 文件系统对象；对象枚举、筛选、元数据序列化、块存储与恢复顺序由项目代码实现。
 Linux FIFO、块设备和字符设备节点不是 NTFS 目录树中可按同类方式恢复的对象，
-本项目不把 Windows 命名管道误称为磁盘文件，也不宣称支持恢复 Linux 设备节点。
+ChengVault不把 Windows 命名管道误称为磁盘文件，也不支持恢复 Linux 设备节点。
 
 | 对象 | 保存与恢复 | 验证方式与权限条件 |
 |---|---|---|
 | 普通文件、空文件、目录 | 保留相对树结构与数据；空目录显式登记 | 比较文件字节、长度和目录存在性 |
-| 文件符号链接 | 保存目标文本与是否为目录，恢复为符号链接 | 检查 REPARSE_POINT、读取目标；Windows 开发者模式或 SeCreateSymbolicLinkPrivilege |
-| 目录符号链接 | 同上；扫描绝不递归链接目标 | 清单中没有链接下重复子树，恢复后仍是目录链接 |
+| 文件符号链接 | 保存目标文本、是否为目录和链接自身属性，恢复为符号链接 | 检查 REPARSE_POINT、LinkType、目标文本、链接属性掩码、目标属性前后不变、链接内容哈希；Windows 开发者模式或 SeCreateSymbolicLinkPrivilege |
+| 目录符号链接 | 同上；扫描绝不递归链接目标 | 清单中没有链接下重复子树；恢复后仍是目录链接，链接属性一致，目标属性未被改写 |
 | 硬链接 | 按卷序号和文件 ID 识别，后续路径引用首个选中实例 | 两条恢复路径具有相同 NTFS 文件 ID；共享数据和 ADS |
 | Junction | 保存 mount-point reparse payload 并通过 FSCTL_SET_REPARSE_POINT 重建 | 检查 reparse tag 和目标，不跟随扫描；需目标目录写权限 |
 | 稀疏文件 | 保存逻辑长度和 FSCTL_QUERY_ALLOCATED_RANGES 区间，仅保存有分配的块 | 恢复后 SPARSE_FILE 标志、逻辑长度及数据区间一致；测试超过 4 GiB 的逻辑长度 |
@@ -20,7 +20,7 @@ Linux FIFO、块设备和字符设备节点不是 NTFS 目录树中可按同类�
 这是“保留链接语义”，不是自动把所有链接重新绑定到恢复目录。
 未知 reparse tag 会明确失败，避免把 OneDrive 占位符等对象误作普通文件完整备份。
 文件正在被其他进程写入时，捕获使用不共享写权限的读句柄，冲突明确报 FILE_BUSY；
-后台任务可以重试。该实现不声称具有 VSS 或数据库跨文件事务一致性。
+后台任务可以重试。该实现没有 VSS，也不能保证数据库跨文件事务一致性。
 
 | 元数据 | 内容 | 验证与限制 |
 |---|---|---|
@@ -28,9 +28,9 @@ Linux FIFO、块设备和字符设备节点不是 NTFS 目录树中可按同类�
 | 组 | primary group SID | 比较 SID；非本用户令牌允许的组可能需提升权限 |
 | 时间 | 创建、最后访问、最后修改的 100ns FILETIME | 比较实际 API 读回值；NTFS 访问时间更新策略可能是延迟或关闭 |
 | 权限 | DACL 的 ACE 原始数据、保护/继承状态、null-DACL 区别 | 比较 ACE 与保护继承位；READ_CONTROL 用于读取，WRITE_DAC 用于恢复 DACL；改变属主/组才请求 WRITE_OWNER |
-| 属性 | 只读、隐藏、系统、归档、临时、不索引、离线 | 实际类型位由创建对象决定，普通属性通过 SetFileAttributes 恢复 |
+| 属性 | 只读、隐藏、系统、归档、临时、不索引、离线 | 普通对象和链接均按属性位恢复；外部验收比较链接自身属性、目标属性前后不变与链接内容哈希（W31） |
 
-不宣称恢复 SACL 审计规则、EFS 私钥或 NTFS 压缩状态。EFS 文件是否可读取由当前
+不恢复 SACL 审计规则、EFS 私钥或 NTFS 压缩状态。EFS 文件是否可读取由当前
 Windows 用户的有效访问能力决定。默认 strictMetadata=true，权限/属主/时间恢复失败
 会使任务失败；显式宽松模式会保留清晰 warnings，不能将警告描述为全部元数据恢复成功。
 文件数据永远不因宽松模式而忽略读取或校验失败。
@@ -58,7 +58,12 @@ Windows 用户的有效访问能力决定。默认 strictMetadata=true，权限/
    备份并恢复到新的独占 NTFS 目录，分别检查内容、链接身份、流及 ACL。
 5. 对非当前用户的属主/DACL 做受控权限测试：无权限运行应明确失败；有权限环境
    才验证成功恢复。测试中不得用“忽略错误”代替属主/权限恢复证据。
-6. 保留系统版本、卷文件系统、权限条件、测试日志和实测截图，与报告对应。
+6. 运行 `verification\symlink-acceptance.ps1`（源码入口 `scripts\symlink-acceptance.ps1`），
+   只有 `result` 为 `PASS` 才算通过；重点看 `linkAttributesMatch`、
+   `targetAttributesUnchanged`、`restoredTargetAttributesMatch`、`payloadMatch` 四项。
+7. 证据 `evidence\symlink-acceptance-results.json` 顶层放最新结果，`history` 保留旧的
+   `SKIP_PERMISSION` 记录；没有权限时保持 `SKIP_PERMISSION`，不得改写成 PASS。
+8. 保留系统版本、卷文件系统、权限条件、测试日志和实测截图，与报告对应。
 
 自动测试的权限拒绝用例给临时文件配置拒绝读取的真实 DACL，并使用禁用额外权限的
 受限令牌执行捕获；结束后还原原 DACL 和令牌。这样不会把管理员的备份特权绕过
@@ -71,7 +76,7 @@ Windows 用户的有效访问能力决定。默认 strictMetadata=true，权限/
 复验应在可丢弃的小容量测试卷进行，不能填满用户工作磁盘来制造测试条件。
 
 实际测试结果以 `test-results.json` 等运行产物为准；本文描述实现边界和复验方法，
-不等同于声称所有环境与权限场景已经通过。
+不等同于所有环境与权限场景已经通过。
 
 实现参考：Microsoft 的 [SetSecurityInfo 文档](https://learn.microsoft.com/en-us/windows/win32/api/aclapi/nf-aclapi-setsecurityinfo)
 说明使用 MAXIMUM_ALLOWED 打开的句柄不向子对象传播 ACE；本实现利用该行为逐对象恢复
