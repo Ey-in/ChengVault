@@ -1,0 +1,64 @@
+{
+  "recordType": "current-machine independent re-verification (plan.md P1-2)",
+  "timestampLocal": "2026-10-21 15:48:23 +08:00",
+  "machine": {
+    "hostName": "<redacted-host>",
+    "machineIdSha256": "35c8fd52abfdc1022052970cf225561f0acafe2f0694380427818553169faa2e",
+    "osCaption": "Microsoft Windows 11 专业版",
+    "osVersion": "10.0.26200",
+    "osBuild": "26200",
+    "cpu": "Intel(R) Core(TM) i7-14650HX",
+    "physicalCores": 16,
+    "logicalProcessors": 24,
+    "memoryGB": 31.7
+  },
+  "package": {
+    "runtimeDirectory": "D:\\Codes\\soft-project\\ChengVault\\dist\\ChengVault-1.0-windows-x64",
+    "version": "1.0.0",
+    "sourceCommit": "d7984eb0e9b45302a02422a0b82a896850dcf17d",
+    "builtAtUtc": "2026-10-17T14:38:10.5101099Z",
+    "qt": "6.11.2"
+  },
+  "programs": {
+    "gui": {
+      "launched": true,
+      "evidence": "runtime-gui PASS",
+      "sha256": "33dd221f94db215a39cda7f9ee525753a2d2d7135551e7678182a3441a489249"
+    },
+    "cli": {
+      "launched": true,
+      "evidence": "runtime-backup / runtime-verify / runtime-restore PASS",
+      "sha256": "2e944096b14b00a3cf29fb32ab741d555264b837e14b59ec4274ae0dc0703603"
+    },
+    "agent": {
+      "launched": true,
+      "wasStillRunningAfterSeconds": 3,
+      "forcedStop": true,
+      "sha256": "08f0d212105a1ae9cc3bca5891bbae767ed268a5c398299b8260686fc0e94064"
+    },
+    "server": {
+      "launched": true,
+      "evidence": "runtime-two-account-network PASS",
+      "sha256": "986723a7c30e54e80eb4098cc30cdc337459dda658dd90f42a26734a267eb36d"
+    }
+  },
+  "checks": {
+    "guiScreenshots": 8,
+    "guiTests": "20 passed / 0 failed / 0 skipped",
+    "backgroundTests": "5 passed / 0 failed / 0 skipped",
+    "networkCases": 18,
+    "networkFailures": 0,
+    "childPathWithoutDevTools": "C:\\WINDOWS;C:\\WINDOWS\\System32",
+    "pluginEnvironmentCleared": true
+  },
+  "evidence": {
+    "deploymentRun": "D:\\Codes\\soft-project\\ChengVault\\evidence\\deployment\\run-20261021-154405-72a006aa",
+    "deploymentResults": "evidence\\deployment-results.json",
+    "networkResults": "D:\\Codes\\soft-project\\ChengVault\\evidence\\deployment\\run-20261021-154405-72a006aa\\network\\run-20261021-154411-ccc649d9\\network-results.json"
+  },
+  "notes": [
+    "deployment-smoke hardcodes independentMachine=false; this file is a separate machine-identity record.",
+    "Package is the 2026-10-17 baseline build (sourceCommit d7984eb0e9b45302a02422a0b82a896850dcf17d); the D7 package must be re-verified.",
+    "hostName and machineIdSha256 identify this machine; redact hostName before committing this file to the public repository."
+  ]
+}

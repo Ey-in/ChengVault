@@ -3,13 +3,13 @@
   "result": "PASS_SEAFTEST_ONAY",
   "clientHost": {
     "machineIdSha256": "778d1e269ec7b2af37054dfe6f05737a85a3fa1fedba4e7b4bcd9bce22891e9c",
-    "hostName": "LOCAL-TEST-HOST",
+    "hostName": "AAPTOP-8PPU7ATE",
     "os": "Microsoft Windows NT 10.0.26200.0",
     "fileSystem": "NTFS"
   },
   "serverHost": {
     "machineIdSha256": "778d1e269ec7b2af37054dfe6f05737a85a3fa1fedba4e7b4bcd9bce22891e9c",
-    "hostName": "LOCAL-TEST-HOST",
+    "hostName": "AAPTOP-8PPU7ATE",
     "os": "Microsoft Windows NT 10.0.26200.0",
     "fileSystem": "NTFS"
   },

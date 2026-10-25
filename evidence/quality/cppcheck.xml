@@ -3,13 +3,13 @@
     <cppcheck version="2.21.0"/>
     <errors>
         <error id="returnByReference" severity="performance" msg="Function &apos;masterKey()&apos; should return member &apos;key_&apos; by const reference." verbose="Function &apos;masterKey()&apos; should return member &apos;key_&apos; by const reference." file0="src/apps/cli_main.cpp">
-            <location file="D:/soft-project/ChengVault/include/chengvault/repository.hpp" line="44" column="16"/>
+            <location file="D:/Codes/soft-project/ChengVault-team/include/chengvault/repository.hpp" line="46" column="16"/>
         </error>
         <error id="returnByReference" severity="performance" msg="Function &apos;path()&apos; should return member &apos;path_&apos; by const reference." verbose="Function &apos;path()&apos; should return member &apos;path_&apos; by const reference." file0="src/apps/cli_main.cpp">
-            <location file="D:/soft-project/ChengVault/include/chengvault/repository.hpp" line="47" column="13"/>
+            <location file="D:/Codes/soft-project/ChengVault-team/include/chengvault/repository.hpp" line="49" column="13"/>
         </error>
         <error id="useStlAlgorithm" severity="style" msg="Consider using std::accumulate algorithm instead of a raw loop." verbose="Consider using std::accumulate algorithm instead of a raw loop." cwe="398" file0="src/core/archive.cpp">
-            <location file="src/core/archive.cpp" line="230" column="13"/>
+            <location file="src/core/archive.cpp" line="229" column="13"/>
         </error>
         <error id="useStlAlgorithm" severity="style" msg="Consider using std::transform algorithm instead of a raw loop." verbose="Consider using std::transform algorithm instead of a raw loop." cwe="398" file0="src/core/crypto.cpp">
             <location file="src/core/crypto.cpp" line="132" column="19"/>

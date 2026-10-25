@@ -530,6 +530,18 @@ void filesystemAdversarialTests(cv::test::Suite &suite) {
         f.plan.filters = {{"timeField", "created"}, {"timeTo", "2000-01-01T00:00:00Z"}};
         check(f.capture()["fileCount"].toInteger() == 0);
     });
+    suite.run("fs.filter.invalid-time-field", "异常健壮性", [] {
+        Fixture f;
+        f.plan.filters = {{"timeField", "bogus"}, {"timeFrom", "2000-01-01T00:00:00Z"}};
+        errorCode("FILTER_TIME_FIELD", [&] { f.capture(); });
+    });
+    suite.run("fs.filter.valid-time-fields", "白盒单元", [] {
+        Fixture f;
+        for (const auto *field : {"created", "accessed", "modified"}) {
+            f.plan.filters = {{"timeField", field}, {"timeFrom", "2000-01-01T00:00:00Z"}};
+            check(f.capture()["fileCount"].toInteger() > 0);
+        }
+    });
     suite.run("fs.filter.content-too-long", "异常健壮性", [] {
         Fixture f;
         f.plan.filters = {{"contentContains", QString(cv::ChunkSize + 1, 'x')}};

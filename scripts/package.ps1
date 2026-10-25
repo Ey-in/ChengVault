@@ -137,7 +137,11 @@ try {
         Copy-Item -LiteralPath (Join-Path $projectRoot ('scripts\'+$runner)) -Destination (Join-Path $verificationRoot $runner)
     }
     foreach($file in @('README.md','PROJECT_NOTICE.txt')) { if(Test-Path -LiteralPath (Join-Path $projectRoot $file)) { Copy-Item -LiteralPath (Join-Path $projectRoot $file) -Destination (Join-Path $stage $file) } }
-    $commit=(& git -C $projectRoot rev-parse HEAD).Trim()
+    $commit='local-build'
+    try {
+        $value=(& git -C $projectRoot rev-parse HEAD 2>$null)
+        if($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($value)) { $commit=$value.Trim() }
+    } catch { }
     $buildTools=[ordered]@{
         compiler=(& (Join-Path $toolchainRoot 'bin\g++.exe') --version | Select-Object -First 1)
         cmake=(& (Join-Path $toolchainRoot 'bin\cmake.exe') --version | Select-Object -First 1)

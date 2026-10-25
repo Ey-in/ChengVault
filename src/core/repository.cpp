@@ -89,6 +89,7 @@ Repository::Repository(QString path, QString password)
     : path_(QDir(path).absolutePath()), password_(std::move(password)) {
     if (!QFileInfo::exists(path_ + "/repository.json"))
         return;
+    require(!password_.isEmpty(), "REPOSITORY_PASSWORD_EMPTY", "仓库密码不能为空");
     config_ = readJson(path_ + "/repository.json");
     validateConfig(config_);
     // Authenticate before exposing any decrypted manifest or data to callers.
@@ -121,6 +122,7 @@ Repository Repository::withMasterKey(const QString &path, const QByteArray &key)
 }
 
 void Repository::wrapKey(const QString &password) {
+    require(!password.isEmpty(), "REPOSITORY_PASSWORD_EMPTY", "仓库密码不能为空");
     // A new salt invalidates precomputed guesses and changes the wrapping key.
     // seal additionally generates independent envelope salt/nonce material.
     // QSaveFile publication in writeJson preserves the old password envelope
@@ -140,6 +142,7 @@ void Repository::init(const QString &cipher) {
     // Single-file archives offer an unencrypted mode; repositories consistently
     // encrypt all content and metadata, including when a default plan says none.
     require(config_.isEmpty(), "REPOSITORY_EXISTS", "仓库已初始化");
+    require(!password_.isEmpty(), "REPOSITORY_PASSWORD_EMPTY", "仓库密码不能为空");
     require(cipher == "chacha20" || cipher == "aes256" || cipher == "aes256-ctr", "REPOSITORY_CIPHER",
             "仓库必须选择 AES-256 或 ChaCha20");
     QDir dir(path_);
@@ -158,6 +161,14 @@ void Repository::init(const QString &cipher) {
     password_.clear();
 }
 
+QByteArray serializeSnapshot(const QJsonObject &snapshot) {
+    // The manifest is the snapshot commit record. Enforce the shared 64 MiB
+    // format ceiling before any write so an oversized tree cannot create a
+    // snapshot that readers later refuse to parse.
+    const auto bytes = QJsonDocument(snapshot).toJson(QJsonDocument::Compact);
+    require(bytes.size() <= ManifestLimit, "MANIFEST_SIZE", "快照清单超过 64 MiB 上限");
+    return bytes;
+}
 TaskResult Repository::backup(const BackupPlan &plan, const Context &context) {
     if (config_.isEmpty())
         init(plan.cipher == "none" ? "chacha20" : plan.cipher);
@@ -218,9 +229,9 @@ TaskResult Repository::backup(const BackupPlan &plan, const Context &context) {
     // The manifest is the commit record. Every referenced block already exists
     // before this atomic write. Cancellation or a crash can leave orphan blocks,
     // but can never advertise a snapshot that was only partly captured.
+    const auto serialized = serializeSnapshot(snapshot);
     atomicWrite(snapshotPath(path_, objectId),
-                crypto::seal(QJsonDocument(snapshot).toJson(QJsonDocument::Compact), key_,
-                             config_.value("cipher").toString()));
+                crypto::seal(serialized, key_, config_.value("cipher").toString()));
     TaskResult result;
     result.files = snapshot.value("fileCount").toVariant().toULongLong();
     result.bytes = snapshot.value("totalBytes").toVariant().toULongLong();

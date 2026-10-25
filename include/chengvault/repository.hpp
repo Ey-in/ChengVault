@@ -2,6 +2,8 @@
 #include "common.hpp"
 
 namespace cv {
+// Serializes a manifest and rejects sizes above the shared 64 MiB format limit.
+QByteArray serializeSnapshot(const QJsonObject &snapshot);
 // A repository owns a stable random key. Changing a password only rewrites the
 // key envelope; existing encrypted chunks and snapshots remain byte-identical.
 class Repository {

@@ -583,6 +583,10 @@ QWidget *MainWindow::backupPage() {
         const auto p = plan();
         const bool repo = choices_["backup.storage"]->currentData().toString() == "repository";
         const bool repair = checks_["backup.repair"]->isChecked();
+        if (repo && p.password.isEmpty()) {
+            QMessageBox::warning(this, "仓库密码不能为空", "仓库模式需要非空密码。");
+            return;
+        }
         runTask(
             "正在创建备份",
             [p, repo, repair](const cv::Context &c) {
@@ -981,6 +985,7 @@ QWidget *MainWindow::automationPage() {
             "保存后台任务",
             [p, job](const cv::Context &) {
                 cv::require(job["keepCount"].toInt() > 0, "BAD_RETENTION", "至少保留一个成功版本");
+                cv::require(!p.password.isEmpty(), "REPOSITORY_PASSWORD_EMPTY", "仓库密码不能为空");
                 cv::Repository repo(p.destination, p.password);
                 if (repo.masterKey().isEmpty())
                     repo.init(p.cipher == "none" ? "chacha20" : p.cipher);

@@ -1,0 +1,15 @@
+portable-gui : PASS
+portable-pax-aes-huffman-backup : PASS
+portable-archive-verify : PASS
+portable-archive-restore : PASS
+local-initial-snapshot : PASS
+network-initial-upload : PASS
+network-repeat-upload : PASS
+local-one-byte-changed-snapshot : PASS
+network-incremental-upload : PASS
+bob-list-isolated : PASS
+bob-download-rejected : PASS
+alice-download : PASS
+downloaded-repository-verify : PASS
+downloaded-snapshot-strict-restore : PASS
+restored-content-and-incremental-byte-counters : PASS

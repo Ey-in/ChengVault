@@ -77,6 +77,9 @@ struct TaskResult {
 };
 
 constexpr qsizetype ChunkSize = 1024 * 1024;
+// Maximum serialized manifest size accepted by the archive and repository
+// formats; readers reject larger metadata before allocating or parsing it.
+constexpr qint64 ManifestLimit = 64LL * 1024 * 1024;
 // Filesystem capture and restore exchange bounded chunks through these two
 // callbacks, keeping archive and repository storage independent of NTFS I/O.
 using ChunkSink = std::function<QString(const QByteArray &)>;

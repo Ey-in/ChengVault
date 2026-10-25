@@ -124,6 +124,49 @@ void repositoryNetworkTests(cv::test::Suite &suite) {
         check(key.size() == 32);
         check(cv::readFile(plan.destination + "/repository.json").indexOf("correct backup password") < 0);
     });
+    suite.run("repository.empty-password-rejected", "安全", [] {
+        QTemporaryDir dir;
+        check(dir.isValid());
+        const auto path = dir.path() + "/repo";
+        try {
+            cv::Repository repo(path, "");
+            repo.init();
+            check(false, "empty repository password accepted");
+        } catch (const cv::Error &e) {
+            check(e.code == "REPOSITORY_PASSWORD_EMPTY", "unexpected error " + e.code);
+        }
+        check(!QFileInfo::exists(path + "/repository.json"));
+    });
+    suite.run("repository.empty-password-preserves-existing", "安全", [] {
+        QTemporaryDir dir;
+        check(dir.isValid());
+        const auto path = dir.path() + "/repo";
+        {
+            cv::Repository repo(path, "correct password");
+            repo.init();
+        }
+        try {
+            cv::Repository repo(path, "");
+            check(false, "empty password opened an existing repository");
+        } catch (const cv::Error &e) {
+            check(e.code == "REPOSITORY_PASSWORD_EMPTY", "unexpected error " + e.code);
+        }
+        cv::Repository repo(path, "correct password");
+        check(repo.list().isEmpty());
+    });
+    suite.run("repository.manifest-size-limit", "异常健壮性", [] {
+        QJsonObject normal{{"version", 1}, {"entries", QJsonArray{}}};
+        check(cv::serializeSnapshot(normal).size() < cv::ManifestLimit);
+        QJsonObject oversized{{"version", 1},
+                              {"entries", QJsonArray{}},
+                              {"padding", QString(cv::ManifestLimit + 1024, 'x')}};
+        try {
+            (void)cv::serializeSnapshot(oversized);
+            check(false, "oversized manifest accepted");
+        } catch (const cv::Error &e) {
+            check(e.code == "MANIFEST_SIZE", "unexpected error " + e.code);
+        }
+    });
     suite.run("repository.first-snapshot", "系统功能", [&] {
         auto result = repository.backup(plan);
         firstId = result.details["snapshotId"].toString();

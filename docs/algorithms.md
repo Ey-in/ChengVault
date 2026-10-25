@@ -1,6 +1,6 @@
-# 自主算法、接口与边界
+﻿# 自主算法、接口与边界
 
-本文对应 `src/core/crypto.cpp`、`compression.cpp` 和 `repair.cpp`。算法源代码由本项目独立编写；参考资料是公开标准的数学定义与测试向量，没有引入第三方实现。测试结果由实际运行生成，本文不把尚未运行的用例计为通过。
+本文对应 `src/core/crypto.cpp`、`compression.cpp` 和 `repair.cpp`。算法源代码由ChengVault独立编写；参考资料是公开标准的数学定义与测试向量，没有引入第三方实现。测试结果由实际运行生成，本文不把尚未运行的用例计为通过。
 
 ## 1. 公共依赖与职责
 
@@ -39,11 +39,11 @@ Qt 负责字节容器、文件 I/O、JSON、临时文件和原子发布。Window
 | 65 | 可变 | 密文 |
 | 末尾 | 32 | HMAC-SHA256 标签 |
 
-加密密钥为 `HKDF(master, salt, "ChengVault/encryption/v1")`，认证密钥为 `HKDF(master, salt, "ChengVault/authentication/v1")`。标签覆盖完整头部与密文。解密先验证格式、长度和标签，再调用底层流加密函数。等长标签比较访问所有字节，不在首个差异处退出。这里使用 **Encrypt-then-MAC**，不宣称采用 AES-GCM 或 ChaCha20-Poly1305。
+加密密钥为 `HKDF(master, salt, "ChengVault/encryption/v1")`，认证密钥为 `HKDF(master, salt, "ChengVault/authentication/v1")`。标签覆盖完整头部与密文。解密先验证格式、长度和标签，再调用底层流加密函数。等长标签比较访问所有字节，不在首个差异处退出。这里使用 **Encrypt-then-MAC**，没有使用 AES-GCM 或 ChaCha20-Poly1305。
 
 `seal` 接受 `aes256`、`aes-256`、`aes256-ctr`、`aes` 和 `chacha20`。不加密模式由上层明确处理，不能把 `none` 悄悄解释成某种加密。
 
-本项目是课程用的自主密码实现，没有经过专业密码审计。AES 使用 S-box 查表，不能声称具备缓存侧信道防护。Qt 隐式共享字节容器也不提供全面的密钥内存锁定或历史副本擦除保证；需要在报告中如实说明。
+ChengVault是课程用的自主密码实现，没有经过专业密码审计。AES 使用 S-box 查表，不能认为具备缓存侧信道防护。Qt 隐式共享字节容器也不提供全面的密钥内存锁定或历史副本擦除保证；需要在报告中如实说明。
 
 ## 4. 两种压缩算法与 CVC1 格式
 

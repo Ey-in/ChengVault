@@ -1,0 +1,145 @@
+D:\Codes\soft-project\ChengVault-team\src\apps\cli_main.cpp:68:90: error: code should be clang-formatted [-Wclang-format-violations]
+        cv::require(!repositoryPath.isEmpty(), "MISSING_REPOSITORY", "璇锋寚瀹?--repo");
+D:\Codes\soft-project\ChengVault-team\src\platform\filesystem.cpp:390:79: error: code should be clang-formatted [-Wclang-format-violations]
+// timeField selects which stored FILETIME participates in the time bounds. An
+                                                                              ^
+D:\Codes\soft-project\ChengVault-team\src\platform\filesystem.cpp:391:78: error: code should be clang-formatted [-Wclang-format-violations]
+// unknown key previously read an absent JSON value, parsed as 0 and silently
+                                                                             ^
+D:\Codes\soft-project\ChengVault-team\src\platform\filesystem.cpp:392:82: error: code should be clang-formatted [-Wclang-format-violations]
+// turned every entry into 1601-01-01 instead of reporting a configuration error.
+                                                                                 ^
+D:\Codes\soft-project\ChengVault-team\src\platform\filesystem.cpp:393:53: error: code should be clang-formatted [-Wclang-format-violations]
+void validateTimeField(const QJsonObject &filters) {
+                                                    ^
+D:\Codes\soft-project\ChengVault-team\src\platform\filesystem.cpp:394:40: error: code should be clang-formatted [-Wclang-format-violations]
+    if (!filters.contains("timeField"))
+                                       ^
+D:\Codes\soft-project\ChengVault-team\src\platform\filesystem.cpp:395:16: error: code should be clang-formatted [-Wclang-format-violations]
+        return;
+               ^
+D:\Codes\soft-project\ChengVault-team\src\platform\filesystem.cpp:396:56: error: code should be clang-formatted [-Wclang-format-violations]
+    const auto field = filters["timeField"].toString();
+                                                       ^
+D:\Codes\soft-project\ChengVault-team\src\platform\filesystem.cpp:397:77: error: code should be clang-formatted [-Wclang-format-violations]
+    // An empty value means "use the default modified field"; the GUI stores
+                                                                            ^
+D:\Codes\soft-project\ChengVault-team\src\platform\filesystem.cpp:398:66: error: code should be clang-formatted [-Wclang-format-violations]
+    // the combo selection even when no time bound is configured.
+                                                                 ^
+D:\Codes\soft-project\ChengVault-team\src\platform\filesystem.cpp:399:25: error: code should be clang-formatted [-Wclang-format-violations]
+    if (field.isEmpty())
+                        ^
+D:\Codes\soft-project\ChengVault-team\src\platform\filesystem.cpp:400:16: error: code should be clang-formatted [-Wclang-format-violations]
+        return;
+               ^
+D:\Codes\soft-project\ChengVault-team\src\platform\filesystem.cpp:401:99: error: code should be clang-formatted [-Wclang-format-violations]
+    require(field == "created" || field == "accessed" || field == "modified", "FILTER_TIME_FIELD",
+                                                                                                  ^
+D:\Codes\soft-project\ChengVault-team\src\platform\filesystem.cpp:402:99: error: code should be clang-formatted [-Wclang-format-violations]
+            "timeField 蹇呴』涓?created銆乤ccessed 鎴?modified锛堝疄闄呭€硷細" + field + "锛?);
+D:\Codes\soft-project\ChengVault-team\src\platform\filesystem.cpp:483:54: error: code should be clang-formatted [-Wclang-format-violations]
+    auto timeField = filters["timeField"].toString();
+                                                     ^
+D:\Codes\soft-project\ChengVault-team\src\platform\filesystem.cpp:484:29: error: code should be clang-formatted [-Wclang-format-violations]
+    if (timeField.isEmpty())
+                            ^
+D:\Codes\soft-project\ChengVault-team\src\platform\filesystem.cpp:485:32: error: code should be clang-formatted [-Wclang-format-violations]
+        timeField = "modified";
+                               ^
+D:\Codes\soft-project\ChengVault-team\include\chengvault\common.hpp:79:45: error: code should be clang-formatted [-Wclang-format-violations]
+constexpr qsizetype ChunkSize = 1024 * 1024;
+                                            ^
+D:\Codes\soft-project\ChengVault-team\include\chengvault\common.hpp:80:75: error: code should be clang-formatted [-Wclang-format-violations]
+// Maximum serialized manifest size accepted by the archive and repository
+                                                                          ^
+D:\Codes\soft-project\ChengVault-team\include\chengvault\common.hpp:81:76: error: code should be clang-formatted [-Wclang-format-violations]
+// formats; readers reject larger metadata before allocating or parsing it.
+                                                                           ^
+D:\Codes\soft-project\ChengVault-team\tests\filesystem_tests.cpp:234:90: error: code should be clang-formatted [-Wclang-format-violations]
+        const DWORD helloBase = GetFileAttributesW(win(f.source + "/hello.txt").c_str());
+                                                                                         ^
+D:\Codes\soft-project\ChengVault-team\tests\filesystem_tests.cpp:506:79: error: code should be clang-formatted [-Wclang-format-violations]
+                check(SetFileAttributesW(win(f.source + "/hello.txt").c_str(), helloBase | FILE_ATTRIBUTE_HIDDEN));
+                                                                              ^
+D:\Codes\soft-project\ChengVault-team\tests\filesystem_tests.cpp:508:76: error: code should be clang-formatted [-Wclang-format-violations]
+                check(SetFileAttributesW(win(f.source + "/nested").c_str(), nestedBase | FILE_ATTRIBUTE_HIDDEN));
+                                                                           ^
+D:\Codes\soft-project\ChengVault-team\tests\filesystem_tests.cpp:514:69: error: code should be clang-formatted [-Wclang-format-violations]
+                check(setAttributesNoFollow(f.source + "/file-link", attributesNoFollow(f.source + "/file-link") | FILE_ATTRIBUTE_READONLY | FILE_ATTRIBUTE_HIDDEN));
+                                                                    ^
+D:\Codes\soft-project\ChengVault-team\tests\filesystem_tests.cpp:514:115: error: code should be clang-formatted [-Wclang-format-violations]
+                check(setAttributesNoFollow(f.source + "/file-link", attributesNoFollow(f.source + "/file-link") | FILE_ATTRIBUTE_READONLY | FILE_ATTRIBUTE_HIDDEN));
+                                                                                                                  ^
+D:\Codes\soft-project\ChengVault-team\tests\filesystem_tests.cpp:515:68: error: code should be clang-formatted [-Wclang-format-violations]
+                check(setAttributesNoFollow(f.source + "/dir-link", attributesNoFollow(f.source + "/dir-link") | FILE_ATTRIBUTE_READONLY | FILE_ATTRIBUTE_HIDDEN));
+                                                                   ^
+D:\Codes\soft-project\ChengVault-team\tests\filesystem_tests.cpp:515:113: error: code should be clang-formatted [-Wclang-format-violations]
+                check(setAttributesNoFollow(f.source + "/dir-link", attributesNoFollow(f.source + "/dir-link") | FILE_ATTRIBUTE_READONLY | FILE_ATTRIBUTE_HIDDEN));
+                                                                                                                ^
+D:\Codes\soft-project\ChengVault-team\tests\filesystem_tests.cpp:518:84: error: code should be clang-formatted [-Wclang-format-violations]
+                check((attributesNoFollow(f.source + "/hello.txt") & targetMask) == (helloBefore & targetMask));
+                                                                                   ^
+D:\Codes\soft-project\ChengVault-team\tests\filesystem_tests.cpp:534:88: error: code should be clang-formatted [-Wclang-format-violations]
+                check((attributesNoFollow(f.restored() + "/hello.txt") & targetMask) == (helloBefore & targetMask), "restored hello attrs");
+                                                                                       ^
+D:\Codes\soft-project\ChengVault-team\tests\filesystem_tests.cpp:534:116: error: code should be clang-formatted [-Wclang-format-violations]
+                check((attributesNoFollow(f.restored() + "/hello.txt") & targetMask) == (helloBefore & targetMask), "restored hello attrs");
+                                                                                                                   ^
+D:\Codes\soft-project\ChengVault-team\tests\filesystem_tests.cpp:535:85: error: code should be clang-formatted [-Wclang-format-violations]
+                check((attributesNoFollow(f.restored() + "/nested") & targetMask) == (nestedBefore & targetMask), "restored nested attrs");
+                                                                                    ^
+D:\Codes\soft-project\ChengVault-team\tests\filesystem_tests.cpp:535:114: error: code should be clang-formatted [-Wclang-format-violations]
+                check((attributesNoFollow(f.restored() + "/nested") & targetMask) == (nestedBefore & targetMask), "restored nested attrs");
+                                                                                                                 ^
+D:\Codes\soft-project\ChengVault-team\tests\filesystem_tests.cpp:536:84: error: code should be clang-formatted [-Wclang-format-violations]
+                check((attributesNoFollow(f.source + "/hello.txt") & targetMask) == (helloBefore & targetMask));
+                                                                                   ^
+D:\Codes\soft-project\ChengVault-team\tests\filesystem_tests.cpp:541:63: error: code should be clang-formatted [-Wclang-format-violations]
+                setAttributesNoFollow(f.source + "/file-link", attributesNoFollow(f.source + "/file-link") & ~(FILE_ATTRIBUTE_READONLY | FILE_ATTRIBUTE_HIDDEN));
+                                                              ^
+D:\Codes\soft-project\ChengVault-team\tests\filesystem_tests.cpp:541:109: error: code should be clang-formatted [-Wclang-format-violations]
+                setAttributesNoFollow(f.source + "/file-link", attributesNoFollow(f.source + "/file-link") & ~(FILE_ATTRIBUTE_READONLY | FILE_ATTRIBUTE_HIDDEN));
+                                                                                                            ^
+D:\Codes\soft-project\ChengVault-team\tests\filesystem_tests.cpp:542:62: error: code should be clang-formatted [-Wclang-format-violations]
+                setAttributesNoFollow(f.source + "/dir-link", attributesNoFollow(f.source + "/dir-link") & ~(FILE_ATTRIBUTE_READONLY | FILE_ATTRIBUTE_HIDDEN));
+                                                             ^
+D:\Codes\soft-project\ChengVault-team\tests\filesystem_tests.cpp:542:107: error: code should be clang-formatted [-Wclang-format-violations]
+                setAttributesNoFollow(f.source + "/dir-link", attributesNoFollow(f.source + "/dir-link") & ~(FILE_ATTRIBUTE_READONLY | FILE_ATTRIBUTE_HIDDEN));
+                                                                                                          ^
+D:\Codes\soft-project\ChengVault-team\tests\filesystem_tests.cpp:606:26: error: code should be clang-formatted [-Wclang-format-violations]
+            QProcess tar;
+                         ^
+D:\Codes\soft-project\ChengVault-team\tests\filesystem_tests.cpp:607:77: error: code should be clang-formatted [-Wclang-format-violations]
+            tar.start(QStandardPaths::findExecutable("tar"), {"-tf", path});
+                                                                            ^
+D:\Codes\soft-project\ChengVault-team\tests\filesystem_tests.cpp:608:47: error: code should be clang-formatted [-Wclang-format-violations]
+            check(tar.waitForFinished(10000));
+                                              ^
+D:\Codes\soft-project\ChengVault-team\tests\filesystem_tests.cpp:609:39: error: code should be clang-formatted [-Wclang-format-violations]
+            if (tar.exitCode() != 0) {
+                                      ^
+D:\Codes\soft-project\ChengVault-team\tests\filesystem_tests.cpp:610:80: error: code should be clang-formatted [-Wclang-format-violations]
+                // MSYS/Git GNU tar treats "C:" as a remote host; --force-local
+                                                                               ^
+D:\Codes\soft-project\ChengVault-team\tests\filesystem_tests.cpp:611:80: error: code should be clang-formatted [-Wclang-format-violations]
+                // keeps the Windows path local. bsdtar already succeeds above.
+                                                                               ^
+D:\Codes\soft-project\ChengVault-team\tests\filesystem_tests.cpp:612:98: error: code should be clang-formatted [-Wclang-format-violations]
+                tar.start(QStandardPaths::findExecutable("tar"), {"--force-local", "-tf", path});
+                                                                                                 ^
+D:\Codes\soft-project\ChengVault-team\tests\filesystem_tests.cpp:613:51: error: code should be clang-formatted [-Wclang-format-violations]
+                check(tar.waitForFinished(10000));
+                                                  ^
+D:\Codes\soft-project\ChengVault-team\tests\filesystem_tests.cpp:614:14: error: code should be clang-formatted [-Wclang-format-violations]
+            }
+             ^
+D:\Codes\soft-project\ChengVault-team\tests\network_repository_tests.cpp:160:31: error: code should be clang-formatted [-Wclang-format-violations]
+        QJsonObject oversized{{"version", 1},
+                              ^
+D:\Codes\soft-project\ChengVault-team\tests\network_repository_tests.cpp:160:46: error: code should be clang-formatted [-Wclang-format-violations]
+        QJsonObject oversized{{"version", 1},
+                                             ^
+D:\Codes\soft-project\ChengVault-team\tests\network_repository_tests.cpp:161:57: error: code should be clang-formatted [-Wclang-format-violations]
+                              {"entries", QJsonArray{}},
+                                                        ^

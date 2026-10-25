@@ -305,6 +305,8 @@ PASS fs.roundtrip.path-longer-than-max-path
 PASS fs.filter.string-name-exclusion
 PASS fs.filter.attribute-exclusion
 PASS fs.filter.time-upper-past
+PASS fs.filter.invalid-time-field
+PASS fs.filter.valid-time-fields
 PASS fs.filter.content-too-long
 PASS fs.ntfs.selected-hardlink-brings-canonical-data
 PASS fs.ntfs.empty-and-all-hole-sparse
@@ -438,13 +440,15 @@ PASS fs.manifest.reject-source/a.
 PASS fs.manifest.reject-source/a:b
 PASS fs.manifest.reject-source/CONIN$
 PASS fs.manifest.reject-source/CONOUT$
-PASS fs.manifest.reject-source/COM¹.txt
+PASS fs.manifest.reject-source/COM鹿.txt
 PASS fs.manifest.case-collision
 PASS fs.ntfs.hardlinks-shared-identity
 PASS fs.ntfs.file-and-directory-ads
 PASS fs.ntfs.sparse-over-4gib
 PASS fs.ntfs.junction-no-recursion
 PASS fs.restore.reparse-escape-rejected
+QTemporaryDir: Unable to remove "C:\\Users\\Eyre\\AppData\\Local\\Temp\\ChengVaultTests-xsowMk" most likely due to the presence of read-only files.
+PASS fs.ntfs.symbolic-file-and-directory-links
 PASS archive.roundtrip.indexed.none.none
 PASS archive.roundtrip.indexed.none.aes256
 PASS archive.roundtrip.indexed.none.chacha20
@@ -468,6 +472,9 @@ PASS archive.pax-independent-reader
 PASS archive.tampered-final-record
 PASS archive.truncation-detected
 PASS repository.initialize.random-master
+PASS repository.empty-password-rejected
+PASS repository.empty-password-preserves-existing
+PASS repository.manifest-size-limit
 PASS repository.first-snapshot
 PASS repository.unchanged-blocks-reused
 PASS repository.local-modification-one-chunk
@@ -583,4 +590,4 @@ PASS SCH-41 missing autostart binary leaves registry unchanged
 PASS SCH-42 inaccessible profile does not escape timer callback
 PASS SCH-43 profile lost during completion does not crash agent
 PASS SCH-44 negative retry counter cannot schedule a busy loop
-Passed 585, failed 0, skipped 1
+Passed 591, failed 0, skipped 0

@@ -1,9 +1,1 @@
-archive.cpp.gcno: extracted unmodified gcov text
-common.cpp.gcno: extracted unmodified gcov text
-compression.cpp.gcno: extracted unmodified gcov text
-crypto.cpp.gcno: extracted unmodified gcov text
-network.cpp.gcno: extracted unmodified gcov text
-repair.cpp.gcno: extracted unmodified gcov text
-repository.cpp.gcno: extracted unmodified gcov text
-scheduler.cpp.gcno: extracted unmodified gcov text
-filesystem.cpp.gcno: extracted unmodified gcov text
+No instrumented core/platform object files found

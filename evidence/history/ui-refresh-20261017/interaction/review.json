@@ -1,0 +1,202 @@
+{
+    "date": "2026-10-17T14:27:35Z",
+    "records": [
+        {
+            "detail": "",
+            "name": "minimum window retained",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "long path retained",
+            "passed": true
+        },
+        {
+            "detail": "resolved font: Microsoft YaHei UI",
+            "name": "input focus",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "01-long-path-focus saved",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "Tab moves focus",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "01-tab-focus saved",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "ShiftTab returns focus",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "backup.password masked",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "restore.password masked",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "remote.password masked",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "remote.key masked",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "02-long-error-layout-sample saved",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "long error layout sample captured",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "03-filter-dialog title",
+            "passed": true
+        },
+        {
+            "detail": "dialog 760x650; review window 1040x720",
+            "name": "03-filter-dialog fits review viewport",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "03-filter-dialog OK visible",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "03-filter-dialog Cancel visible",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "03-filter-dialog saved",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "03-filter-dialog scroll container",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "03-filter-dialog-scrolled saved",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "03-filter-dialog Escape closes",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "03-filter-dialog rejected without request",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "03-filter-dialog inspected without acceptance",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "04-administration-dialog title",
+            "passed": true
+        },
+        {
+            "detail": "dialog 640x620; review window 1040x720",
+            "name": "04-administration-dialog fits review viewport",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "04-administration-dialog OK visible",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "04-administration-dialog Cancel visible",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "04-administration-dialog saved",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "04-administration-dialog administrator secrets masked",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "04-administration-dialog Escape closes",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "04-administration-dialog rejected without request",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "04-administration-dialog inspected without acceptance",
+            "passed": true
+        }
+    ],
+    "scaleFactor": "1",
+    "scope": "Optional UI observations; excluded from course functional test counts",
+    "status": "PASS",
+  "visualReview": "PASS",
+  "visualReviewEvidence": {
+    "reviewedAtUtc": "2026-10-17T14:28:44Z",
+    "method": "All six final 14:27 interaction PNGs reopened with view_image at original resolution.",
+    "conclusion": "Focus visible, secrets masked, long path and middle-elided error do not displace actions; filter and administration dialogs keep confirmation/cancel buttons visible, with dropdown chevrons present.",
+    "report": "../visual-review-secondary.json",
+    "images": [
+      {
+        "file": "01-long-path-focus.png",
+        "sha256": "d56492c6dbb8158f2c41e7a5ff20ec1d7442fb833e8ba3215441adf9f9f50fd6"
+      },
+      {
+        "file": "01-tab-focus.png",
+        "sha256": "8142a53a23bdc88c55b4252ee3db92ee461eec0a0154888d56688b9386768e54"
+      },
+      {
+        "file": "02-long-error-layout-sample.png",
+        "sha256": "fb8b0caf4ea19b62b78a7f7ca5e8c4258ef908117cbbc194104a6b4d8a5a9bc2"
+      },
+      {
+        "file": "03-filter-dialog-scrolled.png",
+        "sha256": "c3357118ce3a580ca149f5435425a8a7a29286ee20cdc472ce8af7b9024025d1"
+      },
+      {
+        "file": "03-filter-dialog.png",
+        "sha256": "bb63cf617aee55b1d7cac64126b0ae32b89d456f50275f6b461d4b5ffc9f08cb"
+      },
+      {
+        "file": "04-administration-dialog.png",
+        "sha256": "097bdac093c1905b83513a4b44040685ffeaa272785a299503357ab14832077d"
+      }
+    ],
+    "processCompletion": "Final validation.json GUI functional regression exitCode=0."
+  }
+}

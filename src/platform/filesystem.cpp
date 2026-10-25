@@ -387,6 +387,20 @@ void validateWildcardFilters(const QJsonObject &filters) {
             (void)Wildcard(pattern);
         }
 }
+// timeField selects which stored FILETIME participates in the time bounds. An
+// unknown key previously read an absent JSON value, parsed as 0 and silently
+// turned every entry into 1601-01-01 instead of reporting a configuration error.
+void validateTimeField(const QJsonObject &filters) {
+    if (!filters.contains("timeField"))
+        return;
+    const auto field = filters["timeField"].toString();
+    // An empty value means "use the default modified field"; the GUI stores
+    // the combo selection even when no time bound is configured.
+    if (field.isEmpty())
+        return;
+    require(field == "created" || field == "accessed" || field == "modified", "FILTER_TIME_FIELD",
+            "timeField 必须为 created、accessed 或 modified（实际值：" + field + "）");
+}
 // Literal directory rules include descendants; wildcard rules match the whole
 // value. '*' intentionally crosses '/' for compatibility with existing plans.
 // Only path patterns normalize separators; DOMAIN\user remains an account.
@@ -466,7 +480,10 @@ QString filterReason(const Record &record, const QJsonObject &filters,
     const auto all = filters["attributesAll"].toInteger(), none = filters["attributesNone"].toInteger();
     if ((attrs & all) != all || (attrs & none) != 0)
         return "文件属性不匹配";
-    const auto when = dateTime(meta[filters["timeField"].toString("modified")]);
+    auto timeField = filters["timeField"].toString();
+    if (timeField.isEmpty())
+        timeField = "modified";
+    const auto when = dateTime(meta[timeField]);
     for (const auto key : {"timeFrom", "timeTo"}) {
         if (!filters.contains(key))
             continue;
@@ -521,6 +538,7 @@ QList<Record> scan(const BackupPlan &plan, QStringList &warnings, const Context 
     // that a source directory truly contains no files.
     require(!plan.sources.isEmpty(), "NO_SOURCE", "请选择至少一个备份源");
     validateWildcardFilters(plan.filters);
+    validateTimeField(plan.filters);
     QSet<QString> names;
     QList<Record> records;
     QMap<QString, QJsonObject> previous;

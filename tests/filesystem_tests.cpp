@@ -86,6 +86,32 @@ quint64 fileId(const QString &path) {
     check(ok);
     return (quint64(info.nFileIndexHigh) << 32) | info.nFileIndexLow;
 }
+DWORD attributesNoFollow(const QString &path) {
+    HANDLE h = CreateFileW(win(path).c_str(), FILE_READ_ATTRIBUTES,
+                           FILE_SHARE_READ | FILE_SHARE_WRITE | FILE_SHARE_DELETE, nullptr, OPEN_EXISTING,
+                           FILE_FLAG_BACKUP_SEMANTICS | FILE_FLAG_OPEN_REPARSE_POINT, nullptr);
+    check(h != INVALID_HANDLE_VALUE);
+    FILE_BASIC_INFO info{};
+    const bool ok = GetFileInformationByHandleEx(h, FileBasicInfo, &info, sizeof(info));
+    CloseHandle(h);
+    check(ok);
+    return info.FileAttributes;
+}
+bool setAttributesNoFollow(const QString &path, DWORD attributes) {
+    HANDLE h = CreateFileW(win(path).c_str(), FILE_READ_ATTRIBUTES | FILE_WRITE_ATTRIBUTES,
+                           FILE_SHARE_READ | FILE_SHARE_WRITE | FILE_SHARE_DELETE, nullptr, OPEN_EXISTING,
+                           FILE_FLAG_BACKUP_SEMANTICS | FILE_FLAG_OPEN_REPARSE_POINT, nullptr);
+    if (h == INVALID_HANDLE_VALUE)
+        return false;
+    FILE_BASIC_INFO info{};
+    bool ok = GetFileInformationByHandleEx(h, FileBasicInfo, &info, sizeof(info));
+    if (ok) {
+        info.FileAttributes = attributes;
+        ok = SetFileInformationByHandle(h, FileBasicInfo, &info, sizeof(info)) != FALSE;
+    }
+    CloseHandle(h);
+    return ok;
+}
 bool makeJunction(const QString &path, const QString &target) {
     if (!QDir().mkdir(path))
         return false;
@@ -205,7 +231,8 @@ void filesystemTests(cv::test::Suite &suite) {
     });
     suite.run("fs.filter.attributes", "白盒单元", [] {
         Fixture f;
-        check(SetFileAttributesW(win(f.source + "/hello.txt").c_str(), FILE_ATTRIBUTE_HIDDEN));
+        const DWORD helloBase = GetFileAttributesW(win(f.source + "/hello.txt").c_str());
+                check(SetFileAttributesW(win(f.source + "/hello.txt").c_str(), helloBase | FILE_ATTRIBUTE_HIDDEN));
         f.plan.filters = {{"attributesAll", qint64(FILE_ATTRIBUTE_HIDDEN)}};
         check(selectedFiles(f.plan) == QStringList{"source/hello.txt"});
     });
@@ -470,16 +497,51 @@ void filesystemTests(cv::test::Suite &suite) {
         else
             suite.run("fs.ntfs.symbolic-file-and-directory-links", "系统功能", [] {
                 Fixture f;
+                const DWORD targetMask = FILE_ATTRIBUTE_READONLY | FILE_ATTRIBUTE_HIDDEN |
+                                         FILE_ATTRIBUTE_SYSTEM | FILE_ATTRIBUTE_ARCHIVE;
+                const DWORD linkMask = FILE_ATTRIBUTE_READONLY | FILE_ATTRIBUTE_HIDDEN |
+                                       FILE_ATTRIBUTE_SYSTEM | FILE_ATTRIBUTE_REPARSE_POINT |
+                                       FILE_ATTRIBUTE_DIRECTORY;
+                const DWORD helloBase = GetFileAttributesW(win(f.source + "/hello.txt").c_str());
+                check(SetFileAttributesW(win(f.source + "/hello.txt").c_str(), helloBase | FILE_ATTRIBUTE_HIDDEN));
+                const DWORD nestedBase = GetFileAttributesW(win(f.source + "/nested").c_str());
+                check(SetFileAttributesW(win(f.source + "/nested").c_str(), nestedBase | FILE_ATTRIBUTE_HIDDEN));
+                const DWORD helloBefore = attributesNoFollow(f.source + "/hello.txt");
+                const DWORD nestedBefore = attributesNoFollow(f.source + "/nested");
                 check(CreateSymbolicLinkW(win(f.source + "/file-link").c_str(), L"hello.txt", 2));
                 check(CreateSymbolicLinkW(win(f.source + "/dir-link").c_str(), L"nested",
                                           SYMBOLIC_LINK_FLAG_DIRECTORY | 2));
+                check(setAttributesNoFollow(f.source + "/file-link", attributesNoFollow(f.source + "/file-link") | FILE_ATTRIBUTE_READONLY | FILE_ATTRIBUTE_HIDDEN));
+                check(setAttributesNoFollow(f.source + "/dir-link", attributesNoFollow(f.source + "/dir-link") | FILE_ATTRIBUTE_READONLY | FILE_ATTRIBUTE_HIDDEN));
+                const DWORD fileLinkSource = attributesNoFollow(f.source + "/file-link") & linkMask;
+                const DWORD dirLinkSource = attributesNoFollow(f.source + "/dir-link") & linkMask;
+                check((attributesNoFollow(f.source + "/hello.txt") & targetMask) == (helloBefore & targetMask));
+                check((attributesNoFollow(f.source + "/nested") & targetMask) == (nestedBefore & targetMask));
                 const auto m = f.capture();
+                const auto fileEntry = entry(m, "source/file-link");
+                const auto dirEntry = entry(m, "source/dir-link");
+                check((DWORD(fileEntry["metadata"].toObject()["attributes"].toInteger()) &
+                       (FILE_ATTRIBUTE_READONLY | FILE_ATTRIBUTE_HIDDEN)) != 0);
+                check((DWORD(dirEntry["metadata"].toObject()["attributes"].toInteger()) &
+                       (FILE_ATTRIBUTE_READONLY | FILE_ATTRIBUTE_HIDDEN)) != 0);
                 f.restore(m);
                 check(GetFileAttributesW(win(f.restored() + "/file-link").c_str()) &
                       FILE_ATTRIBUTE_REPARSE_POINT);
                 check(GetFileAttributesW(win(f.restored() + "/dir-link").c_str()) &
                       FILE_ATTRIBUTE_REPARSE_POINT);
+                check((attributesNoFollow(f.restored() + "/file-link") & linkMask) == fileLinkSource);
+                check((attributesNoFollow(f.restored() + "/dir-link") & linkMask) == dirLinkSource);
+                check((attributesNoFollow(f.restored() + "/hello.txt") & targetMask) == (helloBefore & targetMask), "restored hello attrs");
+                check((attributesNoFollow(f.restored() + "/nested") & targetMask) == (nestedBefore & targetMask), "restored nested attrs");
+                check((attributesNoFollow(f.source + "/hello.txt") & targetMask) == (helloBefore & targetMask));
+                check((attributesNoFollow(f.source + "/nested") & targetMask) == (nestedBefore & targetMask));
                 check(cv::readFile(f.restored() + "/file-link") == cv::readFile(f.source + "/hello.txt"));
+                check(cv::readFile(f.restored() + "/dir-link/中文.txt") ==
+                      cv::readFile(f.source + "/nested/中文.txt"));
+                setAttributesNoFollow(f.source + "/file-link", attributesNoFollow(f.source + "/file-link") & ~(FILE_ATTRIBUTE_READONLY | FILE_ATTRIBUTE_HIDDEN));
+                setAttributesNoFollow(f.source + "/dir-link", attributesNoFollow(f.source + "/dir-link") & ~(FILE_ATTRIBUTE_READONLY | FILE_ATTRIBUTE_HIDDEN));
+                SetFileAttributesW(win(f.source + "/hello.txt").c_str(), FILE_ATTRIBUTE_NORMAL);
+                SetFileAttributesW(win(f.source + "/nested").c_str(), FILE_ATTRIBUTE_NORMAL);
             });
     }
     for (const auto &format : QStringList{"indexed", "tar"})
@@ -544,6 +606,12 @@ void filesystemTests(cv::test::Suite &suite) {
             QProcess tar;
             tar.start(QStandardPaths::findExecutable("tar"), {"-tf", path});
             check(tar.waitForFinished(10000));
+            if (tar.exitCode() != 0) {
+                // MSYS/Git GNU tar treats "C:" as a remote host; --force-local
+                // keeps the Windows path local. bsdtar already succeeds above.
+                tar.start(QStandardPaths::findExecutable("tar"), {"--force-local", "-tf", path});
+                check(tar.waitForFinished(10000));
+            }
             check(tar.exitCode() == 0, QString::fromUtf8(tar.readAllStandardError()));
             const auto listing = tar.readAllStandardOutput();
             check(listing.contains("source/hello.txt"));
