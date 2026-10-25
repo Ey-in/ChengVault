@@ -1,0 +1,2186 @@
+{
+    "cases": [
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "SHA256/FIPS-empty",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.479Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "SHA256/FIPS-abc",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.479Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "SHA256/FIPS-multiblock",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.479Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 3,
+            "name": "SHA256/FIPS-million-a-stream",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.482Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 0,
+            "name": "SHA256/finish-idempotent-reject-update",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.482Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "SHA256/stream-split-0",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.483Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "SHA256/stream-split-1",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.483Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "SHA256/stream-split-55",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.483Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "SHA256/stream-split-56",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.483Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "SHA256/stream-split-63",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.483Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "SHA256/stream-split-64",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.483Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "SHA256/stream-split-65",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.483Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "SHA256/stream-split-127",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.483Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "SHA256/stream-split-128",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.483Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "SHA256/stream-split-129",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.483Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "HMAC/RFC4231-case1",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.483Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "HMAC/RFC4231-case2",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.483Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "HMAC/RFC4231-long-key",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.483Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "PBKDF2/RFC7914-SHA256",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.483Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "PBKDF2/SHA256-iterations-2",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.483Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "KDF/invalid-parameters",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.483Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "HKDF/RFC5869-case1",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.483Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "HKDF/RFC5869-empty-salt-info",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.483Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "AES256CTR/NIST-SP800-38A-F5",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.483Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "AES256CTR/counter-exhaustion",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.483Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "ChaCha20/RFC8439-block",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.483Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "ChaCha20/RFC8439-sunscreen",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.483Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "ChaCha20/counter-exhaustion",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.483Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Crypto/invalid-key-nonce",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.483Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Crypto/independent-parameter-lengths",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.483Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "KDF/partial-block-and-HKDF-maximum",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.484Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/AES-alias-aes-256",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.484Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/AES-alias-aes256-ctr",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.484Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/AES-alias-aes",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.484Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/authenticated-reserved-nonce-rejected",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.484Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/aes256/roundtrip-0",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.484Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/aes256/roundtrip-1",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.484Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/aes256/roundtrip-15",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.484Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/aes256/roundtrip-16",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.484Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/aes256/roundtrip-17",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.484Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/aes256/roundtrip-63",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.485Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/aes256/roundtrip-64",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.485Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/aes256/roundtrip-65",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.485Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 91,
+            "name": "Envelope/aes256/roundtrip-1048576",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.575Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/aes256/wrong-password",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.575Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/aes256/tamper-0",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.575Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/aes256/tamper-8",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.575Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/aes256/tamper-9",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.575Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/aes256/tamper-40",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.575Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/aes256/tamper-41",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.575Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/aes256/tamper-56",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.576Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/aes256/tamper-57",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.576Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/aes256/tamper-64",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.576Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/aes256/tamper-65",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.576Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/aes256/tamper-100",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.576Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/aes256/truncate-append-tag",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.576Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/chacha20/roundtrip-0",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.576Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/chacha20/roundtrip-1",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.576Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/chacha20/roundtrip-15",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.576Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/chacha20/roundtrip-16",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.576Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/chacha20/roundtrip-17",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.576Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/chacha20/roundtrip-63",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.576Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/chacha20/roundtrip-64",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.576Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/chacha20/roundtrip-65",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.576Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 20,
+            "name": "Envelope/chacha20/roundtrip-1048576",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.597Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/chacha20/wrong-password",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.598Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/chacha20/tamper-0",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.598Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/chacha20/tamper-8",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.598Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/chacha20/tamper-9",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.598Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/chacha20/tamper-40",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.598Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/chacha20/tamper-41",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.598Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/chacha20/tamper-56",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.598Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/chacha20/tamper-57",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.598Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/chacha20/tamper-64",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.598Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/chacha20/tamper-65",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.598Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/chacha20/tamper-100",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.598Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Envelope/chacha20/truncate-append-tag",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.598Z"
+        },
+        {
+            "category": "系统功能",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Entropy/OS-random-length-and-distinct",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.598Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 3,
+            "name": "Credentials/DPAPI-current-user-roundtrip",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.601Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Compression/none/fixture-0",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.603Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Compression/none/fixture-1",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.603Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Compression/none/fixture-2",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.604Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Compression/none/fixture-3",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.604Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Compression/none/fixture-4",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.605Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Compression/none/fixture-5",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.605Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 6,
+            "name": "Compression/none/fixture-6",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.612Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 8,
+            "name": "Compression/none/fixture-7",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.620Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Compression/none/bounded-output",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.620Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Compression/none/truncate-append-digest",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.621Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Compression/huffman/fixture-0",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.621Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Compression/huffman/fixture-1",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.621Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Compression/huffman/fixture-2",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.621Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 14,
+            "name": "Compression/huffman/fixture-3",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.636Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 2,
+            "name": "Compression/huffman/fixture-4",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.638Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 54,
+            "name": "Compression/huffman/fixture-5",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.692Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 8,
+            "name": "Compression/huffman/fixture-6",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.700Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 16,
+            "name": "Compression/huffman/fixture-7",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.716Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Compression/huffman/bounded-output",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.716Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Compression/huffman/truncate-append-digest",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.716Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Compression/lz77/fixture-0",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.717Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Compression/lz77/fixture-1",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.717Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Compression/lz77/fixture-2",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.718Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Compression/lz77/fixture-3",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.719Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 1,
+            "name": "Compression/lz77/fixture-4",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.720Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 8,
+            "name": "Compression/lz77/fixture-5",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.729Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 10,
+            "name": "Compression/lz77/fixture-6",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.740Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 31,
+            "name": "Compression/lz77/fixture-7",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.770Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 1,
+            "name": "Compression/lz77/bounded-output",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.772Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Compression/lz77/truncate-append-digest",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.772Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Compression/unknown-algorithm",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.772Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Compression/forged-64bit-length",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.772Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Huffman/corrupt-frequency-table",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.773Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 4,
+            "name": "Huffman/multi-symbol-bits",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.778Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "LZ77/zero-distance-forgery",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.779Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 8,
+            "name": "LZ77/window-and-overlap",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.787Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Compression/short-header-wrong-magic-and-raw-length",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.787Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 22,
+            "name": "Compression/hard-block-limit-independent-of-caller-bound",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.810Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Huffman/empty-nonraw-and-trailing-byte",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.810Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Huffman/single-symbol-extra-stream-rejected",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.810Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Huffman/two-symbol-valid-padding",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.810Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Huffman/truncated-bits",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.810Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Huffman/wrong-frequencies",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.810Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Huffman/nonzero-padding",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.811Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Huffman/extra-byte",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.811Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "LZ77/handwritten-literal-and-overlapping-match",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.811Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "LZ77/missing-flags",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.811Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "LZ77/missing-literal",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.811Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "LZ77/short-match",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.811Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "LZ77/distance-after-output",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.811Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "LZ77/match-exceeds-remaining",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.811Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "LZ77/unused-flags",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.811Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "LZ77/trailing-payload",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.811Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "LZ77/empty-with-payload",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.811Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/systematic-data-unchanged",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.811Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/single-erasure-0",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.811Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-0-1",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.811Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-0-2",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.811Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-0-3",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.811Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-0-4",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.811Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-0-5",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.811Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-0-6",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.812Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-0-7",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.812Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-0-8",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.812Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-0-9",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.812Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-0-10",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.812Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-0-11",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.812Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/single-erasure-1",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.812Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-1-2",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.812Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-1-3",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.812Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-1-4",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.812Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-1-5",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.812Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-1-6",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.812Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-1-7",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.813Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-1-8",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.813Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-1-9",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.813Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-1-10",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.813Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-1-11",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.813Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/single-erasure-2",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.813Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-2-3",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.813Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-2-4",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.813Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-2-5",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.813Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-2-6",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.813Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-2-7",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.813Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-2-8",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.813Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-2-9",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.813Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-2-10",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.813Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-2-11",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.814Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/single-erasure-3",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.814Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-3-4",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.814Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-3-5",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.814Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-3-6",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.814Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-3-7",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.814Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-3-8",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.814Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-3-9",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.814Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-3-10",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.814Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-3-11",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.814Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/single-erasure-4",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.814Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-4-5",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.815Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-4-6",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.815Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-4-7",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.815Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-4-8",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.815Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-4-9",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.815Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-4-10",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.815Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-4-11",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.815Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/single-erasure-5",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.815Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-5-6",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.815Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-5-7",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.815Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-5-8",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.815Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-5-9",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.815Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-5-10",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.815Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-5-11",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.816Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/single-erasure-6",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.816Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-6-7",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.816Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-6-8",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.816Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-6-9",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.816Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-6-10",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.816Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-6-11",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.816Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/single-erasure-7",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.816Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-7-8",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.816Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-7-9",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.816Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-7-10",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.816Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-7-11",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.816Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/single-erasure-8",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.817Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-8-9",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.817Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-8-10",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.817Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-8-11",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.817Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/single-erasure-9",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.817Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-9-10",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.817Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-9-11",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.817Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/single-erasure-10",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.817Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/double-erasure-10-11",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.817Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/single-erasure-11",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.817Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/three-erasures-rejected",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.817Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/inconsistent-survivor-rejected",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.817Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/shard-count-and-size-rejected",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.817Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 0,
+            "name": "RS12-10/zero-length-shards-and-survivor-length",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.817Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 140,
+            "name": "Repair/create-real-sidecar",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:29.966Z"
+        },
+        {
+            "category": "系统功能",
+            "detail": "",
+            "durationMs": 273,
+            "name": "Repair/two-damaged-data-shards",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:30.240Z"
+        },
+        {
+            "category": "系统功能",
+            "detail": "",
+            "durationMs": 168,
+            "name": "Repair/data-and-parity-damaged",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:30.409Z"
+        },
+        {
+            "category": "系统功能",
+            "detail": "",
+            "durationMs": 185,
+            "name": "Repair/both-parity-damaged",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:30.594Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 168,
+            "name": "Repair/three-damaged-reject-no-output",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:30.763Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 178,
+            "name": "Repair/truncated-archive-tail",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:30.941Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 239,
+            "name": "Repair/head-metadata-damaged-tail-used",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:31.181Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 176,
+            "name": "Repair/tail-metadata-damaged-head-used",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:31.358Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 48,
+            "name": "Repair/both-metadata-copies-damaged",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:31.406Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 32,
+            "name": "Repair/valid-but-conflicting-metadata-copies",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:31.438Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 29,
+            "name": "Repair/appended-archive-rejected",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:31.468Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 171,
+            "name": "Repair/truncated-sidecar-parity",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:31.641Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 6,
+            "name": "Repair/existing-output-protected",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:31.647Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Repair/cancel-without-output",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:31.647Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 81,
+            "name": "Repair/wrong-sidecar-rejected",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:31.729Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 23,
+            "name": "Repair/empty-archive",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:31.752Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 186,
+            "name": "Repair/encrypted-archive-still-needs-password",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:31.938Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 737,
+            "name": "Repair/two-stripes-independent-erasure-budgets",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:32.675Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 12,
+            "name": "Repair/unsupported-index-version",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:32.688Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 18,
+            "name": "Repair/unsupported-index-shardSize",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:32.706Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 21,
+            "name": "Repair/unsupported-index-dataShards",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:32.728Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 6,
+            "name": "Repair/unsupported-index-parityShards",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:32.735Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 20,
+            "name": "Repair/index-negative-size",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:32.756Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 9,
+            "name": "Repair/index-leading-zero-size",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:32.765Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 8,
+            "name": "Repair/index-signed-overflow-size",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:32.775Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 10,
+            "name": "Repair/index-nondecimal-size",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:32.784Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 9,
+            "name": "Repair/index-numeric-size",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:32.794Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 11,
+            "name": "Repair/index-index-capacity",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:32.805Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 11,
+            "name": "Repair/index-groups-not-array",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:32.818Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 10,
+            "name": "Repair/index-extra-group",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:32.828Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 9,
+            "name": "Repair/index-short-hash",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:32.838Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 11,
+            "name": "Repair/index-nonhex-hash",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:32.850Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 11,
+            "name": "Repair/index-uppercase-hash",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:32.862Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 7,
+            "name": "Repair/checksummed-index-malformed-json",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:32.870Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 7,
+            "name": "Repair/checksummed-index-nonobject-json",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:32.877Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 15,
+            "name": "Repair/index-shard-row-and-digest-validation",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:32.892Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 44,
+            "name": "Repair/locator-invalid-lengths-and-checksum",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:32.937Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 206,
+            "name": "Repair/whole-digest-inconsistent-with-valid-shards",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:33.144Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 109,
+            "name": "Repair/reconstructed-shard-hash-must-match-index",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:33.253Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 6,
+            "name": "Repair/missing-inputs-and-invalid-output-parent",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:33.259Z"
+        },
+        {
+            "category": "并发稳定性",
+            "detail": "",
+            "durationMs": 92,
+            "name": "Repair/source-changed-length",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:33.351Z"
+        },
+        {
+            "category": "并发稳定性",
+            "detail": "",
+            "durationMs": 100,
+            "name": "Repair/source-changed-timestamp",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:33.453Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 104,
+            "name": "Repair/cancel-after-work-recover",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:33.557Z"
+        },
+        {
+            "category": "并发稳定性",
+            "detail": "",
+            "durationMs": 138,
+            "name": "Repair/concurrent-output-preserved-recover",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:33.696Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 61,
+            "name": "Repair/cancel-after-work-create",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:33.757Z"
+        },
+        {
+            "category": "并发稳定性",
+            "detail": "",
+            "durationMs": 71,
+            "name": "Repair/concurrent-output-preserved-create",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:33.828Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 14,
+            "name": "HashFile/stream-and-cancel",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:33.843Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 5,
+            "name": "HashFile/missing-file-and-cancel-after-read",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:33.849Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 7,
+            "name": "Common/bounded-read-exact-and-over-limit",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:33.856Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 3,
+            "name": "Common/empty-file-zero-bound",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:33.860Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 16,
+            "name": "Common/json-object-required",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:33.876Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "Common/plan-defaults-and-password-serialization",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:33.876Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 7,
+            "name": "Common/atomic-write-parent-blocked-keeps-original",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:33.884Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 37,
+            "name": "Common/atomic-commit-sharing-denial-keeps-original",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:33.921Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 59,
+            "name": "Repair/invalid-Windows-output-name-cleans-up",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:33.982Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 8,
+            "name": "Common/app-data-directory-invalid-override",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:33.991Z"
+        }
+    ],
+    "date": "2026-10-17T12:47:34Z",
+    "failed": 0,
+    "passed": 272,
+    "platform": "Windows 11 Version 25H2",
+    "qt": "6.11.2",
+    "skipped": 0
+}

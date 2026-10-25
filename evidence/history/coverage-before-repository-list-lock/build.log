@@ -1,0 +1,8 @@
+[0/2] Re-checking globbed directories...
+[1/10] Automatic MOC for target chengvault_core
+[2/9] Building CXX object CMakeFiles/chengvault_core.dir/src/platform/filesystem.cpp.obj
+[3/9] Linking CXX static library libchengvault_core.a
+[4/9] Automatic MOC for target ChengVaultTests
+[5/8] Linking CXX executable ChengVaultGuiTests.exe
+[6/8] Building CXX object CMakeFiles/ChengVaultTests.dir/tests/filesystem_adversarial_tests.cpp.obj
+[7/8] Linking CXX executable ChengVaultTests.exe

@@ -1,0 +1,50 @@
+{
+  "generatedAtUtc": "2026-10-17T13:47:34.4342501Z",
+  "scope": "All nine production src/core/*.cpp and src/platform/*.cpp; no source/branch exclusions in primary metric",
+  "coreSourceRevision": "ed2806e7818eb37d15444104bf313b5b49c7d169",
+  "frozenSourceAndTestsRevision": "ad138ef98d91103fb9ffc3bb9cbfcd4e191cd59f",
+  "schedulerHarnessRevision": "789ce85",
+  "previousMeasurement": "evidence/history/coverage-before-repository-list-lock/measurement-runs.json",
+  "reasonForFreshCampaign": "Real deployment exposed unlocked public snapshot listing racing Agent retention. Public list now locks; private listUnlocked is used only under existing verify/prune locks. New regression requires exact REPOSITORY_BUSY during writer lock and identical full listing after unlock.",
+  "initialCounterReset": "scripts/coverage.ps1 default reset after rebuilding final frozen targets; all build-coverage .gcda deleted before this campaign",
+  "coreExecution": {
+    "passed": 585,
+    "failed": 0,
+    "skipped": 1,
+    "result": "core-tests.json",
+    "finishedAtUtc": "2026-10-17T13:46:21.4151075Z",
+    "runs": 1
+  },
+  "guiExecution": {
+    "passed": 20,
+    "failed": 0,
+    "result": "gui-tests.json",
+    "finishedAtUtc": "2026-10-17T13:46:30.8422583Z",
+    "runs": 1
+  },
+  "counterRetention": "Only this clean campaign: one complete core execution followed by one complete GUI execution; no counts from the previous production revision.",
+  "collectionCommand": "scripts/coverage.ps1 -AllowBelowTarget -Python <fixed bundled Python runtime>",
+  "verifiedSourceDigests": 9,
+  "coreCaseNamesUnique": true,
+  "buildAndProfilingWarnings": 0,
+  "lineTargetPassed": true,
+  "rawBranchTargetPassed": false,
+  "lineCovered": 3669,
+  "lineTotal": 3765,
+  "linePercent": 97.5,
+  "rawBranchCovered": 8118,
+  "rawBranchTotal": 14386,
+  "rawBranchPercent": 56.4,
+  "auxiliaryBranchCovered": 7395,
+  "auxiliaryBranchTotal": 8579,
+  "auxiliaryBranchPercent": 86.2,
+  "commentThresholdExclusive": 20,
+  "commentThresholdPassed": true,
+  "commentPercentPhysical": 20.22,
+  "qualityFindings": {
+    "errors": 0,
+    "warnings": 0,
+    "style": 5,
+    "performance": 2
+  }
+}

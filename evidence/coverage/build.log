@@ -1,0 +1,11 @@
+[0/2] Re-checking globbed directories...
+[1/13] Automatic MOC for target chengvault_core
+[2/12] Building CXX object CMakeFiles/chengvault_core.dir/src/core/repository.cpp.obj
+[3/12] Building CXX object CMakeFiles/chengvault_core.dir/src/core/scheduler.cpp.obj
+[4/12] Linking CXX static library libchengvault_core.a
+[5/12] Automatic MOC for target ChengVaultTests
+[6/11] Building CXX object CMakeFiles/ChengVaultTests.dir/tests/scheduler_tests.cpp.obj
+[7/11] Building CXX object CMakeFiles/ChengVaultGuiTests.dir/src/gui/main_window.cpp.obj
+[8/11] Linking CXX executable ChengVaultGuiTests.exe
+[9/11] Building CXX object CMakeFiles/ChengVaultTests.dir/tests/network_repository_tests.cpp.obj
+[10/11] Linking CXX executable ChengVaultTests.exe

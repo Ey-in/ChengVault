@@ -1,0 +1,17 @@
+[0/2] Re-checking globbed directories...
+[1/18] Automatic MOC for target chengvault_core
+[2/17] Building CXX object CMakeFiles/chengvault_core.dir/src/core/crypto.cpp.obj
+[3/17] Linking CXX static library libchengvault_core.a
+[4/17] Automatic MOC for target ChengVaultTests
+[5/17] Automatic MOC for target ChengVaultGuiTests
+[6/17] Building CXX object CMakeFiles/ChengVaultTests.dir/ChengVaultTests_autogen/mocs_compilation.cpp.obj
+[7/17] Building CXX object CMakeFiles/ChengVaultTests.dir/tests/test_main.cpp.obj
+[8/17] Building CXX object CMakeFiles/ChengVaultTests.dir/tests/algorithms_tests.cpp.obj
+[9/17] Building CXX object CMakeFiles/ChengVaultTests.dir/tests/filesystem_tests.cpp.obj
+[10/17] Building CXX object CMakeFiles/ChengVaultGuiTests.dir/ChengVaultGuiTests_autogen/mocs_compilation.cpp.obj
+[11/17] Building CXX object CMakeFiles/ChengVaultTests.dir/tests/scheduler_tests.cpp.obj
+[12/17] Building CXX object CMakeFiles/ChengVaultTests.dir/tests/network_repository_tests.cpp.obj
+[13/17] Linking CXX executable ChengVaultTests.exe
+[14/17] Building CXX object CMakeFiles/ChengVaultGuiTests.dir/tests/gui_smoke.cpp.obj
+[15/17] Building CXX object CMakeFiles/ChengVaultGuiTests.dir/src/gui/main_window.cpp.obj
+[16/17] Linking CXX executable ChengVaultGuiTests.exe

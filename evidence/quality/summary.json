@@ -1,0 +1,16 @@
+{
+  "formatCheckedFiles": 36,
+  "formatNoncompliantFiles": [],
+  "cppcheckExit": 0,
+  "cppcheckFindingCount": 7,
+  "cppcheckErrorCount": 0,
+  "cppcheckWarningCount": 0,
+  "cppcheckStyleCount": 5,
+  "cppcheckPerformanceCount": 2,
+  "reviewNotes": "docs/quality-and-coverage.md; original findings remain in cppcheck.xml",
+  "commentPercentPhysical": 20.22,
+  "commentPercentNonblank": 20.48,
+  "commentThresholdExclusive": 20,
+  "commentPass": true,
+  "generatedAtUtc": "2026-10-17T14:27:22.2446362Z"
+}

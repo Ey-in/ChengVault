@@ -1,0 +1,50 @@
+{
+  "generatedAtUtc": "2026-10-17T13:18:15.845720+00:00",
+  "scope": "All nine production src/core/*.cpp and src/platform/*.cpp; no source/branch exclusions in primary metric",
+  "coreSourceRevision": "c7c4a1569bca385d7fb4daf6f539cf5182cc7b93",
+  "guiHarnessRevision": "559134197499d97460e114aa7d37ab5730fdab33",
+  "initialCounterReset": "scripts/coverage.ps1 default reset after rebuilding the final independent-wildcard core",
+  "interruptedEarlierRun": "evidence/history/coverage-interrupted-before-independent-wildcard/interruption.json; its counters were cleared before this final campaign",
+  "coreExecution": {
+    "passed": 584,
+    "failed": 0,
+    "skipped": 1,
+    "result": "core-tests.json",
+    "date": "2026-10-17T13:09:53Z"
+  },
+  "guiExecutions": [
+    {
+      "passed": 18,
+      "failed": 2,
+      "result": "../history/coverage-gui-completion-race/gui-tests.json",
+      "note": "Preserved failing attempt; output-file appearance did not guarantee worker completion."
+    },
+    {
+      "passed": 20,
+      "failed": 0,
+      "result": "../history/coverage-gui-stale-test-counter/gui-tests.json",
+      "note": "Only GUI harness changed; GCC rewrote the changed test object counter with a checksum diagnostic. Production counters were compatible."
+    },
+    {
+      "passed": 20,
+      "failed": 0,
+      "result": "gui-tests.json",
+      "note": "Same rebuilt GUI test binary rerun without deleting counters; final log has no profiling diagnostic.",
+      "date": "2026-10-17T13:16:49Z"
+    }
+  ],
+  "counterRetention": "Same production core build retained counters across GUI reruns. Test-object counters are outside the production metric. No source exclusions or manual hit-count edits.",
+  "collectionCommand": "scripts/coverage.ps1 -SkipBuild -SkipTests -AllowBelowTarget -Python <fixed bundled Python runtime>",
+  "verifiedSourceDigests": 9,
+  "coreCaseNamesUnique": true,
+  "lineTargetPassed": true,
+  "rawBranchTargetPassed": false,
+  "commentThresholdExclusive": 20,
+  "commentThresholdPassed": true,
+  "qualityFindings": {
+    "errors": 0,
+    "warnings": 0,
+    "style": 5,
+    "performance": 2
+  }
+}
