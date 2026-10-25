@@ -1,0 +1,10 @@
+{
+  "checkedAtUtc": "2026-10-17T12:47:02.3557927Z",
+  "nativeStarUmlOpenVerified": false,
+  "version": "7.1.1",
+  "installerSource": "https://staruml.io/api/download/releases-v7/StarUML%20Setup%207.1.1.exe",
+  "installerSignature": "Valid: MKLabs Co.,Ltd.",
+  "installerSha256": "633d8b8f6c508fcb2fa2dfa379ff981fe01a6aa6b1d925103da6eb6dd1467b89",
+  "outcome": "NOT_VERIFIED",
+  "detail": "Automated launch interpreted --disable-gpu as a model pathname. StarUML then displayed an Electron showErrorBox conversion error. Test-owned processes stopped; this native launch method is discontinued. Existing schema checks remain separate."
+}

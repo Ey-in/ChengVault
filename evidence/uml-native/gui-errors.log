@@ -1,0 +1,3 @@
+
+DevTools listening on ws://127.0.0.1:9222/devtools/browser/5f3c3abc-ccdf-483b-88e6-efd57582745f
+[45536:1017/204533.211:INFO:CONSOLE(201)] "Error: ENOENT: no such file or directory, open 'D:\soft-project\ChengVault\--disable-gpu'", source: D:\soft-project\ChengVault\.toolchain\staruml\resources\app.asar\src\engine\default-commands.js (201)

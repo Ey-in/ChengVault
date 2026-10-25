@@ -1,0 +1,1951 @@
+[
+  {
+    "key": "01-use-cases",
+    "title": "用例图｜用户目标与包含关系",
+    "type": "UMLUseCaseDiagram",
+    "nodes": [
+      {
+        "id": "user",
+        "title": "备份用户",
+        "x": 30,
+        "y": 320,
+        "w": 120,
+        "h": 100,
+        "kind": "actor",
+        "lines": []
+      },
+      {
+        "id": "admin",
+        "title": "管理员",
+        "x": 30,
+        "y": 820,
+        "w": 120,
+        "h": 100,
+        "kind": "actor",
+        "lines": []
+      },
+      {
+        "id": "backup",
+        "title": "UC01 创建备份",
+        "x": 310,
+        "y": 150,
+        "w": 300,
+        "h": 85,
+        "kind": "usecase",
+        "lines": []
+      },
+      {
+        "id": "restore",
+        "title": "UC02 还原文件",
+        "x": 310,
+        "y": 310,
+        "w": 300,
+        "h": 85,
+        "kind": "usecase",
+        "lines": []
+      },
+      {
+        "id": "jobs",
+        "title": "UC03 管理自动任务",
+        "x": 310,
+        "y": 470,
+        "w": 300,
+        "h": 85,
+        "kind": "usecase",
+        "lines": []
+      },
+      {
+        "id": "network",
+        "title": "UC04 远程网盘",
+        "x": 310,
+        "y": 630,
+        "w": 300,
+        "h": 85,
+        "kind": "usecase",
+        "lines": []
+      },
+      {
+        "id": "repair",
+        "title": "UC05 检查与修复归档",
+        "x": 310,
+        "y": 790,
+        "w": 300,
+        "h": 85,
+        "kind": "usecase",
+        "lines": []
+      },
+      {
+        "id": "adminuc",
+        "title": "UC06 管理账户/设备",
+        "x": 310,
+        "y": 950,
+        "w": 300,
+        "h": 85,
+        "kind": "usecase",
+        "lines": []
+      },
+      {
+        "id": "scan",
+        "title": "UC07 按规则扫描",
+        "x": 960,
+        "y": 150,
+        "w": 330,
+        "h": 85,
+        "kind": "usecase",
+        "lines": []
+      },
+      {
+        "id": "verify",
+        "title": "UC08 校验并安全恢复",
+        "x": 960,
+        "y": 310,
+        "w": 330,
+        "h": 85,
+        "kind": "usecase",
+        "lines": []
+      },
+      {
+        "id": "auth",
+        "title": "UC09 用户/设备认证",
+        "x": 960,
+        "y": 630,
+        "w": 330,
+        "h": 85,
+        "kind": "usecase",
+        "lines": []
+      },
+      {
+        "id": "detect",
+        "title": "UC10 定位损坏分片",
+        "x": 960,
+        "y": 790,
+        "w": 330,
+        "h": 85,
+        "kind": "usecase",
+        "lines": []
+      }
+    ],
+    "edges": [
+      {
+        "from": "user",
+        "to": "backup",
+        "label": "",
+        "kind": "association",
+        "points": [
+          [
+            150,
+            370
+          ],
+          [
+            240,
+            370
+          ],
+          [
+            240,
+            192.5
+          ],
+          [
+            310,
+            192.5
+          ]
+        ]
+      },
+      {
+        "from": "user",
+        "to": "restore",
+        "label": "",
+        "kind": "association",
+        "points": [
+          [
+            150,
+            370
+          ],
+          [
+            240,
+            370
+          ],
+          [
+            240,
+            352.5
+          ],
+          [
+            310,
+            352.5
+          ]
+        ]
+      },
+      {
+        "from": "user",
+        "to": "jobs",
+        "label": "",
+        "kind": "association",
+        "points": [
+          [
+            150,
+            370
+          ],
+          [
+            240,
+            370
+          ],
+          [
+            240,
+            512.5
+          ],
+          [
+            310,
+            512.5
+          ]
+        ]
+      },
+      {
+        "from": "user",
+        "to": "network",
+        "label": "",
+        "kind": "association",
+        "points": [
+          [
+            150,
+            370
+          ],
+          [
+            240,
+            370
+          ],
+          [
+            240,
+            672.5
+          ],
+          [
+            310,
+            672.5
+          ]
+        ]
+      },
+      {
+        "from": "user",
+        "to": "repair",
+        "label": "",
+        "kind": "association",
+        "points": [
+          [
+            150,
+            370
+          ],
+          [
+            240,
+            370
+          ],
+          [
+            240,
+            832.5
+          ],
+          [
+            310,
+            832.5
+          ]
+        ]
+      },
+      {
+        "from": "admin",
+        "to": "adminuc",
+        "label": "",
+        "kind": "association",
+        "points": [
+          [
+            150,
+            870.0
+          ],
+          [
+            310,
+            992.5
+          ]
+        ]
+      },
+      {
+        "from": "backup",
+        "to": "scan",
+        "label": "",
+        "kind": "include",
+        "points": [
+          [
+            610,
+            192.5
+          ],
+          [
+            960,
+            192.5
+          ]
+        ]
+      },
+      {
+        "from": "restore",
+        "to": "verify",
+        "label": "",
+        "kind": "include",
+        "points": [
+          [
+            610,
+            352.5
+          ],
+          [
+            960,
+            352.5
+          ]
+        ]
+      },
+      {
+        "from": "network",
+        "to": "auth",
+        "label": "",
+        "kind": "include",
+        "points": [
+          [
+            610,
+            672.5
+          ],
+          [
+            960,
+            672.5
+          ]
+        ]
+      },
+      {
+        "from": "repair",
+        "to": "detect",
+        "label": "",
+        "kind": "include",
+        "points": [
+          [
+            610,
+            832.5
+          ],
+          [
+            960,
+            832.5
+          ]
+        ]
+      }
+    ],
+    "width": 1500,
+    "height": 1140,
+    "note": "六类必需筛选与四类额外筛选属于 UC07；权限不足必须明确报告。"
+  },
+  {
+    "key": "02-components",
+    "title": "构件图｜界面、核心与平台职责",
+    "type": "UMLComponentDiagram",
+    "nodes": [
+      {
+        "id": "gui",
+        "title": "Qt Widgets 客户端",
+        "x": 70,
+        "y": 150,
+        "w": 250,
+        "h": 100,
+        "kind": "component",
+        "lines": []
+      },
+      {
+        "id": "cli",
+        "title": "命令行工具 CLI",
+        "x": 625,
+        "y": 150,
+        "w": 250,
+        "h": 100,
+        "kind": "component",
+        "lines": []
+      },
+      {
+        "id": "agent",
+        "title": "后台任务 Agent",
+        "x": 1180,
+        "y": 150,
+        "w": 250,
+        "h": 100,
+        "kind": "component",
+        "lines": []
+      },
+      {
+        "id": "archive",
+        "title": "归档服务 archive",
+        "x": 70,
+        "y": 390,
+        "w": 250,
+        "h": 100,
+        "kind": "component",
+        "lines": []
+      },
+      {
+        "id": "repo",
+        "title": "版本仓库 Repository",
+        "x": 625,
+        "y": 390,
+        "w": 250,
+        "h": 100,
+        "kind": "component",
+        "lines": []
+      },
+      {
+        "id": "net",
+        "title": "网络客户端 Client",
+        "x": 1180,
+        "y": 390,
+        "w": 250,
+        "h": 100,
+        "kind": "component",
+        "lines": []
+      },
+      {
+        "id": "fs",
+        "title": "NTFS 扫描与恢复",
+        "x": 70,
+        "y": 650,
+        "w": 250,
+        "h": 100,
+        "kind": "component",
+        "lines": []
+      },
+      {
+        "id": "algo",
+        "title": "压缩 / 密码 / RS",
+        "x": 625,
+        "y": 650,
+        "w": 250,
+        "h": 100,
+        "kind": "component",
+        "lines": []
+      },
+      {
+        "id": "server",
+        "title": "独立网盘 Server",
+        "x": 1180,
+        "y": 650,
+        "w": 250,
+        "h": 100,
+        "kind": "component",
+        "lines": []
+      },
+      {
+        "id": "win",
+        "title": "Win32 文件与事件 API",
+        "x": 70,
+        "y": 870,
+        "w": 250,
+        "h": 100,
+        "kind": "component",
+        "lines": []
+      },
+      {
+        "id": "storage",
+        "title": "归档 / 加密对象 / 快照",
+        "x": 625,
+        "y": 870,
+        "w": 250,
+        "h": 100,
+        "kind": "component",
+        "lines": []
+      },
+      {
+        "id": "remote",
+        "title": "用户隔离的远端仓库",
+        "x": 1180,
+        "y": 870,
+        "w": 250,
+        "h": 100,
+        "kind": "component",
+        "lines": []
+      }
+    ],
+    "edges": [
+      {
+        "from": "gui",
+        "to": "archive",
+        "label": "",
+        "kind": "dependency",
+        "points": [
+          [
+            195.0,
+            250
+          ],
+          [
+            195.0,
+            390
+          ]
+        ]
+      },
+      {
+        "from": "cli",
+        "to": "repo",
+        "label": "",
+        "kind": "dependency",
+        "points": [
+          [
+            750.0,
+            250
+          ],
+          [
+            750.0,
+            390
+          ]
+        ]
+      },
+      {
+        "from": "agent",
+        "to": "repo",
+        "label": "",
+        "kind": "dependency",
+        "points": [
+          [
+            1180,
+            200.0
+          ],
+          [
+            875,
+            440.0
+          ]
+        ]
+      },
+      {
+        "from": "gui",
+        "to": "repo",
+        "label": "",
+        "kind": "dependency",
+        "points": [
+          [
+            320,
+            200.0
+          ],
+          [
+            625,
+            440.0
+          ]
+        ]
+      },
+      {
+        "from": "gui",
+        "to": "net",
+        "label": "",
+        "kind": "dependency",
+        "points": [
+          [
+            320,
+            200.0
+          ],
+          [
+            1180,
+            440.0
+          ]
+        ]
+      },
+      {
+        "from": "archive",
+        "to": "fs",
+        "label": "",
+        "kind": "dependency",
+        "points": [
+          [
+            195.0,
+            490
+          ],
+          [
+            195.0,
+            650
+          ]
+        ]
+      },
+      {
+        "from": "repo",
+        "to": "fs",
+        "label": "",
+        "kind": "dependency",
+        "points": [
+          [
+            625,
+            440.0
+          ],
+          [
+            320,
+            700.0
+          ]
+        ]
+      },
+      {
+        "from": "archive",
+        "to": "algo",
+        "label": "",
+        "kind": "dependency",
+        "points": [
+          [
+            320,
+            440.0
+          ],
+          [
+            625,
+            700.0
+          ]
+        ]
+      },
+      {
+        "from": "repo",
+        "to": "algo",
+        "label": "",
+        "kind": "dependency",
+        "points": [
+          [
+            750.0,
+            490
+          ],
+          [
+            750.0,
+            650
+          ]
+        ]
+      },
+      {
+        "from": "fs",
+        "to": "win",
+        "label": "",
+        "kind": "dependency",
+        "points": [
+          [
+            195.0,
+            750
+          ],
+          [
+            195.0,
+            870
+          ]
+        ]
+      },
+      {
+        "from": "repo",
+        "to": "storage",
+        "label": "",
+        "kind": "dependency",
+        "points": [
+          [
+            750.0,
+            490
+          ],
+          [
+            750.0,
+            870
+          ]
+        ]
+      },
+      {
+        "from": "net",
+        "to": "server",
+        "label": "认证加密 TCP",
+        "kind": "dependency",
+        "points": [
+          [
+            1305.0,
+            490
+          ],
+          [
+            1305.0,
+            650
+          ]
+        ]
+      },
+      {
+        "from": "server",
+        "to": "remote",
+        "label": "",
+        "kind": "dependency",
+        "points": [
+          [
+            1305.0,
+            750
+          ],
+          [
+            1305.0,
+            870
+          ]
+        ]
+      },
+      {
+        "from": "algo",
+        "to": "storage",
+        "label": "",
+        "kind": "dependency",
+        "points": [
+          [
+            750.0,
+            750
+          ],
+          [
+            750.0,
+            870
+          ]
+        ]
+      }
+    ],
+    "width": 1500,
+    "height": 1080,
+    "note": "算法由项目自主实现；Qt / Win32 提供界面、I/O、线程、事件、网络及安全随机数。"
+  },
+  {
+    "key": "03-core-classes",
+    "title": "类图｜公共类型与主要协作",
+    "type": "UMLClassDiagram",
+    "nodes": [
+      {
+        "id": "plan",
+        "title": "BackupPlan",
+        "x": 40,
+        "y": 150,
+        "w": 300,
+        "h": 145,
+        "kind": "class",
+        "lines": [
+          "sources / destination",
+          "format / compression / cipher",
+          "filters / strictMetadata"
+        ]
+      },
+      {
+        "id": "repository",
+        "title": "Repository",
+        "x": 585,
+        "y": 150,
+        "w": 330,
+        "h": 195,
+        "kind": "class",
+        "lines": [
+          "init() / backup(plan)",
+          "manifest(id) / restore(id)",
+          "verify() / prune()",
+          "changePassword(password)"
+        ]
+      },
+      {
+        "id": "client",
+        "title": "network::Client",
+        "x": 1160,
+        "y": 150,
+        "w": 300,
+        "h": 145,
+        "kind": "class",
+        "lines": [
+          "upload(path) / download(id)",
+          "list() / admin(action)",
+          "RemoteOptions options_"
+        ]
+      },
+      {
+        "id": "context",
+        "title": "Context",
+        "x": 40,
+        "y": 460,
+        "w": 300,
+        "h": 135,
+        "kind": "class",
+        "lines": [
+          "cancelled / progress",
+          "check() / update()"
+        ]
+      },
+      {
+        "id": "engine",
+        "title": "schedule::Engine",
+        "x": 585,
+        "y": 460,
+        "w": 330,
+        "h": 170,
+        "kind": "class",
+        "lines": [
+          "start() / stop() / tick(now)",
+          "launch(job, now)",
+          "running_ / watches_ / dirty_"
+        ]
+      },
+      {
+        "id": "server",
+        "title": "network::Server",
+        "x": 1160,
+        "y": 460,
+        "w": 300,
+        "h": 170,
+        "kind": "class",
+        "lines": [
+          "configureUser() / configureDevice()",
+          "listen() / stop()",
+          "unique_ptr<Impl> impl_"
+        ]
+      },
+      {
+        "id": "restore",
+        "title": "RestoreOptions",
+        "x": 40,
+        "y": 800,
+        "w": 300,
+        "h": 130,
+        "kind": "class",
+        "lines": [
+          "overwrite / strictMetadata",
+          "selectedPaths"
+        ]
+      },
+      {
+        "id": "watch",
+        "title": "DirectoryWatch",
+        "x": 585,
+        "y": 800,
+        "w": 330,
+        "h": 130,
+        "kind": "class",
+        "lines": [
+          "DirectoryWatch(paths)",
+          "takeChanged()"
+        ]
+      },
+      {
+        "id": "sha",
+        "title": "crypto::Sha256",
+        "x": 1160,
+        "y": 800,
+        "w": 300,
+        "h": 130,
+        "kind": "class",
+        "lines": [
+          "update(bytes) / finish()",
+          "state_[8] / pending_ / length_"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "from": "repository",
+        "to": "plan",
+        "label": "读取计划",
+        "kind": "dependency",
+        "points": [
+          [
+            585,
+            247.5
+          ],
+          [
+            340,
+            222.5
+          ]
+        ]
+      },
+      {
+        "from": "repository",
+        "to": "context",
+        "label": "进度 / 取消",
+        "kind": "dependency",
+        "points": [
+          [
+            585,
+            247.5
+          ],
+          [
+            340,
+            527.5
+          ]
+        ]
+      },
+      {
+        "from": "repository",
+        "to": "restore",
+        "label": "恢复选项",
+        "kind": "dependency",
+        "points": [
+          [
+            585,
+            300
+          ],
+          [
+            400,
+            300
+          ],
+          [
+            400,
+            860
+          ],
+          [
+            340,
+            860
+          ]
+        ]
+      },
+      {
+        "from": "engine",
+        "to": "repository",
+        "label": "执行备份",
+        "kind": "dependency",
+        "points": [
+          [
+            750.0,
+            460
+          ],
+          [
+            750.0,
+            345
+          ]
+        ]
+      },
+      {
+        "from": "engine",
+        "to": "watch",
+        "label": "持有多个监听器",
+        "kind": "dependency",
+        "points": [
+          [
+            750.0,
+            630
+          ],
+          [
+            750.0,
+            800
+          ]
+        ]
+      },
+      {
+        "from": "client",
+        "to": "server",
+        "label": "协议调用",
+        "kind": "dependency",
+        "points": [
+          [
+            1310.0,
+            295
+          ],
+          [
+            1310.0,
+            460
+          ]
+        ]
+      },
+      {
+        "from": "repository",
+        "to": "sha",
+        "label": "对象摘要",
+        "kind": "dependency",
+        "points": [
+          [
+            915,
+            305
+          ],
+          [
+            1035,
+            305
+          ],
+          [
+            1035,
+            865
+          ],
+          [
+            1160,
+            865
+          ]
+        ]
+      }
+    ],
+    "width": 1500,
+    "height": 1040,
+    "note": "cv::fs / archive / compression / repair 是命名空间服务；本图只把真实类与结构体建为 Class。"
+  },
+  {
+    "key": "04-backup-sequence",
+    "title": "顺序图｜独立归档备份",
+    "type": "UMLSequenceDiagram",
+    "nodes": [
+      {
+        "id": "0",
+        "title": "GUI / CLI",
+        "x": 110.0,
+        "y": 130,
+        "w": 221.0,
+        "h": 830,
+        "kind": "lifeline",
+        "lines": []
+      },
+      {
+        "id": "1",
+        "title": "archive::backup",
+        "x": 366.0,
+        "y": 130,
+        "w": 221.0,
+        "h": 830,
+        "kind": "lifeline",
+        "lines": []
+      },
+      {
+        "id": "2",
+        "title": "fs::capture",
+        "x": 622.0,
+        "y": 130,
+        "w": 221.0,
+        "h": 830,
+        "kind": "lifeline",
+        "lines": []
+      },
+      {
+        "id": "3",
+        "title": "压缩 / 加密",
+        "x": 878.0,
+        "y": 130,
+        "w": 221.0,
+        "h": 830,
+        "kind": "lifeline",
+        "lines": []
+      },
+      {
+        "id": "4",
+        "title": "临时区 / QSaveFile",
+        "x": 1134.0,
+        "y": 130,
+        "w": 221.0,
+        "h": 830,
+        "kind": "lifeline",
+        "lines": []
+      }
+    ],
+    "edges": [
+      {
+        "from": "0",
+        "to": "1",
+        "label": "1. 提交 BackupPlan",
+        "kind": "message",
+        "reply": false,
+        "points": [
+          [
+            220.5,
+            255
+          ],
+          [
+            476.5,
+            255
+          ]
+        ]
+      },
+      {
+        "from": "1",
+        "to": "2",
+        "label": "2. capture(plan, storeChunk)",
+        "kind": "message",
+        "reply": false,
+        "points": [
+          [
+            476.5,
+            316
+          ],
+          [
+            732.5,
+            316
+          ]
+        ]
+      },
+      {
+        "from": "2",
+        "to": "1",
+        "label": "3. 逐块回调 storeChunk(bytes)",
+        "kind": "message",
+        "reply": false,
+        "points": [
+          [
+            732.5,
+            377
+          ],
+          [
+            476.5,
+            377
+          ]
+        ]
+      },
+      {
+        "from": "1",
+        "to": "4",
+        "label": "4. 数据块暂存 private spool",
+        "kind": "message",
+        "reply": false,
+        "points": [
+          [
+            476.5,
+            438
+          ],
+          [
+            1244.5,
+            438
+          ]
+        ]
+      },
+      {
+        "from": "2",
+        "to": "1",
+        "label": "5. 返回文件清单及元数据",
+        "kind": "message",
+        "reply": true,
+        "points": [
+          [
+            732.5,
+            499
+          ],
+          [
+            476.5,
+            499
+          ]
+        ]
+      },
+      {
+        "from": "1",
+        "to": "4",
+        "label": "6. 生成 PAX/TAR 或索引内层",
+        "kind": "message",
+        "reply": false,
+        "points": [
+          [
+            476.5,
+            560
+          ],
+          [
+            1244.5,
+            560
+          ]
+        ]
+      },
+      {
+        "from": "1",
+        "to": "4",
+        "label": "7. 逐块读取完整内层归档",
+        "kind": "message",
+        "reply": false,
+        "points": [
+          [
+            476.5,
+            621
+          ],
+          [
+            1244.5,
+            621
+          ]
+        ]
+      },
+      {
+        "from": "1",
+        "to": "3",
+        "label": "8. encode → seal（启用时）",
+        "kind": "message",
+        "reply": false,
+        "points": [
+          [
+            476.5,
+            682
+          ],
+          [
+            988.5,
+            682
+          ]
+        ]
+      },
+      {
+        "from": "3",
+        "to": "1",
+        "label": "9. 返回认证数据块",
+        "kind": "message",
+        "reply": true,
+        "points": [
+          [
+            988.5,
+            743
+          ],
+          [
+            476.5,
+            743
+          ]
+        ]
+      },
+      {
+        "from": "1",
+        "to": "4",
+        "label": "10. 写外层 / 终止校验 / commit",
+        "kind": "message",
+        "reply": false,
+        "points": [
+          [
+            476.5,
+            804
+          ],
+          [
+            1244.5,
+            804
+          ]
+        ]
+      },
+      {
+        "from": "1",
+        "to": "0",
+        "label": "11. TaskResult 与统计",
+        "kind": "message",
+        "reply": true,
+        "points": [
+          [
+            476.5,
+            865
+          ],
+          [
+            220.5,
+            865
+          ]
+        ]
+      }
+    ],
+    "width": 1500,
+    "height": 1050,
+    "note": "先完成稳定快照，再打包与转换；按块处理限制内存，但暂存区需要额外磁盘空间。"
+  },
+  {
+    "key": "05-restore-sequence",
+    "title": "顺序图｜认证后解压解包并恢复",
+    "type": "UMLSequenceDiagram",
+    "nodes": [
+      {
+        "id": "0",
+        "title": "GUI / CLI",
+        "x": 110.0,
+        "y": 130,
+        "w": 178.33333333333334,
+        "h": 830,
+        "kind": "lifeline",
+        "lines": []
+      },
+      {
+        "id": "1",
+        "title": "archive::restore",
+        "x": 323.33333333333337,
+        "y": 130,
+        "w": 178.33333333333334,
+        "h": 830,
+        "kind": "lifeline",
+        "lines": []
+      },
+      {
+        "id": "2",
+        "title": "open / decode",
+        "x": 536.6666666666667,
+        "y": 130,
+        "w": 178.33333333333334,
+        "h": 830,
+        "kind": "lifeline",
+        "lines": []
+      },
+      {
+        "id": "3",
+        "title": "临时内层归档",
+        "x": 750.0,
+        "y": 130,
+        "w": 178.33333333333334,
+        "h": 830,
+        "kind": "lifeline",
+        "lines": []
+      },
+      {
+        "id": "4",
+        "title": "fs::restore",
+        "x": 963.3333333333334,
+        "y": 130,
+        "w": 178.33333333333334,
+        "h": 830,
+        "kind": "lifeline",
+        "lines": []
+      },
+      {
+        "id": "5",
+        "title": "NTFS 目标",
+        "x": 1176.6666666666667,
+        "y": 130,
+        "w": 178.33333333333334,
+        "h": 830,
+        "kind": "lifeline",
+        "lines": []
+      }
+    ],
+    "edges": [
+      {
+        "from": "0",
+        "to": "1",
+        "label": "1. 口令 + 恢复选项",
+        "kind": "message",
+        "reply": false,
+        "points": [
+          [
+            199.16666666666669,
+            255
+          ],
+          [
+            412.50000000000006,
+            255
+          ]
+        ]
+      },
+      {
+        "from": "1",
+        "to": "2",
+        "label": "2. 解锁主密钥 / 逐块认证解压",
+        "kind": "message",
+        "reply": false,
+        "points": [
+          [
+            412.50000000000006,
+            316
+          ],
+          [
+            625.8333333333334,
+            316
+          ]
+        ]
+      },
+      {
+        "from": "2",
+        "to": "1",
+        "label": "3. 返回已认证的明文块",
+        "kind": "message",
+        "reply": true,
+        "points": [
+          [
+            625.8333333333334,
+            377
+          ],
+          [
+            412.50000000000006,
+            377
+          ]
+        ]
+      },
+      {
+        "from": "1",
+        "to": "3",
+        "label": "4. 写入临时内层归档",
+        "kind": "message",
+        "reply": false,
+        "points": [
+          [
+            412.50000000000006,
+            438
+          ],
+          [
+            839.1666666666666,
+            438
+          ]
+        ]
+      },
+      {
+        "from": "1",
+        "to": "3",
+        "label": "5. 验证终止记录 / 解析清单",
+        "kind": "message",
+        "reply": false,
+        "points": [
+          [
+            412.50000000000006,
+            499
+          ],
+          [
+            839.1666666666666,
+            499
+          ]
+        ]
+      },
+      {
+        "from": "1",
+        "to": "4",
+        "label": "6. restore(manifest, loadChunk)",
+        "kind": "message",
+        "reply": false,
+        "points": [
+          [
+            412.50000000000006,
+            560
+          ],
+          [
+            1052.5,
+            560
+          ]
+        ]
+      },
+      {
+        "from": "4",
+        "to": "1",
+        "label": "7. 按需 loadChunk(id)",
+        "kind": "message",
+        "reply": false,
+        "points": [
+          [
+            1052.5,
+            621
+          ],
+          [
+            412.50000000000006,
+            621
+          ]
+        ]
+      },
+      {
+        "from": "1",
+        "to": "3",
+        "label": "8. 按索引读取并验证 SHA256",
+        "kind": "message",
+        "reply": false,
+        "points": [
+          [
+            412.50000000000006,
+            682
+          ],
+          [
+            839.1666666666666,
+            682
+          ]
+        ]
+      },
+      {
+        "from": "1",
+        "to": "4",
+        "label": "9. 返回明文数据块",
+        "kind": "message",
+        "reply": true,
+        "points": [
+          [
+            412.50000000000006,
+            743
+          ],
+          [
+            1052.5,
+            743
+          ]
+        ]
+      },
+      {
+        "from": "4",
+        "to": "5",
+        "label": "10. 安全写入 / 链接 / 元数据",
+        "kind": "message",
+        "reply": false,
+        "points": [
+          [
+            1052.5,
+            804
+          ],
+          [
+            1265.8333333333335,
+            804
+          ]
+        ]
+      },
+      {
+        "from": "4",
+        "to": "1",
+        "label": "11. TaskResult 与明细",
+        "kind": "message",
+        "reply": true,
+        "points": [
+          [
+            1052.5,
+            865
+          ],
+          [
+            412.50000000000006,
+            865
+          ]
+        ]
+      },
+      {
+        "from": "1",
+        "to": "0",
+        "label": "12. 最终恢复结果",
+        "kind": "message",
+        "reply": true,
+        "points": [
+          [
+            412.50000000000006,
+            926
+          ],
+          [
+            199.16666666666669,
+            926
+          ]
+        ]
+      }
+    ],
+    "width": 1500,
+    "height": 1050,
+    "note": "默认不覆盖；完整外层校验通过后才恢复用户文件；目录元数据在子对象处理后恢复。"
+  },
+  {
+    "key": "06-network-sequence",
+    "title": "顺序图｜认证与可续传增量上传",
+    "type": "UMLSequenceDiagram",
+    "nodes": [
+      {
+        "id": "0",
+        "title": "network::Client",
+        "x": 110.0,
+        "y": 130,
+        "w": 285.0,
+        "h": 830,
+        "kind": "lifeline",
+        "lines": []
+      },
+      {
+        "id": "1",
+        "title": "network::Server",
+        "x": 430.0,
+        "y": 130,
+        "w": 285.0,
+        "h": 830,
+        "kind": "lifeline",
+        "lines": []
+      },
+      {
+        "id": "2",
+        "title": "账户 / 设备库",
+        "x": 750.0,
+        "y": 130,
+        "w": 285.0,
+        "h": 830,
+        "kind": "lifeline",
+        "lines": []
+      },
+      {
+        "id": "3",
+        "title": "用户隔离仓库",
+        "x": 1070.0,
+        "y": 130,
+        "w": 285.0,
+        "h": 830,
+        "kind": "lifeline",
+        "lines": []
+      }
+    ],
+    "edges": [
+      {
+        "from": "0",
+        "to": "1",
+        "label": "1. hello：用户 / 设备 / nonce",
+        "kind": "message",
+        "reply": false,
+        "points": [
+          [
+            252.5,
+            255
+          ],
+          [
+            572.5,
+            255
+          ]
+        ]
+      },
+      {
+        "from": "1",
+        "to": "2",
+        "label": "2. 查设备配对密钥",
+        "kind": "message",
+        "reply": false,
+        "points": [
+          [
+            572.5,
+            316
+          ],
+          [
+            892.5,
+            316
+          ]
+        ]
+      },
+      {
+        "from": "1",
+        "to": "0",
+        "label": "3. server nonce + HMAC proof",
+        "kind": "message",
+        "reply": true,
+        "points": [
+          [
+            572.5,
+            377
+          ],
+          [
+            252.5,
+            377
+          ]
+        ]
+      },
+      {
+        "from": "0",
+        "to": "1",
+        "label": "4. client proof / 加密 login",
+        "kind": "message",
+        "reply": false,
+        "points": [
+          [
+            252.5,
+            438
+          ],
+          [
+            572.5,
+            438
+          ]
+        ]
+      },
+      {
+        "from": "1",
+        "to": "2",
+        "label": "5. 验证口令与启用状态",
+        "kind": "message",
+        "reply": false,
+        "points": [
+          [
+            572.5,
+            499
+          ],
+          [
+            892.5,
+            499
+          ]
+        ]
+      },
+      {
+        "from": "0",
+        "to": "1",
+        "label": "6. begin：对象清单",
+        "kind": "message",
+        "reply": false,
+        "points": [
+          [
+            252.5,
+            560
+          ],
+          [
+            572.5,
+            560
+          ]
+        ]
+      },
+      {
+        "from": "1",
+        "to": "3",
+        "label": "7. 比对对象 / 暂存偏移",
+        "kind": "message",
+        "reply": false,
+        "points": [
+          [
+            572.5,
+            621
+          ],
+          [
+            1212.5,
+            621
+          ]
+        ]
+      },
+      {
+        "from": "1",
+        "to": "0",
+        "label": "8. 缺失对象与 offset",
+        "kind": "message",
+        "reply": true,
+        "points": [
+          [
+            572.5,
+            682
+          ],
+          [
+            252.5,
+            682
+          ]
+        ]
+      },
+      {
+        "from": "0",
+        "to": "1",
+        "label": "9. 加密 put：从 offset 续传",
+        "kind": "message",
+        "reply": false,
+        "points": [
+          [
+            252.5,
+            743
+          ],
+          [
+            572.5,
+            743
+          ]
+        ]
+      },
+      {
+        "from": "1",
+        "to": "3",
+        "label": "10. 摘要校验 / 原子提交索引",
+        "kind": "message",
+        "reply": false,
+        "points": [
+          [
+            572.5,
+            804
+          ],
+          [
+            1212.5,
+            804
+          ]
+        ]
+      },
+      {
+        "from": "1",
+        "to": "0",
+        "label": "11. 带认证的成功响应",
+        "kind": "message",
+        "reply": true,
+        "points": [
+          [
+            572.5,
+            865
+          ],
+          [
+            252.5,
+            865
+          ]
+        ]
+      }
+    ],
+    "width": 1500,
+    "height": 1050,
+    "note": "每帧绑定会话和递增序号；用户路径不由请求任意指定；服务器不掌握备份仓库主密钥。"
+  },
+  {
+    "key": "07-task-state",
+    "title": "状态图｜自动任务执行与重试",
+    "type": "UMLStatechartDiagram",
+    "nodes": [
+      {
+        "id": "initial",
+        "title": "",
+        "x": 50,
+        "y": 125,
+        "w": 24,
+        "h": 24,
+        "kind": "initial",
+        "lines": []
+      },
+      {
+        "id": "waiting",
+        "title": "waiting｜等待到期 / 事件",
+        "x": 100,
+        "y": 180,
+        "w": 380,
+        "h": 110,
+        "kind": "state",
+        "lines": []
+      },
+      {
+        "id": "running",
+        "title": "running｜后台备份",
+        "x": 950,
+        "y": 180,
+        "w": 380,
+        "h": 110,
+        "kind": "state",
+        "lines": []
+      },
+      {
+        "id": "retry",
+        "title": "retrying｜延迟重试",
+        "x": 950,
+        "y": 580,
+        "w": 380,
+        "h": 110,
+        "kind": "state",
+        "lines": []
+      },
+      {
+        "id": "disabled",
+        "title": "禁用｜enabled=false",
+        "x": 100,
+        "y": 580,
+        "w": 380,
+        "h": 110,
+        "kind": "state",
+        "lines": []
+      }
+    ],
+    "edges": [
+      {
+        "from": "initial",
+        "to": "waiting",
+        "label": "",
+        "kind": "transition",
+        "points": [
+          [
+            62,
+            149
+          ],
+          [
+            62,
+            170
+          ],
+          [
+            130,
+            170
+          ],
+          [
+            130,
+            180
+          ]
+        ]
+      },
+      {
+        "from": "waiting",
+        "to": "running",
+        "label": "到期 / 首次 / 事件稳定 ≥ 2秒",
+        "kind": "transition",
+        "points": [
+          [
+            480,
+            235.0
+          ],
+          [
+            950,
+            235.0
+          ]
+        ]
+      },
+      {
+        "from": "running",
+        "to": "waiting",
+        "label": "成功：记录结果并计算 nextRun",
+        "kind": "transition",
+        "points": [
+          [
+            1140,
+            180
+          ],
+          [
+            1140,
+            100
+          ],
+          [
+            290,
+            100
+          ],
+          [
+            290,
+            180
+          ]
+        ],
+        "labelPosition": [
+          700,
+          112
+        ]
+      },
+      {
+        "from": "running",
+        "to": "retry",
+        "label": "失败：failures+1",
+        "kind": "transition",
+        "points": [
+          [
+            1140.0,
+            290
+          ],
+          [
+            1140.0,
+            580
+          ]
+        ]
+      },
+      {
+        "from": "retry",
+        "to": "running",
+        "label": "重试到期",
+        "kind": "transition",
+        "points": [
+          [
+            1330,
+            635
+          ],
+          [
+            1430,
+            635
+          ],
+          [
+            1430,
+            235
+          ],
+          [
+            1330,
+            235
+          ]
+        ],
+        "labelPosition": [
+          1370,
+          450
+        ]
+      },
+      {
+        "from": "waiting",
+        "to": "disabled",
+        "label": "用户禁用",
+        "kind": "transition",
+        "points": [
+          [
+            290.0,
+            290
+          ],
+          [
+            290.0,
+            580
+          ]
+        ]
+      },
+      {
+        "from": "disabled",
+        "to": "waiting",
+        "label": "用户启用",
+        "kind": "transition",
+        "points": [
+          [
+            100,
+            635
+          ],
+          [
+            40,
+            635
+          ],
+          [
+            40,
+            235
+          ],
+          [
+            100,
+            235
+          ]
+        ],
+        "labelPosition": [
+          130,
+          450
+        ]
+      },
+      {
+        "from": "retry",
+        "to": "disabled",
+        "label": "用户禁用",
+        "kind": "transition",
+        "points": [
+          [
+            950,
+            635.0
+          ],
+          [
+            480,
+            635.0
+          ]
+        ]
+      }
+    ],
+    "width": 1500,
+    "height": 850,
+    "note": "禁用由 enabled 标志表示；事件去抖由 dirty_ 时间记录；同一 Engine 同时仅运行一个任务。"
+  }
+]

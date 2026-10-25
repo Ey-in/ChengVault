@@ -1,0 +1,7 @@
+{
+  "timestampUtc": "2026-10-17T14:23:34.0954378Z",
+  "status": "FAIL",
+  "error": "GUI functional regression failed with exit code -1073741819",
+  "records": [],
+  "visualReview": "NOT_READY"
+}

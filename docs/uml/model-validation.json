@@ -1,0 +1,12 @@
+{
+  "modelsAndViews": 1126,
+  "references": 3116,
+  "diagrams": 7,
+  "uniqueIds": true,
+  "resolvedReferences": true,
+  "acyclicParents": true,
+  "viewBounds": true,
+  "nativeStarUmlOpenVerified": false,
+  "scope": "STATIC_STRUCTURE_ONLY; this check does not launch StarUML",
+  "nativeValidationEvidence": "../../evidence/uml-native/validation.json"
+}

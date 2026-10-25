@@ -1,0 +1,81 @@
+{
+  "timestampUtc": "2026-10-17T14:27:43.0808078Z",
+  "status": "PASS",
+  "inputDesktopBefore": "Default",
+  "inputDesktopAfter": "Default",
+  "testDesktop": "ChengVaultUi-a969a8cee36e4544b286b698db0e84e2",
+  "desktopSwitchRequested": false,
+  "coreSourceHashesUnchanged": true,
+  "coreSourceCount": 9,
+  "records": [
+    {
+      "name": "GUI functional regression",
+      "exitCode": 0,
+      "durationMs": 5769,
+      "scaleFactor": "1",
+      "executableSha256": "cd8b738cf7a54a07690496bb4e8c731dcf297c2becd05cddd5272a3ee219884f"
+    },
+    {
+      "name": "Capture default",
+      "exitCode": 0,
+      "durationMs": 2514,
+      "scaleFactor": "1",
+      "executableSha256": "33dd221f94db215a39cda7f9ee525753a2d2d7135551e7678182a3441a489249"
+    },
+    {
+      "name": "Capture minimum",
+      "exitCode": 0,
+      "durationMs": 2026,
+      "scaleFactor": "1",
+      "executableSha256": "33dd221f94db215a39cda7f9ee525753a2d2d7135551e7678182a3441a489249"
+    },
+    {
+      "name": "Capture high-dpi",
+      "exitCode": 0,
+      "durationMs": 2974,
+      "scaleFactor": "1.5",
+      "executableSha256": "33dd221f94db215a39cda7f9ee525753a2d2d7135551e7678182a3441a489249"
+    }
+  ],
+  "visualReview": "PASS",
+  "defaultPageReview": {
+    "method": "All eight final default captures viewed individually; no clipping or overlap beyond intentional scroll viewport",
+    "images": [
+      {
+        "file": "automation.png",
+        "sha256": "0f36c6da19546fa731a1cf62afa30aacab6779d40522a590a7cada3ecfd6ce4a"
+      },
+      {
+        "file": "backup.png",
+        "sha256": "99548060a4730dbb702ac8e25c774ff56774f622552bbd6564b1cdcc4e92a14c"
+      },
+      {
+        "file": "logs.png",
+        "sha256": "4c5bfe7db17ff93d8aa134a1db682bb66fff904a08d411bab4c429ec78362f33"
+      },
+      {
+        "file": "network.png",
+        "sha256": "5c2f588b60aa798d1ea4c27b6831e1066ff0f724714ccd852cbd454e18418209"
+      },
+      {
+        "file": "overview.png",
+        "sha256": "7798d524ff2445dd4ce34e4774a31aa93ff4a38affc3a67ad27e6861ec15f866"
+      },
+      {
+        "file": "repair.png",
+        "sha256": "4ebbfad787c06b946138e5339df9f888693925314215ddbc1604649f8c109755"
+      },
+      {
+        "file": "restore.png",
+        "sha256": "21d2817a6511b862dc6e4498493c4793beae77eca74ab644403a5d9f73c92b08"
+      },
+      {
+        "file": "settings.png",
+        "sha256": "f2ba412c6209ab87b56682f79eaa5aeedf68ae45a1028ec173c30cbd2fb89fe8"
+      }
+    ]
+  },
+  "secondaryReview": "evidence/ui-refresh/visual-review-secondary.json",
+  "interactionObservationCount": 32,
+  "observationScope": "Additional presentation checks; excluded from original 610 functional passing cases"
+}

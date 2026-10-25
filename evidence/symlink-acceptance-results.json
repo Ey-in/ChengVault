@@ -1,0 +1,41 @@
+{
+  "timestampUtc": "2026-10-17T13:47:01.6509350Z",
+  "result": "SKIP_PERMISSION",
+  "passed": 0,
+  "failed": 0,
+  "skipped": 2,
+  "hostName": "<redacted-host>",
+  "os": "Microsoft Windows NT 10.0.26200.0",
+  "fileSystem": "NTFS",
+  "currentUserSid": "<redacted-user-sid>",
+  "administratorToken": false,
+  "createsWithAllowUnprivilegedFlag": true,
+  "changesSystemPolicy": false,
+  "executable": "D:\\soft-project\\ChengVault\\dist\\ChengVault-1.0-windows-x64\\ChengVaultCli.exe",
+  "executableSha256": "2e944096b14b00a3cf29fb32ab741d555264b837e14b59ec4274ae0dc0703603",
+  "sourceCommit": "ad138ef98d91103fb9ffc3bb9cbfcd4e191cd59f",
+  "creationResults": [
+    {
+      "name": "file-link",
+      "target": "payload.txt",
+      "directory": false,
+      "flags": 2,
+      "created": false,
+      "win32Error": 1314,
+      "message": "客户端没有所需的特权。",
+      "status": "SKIP_PERMISSION"
+    },
+    {
+      "name": "directory-link",
+      "target": "payload-dir",
+      "directory": true,
+      "flags": 3,
+      "created": false,
+      "win32Error": 1314,
+      "message": "客户端没有所需的特权。",
+      "status": "SKIP_PERMISSION"
+    }
+  ],
+  "restorationChecks": [],
+  "evidenceDirectory": "D:\\soft-project\\ChengVault\\tmp\\symlink-final-runtime\\run-20261017-214701-010cc906"
+}

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="850" viewBox="0 0 1500 850">
+<defs><marker id="arrow" markerWidth="11" markerHeight="11" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10" fill="none" stroke="#53657c" stroke-width="1.7"/></marker></defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#172c42} .small{font-size:16px} .title{font-size:29px;font-weight:700} .label{font-size:17px} .node{font-size:19px;font-weight:600}</style>
+<text x="35" y="48" class="title">状态图｜自动任务执行与重试</text>
+<path d="M35 70 H1465" stroke="#2aa89b" stroke-width="5"/>
+<polyline points="62,149 62,170 130,170 130,180" fill="none" stroke="#53657c" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="480,235.0 950,235.0" fill="none" stroke="#53657c" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="715.0" y="222.0" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">到期 / 首次 / 事件稳定 ≥ 2秒</text>
+<polyline points="1140,180 1140,100 290,100 290,180" fill="none" stroke="#53657c" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="700" y="112" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">成功：记录结果并计算 nextRun</text>
+<polyline points="1140.0,290 1140.0,580" fill="none" stroke="#53657c" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="1140.0" y="422.0" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">失败：failures+1</text>
+<polyline points="1330,635 1430,635 1430,235 1330,235" fill="none" stroke="#53657c" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="1370" y="450" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">重试到期</text>
+<polyline points="290.0,290 290.0,580" fill="none" stroke="#53657c" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="290.0" y="422.0" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">用户禁用</text>
+<polyline points="100,635 40,635 40,235 100,235" fill="none" stroke="#53657c" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="130" y="450" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">用户启用</text>
+<polyline points="950,635.0 480,635.0" fill="none" stroke="#53657c" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="715.0" y="622.0" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">用户禁用</text>
+<circle cx="62.0" cy="137.0" r="12.0" fill="#172c42"/>
+<rect x="100" y="180" width="380" height="110" rx="20" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="290.0" y="242.0" text-anchor="middle" class="node">waiting｜等待到期 / 事件</text>
+<rect x="950" y="180" width="380" height="110" rx="20" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="1140.0" y="242.0" text-anchor="middle" class="node">running｜后台备份</text>
+<rect x="950" y="580" width="380" height="110" rx="20" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="1140.0" y="642.0" text-anchor="middle" class="node">retrying｜延迟重试</text>
+<rect x="100" y="580" width="380" height="110" rx="20" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="290.0" y="642.0" text-anchor="middle" class="node">禁用｜enabled=false</text>
+<text x="35" y="822" class="small">禁用由 enabled 标志表示；事件去抖由 dirty_ 时间记录；同一 Engine 同时仅运行一个任务。</text>
+</svg>

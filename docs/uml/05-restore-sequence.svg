@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1050" viewBox="0 0 1500 1050">
+<defs><marker id="arrow" markerWidth="11" markerHeight="11" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10" fill="none" stroke="#53657c" stroke-width="1.7"/></marker></defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#172c42} .small{font-size:16px} .title{font-size:29px;font-weight:700} .label{font-size:17px} .node{font-size:19px;font-weight:600}</style>
+<text x="35" y="48" class="title">顺序图｜认证后解压解包并恢复</text>
+<path d="M35 70 H1465" stroke="#2aa89b" stroke-width="5"/>
+<polyline points="199.16666666666669,255 412.50000000000006,255" fill="none" stroke="#53657c" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="305.83333333333337" y="242.0" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">1. 口令 + 恢复选项</text>
+<polyline points="412.50000000000006,316 625.8333333333334,316" fill="none" stroke="#53657c" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="519.1666666666667" y="303.0" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">2. 解锁主密钥 / 逐块认证解压</text>
+<polyline points="625.8333333333334,377 412.50000000000006,377" fill="none" stroke="#53657c" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="519.1666666666667" y="364.0" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">3. 返回已认证的明文块</text>
+<polyline points="412.50000000000006,438 839.1666666666666,438" fill="none" stroke="#53657c" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="625.8333333333334" y="425.0" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">4. 写入临时内层归档</text>
+<polyline points="412.50000000000006,499 839.1666666666666,499" fill="none" stroke="#53657c" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="625.8333333333334" y="486.0" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">5. 验证终止记录 / 解析清单</text>
+<polyline points="412.50000000000006,560 1052.5,560" fill="none" stroke="#53657c" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="732.5" y="547.0" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">6. restore(manifest, loadChunk)</text>
+<polyline points="1052.5,621 412.50000000000006,621" fill="none" stroke="#53657c" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="732.5" y="608.0" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">7. 按需 loadChunk(id)</text>
+<polyline points="412.50000000000006,682 839.1666666666666,682" fill="none" stroke="#53657c" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="625.8333333333334" y="669.0" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">8. 按索引读取并验证 SHA256</text>
+<polyline points="412.50000000000006,743 1052.5,743" fill="none" stroke="#53657c" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="732.5" y="730.0" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">9. 返回明文数据块</text>
+<polyline points="1052.5,804 1265.8333333333335,804" fill="none" stroke="#53657c" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="1159.1666666666667" y="791.0" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">10. 安全写入 / 链接 / 元数据</text>
+<polyline points="1052.5,865 412.50000000000006,865" fill="none" stroke="#53657c" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="732.5" y="852.0" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">11. TaskResult 与明细</text>
+<polyline points="412.50000000000006,926 199.16666666666669,926" fill="none" stroke="#53657c" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="305.83333333333337" y="913.0" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">12. 最终恢复结果</text>
+<rect x="110.0" y="130" width="178.33333333333334" height="60" rx="7" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="199.16666666666669" y="165" text-anchor="middle" class="node">GUI / CLI</text>
+<path d="M199.16666666666669 190 V960" stroke="#8ca3b8" stroke-width="1.5" stroke-dasharray="7 5"/>
+<rect x="323.33333333333337" y="130" width="178.33333333333334" height="60" rx="7" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="412.50000000000006" y="165" text-anchor="middle" class="node">archive::restore</text>
+<path d="M412.50000000000006 190 V960" stroke="#8ca3b8" stroke-width="1.5" stroke-dasharray="7 5"/>
+<rect x="536.6666666666667" y="130" width="178.33333333333334" height="60" rx="7" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="625.8333333333334" y="165" text-anchor="middle" class="node">open / decode</text>
+<path d="M625.8333333333334 190 V960" stroke="#8ca3b8" stroke-width="1.5" stroke-dasharray="7 5"/>
+<rect x="750.0" y="130" width="178.33333333333334" height="60" rx="7" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="839.1666666666666" y="165" text-anchor="middle" class="node">临时内层归档</text>
+<path d="M839.1666666666666 190 V960" stroke="#8ca3b8" stroke-width="1.5" stroke-dasharray="7 5"/>
+<rect x="963.3333333333334" y="130" width="178.33333333333334" height="60" rx="7" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="1052.5" y="165" text-anchor="middle" class="node">fs::restore</text>
+<path d="M1052.5 190 V960" stroke="#8ca3b8" stroke-width="1.5" stroke-dasharray="7 5"/>
+<rect x="1176.6666666666667" y="130" width="178.33333333333334" height="60" rx="7" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="1265.8333333333335" y="165" text-anchor="middle" class="node">NTFS 目标</text>
+<path d="M1265.8333333333335 190 V960" stroke="#8ca3b8" stroke-width="1.5" stroke-dasharray="7 5"/>
+<text x="35" y="1022" class="small">默认不覆盖；完整外层校验通过后才恢复用户文件；目录元数据在子对象处理后恢复。</text>
+</svg>

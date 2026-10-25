@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1140" viewBox="0 0 1500 1140">
+<defs><marker id="arrow" markerWidth="11" markerHeight="11" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10" fill="none" stroke="#53657c" stroke-width="1.7"/></marker></defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#172c42} .small{font-size:16px} .title{font-size:29px;font-weight:700} .label{font-size:17px} .node{font-size:19px;font-weight:600}</style>
+<text x="35" y="48" class="title">用例图｜用户目标与包含关系</text>
+<path d="M35 70 H1465" stroke="#2aa89b" stroke-width="5"/>
+<rect x="210" y="95" width="1220" height="965" fill="#f8fbfd" stroke="#9fb3c7" stroke-width="2" rx="8"/>
+<text x="235" y="125" class="small">系统边界：澄匣备份 ChengVault</text>
+<polyline points="150,370 240,370 240,192.5 310,192.5" fill="none" stroke="#53657c" stroke-width="2"/>
+<polyline points="150,370 240,370 240,352.5 310,352.5" fill="none" stroke="#53657c" stroke-width="2"/>
+<polyline points="150,370 240,370 240,512.5 310,512.5" fill="none" stroke="#53657c" stroke-width="2"/>
+<polyline points="150,370 240,370 240,672.5 310,672.5" fill="none" stroke="#53657c" stroke-width="2"/>
+<polyline points="150,370 240,370 240,832.5 310,832.5" fill="none" stroke="#53657c" stroke-width="2"/>
+<polyline points="150,870.0 310,992.5" fill="none" stroke="#53657c" stroke-width="2"/>
+<polyline points="610,192.5 960,192.5" fill="none" stroke="#53657c" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="785.0" y="179.5" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">«include»</text>
+<polyline points="610,352.5 960,352.5" fill="none" stroke="#53657c" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="785.0" y="339.5" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">«include»</text>
+<polyline points="610,672.5 960,672.5" fill="none" stroke="#53657c" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="785.0" y="659.5" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">«include»</text>
+<polyline points="610,832.5 960,832.5" fill="none" stroke="#53657c" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="785.0" y="819.5" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">«include»</text>
+<circle cx="90.0" cy="334" r="12" fill="white" stroke="#294b68" stroke-width="2"/>
+<path d="M90.0 346 V380 M66.0 360 H114.0 M90.0 380 L67.0 407 M90.0 380 L113.0 407" fill="none" stroke="#294b68" stroke-width="2"/>
+<text x="90.0" y="433" text-anchor="middle" class="node">备份用户</text>
+<circle cx="90.0" cy="834" r="12" fill="white" stroke="#294b68" stroke-width="2"/>
+<path d="M90.0 846 V880 M66.0 860 H114.0 M90.0 880 L67.0 907 M90.0 880 L113.0 907" fill="none" stroke="#294b68" stroke-width="2"/>
+<text x="90.0" y="933" text-anchor="middle" class="node">管理员</text>
+<ellipse cx="460.0" cy="192.5" rx="150.0" ry="42.5" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="460.0" y="199.5" text-anchor="middle" class="node">UC01 创建备份</text>
+<ellipse cx="460.0" cy="352.5" rx="150.0" ry="42.5" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="460.0" y="359.5" text-anchor="middle" class="node">UC02 还原文件</text>
+<ellipse cx="460.0" cy="512.5" rx="150.0" ry="42.5" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="460.0" y="519.5" text-anchor="middle" class="node">UC03 管理自动任务</text>
+<ellipse cx="460.0" cy="672.5" rx="150.0" ry="42.5" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="460.0" y="679.5" text-anchor="middle" class="node">UC04 远程网盘</text>
+<ellipse cx="460.0" cy="832.5" rx="150.0" ry="42.5" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="460.0" y="839.5" text-anchor="middle" class="node">UC05 检查与修复归档</text>
+<ellipse cx="460.0" cy="992.5" rx="150.0" ry="42.5" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="460.0" y="999.5" text-anchor="middle" class="node">UC06 管理账户/设备</text>
+<ellipse cx="1125.0" cy="192.5" rx="165.0" ry="42.5" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="1125.0" y="199.5" text-anchor="middle" class="node">UC07 按规则扫描</text>
+<ellipse cx="1125.0" cy="352.5" rx="165.0" ry="42.5" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="1125.0" y="359.5" text-anchor="middle" class="node">UC08 校验并安全恢复</text>
+<ellipse cx="1125.0" cy="672.5" rx="165.0" ry="42.5" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="1125.0" y="679.5" text-anchor="middle" class="node">UC09 用户/设备认证</text>
+<ellipse cx="1125.0" cy="832.5" rx="165.0" ry="42.5" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="1125.0" y="839.5" text-anchor="middle" class="node">UC10 定位损坏分片</text>
+<text x="35" y="1112" class="small">六类必需筛选与四类额外筛选属于 UC07；权限不足必须明确报告。</text>
+</svg>

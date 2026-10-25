@@ -1,0 +1,51 @@
+{
+  "timestampUtc": "2026-10-17T08:42:39.7818273Z",
+  "fixture": "D:\\soft-project\\ChengVault\\evidence\\metadata-times\\run-3c9b90618bef4ae5b7b04a66630f274e",
+  "executableSha256": "4991583bf6badf9b860d62c7de809f1f362ea97c1fb80e53b04dd56297cc6e8c",
+  "strictMetadata": true,
+  "warnings": [],
+  "records": [
+    {
+      "name": "META-TIME/三类时间.txt/CreationTimeUtc",
+      "category": "系统功能",
+      "expectedFileTime": "132567987060000000",
+      "actualFileTime": "132567987060000000",
+      "passed": true
+    },
+    {
+      "name": "META-TIME/三类时间.txt/LastAccessTimeUtc",
+      "category": "系统功能",
+      "expectedFileTime": "132908439670000000",
+      "actualFileTime": "132908439670000000",
+      "passed": true
+    },
+    {
+      "name": "META-TIME/三类时间.txt/LastWriteTimeUtc",
+      "category": "系统功能",
+      "expectedFileTime": "133251484280000000",
+      "actualFileTime": "133251484280000000",
+      "passed": true
+    },
+    {
+      "name": "META-TIME/空目录/CreationTimeUtc",
+      "category": "系统功能",
+      "expectedFileTime": "132567987060000000",
+      "actualFileTime": "132567987060000000",
+      "passed": true
+    },
+    {
+      "name": "META-TIME/空目录/LastAccessTimeUtc",
+      "category": "系统功能",
+      "expectedFileTime": "132908439670000000",
+      "actualFileTime": "132908439670000000",
+      "passed": true
+    },
+    {
+      "name": "META-TIME/空目录/LastWriteTimeUtc",
+      "category": "系统功能",
+      "expectedFileTime": "133251484280000000",
+      "actualFileTime": "133251484280000000",
+      "passed": true
+    }
+  ]
+}

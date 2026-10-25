@@ -1,0 +1,44 @@
+[
+  {
+    "id": "CV_7905103c1d5c5a808b655869e4abb88a",
+    "type": "UMLUseCaseDiagram",
+    "name": "用例图｜用户目标与包含关系",
+    "description": ""
+  },
+  {
+    "id": "CV_e34c381de7fe5422bce0f079948c40ed",
+    "type": "UMLComponentDiagram",
+    "name": "构件图｜界面、核心与平台职责",
+    "description": ""
+  },
+  {
+    "id": "CV_fc782a0fd62b5a3a861e2712fc8eeb25",
+    "type": "UMLClassDiagram",
+    "name": "类图｜公共类型与主要协作",
+    "description": ""
+  },
+  {
+    "id": "CV_40cab7c53fd5512e8464b0d65f60d3f9",
+    "type": "UMLSequenceDiagram",
+    "name": "顺序图｜独立归档备份",
+    "description": ""
+  },
+  {
+    "id": "CV_ea47eb34d49657898c398f39a6873ddc",
+    "type": "UMLSequenceDiagram",
+    "name": "顺序图｜认证后解压解包并恢复",
+    "description": ""
+  },
+  {
+    "id": "CV_b2fdc1f1a3b55cbcb4f12b90599eb610",
+    "type": "UMLSequenceDiagram",
+    "name": "顺序图｜认证与可续传增量上传",
+    "description": ""
+  },
+  {
+    "id": "CV_37852be2efcb5c5d8bbfc63e4e0cad89",
+    "type": "UMLStatechartDiagram",
+    "name": "状态图｜自动任务执行与重试",
+    "description": ""
+  }
+]

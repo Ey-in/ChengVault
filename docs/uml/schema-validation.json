@@ -1,0 +1,18 @@
+{
+  "officialMetamodelUrl": "https://raw.githubusercontent.com/staruml/staruml-samples/main/StarUML-metamodel.mdj",
+  "officialMetamodelSha256": "c5a816be7e48334631a72d257eee9c6606cf6606cc39c93a507a058031675635",
+  "modelSha256": "73685575e1fcdc3fde415805cf030f4bb769f510035930971508610762c2c321",
+  "modelTypes": 56,
+  "modelsAndViews": 1126,
+  "checkedAssociationFieldTypes": 4241,
+  "unknownTypes": [],
+  "unknownFields": [],
+  "wrongReferenceTypes": [],
+  "unresolvedReferences": [],
+  "passed": true,
+  "nativeStarUmlOpenVerified": false,
+  "limits": [
+    "Static JSON/metamodel-field/reference checks only.",
+    "Does not run the native renderer or every UML well-formedness rule."
+  ]
+}

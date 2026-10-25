@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1040" viewBox="0 0 1500 1040">
+<defs><marker id="arrow" markerWidth="11" markerHeight="11" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10" fill="none" stroke="#53657c" stroke-width="1.7"/></marker></defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#172c42} .small{font-size:16px} .title{font-size:29px;font-weight:700} .label{font-size:17px} .node{font-size:19px;font-weight:600}</style>
+<text x="35" y="48" class="title">类图｜公共类型与主要协作</text>
+<path d="M35 70 H1465" stroke="#2aa89b" stroke-width="5"/>
+<polyline points="585,247.5 340,222.5" fill="none" stroke="#53657c" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="462.5" y="222.0" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">读取计划</text>
+<polyline points="585,247.5 340,527.5" fill="none" stroke="#53657c" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="462.5" y="374.5" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">进度 / 取消</text>
+<polyline points="585,300 400,300 400,860 340,860" fill="none" stroke="#53657c" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="492.5" y="287.0" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">恢复选项</text>
+<polyline points="750.0,460 750.0,345" fill="none" stroke="#53657c" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="750.0" y="389.5" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">执行备份</text>
+<polyline points="750.0,630 750.0,800" fill="none" stroke="#53657c" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="750.0" y="702.0" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">持有多个监听器</text>
+<polyline points="1310.0,295 1310.0,460" fill="none" stroke="#53657c" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="1310.0" y="364.5" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">协议调用</text>
+<polyline points="915,305 1035,305 1035,865 1160,865" fill="none" stroke="#53657c" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="975.0" y="292.0" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">对象摘要</text>
+<rect x="40" y="150" width="300" height="145" rx="7" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="190.0" y="185" text-anchor="middle" class="node">BackupPlan</text>
+<path d="M40 198 H340" stroke="#2b6d8a"/>
+<text x="52" y="225" class="small">sources / destination</text>
+<text x="52" y="252" class="small">format / compression / cipher</text>
+<text x="52" y="279" class="small">filters / strictMetadata</text>
+<rect x="585" y="150" width="330" height="195" rx="7" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="750.0" y="185" text-anchor="middle" class="node">Repository</text>
+<path d="M585 198 H915" stroke="#2b6d8a"/>
+<text x="597" y="225" class="small">init() / backup(plan)</text>
+<text x="597" y="252" class="small">manifest(id) / restore(id)</text>
+<text x="597" y="279" class="small">verify() / prune()</text>
+<text x="597" y="306" class="small">changePassword(password)</text>
+<rect x="1160" y="150" width="300" height="145" rx="7" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="1310.0" y="185" text-anchor="middle" class="node">network::Client</text>
+<path d="M1160 198 H1460" stroke="#2b6d8a"/>
+<text x="1172" y="225" class="small">upload(path) / download(id)</text>
+<text x="1172" y="252" class="small">list() / admin(action)</text>
+<text x="1172" y="279" class="small">RemoteOptions options_</text>
+<rect x="40" y="460" width="300" height="135" rx="7" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="190.0" y="495" text-anchor="middle" class="node">Context</text>
+<path d="M40 508 H340" stroke="#2b6d8a"/>
+<text x="52" y="535" class="small">cancelled / progress</text>
+<text x="52" y="562" class="small">check() / update()</text>
+<rect x="585" y="460" width="330" height="170" rx="7" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="750.0" y="495" text-anchor="middle" class="node">schedule::Engine</text>
+<path d="M585 508 H915" stroke="#2b6d8a"/>
+<text x="597" y="535" class="small">start() / stop() / tick(now)</text>
+<text x="597" y="562" class="small">launch(job, now)</text>
+<text x="597" y="589" class="small">running_ / watches_ / dirty_</text>
+<rect x="1160" y="460" width="300" height="170" rx="7" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="1310.0" y="495" text-anchor="middle" class="node">network::Server</text>
+<path d="M1160 508 H1460" stroke="#2b6d8a"/>
+<text x="1172" y="535" class="small">configureUser() / configureDevice()</text>
+<text x="1172" y="562" class="small">listen() / stop()</text>
+<text x="1172" y="589" class="small">unique_ptr&lt;Impl&gt; impl_</text>
+<rect x="40" y="800" width="300" height="130" rx="7" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="190.0" y="835" text-anchor="middle" class="node">RestoreOptions</text>
+<path d="M40 848 H340" stroke="#2b6d8a"/>
+<text x="52" y="875" class="small">overwrite / strictMetadata</text>
+<text x="52" y="902" class="small">selectedPaths</text>
+<rect x="585" y="800" width="330" height="130" rx="7" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="750.0" y="835" text-anchor="middle" class="node">DirectoryWatch</text>
+<path d="M585 848 H915" stroke="#2b6d8a"/>
+<text x="597" y="875" class="small">DirectoryWatch(paths)</text>
+<text x="597" y="902" class="small">takeChanged()</text>
+<rect x="1160" y="800" width="300" height="130" rx="7" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="1310.0" y="835" text-anchor="middle" class="node">crypto::Sha256</text>
+<path d="M1160 848 H1460" stroke="#2b6d8a"/>
+<text x="1172" y="875" class="small">update(bytes) / finish()</text>
+<text x="1172" y="902" class="small">state_[8] / pending_ / length_</text>
+<text x="35" y="1012" class="small">cv::fs / archive / compression / repair 是命名空间服务；本图只把真实类与结构体建为 Class。</text>
+</svg>

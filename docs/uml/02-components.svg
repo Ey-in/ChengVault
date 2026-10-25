@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1080" viewBox="0 0 1500 1080">
+<defs><marker id="arrow" markerWidth="11" markerHeight="11" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10" fill="none" stroke="#53657c" stroke-width="1.7"/></marker></defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#172c42} .small{font-size:16px} .title{font-size:29px;font-weight:700} .label{font-size:17px} .node{font-size:19px;font-weight:600}</style>
+<text x="35" y="48" class="title">构件图｜界面、核心与平台职责</text>
+<path d="M35 70 H1465" stroke="#2aa89b" stroke-width="5"/>
+<polyline points="195.0,250 195.0,390" fill="none" stroke="#53657c" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<polyline points="750.0,250 750.0,390" fill="none" stroke="#53657c" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<polyline points="1180,200.0 875,440.0" fill="none" stroke="#53657c" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<polyline points="320,200.0 625,440.0" fill="none" stroke="#53657c" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<polyline points="320,200.0 1180,440.0" fill="none" stroke="#53657c" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<polyline points="195.0,490 195.0,650" fill="none" stroke="#53657c" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<polyline points="625,440.0 320,700.0" fill="none" stroke="#53657c" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<polyline points="320,440.0 625,700.0" fill="none" stroke="#53657c" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<polyline points="750.0,490 750.0,650" fill="none" stroke="#53657c" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<polyline points="195.0,750 195.0,870" fill="none" stroke="#53657c" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<polyline points="750.0,490 750.0,870" fill="none" stroke="#53657c" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<polyline points="1305.0,490 1305.0,650" fill="none" stroke="#53657c" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="1305.0" y="557.0" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">认证加密 TCP</text>
+<polyline points="1305.0,750 1305.0,870" fill="none" stroke="#53657c" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<polyline points="750.0,750 750.0,870" fill="none" stroke="#53657c" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<rect x="70" y="150" width="250" height="100" rx="7" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="195.0" y="185" text-anchor="middle" class="node">Qt Widgets 客户端</text>
+<rect x="625" y="150" width="250" height="100" rx="7" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="750.0" y="185" text-anchor="middle" class="node">命令行工具 CLI</text>
+<rect x="1180" y="150" width="250" height="100" rx="7" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="1305.0" y="185" text-anchor="middle" class="node">后台任务 Agent</text>
+<rect x="70" y="390" width="250" height="100" rx="7" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="195.0" y="425" text-anchor="middle" class="node">归档服务 archive</text>
+<rect x="625" y="390" width="250" height="100" rx="7" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="750.0" y="425" text-anchor="middle" class="node">版本仓库 Repository</text>
+<rect x="1180" y="390" width="250" height="100" rx="7" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="1305.0" y="425" text-anchor="middle" class="node">网络客户端 Client</text>
+<rect x="70" y="650" width="250" height="100" rx="7" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="195.0" y="685" text-anchor="middle" class="node">NTFS 扫描与恢复</text>
+<rect x="625" y="650" width="250" height="100" rx="7" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="750.0" y="685" text-anchor="middle" class="node">压缩 / 密码 / RS</text>
+<rect x="1180" y="650" width="250" height="100" rx="7" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="1305.0" y="685" text-anchor="middle" class="node">独立网盘 Server</text>
+<rect x="70" y="870" width="250" height="100" rx="7" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="195.0" y="905" text-anchor="middle" class="node">Win32 文件与事件 API</text>
+<rect x="625" y="870" width="250" height="100" rx="7" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="750.0" y="905" text-anchor="middle" class="node">归档 / 加密对象 / 快照</text>
+<rect x="1180" y="870" width="250" height="100" rx="7" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="1305.0" y="905" text-anchor="middle" class="node">用户隔离的远端仓库</text>
+<text x="35" y="1052" class="small">算法由项目自主实现；Qt / Win32 提供界面、I/O、线程、事件、网络及安全随机数。</text>
+</svg>

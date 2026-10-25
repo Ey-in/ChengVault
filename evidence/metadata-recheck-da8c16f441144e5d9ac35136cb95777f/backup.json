@@ -1,0 +1,15 @@
+{
+    "bytes": 46,
+    "details": {
+        "cipher": "none",
+        "compression": "none",
+        "entries": 4,
+        "format": "indexed"
+    },
+    "files": 2,
+    "output": "D:/soft-project/ChengVault/evidence/metadata-recheck-da8c16f441144e5d9ac35136cb95777f/check.cva",
+    "storedBytes": 3670,
+    "success": true,
+    "warnings": [
+    ]
+}

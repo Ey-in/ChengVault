@@ -1,0 +1,37 @@
+{
+  "checkedAtUtc": "2026-10-17T13:07:45.8849033Z",
+  "nativeStarUmlOpenVerified": false,
+  "nativeRenderingVerified": false,
+  "outcome": "NOT_VERIFIED",
+  "activeDesktopBefore": "Default",
+  "isolatedDesktop": "ChengVaultVerification-2a048b725c1f41a6a6e0cad5ec1d51e2",
+  "switchDesktopCalled": false,
+  "testProcesses": [
+    {
+      "purpose": "desktop identity probe",
+      "pid": 34052
+    },
+    {
+      "purpose": "native model and diagram rendering",
+      "pid": 13504
+    }
+  ],
+  "officialApi": "https://docs.staruml.io/user-guide/ai-integration-via-mcp",
+  "modelSha256": "d2b6760dafa212ee3cc9dab05be10d6562be500f62b1b83d93f591e4aa4f4a4b",
+  "desktopProbe": {
+    "threadDesktop": "ChengVaultVerification-2a048b725c1f41a6a6e0cad5ec1d51e2",
+    "activeInputDesktop": "Default",
+    "pid": 34052
+  },
+  "desktopIsolationVerified": true,
+  "applicationSha256": "f50cc13209a56cc125e56389a9316c6bbdaed65a04582329609a467e154f4cb0",
+  "signature": "CN=\"MKLabs Co.,Ltd.\", O=\"MKLabs Co.,Ltd.\", L=Songpa District, S=Seoul, C=KR",
+  "version": "7.1.1.0",
+  "diagramResponse": [],
+  "error": "Expected seven native diagrams; API returned 0.",
+  "jobClosed": true,
+  "desktopClosed": true,
+  "settingsRestored": true,
+  "activeDesktopAfter": "Default",
+  "activeDesktopUnchanged": true
+}

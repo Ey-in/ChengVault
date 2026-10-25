@@ -1,0 +1,306 @@
+{
+  "timestampUtc": "2026-10-17T08:11:03.3607017Z",
+  "os": "Microsoft Windows NT 10.0.26200.0",
+  "processors": 16,
+  "dataMiB": 1024,
+  "smallFileCount": 5000,
+  "runDirectory": "D:\\soft-project\\ChengVault\\evidence\\benchmark\\run-20261017-160724-f817bca9",
+  "records": [
+    {
+      "name": "large-archive-backup",
+      "timestampUtc": "2026-10-17T08:07:32.285324Z",
+      "exitCode": 0,
+      "durationMs": 7571,
+      "peakWorkingSetBytes": 16748544,
+      "result": {
+        "bytes": 1073741824,
+        "details": {
+          "cipher": "chacha20",
+          "compression": "lz77",
+          "entries": 2,
+          "format": "indexed"
+        },
+        "files": 1,
+        "output": "D:/soft-project/ChengVault/evidence/benchmark/run-20261017-160724-f817bca9/large.cva",
+        "storedBytes": 60698,
+        "success": true,
+        "warnings": [],
+        "warningCount": 0,
+        "warningsTruncated": false
+      },
+      "peakWorkingSetSamplingMs": 200
+    },
+    {
+      "name": "large-archive-verify",
+      "timestampUtc": "2026-10-17T08:07:32.6294943Z",
+      "exitCode": 0,
+      "durationMs": 319,
+      "peakWorkingSetBytes": 12861440,
+      "result": {
+        "bytes": 1073741824,
+        "details": {
+          "format": "indexed",
+          "verifiedChunks": 1
+        },
+        "files": 1,
+        "output": "D:\\soft-project\\ChengVault\\evidence\\benchmark\\run-20261017-160724-f817bca9\\large.cva",
+        "storedBytes": 60698,
+        "success": true,
+        "warnings": [],
+        "warningCount": 0,
+        "warningsTruncated": false
+      },
+      "peakWorkingSetSamplingMs": 200
+    },
+    {
+      "name": "large-archive-restore",
+      "timestampUtc": "2026-10-17T08:07:48.1589206Z",
+      "exitCode": 0,
+      "durationMs": 15518,
+      "peakWorkingSetBytes": 16138240,
+      "result": {
+        "bytes": 1073741824,
+        "details": {
+          "entries": 2,
+          "format": "indexed",
+          "metadataStrict": false
+        },
+        "files": 1,
+        "output": "D:/soft-project/ChengVault/evidence/benchmark/run-20261017-160724-f817bca9/large-restored",
+        "storedBytes": 0,
+        "success": true,
+        "warnings": [
+          "恢复属主/权限失败 D:/soft-project/ChengVault/evidence/benchmark/run-20261017-160724-f817bca9/large-restored/large-source/.cv-restore-944192f8-b222-4c42-9c2c-5b8da47935ba (Win32=5)",
+          "恢复属主/权限失败 D:\\soft-project\\ChengVault\\evidence\\benchmark\\run-20261017-160724-f817bca9\\large-restored/large-source (Win32=5)"
+        ],
+        "warningCount": 2,
+        "warningsTruncated": false
+      },
+      "interpretation": "Data operation completed with metadata permission warnings; not full metadata restoration pass.",
+      "peakWorkingSetSamplingMs": 200
+    },
+    {
+      "name": "large-content-integrity",
+      "result": "PASS",
+      "logicalBytes": 1073741824,
+      "archiveBytes": 60698,
+      "storageRatio": 5.6529417634010315E-05
+    },
+    {
+      "name": "repository-initial",
+      "timestampUtc": "2026-10-17T08:07:58.95382Z",
+      "exitCode": 0,
+      "durationMs": 8276,
+      "peakWorkingSetBytes": 17461248,
+      "result": {
+        "bytes": 1073741824,
+        "details": {
+          "compression": "lz77",
+          "createdUtc": "2026-10-17T08:07:58.892Z",
+          "id": "c153443d-d2e8-4308-a380-baeadb822454",
+          "newBytes": 31085,
+          "newChunks": 1,
+          "reusedChunks": 1023,
+          "snapshotId": "c153443d-d2e8-4308-a380-baeadb822454"
+        },
+        "files": 1,
+        "output": "D:/soft-project/ChengVault/evidence/benchmark/run-20261017-160724-f817bca9/incremental-repository",
+        "storedBytes": 31085,
+        "success": true,
+        "warnings": [],
+        "warningCount": 0,
+        "warningsTruncated": false
+      },
+      "peakWorkingSetSamplingMs": 200
+    },
+    {
+      "name": "repository-unchanged",
+      "timestampUtc": "2026-10-17T08:08:06.9850621Z",
+      "exitCode": 0,
+      "durationMs": 8017,
+      "peakWorkingSetBytes": 17170432,
+      "result": {
+        "bytes": 1073741824,
+        "details": {
+          "compression": "lz77",
+          "createdUtc": "2026-10-17T08:08:06.869Z",
+          "id": "438f3b5f-1345-42b8-affb-9dea71891677",
+          "newBytes": 0,
+          "newChunks": 0,
+          "reusedChunks": 1024,
+          "snapshotId": "438f3b5f-1345-42b8-affb-9dea71891677"
+        },
+        "files": 1,
+        "output": "D:/soft-project/ChengVault/evidence/benchmark/run-20261017-160724-f817bca9/incremental-repository",
+        "storedBytes": 0,
+        "success": true,
+        "warnings": [],
+        "warningCount": 0,
+        "warningsTruncated": false
+      },
+      "peakWorkingSetSamplingMs": 200
+    },
+    {
+      "name": "repository-one-block-change",
+      "timestampUtc": "2026-10-17T08:08:15.1937995Z",
+      "exitCode": 0,
+      "durationMs": 8181,
+      "peakWorkingSetBytes": 17154048,
+      "result": {
+        "bytes": 1073741824,
+        "details": {
+          "compression": "lz77",
+          "createdUtc": "2026-10-17T08:08:15.137Z",
+          "id": "f2cdc1ab-5f38-4085-a98a-74ce339bb273",
+          "newBytes": 31089,
+          "newChunks": 1,
+          "reusedChunks": 1023,
+          "snapshotId": "f2cdc1ab-5f38-4085-a98a-74ce339bb273"
+        },
+        "files": 1,
+        "output": "D:/soft-project/ChengVault/evidence/benchmark/run-20261017-160724-f817bca9/incremental-repository",
+        "storedBytes": 31089,
+        "success": true,
+        "warnings": [],
+        "warningCount": 0,
+        "warningsTruncated": false
+      },
+      "peakWorkingSetSamplingMs": 200
+    },
+    {
+      "name": "repository-verify",
+      "timestampUtc": "2026-10-17T08:08:15.688354Z",
+      "exitCode": 0,
+      "durationMs": 475,
+      "peakWorkingSetBytes": 16125952,
+      "result": {
+        "bytes": 2097152,
+        "details": {
+          "chunks": 2,
+          "snapshots": 3
+        },
+        "files": 2,
+        "output": "",
+        "storedBytes": 0,
+        "success": true,
+        "warnings": [],
+        "warningCount": 0,
+        "warningsTruncated": false
+      },
+      "peakWorkingSetSamplingMs": 200
+    },
+    {
+      "name": "small-files-backup",
+      "timestampUtc": "2026-10-17T08:08:22.9802725Z",
+      "exitCode": 0,
+      "durationMs": 5069,
+      "peakWorkingSetBytes": 46817280,
+      "result": {
+        "bytes": 5400000,
+        "details": {
+          "cipher": "aes256",
+          "compression": "huffman",
+          "entries": 5001,
+          "format": "indexed"
+        },
+        "files": 5000,
+        "output": "D:/soft-project/ChengVault/evidence/benchmark/run-20261017-160724-f817bca9/small.cva",
+        "storedBytes": 2709879,
+        "success": true,
+        "warnings": [],
+        "warningCount": 0,
+        "warningsTruncated": false
+      },
+      "peakWorkingSetSamplingMs": 200
+    },
+    {
+      "name": "small-files-restore",
+      "timestampUtc": "2026-10-17T08:09:06.3707888Z",
+      "exitCode": 0,
+      "durationMs": 43251,
+      "peakWorkingSetBytes": 39731200,
+      "result": {
+        "bytes": 5400000,
+        "details": {
+          "entries": 5001,
+          "format": "indexed",
+          "metadataStrict": false
+        },
+        "files": 5000,
+        "output": "D:/soft-project/ChengVault/evidence/benchmark/run-20261017-160724-f817bca9/small-restored",
+        "storedBytes": 0,
+        "success": true,
+        "warnings": [
+          "恢复属主/权限失败 D:/soft-project/ChengVault/evidence/benchmark/run-20261017-160724-f817bca9/small-restored/small-source/.cv-restore-730d18ac-9c25-4401-83c4-667c5add6520 (Win32=5)",
+          "恢复属主/权限失败 D:/soft-project/ChengVault/evidence/benchmark/run-20261017-160724-f817bca9/small-restored/small-source/.cv-restore-5ccca943-c6a5-4c8e-b310-95d326529815 (Win32=5)",
+          "恢复属主/权限失败 D:/soft-project/ChengVault/evidence/benchmark/run-20261017-160724-f817bca9/small-restored/small-source/.cv-restore-012bc365-8907-4207-8fe6-d20496c28488 (Win32=5)",
+          "恢复属主/权限失败 D:/soft-project/ChengVault/evidence/benchmark/run-20261017-160724-f817bca9/small-restored/small-source/.cv-restore-47024b9b-3d5a-422c-a38e-5a50dec7142e (Win32=5)",
+          "恢复属主/权限失败 D:/soft-project/ChengVault/evidence/benchmark/run-20261017-160724-f817bca9/small-restored/small-source/.cv-restore-e43d9106-1667-4892-ba0f-0341c2c4d718 (Win32=5)"
+        ],
+        "warningCount": 5001,
+        "warningsTruncated": true
+      },
+      "interpretation": "Data operation completed with metadata permission warnings; not full metadata restoration pass.",
+      "peakWorkingSetSamplingMs": 200
+    },
+    {
+      "name": "over-4gib-sparse-backup",
+      "timestampUtc": "2026-10-17T08:10:04.9186669Z",
+      "exitCode": 0,
+      "durationMs": 55571,
+      "peakWorkingSetBytes": 17338368,
+      "result": {
+        "bytes": 4295098368,
+        "details": {
+          "cipher": "chacha20",
+          "compression": "lz77",
+          "entries": 2,
+          "format": "pax"
+        },
+        "files": 1,
+        "output": "D:/soft-project/ChengVault/evidence/benchmark/run-20261017-160724-f817bca9/sparse.cva",
+        "storedBytes": 53026059,
+        "success": true,
+        "warnings": [],
+        "warningCount": 0,
+        "warningsTruncated": false
+      },
+      "peakWorkingSetSamplingMs": 200
+    },
+    {
+      "name": "over-4gib-sparse-restore",
+      "timestampUtc": "2026-10-17T08:11:03.3322464Z",
+      "exitCode": 0,
+      "durationMs": 58397,
+      "peakWorkingSetBytes": 14786560,
+      "result": {
+        "bytes": 131072,
+        "details": {
+          "entries": 2,
+          "format": "tar",
+          "metadataStrict": false
+        },
+        "files": 1,
+        "output": "D:/soft-project/ChengVault/evidence/benchmark/run-20261017-160724-f817bca9/sparse-restored",
+        "storedBytes": 0,
+        "success": true,
+        "warnings": [
+          "恢复属主/权限失败 D:/soft-project/ChengVault/evidence/benchmark/run-20261017-160724-f817bca9/sparse-restored/sparse-source/.cv-restore-fe11a99b-cd79-4280-8e19-ca3303131dc0 (Win32=5)",
+          "恢复属主/权限失败 D:\\soft-project\\ChengVault\\evidence\\benchmark\\run-20261017-160724-f817bca9\\sparse-restored/sparse-source (Win32=5)"
+        ],
+        "warningCount": 2,
+        "warningsTruncated": false
+      },
+      "interpretation": "Data operation completed with metadata permission warnings; not full metadata restoration pass.",
+      "peakWorkingSetSamplingMs": 200
+    },
+    {
+      "name": "over-4gib-sparse-integrity",
+      "result": "PASS",
+      "logicalBytes": 4295098368,
+      "archiveBytes": 53026059
+    }
+  ],
+  "datasetDescription": "1024 identical 1MiB blocks, each containing 64 repetitions of a seeded 16KiB pseudo-random pattern. Storage ratio includes chunk deduplication and compression. One byte changed after archive content comparison.",
+  "evidenceStatus": "Historical pre-fix performance run. Restore data checks passed, owner/permission metadata warnings retained. See subsequent strict metadata regression evidence."
+}
