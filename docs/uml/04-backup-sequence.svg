@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1050" viewBox="0 0 1500 1050">
+<defs><marker id="arrow" markerWidth="11" markerHeight="11" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10" fill="none" stroke="#53657c" stroke-width="1.7"/></marker></defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#172c42} .small{font-size:16px} .title{font-size:29px;font-weight:700} .label{font-size:17px} .node{font-size:19px;font-weight:600}</style>
+<text x="35" y="48" class="title">顺序图｜独立归档备份</text>
+<path d="M35 70 H1465" stroke="#2aa89b" stroke-width="5"/>
+<polyline points="220.5,255 476.5,255" fill="none" stroke="#53657c" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="348.5" y="242.0" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">1. 提交 BackupPlan</text>
+<polyline points="476.5,316 732.5,316" fill="none" stroke="#53657c" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="604.5" y="303.0" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">2. capture(plan, storeChunk)</text>
+<polyline points="732.5,377 476.5,377" fill="none" stroke="#53657c" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="604.5" y="364.0" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">3. 逐块回调 storeChunk(bytes)</text>
+<polyline points="476.5,438 1244.5,438" fill="none" stroke="#53657c" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="860.5" y="425.0" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">4. 数据块暂存 private spool</text>
+<polyline points="732.5,499 476.5,499" fill="none" stroke="#53657c" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="604.5" y="486.0" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">5. 返回文件清单及元数据</text>
+<polyline points="476.5,560 1244.5,560" fill="none" stroke="#53657c" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="860.5" y="547.0" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">6. 生成 PAX/TAR 或索引内层</text>
+<polyline points="476.5,621 1244.5,621" fill="none" stroke="#53657c" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="860.5" y="608.0" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">7. 逐块读取完整内层归档</text>
+<polyline points="476.5,682 988.5,682" fill="none" stroke="#53657c" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="732.5" y="669.0" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">8. encode → seal（启用时）</text>
+<polyline points="988.5,743 476.5,743" fill="none" stroke="#53657c" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="732.5" y="730.0" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">9. 返回认证数据块</text>
+<polyline points="476.5,804 1244.5,804" fill="none" stroke="#53657c" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="860.5" y="791.0" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">10. 写外层 / 终止校验 / commit</text>
+<polyline points="476.5,865 220.5,865" fill="none" stroke="#53657c" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="348.5" y="852.0" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">11. TaskResult 与统计</text>
+<rect x="110.0" y="130" width="221.0" height="60" rx="7" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="220.5" y="165" text-anchor="middle" class="node">GUI / CLI</text>
+<path d="M220.5 190 V960" stroke="#8ca3b8" stroke-width="1.5" stroke-dasharray="7 5"/>
+<rect x="366.0" y="130" width="221.0" height="60" rx="7" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="476.5" y="165" text-anchor="middle" class="node">archive::backup</text>
+<path d="M476.5 190 V960" stroke="#8ca3b8" stroke-width="1.5" stroke-dasharray="7 5"/>
+<rect x="622.0" y="130" width="221.0" height="60" rx="7" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="732.5" y="165" text-anchor="middle" class="node">fs::capture</text>
+<path d="M732.5 190 V960" stroke="#8ca3b8" stroke-width="1.5" stroke-dasharray="7 5"/>
+<rect x="878.0" y="130" width="221.0" height="60" rx="7" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="988.5" y="165" text-anchor="middle" class="node">压缩 / 加密</text>
+<path d="M988.5 190 V960" stroke="#8ca3b8" stroke-width="1.5" stroke-dasharray="7 5"/>
+<rect x="1134.0" y="130" width="221.0" height="60" rx="7" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="1244.5" y="165" text-anchor="middle" class="node">临时区 / QSaveFile</text>
+<path d="M1244.5 190 V960" stroke="#8ca3b8" stroke-width="1.5" stroke-dasharray="7 5"/>
+<text x="35" y="1022" class="small">先完成稳定快照，再打包与转换；按块处理限制内存，但暂存区需要额外磁盘空间。</text>
+</svg>

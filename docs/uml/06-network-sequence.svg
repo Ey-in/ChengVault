@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1050" viewBox="0 0 1500 1050">
+<defs><marker id="arrow" markerWidth="11" markerHeight="11" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10" fill="none" stroke="#53657c" stroke-width="1.7"/></marker></defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#172c42} .small{font-size:16px} .title{font-size:29px;font-weight:700} .label{font-size:17px} .node{font-size:19px;font-weight:600}</style>
+<text x="35" y="48" class="title">顺序图｜认证与可续传增量上传</text>
+<path d="M35 70 H1465" stroke="#2aa89b" stroke-width="5"/>
+<polyline points="252.5,255 572.5,255" fill="none" stroke="#53657c" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="412.5" y="242.0" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">1. hello：用户 / 设备 / nonce</text>
+<polyline points="572.5,316 892.5,316" fill="none" stroke="#53657c" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="732.5" y="303.0" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">2. 查设备配对密钥</text>
+<polyline points="572.5,377 252.5,377" fill="none" stroke="#53657c" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="412.5" y="364.0" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">3. server nonce + HMAC proof</text>
+<polyline points="252.5,438 572.5,438" fill="none" stroke="#53657c" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="412.5" y="425.0" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">4. client proof / 加密 login</text>
+<polyline points="572.5,499 892.5,499" fill="none" stroke="#53657c" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="732.5" y="486.0" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">5. 验证口令与启用状态</text>
+<polyline points="252.5,560 572.5,560" fill="none" stroke="#53657c" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="412.5" y="547.0" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">6. begin：对象清单</text>
+<polyline points="572.5,621 1212.5,621" fill="none" stroke="#53657c" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="892.5" y="608.0" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">7. 比对对象 / 暂存偏移</text>
+<polyline points="572.5,682 252.5,682" fill="none" stroke="#53657c" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="412.5" y="669.0" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">8. 缺失对象与 offset</text>
+<polyline points="252.5,743 572.5,743" fill="none" stroke="#53657c" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="412.5" y="730.0" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">9. 加密 put：从 offset 续传</text>
+<polyline points="572.5,804 1212.5,804" fill="none" stroke="#53657c" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="892.5" y="791.0" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">10. 摘要校验 / 原子提交索引</text>
+<polyline points="572.5,865 252.5,865" fill="none" stroke="#53657c" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="412.5" y="852.0" text-anchor="middle" class="label" stroke="white" stroke-width="5" paint-order="stroke">11. 带认证的成功响应</text>
+<rect x="110.0" y="130" width="285.0" height="60" rx="7" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="252.5" y="165" text-anchor="middle" class="node">network::Client</text>
+<path d="M252.5 190 V960" stroke="#8ca3b8" stroke-width="1.5" stroke-dasharray="7 5"/>
+<rect x="430.0" y="130" width="285.0" height="60" rx="7" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="572.5" y="165" text-anchor="middle" class="node">network::Server</text>
+<path d="M572.5 190 V960" stroke="#8ca3b8" stroke-width="1.5" stroke-dasharray="7 5"/>
+<rect x="750.0" y="130" width="285.0" height="60" rx="7" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="892.5" y="165" text-anchor="middle" class="node">账户 / 设备库</text>
+<path d="M892.5 190 V960" stroke="#8ca3b8" stroke-width="1.5" stroke-dasharray="7 5"/>
+<rect x="1070.0" y="130" width="285.0" height="60" rx="7" fill="#edf7fb" stroke="#2b6d8a" stroke-width="2"/>
+<text x="1212.5" y="165" text-anchor="middle" class="node">用户隔离仓库</text>
+<path d="M1212.5 190 V960" stroke="#8ca3b8" stroke-width="1.5" stroke-dasharray="7 5"/>
+<text x="35" y="1022" class="small">每帧绑定会话和递增序号；用户路径不由请求任意指定；服务器不掌握备份仓库主密钥。</text>
+</svg>

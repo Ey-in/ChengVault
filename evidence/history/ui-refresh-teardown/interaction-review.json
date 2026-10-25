@@ -1,0 +1,169 @@
+{
+    "date": "2026-10-17T14:23:28Z",
+    "records": [
+        {
+            "detail": "",
+            "name": "minimum window retained",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "long path retained",
+            "passed": true
+        },
+        {
+            "detail": "resolved font: Microsoft YaHei UI",
+            "name": "input focus",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "01-long-path-focus saved",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "Tab moves focus",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "01-tab-focus saved",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "ShiftTab returns focus",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "backup.password masked",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "restore.password masked",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "remote.password masked",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "remote.key masked",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "02-long-error-layout-sample saved",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "long error layout sample captured",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "03-filter-dialog title",
+            "passed": true
+        },
+        {
+            "detail": "dialog 760x650; review window 1040x720",
+            "name": "03-filter-dialog fits review viewport",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "03-filter-dialog OK visible",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "03-filter-dialog Cancel visible",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "03-filter-dialog saved",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "03-filter-dialog scroll container",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "03-filter-dialog-scrolled saved",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "03-filter-dialog Escape closes",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "03-filter-dialog rejected without request",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "03-filter-dialog inspected without acceptance",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "04-administration-dialog title",
+            "passed": true
+        },
+        {
+            "detail": "dialog 640x620; review window 1040x720",
+            "name": "04-administration-dialog fits review viewport",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "04-administration-dialog OK visible",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "04-administration-dialog Cancel visible",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "04-administration-dialog saved",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "04-administration-dialog administrator secrets masked",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "04-administration-dialog Escape closes",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "04-administration-dialog rejected without request",
+            "passed": true
+        },
+        {
+            "detail": "",
+            "name": "04-administration-dialog inspected without acceptance",
+            "passed": true
+        }
+    ],
+    "scaleFactor": "1",
+    "scope": "Optional UI observations; excluded from course functional test counts",
+    "status": "PASS",
+    "visualReview": "PENDING"
+}

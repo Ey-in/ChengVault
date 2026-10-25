@@ -1,0 +1,687 @@
+{
+  "fs.adversarial.manifest.unsupported-version": [
+    "清单：清单 version 置 99",
+    "捕获真实 NTFS 夹具后，清单 version 置 99，调用恢复。",
+    "MANIFEST_VERSION；恢复根目录未创建。"
+  ],
+  "fs.adversarial.manifest.entries-not-array": [
+    "清单：entries 置字符串 broken",
+    "捕获真实 NTFS 夹具后，entries 置字符串 broken，调用恢复。",
+    "MANIFEST_VERSION；恢复根目录未创建。"
+  ],
+  "fs.adversarial.manifest.non-object-entry": [
+    "清单：entries 数组追加整数 7",
+    "捕获真实 NTFS 夹具后，entries 数组追加整数 7，调用恢复。",
+    "MANIFEST_ENTRY；恢复根目录未创建。"
+  ],
+  "fs.adversarial.manifest.negative-file-size": [
+    "清单：a.txt 的 size 置 -1",
+    "捕获真实 NTFS 夹具后，a.txt 的 size 置 -1，调用恢复。",
+    "MANIFEST_SIZE；恢复根目录未创建。"
+  ],
+  "fs.adversarial.manifest.bad-filetime": [
+    "清单：created 置字符串 NaN",
+    "捕获真实 NTFS 夹具后，created 置字符串 NaN，调用恢复。",
+    "METADATA_TIME；恢复根目录未创建。"
+  ],
+  "fs.adversarial.manifest.missing-main-stream": [
+    "清单：清空普通文件 streams",
+    "捕获真实 NTFS 夹具后，清空普通文件 streams，调用恢复。",
+    "STREAM_MISSING；恢复根目录未创建。"
+  ],
+  "fs.adversarial.manifest.main-stream-size-mismatch": [
+    "清单：默认流 size 改为 999",
+    "捕获真实 NTFS 夹具后，默认流 size 改为 999，调用恢复。",
+    "STREAM_SIZE；恢复根目录未创建。"
+  ],
+  "fs.adversarial.manifest.invalid-stream-name": [
+    "清单：流名设 :../escape:$DATA",
+    "捕获真实 NTFS 夹具后，流名设 :../escape:$DATA，调用恢复。",
+    "STREAM_INVALID；恢复根目录未创建。"
+  ],
+  "fs.adversarial.manifest.duplicate-stream": [
+    "清单：重复加入同一个数据流",
+    "捕获真实 NTFS 夹具后，重复加入同一个数据流，调用恢复。",
+    "STREAM_INVALID；恢复根目录未创建。"
+  ],
+  "fs.adversarial.manifest.directory-main-stream": [
+    "清单：保留主数据流但把对象改为 directory",
+    "捕获真实 NTFS 夹具后，保留主数据流但把对象改为 directory，调用恢复。",
+    "STREAM_TYPE；恢复根目录未创建。"
+  ],
+  "fs.adversarial.manifest.empty-chunk-id": [
+    "清单：块 id 置空",
+    "捕获真实 NTFS 夹具后，块 id 置空，调用恢复。",
+    "CHUNK_INVALID；恢复根目录未创建。"
+  ],
+  "fs.adversarial.manifest.oversized-chunk-id": [
+    "清单：块 id 设 257 个 a",
+    "捕获真实 NTFS 夹具后，块 id 设 257 个 a，调用恢复。",
+    "CHUNK_INVALID；恢复根目录未创建。"
+  ],
+  "fs.adversarial.manifest.invalid-chunk-digest": [
+    "清单：摘要改为 ABC",
+    "捕获真实 NTFS 夹具后，摘要改为 ABC，调用恢复。",
+    "CHUNK_INVALID；恢复根目录未创建。"
+  ],
+  "fs.adversarial.manifest.negative-chunk-offset": [
+    "清单：块 offset 置 -1",
+    "捕获真实 NTFS 夹具后，块 offset 置 -1，调用恢复。",
+    "CHUNK_INVALID；恢复根目录未创建。"
+  ],
+  "fs.adversarial.manifest.zero-chunk-length": [
+    "清单：块 length 置 0",
+    "捕获真实 NTFS 夹具后，块 length 置 0，调用恢复。",
+    "CHUNK_INVALID；恢复根目录未创建。"
+  ],
+  "fs.adversarial.manifest.chunk-over-one-mib": [
+    "清单：块长设 1 MiB+1",
+    "捕获真实 NTFS 夹具后，块长设 1 MiB+1，调用恢复。",
+    "CHUNK_INVALID；恢复根目录未创建。"
+  ],
+  "fs.adversarial.manifest.overlapping-chunks": [
+    "清单：重复同一个块使偏移重叠",
+    "捕获真实 NTFS 夹具后，重复同一个块使偏移重叠，调用恢复。",
+    "CHUNK_INVALID；恢复根目录未创建。"
+  ],
+  "fs.adversarial.manifest.non-sparse-gap": [
+    "清单：普通流首块 offset=1、length=1",
+    "捕获真实 NTFS 夹具后，普通流首块 offset=1、length=1，调用恢复。",
+    "CHUNK_GAP；恢复根目录未创建。"
+  ],
+  "fs.adversarial.manifest.non-sparse-tail-missing": [
+    "清单：普通流唯一块 length 缩到 1",
+    "捕获真实 NTFS 夹具后，普通流唯一块 length 缩到 1，调用恢复。",
+    "CHUNK_MISSING；恢复根目录未创建。"
+  ],
+  "fs.adversarial.manifest.parent-not-directory": [
+    "清单：删除清单中的 source 父目录条目",
+    "捕获真实 NTFS 夹具后，删除清单中的 source 父目录条目，调用恢复。",
+    "PARENT_INVALID；恢复根目录未创建。"
+  ],
+  "fs.adversarial.manifest.hardlink-missing-target": [
+    "清单：硬链接 target 指 source/missing，清空 streams",
+    "捕获真实 NTFS 夹具后，硬链接 target 指 source/missing，清空 streams，调用恢复。",
+    "HARDLINK_TARGET；恢复根目录未创建。"
+  ],
+  "fs.adversarial.manifest.symlink-empty-target": [
+    "清单：符号链接 target 设空",
+    "捕获真实 NTFS 夹具后，符号链接 target 设空，调用恢复。",
+    "LINK_TARGET；恢复根目录未创建。"
+  ],
+  "fs.adversarial.manifest.junction-short-reparse": [
+    "清单：Junction 原始重解析数据仅一个零字节",
+    "捕获真实 NTFS 夹具后，Junction 原始重解析数据仅一个零字节，调用恢复。",
+    "JUNCTION_INVALID；恢复根目录未创建。"
+  ],
+  "fs.adversarial.junction.display-target-mismatch": [
+    "Junction：Junction target 改为 C:\\unrelated，原始 SubstituteName 保持",
+    "捕获真实 NTFS 夹具后，Junction target 改为 C:\\unrelated，原始 SubstituteName 保持，调用恢复。",
+    "JUNCTION_TARGET；恢复根目录未创建。"
+  ],
+  "fs.adversarial.junction.raw-size-mismatch": [
+    "Junction：翻转重解析 DataLength 字节",
+    "捕获真实 NTFS 夹具后，翻转重解析 DataLength 字节，调用恢复。",
+    "REPARSE_INVALID；恢复根目录未创建。"
+  ],
+  "fs.adversarial.junction.odd-substitute-offset": [
+    "Junction：SubstituteNameOffset 改为奇数 1",
+    "捕获真实 NTFS 夹具后，SubstituteNameOffset 改为奇数 1，调用恢复。",
+    "REPARSE_INVALID；恢复根目录未创建。"
+  ],
+  "fs.adversarial.junction.unknown-reparse-tag": [
+    "Junction：重解析标签置 0x80000013",
+    "捕获真实 NTFS 夹具后，重解析标签置 0x80000013，调用恢复。",
+    "REPARSE_UNSUPPORTED；恢复根目录未创建。"
+  ],
+  "archive.adversarial.index.magic": [
+    "索引：索引 magic 首字节改为 X",
+    "生成真实归档并修改内层；重新封装有效非加密外层后，索引 magic 首字节改为 X，调用恢复。",
+    "INDEX_MAGIC；恢复根目录未创建。"
+  ],
+  "archive.adversarial.index.manifest-too-large": [
+    "索引：清单长度设 64 MiB+1",
+    "生成真实归档并修改内层；重新封装有效非加密外层后，清单长度设 64 MiB+1，调用恢复。",
+    "MANIFEST_SIZE；恢复根目录未创建。"
+  ],
+  "archive.adversarial.index.manifest-json-array": [
+    "索引：清单改成 [] 并同步长度为 2",
+    "生成真实归档并修改内层；重新封装有效非加密外层后，清单改成 [] 并同步长度为 2，调用恢复。",
+    "ARCHIVE_JSON；恢复根目录未创建。"
+  ],
+  "archive.adversarial.index.chunk-count-limit": [
+    "索引：块数量设 10000001",
+    "生成真实归档并修改内层；重新封装有效非加密外层后，块数量设 10000001，调用恢复。",
+    "CHUNK_COUNT；恢复根目录未创建。"
+  ],
+  "archive.adversarial.index.chunk-id-syntax": [
+    "索引：十六进制块 ID 首字符改为 z",
+    "生成真实归档并修改内层；重新封装有效非加密外层后，十六进制块 ID 首字符改为 z，调用恢复。",
+    "INDEX_INVALID；恢复根目录未创建。"
+  ],
+  "archive.adversarial.index.chunk-zero-length": [
+    "索引：索引首块长度设 0",
+    "生成真实归档并修改内层；重新封装有效非加密外层后，索引首块长度设 0，调用恢复。",
+    "INDEX_INVALID；恢复根目录未创建。"
+  ],
+  "archive.adversarial.index.chunk-size-limit": [
+    "索引：索引首块长度设 1 MiB+1",
+    "生成真实归档并修改内层；重新封装有效非加密外层后，索引首块长度设 1 MiB+1，调用恢复。",
+    "INDEX_INVALID；恢复根目录未创建。"
+  ],
+  "archive.adversarial.index.trailing-bytes": [
+    "索引：索引末尾追加 x",
+    "生成真实归档并修改内层；重新封装有效非加密外层后，索引末尾追加 x，调用恢复。",
+    "INDEX_TRAILING；恢复根目录未创建。"
+  ],
+  "archive.adversarial.index.duplicate-block-id": [
+    "索引：第二块 ID 改为第一块 ID",
+    "生成真实归档并修改内层；重新封装有效非加密外层后，第二块 ID 改为第一块 ID，调用恢复。",
+    "INDEX_INVALID；恢复根目录未创建。"
+  ],
+  "archive.adversarial.index.missing-index-block": [
+    "索引：移除所有块，索引块数设 0",
+    "生成真实归档并修改内层；重新封装有效非加密外层后，移除所有块，索引块数设 0，调用恢复。",
+    "INDEX_MISMATCH；恢复根目录未创建。"
+  ],
+  "archive.adversarial.index.unknown-index-block": [
+    "索引：实际块 ID 换为 64 个 0，清单引用保持",
+    "生成真实归档并修改内层；重新封装有效非加密外层后，实际块 ID 换为 64 个 0，清单引用保持，调用恢复。",
+    "CHUNK_MISSING；恢复根目录未创建。"
+  ],
+  "archive.adversarial.index.block-content-corrupt": [
+    "索引：翻转首块内容一个字节",
+    "生成真实归档并修改内层；重新封装有效非加密外层后，翻转首块内容一个字节，调用恢复。",
+    "CHUNK_CHECKSUM；恢复根目录未创建。"
+  ],
+  "archive.adversarial.pax.bad-checksum": [
+    "PAX：翻转 USTAR 首字节且不改 TAR 校验和",
+    "生成真实归档并修改内层；重新封装有效非加密外层后，翻转 USTAR 首字节且不改 TAR 校验和，调用恢复。",
+    "TAR_CHECKSUM；恢复根目录未创建。"
+  ],
+  "archive.adversarial.pax.bad-octal": [
+    "PAX：TAR 八进制数字字段加入 9",
+    "生成真实归档并修改内层；重新封装有效非加密外层后，TAR 八进制数字字段加入 9，调用恢复。",
+    "TAR_NUMBER；恢复根目录未创建。"
+  ],
+  "archive.adversarial.pax.bad-pax-length": [
+    "PAX：PAX 长度首字符改 x",
+    "生成真实归档并修改内层；重新封装有效非加密外层后，PAX 长度首字符改 x，调用恢复。",
+    "PAX_LENGTH；恢复根目录未创建。"
+  ],
+  "archive.adversarial.pax.bad-pax-newline": [
+    "PAX：PAX 记录末尾换行改 x",
+    "生成真实归档并修改内层；重新封装有效非加密外层后，PAX 记录末尾换行改 x，调用恢复。",
+    "PAX_LENGTH；恢复根目录未创建。"
+  ],
+  "archive.adversarial.pax.missing-pax-key": [
+    "PAX：PAX 体改为 8 abcde\\n，不含等号",
+    "生成真实归档并修改内层；重新封装有效非加密外层后，PAX 体改为 8 abcde\\n，不含等号，调用恢复。",
+    "PAX_KEY；恢复根目录未创建。"
+  ],
+  "archive.adversarial.pax.duplicate-pax-key": [
+    "PAX：增加重复 path=again 记录",
+    "生成真实归档并修改内层；重新封装有效非加密外层后，增加重复 path=again 记录，调用恢复。",
+    "PAX_DUPLICATE；恢复根目录未创建。"
+  ],
+  "archive.adversarial.pax.consecutive-pax": [
+    "PAX：复制首个 PAX 成员，形成连续扩展头",
+    "生成真实归档并修改内层；重新封装有效非加密外层后，复制首个 PAX 成员，形成连续扩展头，调用恢复。",
+    "PAX_SIZE；恢复根目录未创建。"
+  ],
+  "archive.adversarial.pax.missing-pax-header": [
+    "PAX：删除首个 PAX 扩展头",
+    "生成真实归档并修改内层；重新封装有效非加密外层后，删除首个 PAX 扩展头，调用恢复。",
+    "PAX_MISSING；恢复根目录未创建。"
+  ],
+  "archive.adversarial.pax.manifest-not-first": [
+    "PAX：删除最前清单成员及其扩展头",
+    "生成真实归档并修改内层；重新封装有效非加密外层后，删除最前清单成员及其扩展头，调用恢复。",
+    "TAR_MANIFEST；恢复根目录未创建。"
+  ],
+  "archive.adversarial.pax.manifest-duplicate": [
+    "PAX：重复插入清单成员及其扩展头",
+    "生成真实归档并修改内层；重新封装有效非加密外层后，重复插入清单成员及其扩展头，调用恢复。",
+    "TAR_MANIFEST；恢复根目录未创建。"
+  ],
+  "archive.adversarial.pax.member-unregistered": [
+    "PAX：成员 path 改 unknown",
+    "生成真实归档并修改内层；重新封装有效非加密外层后，成员 path 改 unknown，调用恢复。",
+    "TAR_UNEXPECTED；恢复根目录未创建。"
+  ],
+  "archive.adversarial.pax.member-type-mismatch": [
+    "PAX：成员 type 改符号链接并重算 TAR 头校验和",
+    "生成真实归档并修改内层；重新封装有效非加密外层后，成员 type 改符号链接并重算 TAR 头校验和，调用恢复。",
+    "TAR_TYPE；恢复根目录未创建。"
+  ],
+  "archive.adversarial.pax.member-duplicate": [
+    "PAX：复制首个真实成员及其扩展头",
+    "生成真实归档并修改内层；重新封装有效非加密外层后，复制首个真实成员及其扩展头，调用恢复。",
+    "TAR_DUPLICATE；恢复根目录未创建。"
+  ],
+  "archive.adversarial.pax.member-missing": [
+    "PAX：删除首个真实成员及其扩展头",
+    "生成真实归档并修改内层；重新封装有效非加密外层后，删除首个真实成员及其扩展头，调用恢复。",
+    "TAR_MISSING；恢复根目录未创建。"
+  ],
+  "archive.adversarial.pax.manifest-padding-nonzero": [
+    "PAX：清单成员对齐填充首字节改 x",
+    "生成真实归档并修改内层；重新封装有效非加密外层后，清单成员对齐填充首字节改 x，调用恢复。",
+    "TAR_PADDING；恢复根目录未创建。"
+  ],
+  "archive.adversarial.pax.pax-padding-nonzero": [
+    "PAX：PAX 扩展头对齐填充首字节改 x",
+    "生成真实归档并修改内层；重新封装有效非加密外层后，PAX 扩展头对齐填充首字节改 x，调用恢复。",
+    "TAR_PADDING；恢复根目录未创建。"
+  ],
+  "archive.adversarial.pax.one-terminator-only": [
+    "PAX：删除末尾一个 512 字节终结块",
+    "生成真实归档并修改内层；重新封装有效非加密外层后，删除末尾一个 512 字节终结块，调用恢复。",
+    "TAR_TERMINATOR；恢复根目录未创建。"
+  ],
+  "archive.adversarial.pax.terminator-then-member": [
+    "PAX：在首成员前插入零终结块",
+    "生成真实归档并修改内层；重新封装有效非加密外层后，在首成员前插入零终结块，调用恢复。",
+    "TAR_TERMINATOR；恢复根目录未创建。"
+  ],
+  "archive.adversarial.pax.trailing-after-terminator": [
+    "PAX：双终结块后追加一个零块",
+    "生成真实归档并修改内层；重新封装有效非加密外层后，双终结块后追加一个零块，调用恢复。",
+    "TAR_TERMINATOR；恢复根目录未创建。"
+  ],
+  "archive.adversarial.frame.sequence": [
+    "封装记录：首记录序号改 7",
+    "生成真实归档并修改内层；重新封装有效非加密外层后，首记录序号改 7，调用恢复。",
+    "ARCHIVE_SEQUENCE；恢复根目录未创建。"
+  ],
+  "archive.adversarial.frame.header-binding": [
+    "封装记录：翻转记录头绑定摘要字节",
+    "生成真实归档并修改内层；重新封装有效非加密外层后，翻转记录头绑定摘要字节，调用恢复。",
+    "ARCHIVE_SEQUENCE；恢复根目录未创建。"
+  ],
+  "archive.adversarial.frame.record-kind": [
+    "封装记录：记录类型改 9",
+    "生成真实归档并修改内层；重新封装有效非加密外层后，记录类型改 9，调用恢复。",
+    "ARCHIVE_RECORD；恢复根目录未创建。"
+  ],
+  "archive.adversarial.frame.record-short-body": [
+    "封装记录：记录截短到 42 字节",
+    "生成真实归档并修改内层；重新封装有效非加密外层后，记录截短到 42 字节，调用恢复。",
+    "ARCHIVE_RECORD；恢复根目录未创建。"
+  ],
+  "archive.adversarial.frame.decoded-size-limit": [
+    "封装记录：解压原长改 1 MiB+1",
+    "生成真实归档并修改内层；重新封装有效非加密外层后，解压原长改 1 MiB+1，调用恢复。",
+    "BLOCK_SIZE；恢复根目录未创建。"
+  ],
+  "archive.adversarial.frame.decoded-digest": [
+    "封装记录：翻转解压摘要字节",
+    "生成真实归档并修改内层；重新封装有效非加密外层后，翻转解压摘要字节，调用恢复。",
+    "ARCHIVE_CHECKSUM；恢复根目录未创建。"
+  ],
+  "archive.adversarial.frame.decoded-size-mismatch": [
+    "封装记录：解压声明原长改 0",
+    "生成真实归档并修改内层；重新封装有效非加密外层后，解压声明原长改 0，调用恢复。",
+    "ARCHIVE_CHECKSUM；恢复根目录未创建。"
+  ],
+  "archive.adversarial.frame.final-length": [
+    "封装记录：翻转终结记录总长度",
+    "生成真实归档并修改内层；重新封装有效非加密外层后，翻转终结记录总长度，调用恢复。",
+    "ARCHIVE_FINAL；恢复根目录未创建。"
+  ],
+  "archive.adversarial.frame.final-digest": [
+    "封装记录：翻转终结记录摘要",
+    "生成真实归档并修改内层；重新封装有效非加密外层后，翻转终结记录摘要，调用恢复。",
+    "ARCHIVE_FINAL；恢复根目录未创建。"
+  ],
+  "archive.adversarial.frame.missing-final": [
+    "封装记录：删除终结记录",
+    "生成真实归档并修改内层；重新封装有效非加密外层后，删除终结记录，调用恢复。",
+    "ARCHIVE_TRUNCATED；恢复根目录未创建。"
+  ],
+  "archive.adversarial.frame.duplicate-final": [
+    "封装记录：重复追加终结记录",
+    "生成真实归档并修改内层；重新封装有效非加密外层后，重复追加终结记录，调用恢复。",
+    "ARCHIVE_FINAL；恢复根目录未创建。"
+  ],
+  "archive.adversarial.header.ARCHIVE_VERSION": [
+    "外层头参数",
+    "有效外层头中设置 version=3 后用 password 调用恢复。",
+    "ARCHIVE_VERSION；目标目录未创建。"
+  ],
+  "archive.adversarial.header.ARCHIVE_FORMAT": [
+    "外层头参数",
+    "有效外层头中设置 format=zip 后用 password 调用恢复。",
+    "ARCHIVE_FORMAT；目标目录未创建。"
+  ],
+  "archive.adversarial.header.CIPHER_UNSUPPORTED": [
+    "外层头参数",
+    "有效外层头中设置 cipher=xor 后用 password 调用恢复。",
+    "CIPHER_UNSUPPORTED；目标目录未创建。"
+  ],
+  "archive.adversarial.header.KDF_PARAMETERS": [
+    "外层头参数",
+    "有效外层头中设置 cipher=aes256，salt=AA==，iterations=1 后用 password 调用恢复。",
+    "KDF_PARAMETERS；目标目录未创建。"
+  ],
+  "fs.restore.unknown-selection-no-output": [
+    "选择不存在路径",
+    "selectedPaths={missing}，对有效清单恢复。",
+    "SELECTION_EMPTY；输出根不存在。"
+  ],
+  "fs.restore.file-directory-type-conflict": [
+    "文件目录类型冲突",
+    "预建 source/a.txt/keep 目录树，启用覆盖恢复文件 a.txt。",
+    "TYPE_CONFLICT；keep 内容不变。"
+  ],
+  "fs.restore.existing-directory-ads-protected": [
+    "已有目录 ADS",
+    "源目录 origin 流为 new，目标同名流为 old；启用覆盖。",
+    "DIRECTORY_ADS_CONFLICT；目标流仍为 old。"
+  ],
+  "fs.restore.chunk-changes-after-preflight": [
+    "预检后块变化",
+    "第一次 ChunkSource 返回原块，第二次翻转字节；目标 a.txt 预置 old。",
+    "CHUNK_CORRUPT；调用两次，old 保持，临时文件清理。"
+  ],
+  "fs.restore.cancel-after-preflight": [
+    "预检后取消",
+    "ChunkSource 首次返回有效块同时置取消标志。",
+    "CANCELLED；未发布 source/a.txt。"
+  ],
+  "fs.capture.no-source": [
+    "空源列表",
+    "清空 plan.sources 后捕获。",
+    "NO_SOURCE。"
+  ],
+  "fs.capture.colliding-source-roots": [
+    "同名多源根",
+    "同时选择 source 与 other/source。",
+    "ROOT_COLLISION，防止覆盖同一逻辑根。"
+  ],
+  "fs.capture.sink-empty-id": [
+    "无效块存储返回值",
+    "ChunkSink 对有效输入返回空 QString。",
+    "CHUNK_ID，不产生成功清单。"
+  ],
+  "fs.roundtrip.path-longer-than-max-path": [
+    "超过 260 字符路径",
+    "建立五层各 60 字符目录及 中文-long.txt，捕获恢复。",
+    "恢复路径超过 260 字符，内容等于 long path payload。"
+  ],
+  "fs.filter.string-name-exclusion": [
+    "字符串规则与排除优先",
+    "nameInclude=*.txt 且 nameExclude=a.*，捕获夹具。",
+    "fileCount=0。"
+  ],
+  "fs.filter.attribute-exclusion": [
+    "排除隐藏文件",
+    "给 a.txt 加 HIDDEN，types=file 且 attributesNone=HIDDEN。",
+    "只捕获未隐藏的 b.bin，fileCount=1。"
+  ],
+  "fs.filter.time-upper-past": [
+    "创建时间旧上界",
+    "timeField=created，timeTo=2000-01-01T00:00:00Z。",
+    "新建夹具文件均不命中，fileCount=0。"
+  ],
+  "fs.filter.content-too-long": [
+    "内容查询长度上限",
+    "contentContains 设 1 MiB+1 个 x。",
+    "FILTER_SIZE，不能静默截短查询。"
+  ],
+  "fs.ntfs.selected-hardlink-brings-canonical-data": [
+    "硬链接恢复闭包",
+    "仅选择硬链接别名恢复，随后通过别名写 shared。",
+    "自动恢复规范数据路径，二者共享写入，未选 b.bin 不存在。"
+  ],
+  "fs.ntfs.empty-and-all-hole-sparse": [
+    "空与全空洞稀疏文件",
+    "建立 2 MiB 全空洞文件和零长稀疏文件，捕获恢复。",
+    "长度与全零字节正确，SPARSE_FILE 属性保持。"
+  ],
+  "fs.ntfs.junction-print-name-is-not-target-authority": [
+    "Junction 真实目标",
+    "保持 SubstituteName，改变 PrintName 首字节后恢复并再次捕获。",
+    "仍报告实际 SubstituteName，显示名不能改变目标判定。"
+  ],
+  "fs.metadata.null-dacl-roundtrip": [
+    "NULL DACL",
+    "清单 daclNull=true 并移除 DACL 字节，恢复并重新捕获。",
+    "NULL DACL 实际保持，警告为空。"
+  ],
+  "fs.metadata.foreign-owner-strict": [
+    "严格属主拒绝",
+    "清单 ownerSid=S-1-5-18，以禁用特权的受限令牌恢复。",
+    "METADATA_PERMISSION；不发布目标文件。"
+  ],
+  "fs.metadata.foreign-owner-warning": [
+    "宽松属主警告",
+    "同样恢复 SYSTEM 属主但 strictMetadata=false。",
+    "数据文件存在，结果含明确警告；不宣称属主恢复成功。"
+  ],
+  "fs.filter.hardlink-type-selects-both-names": [
+    "硬链接对象筛选",
+    "建立 a.txt 与 z-link.txt 硬链接，types=hardlink，extensions=txt。",
+    "两名称均选中，fileCount=2，b.bin 不恢复。"
+  ],
+  "archive.pax-alias-ntfs-streams-hardlinks-sparse": [
+    "PAX 与 NTFS 组合",
+    "用 pax 别名备份目录 ADS、硬链接、Junction 和稀疏文件。",
+    "识别为 tar；ADS/链接内容、重解析与稀疏标志及 TAIL 字节保持。"
+  ],
+  "archive.pax-link-target-mismatch": [
+    "PAX 链接目标交叉验证",
+    "生成硬链接归档，改 PAX linkpath 的一个字节，重算有效外层。",
+    "TAR_LINK；输出根未创建。"
+  ],
+  "archive.cipher-alias-and-missing-password": [
+    "AES 别名与口令边界",
+    "用 AES-256 空口令备份，再填 alias password；读取时省略口令。",
+    "空口令和无口令 inspect 均 PASSWORD_REQUIRED；正确口令 verify 成功。"
+  ],
+  "archive.cancel-during-wrap-preserves-existing": [
+    "封装时取消",
+    "预置旧归档，在打包/压缩/加密进度回调取消。",
+    "CANCELLED；旧归档全部字节不变。"
+  ],
+  "fs.metadata.invalid-ownerSid-preserves-file": [
+    "非法元数据 ownerSid",
+    "目标 a.txt 预置 unchanged；清单 ownerSid 设 invalid，显式覆盖仅恢复该文件。",
+    "SID_INVALID；原文件保持，临时文件清理。"
+  ],
+  "fs.metadata.invalid-groupSid-preserves-file": [
+    "非法元数据 groupSid",
+    "目标 a.txt 预置 unchanged；清单 groupSid 设 invalid，显式覆盖仅恢复该文件。",
+    "SID_INVALID；原文件保持，临时文件清理。"
+  ],
+  "fs.metadata.invalid-daclBase64-preserves-file": [
+    "非法元数据 daclBase64",
+    "目标 a.txt 预置 unchanged；清单 daclBase64 设 invalid，显式覆盖仅恢复该文件。",
+    "ACL_INVALID；原文件保持，临时文件清理。"
+  ],
+  "fs.filter.glob.star": [
+    "自主通配 *.txt",
+    "建立含中英文、emoji、ß/İ、括号和连字符的真实文件；nameInclude=*.txt；比较预览集合与捕获计数。",
+    "准确命中 所有 txt 文件；预览和实际捕获一致。"
+  ],
+  "fs.filter.glob.one-codepoint": [
+    "自主通配 ?.txt",
+    "建立含中英文、emoji、ß/İ、括号和连字符的真实文件；nameInclude=?.txt；比较预览集合与捕获计数。",
+    "准确命中 a.txt、].txt、🙂.txt、ß.txt、İ.txt；预览和实际捕获一致。"
+  ],
+  "fs.filter.glob.two-codepoints": [
+    "自主通配 ??.txt",
+    "建立含中英文、emoji、ß/İ、括号和连字符的真实文件；nameInclude=??.txt；比较预览集合与捕获计数。",
+    "准确命中 A7.TXT、a-.txt、中文.txt；预览和实际捕获一致。"
+  ],
+  "fs.filter.glob.ascii-case-fold": [
+    "自主通配 A?.tXt",
+    "建立含中英文、emoji、ß/İ、括号和连字符的真实文件；nameInclude=A?.tXt；比较预览集合与捕获计数。",
+    "准确命中 A7.TXT、a-.txt；预览和实际捕获一致。"
+  ],
+  "fs.filter.glob.unicode-case-fold": [
+    "自主通配 ÉCOLE.TXT",
+    "建立含中英文、emoji、ß/İ、括号和连字符的真实文件；nameInclude=ÉCOLE.TXT；比较预览集合与捕获计数。",
+    "准确命中 école.txt；预览和实际捕获一致。"
+  ],
+  "fs.filter.glob.simple-fold-sharp-s": [
+    "自主通配 ẞ.txt",
+    "建立含中英文、emoji、ß/İ、括号和连字符的真实文件；nameInclude=ẞ.txt；比较预览集合与捕获计数。",
+    "准确命中 ß.txt；预览和实际捕获一致。"
+  ],
+  "fs.filter.glob.simple-fold-dotted-I": [
+    "自主通配 İ.txt",
+    "建立含中英文、emoji、ß/İ、括号和连字符的真实文件；nameInclude=İ.txt；比较预览集合与捕获计数。",
+    "准确命中 İ.txt；预览和实际捕获一致。"
+  ],
+  "fs.filter.glob.fold-does-not-expand-points": [
+    "自主通配 SS.txt",
+    "建立含中英文、emoji、ß/İ、括号和连字符的真实文件；nameInclude=SS.txt；比较预览集合与捕获计数。",
+    "准确命中 空集合，不把 ß 展开成 SS；预览和实际捕获一致。"
+  ],
+  "fs.filter.glob.digit-range": [
+    "自主通配 a[0-9].txt",
+    "建立含中英文、emoji、ß/İ、括号和连字符的真实文件；nameInclude=a[0-9].txt；比较预览集合与捕获计数。",
+    "准确命中 A7.TXT；预览和实际捕获一致。"
+  ],
+  "fs.filter.glob.character-set": [
+    "自主通配 [ab].*",
+    "建立含中英文、emoji、ß/İ、括号和连字符的真实文件；nameInclude=[ab].*；比较预览集合与捕获计数。",
+    "准确命中 a.txt、b.bin；预览和实际捕获一致。"
+  ],
+  "fs.filter.glob.negated-set": [
+    "自主通配 [!a]*.txt",
+    "建立含中英文、emoji、ß/İ、括号和连字符的真实文件；nameInclude=[!a]*.txt；比较预览集合与捕获计数。",
+    "准确命中 [note].txt、].txt、école.txt、中文.txt、🙂.txt、ß.txt、İ.txt；预览和实际捕获一致。"
+  ],
+  "fs.filter.glob.caret-negated-set": [
+    "自主通配 [^a]*.txt",
+    "建立含中英文、emoji、ß/İ、括号和连字符的真实文件；nameInclude=[^a]*.txt；比较预览集合与捕获计数。",
+    "准确命中 与 [!a]*.txt 同一集合；预览和实际捕获一致。"
+  ],
+  "fs.filter.glob.leading-hyphen": [
+    "自主通配 a[-7].txt",
+    "建立含中英文、emoji、ß/İ、括号和连字符的真实文件；nameInclude=a[-7].txt；比较预览集合与捕获计数。",
+    "准确命中 a-.txt、A7.TXT；预览和实际捕获一致。"
+  ],
+  "fs.filter.glob.trailing-hyphen": [
+    "自主通配 a[7-].txt",
+    "建立含中英文、emoji、ß/İ、括号和连字符的真实文件；nameInclude=a[7-].txt；比较预览集合与捕获计数。",
+    "准确命中 a-.txt、A7.TXT；预览和实际捕获一致。"
+  ],
+  "fs.filter.glob.literal-opening-bracket": [
+    "自主通配 [[]note].txt",
+    "建立含中英文、emoji、ß/İ、括号和连字符的真实文件；nameInclude=[[]note].txt；比较预览集合与捕获计数。",
+    "准确命中 [note].txt；预览和实际捕获一致。"
+  ],
+  "fs.filter.glob.literal-closing-bracket": [
+    "自主通配 []].txt",
+    "建立含中英文、emoji、ß/İ、括号和连字符的真实文件；nameInclude=[]].txt；比较预览集合与捕获计数。",
+    "准确命中 ].txt；预览和实际捕获一致。"
+  ],
+  "fs.filter.glob.closing-bracket-in-set": [
+    "自主通配 []a].txt",
+    "建立含中英文、emoji、ß/İ、括号和连字符的真实文件；nameInclude=[]a].txt；比较预览集合与捕获计数。",
+    "准确命中 ].txt、a.txt；预览和实际捕获一致。"
+  ],
+  "fs.filter.glob.collapsed-stars": [
+    "自主通配 **a**.cpp",
+    "建立含中英文、emoji、ß/İ、括号和连字符的真实文件；nameInclude=**a**.cpp；比较预览集合与捕获计数。",
+    "准确命中 alpha.cpp；预览和实际捕获一致。"
+  ],
+  "fs.filter.glob.multiple-star-segments": [
+    "自主通配 *b*e*t*a*.hpp",
+    "建立含中英文、emoji、ß/İ、括号和连字符的真实文件；nameInclude=*b*e*t*a*.hpp；比较预览集合与捕获计数。",
+    "准确命中 beta.hpp；预览和实际捕获一致。"
+  ],
+  "fs.filter.glob.star-retry": [
+    "自主通配 *ab.txt",
+    "建立含中英文、emoji、ß/İ、括号和连字符的真实文件；nameInclude=*ab.txt；比较预览集合与捕获计数。",
+    "准确命中 aaaaab.txt；预览和实际捕获一致。"
+  ],
+  "fs.filter.glob.multiple-retries": [
+    "自主通配 *a*a*a*.txt",
+    "建立含中英文、emoji、ß/İ、括号和连字符的真实文件；nameInclude=*a*a*a*.txt；比较预览集合与捕获计数。",
+    "准确命中 aaaaab.txt；预览和实际捕获一致。"
+  ],
+  "fs.filter.glob.tail-star-zero-points": [
+    "自主通配 *.txt*",
+    "建立含中英文、emoji、ß/İ、括号和连字符的真实文件；nameInclude=*.txt*；比较预览集合与捕获计数。",
+    "准确命中 所有 txt 文件；预览和实际捕获一致。"
+  ],
+  "fs.filter.glob.empty-pattern": [
+    "自主通配 空串",
+    "建立含中英文、emoji、ß/İ、括号和连字符的真实文件；nameInclude=空串；比较预览集合与捕获计数。",
+    "准确命中 空集合；预览和实际捕获一致。"
+  ],
+  "fs.filter.glob.whole-value-anchor": [
+    "自主通配 alpha",
+    "建立含中英文、emoji、ß/İ、括号和连字符的真实文件；nameInclude=alpha；比较预览集合与捕获计数。",
+    "准确命中 空集合，不能只匹配文件名前缀；预览和实际捕获一致。"
+  ],
+  "fs.filter.glob.letter-range": [
+    "自主通配 [A-Z]*.cpp",
+    "建立含中英文、emoji、ß/İ、括号和连字符的真实文件；nameInclude=[A-Z]*.cpp；比较预览集合与捕获计数。",
+    "准确命中 alpha.cpp；预览和实际捕获一致。"
+  ],
+  "fs.filter.glob.unicode-range": [
+    "自主通配 [中-文]*.txt",
+    "建立含中英文、emoji、ß/İ、括号和连字符的真实文件；nameInclude=[中-文]*.txt；比较预览集合与捕获计数。",
+    "准确命中 中文.txt；预览和实际捕获一致。"
+  ],
+  "fs.filter.glob.all-values": [
+    "自主通配 *",
+    "建立含中英文、emoji、ß/İ、括号和连字符的真实文件；nameInclude=*；比较预览集合与捕获计数。",
+    "准确命中 夹具全部普通文件；预览和实际捕获一致。"
+  ],
+  "fs.filter.glob.invalid-[": [
+    "畸形字符集合 [",
+    "nameInclude=[*, [] 且 pathExclude=source，预览根被排除的计划。",
+    "扫描前 FILTER_PATTERN；早期匹配与排除不能掩盖配置错误。"
+  ],
+  "fs.filter.glob.invalid-[]": [
+    "畸形字符集合 []",
+    "nameInclude=[*, []] 且 pathExclude=source，预览根被排除的计划。",
+    "扫描前 FILTER_PATTERN；早期匹配与排除不能掩盖配置错误。"
+  ],
+  "fs.filter.glob.invalid-[!]": [
+    "畸形字符集合 [!]",
+    "nameInclude=[*, [!]] 且 pathExclude=source，预览根被排除的计划。",
+    "扫描前 FILTER_PATTERN；早期匹配与排除不能掩盖配置错误。"
+  ],
+  "fs.filter.glob.invalid-[a": [
+    "畸形字符集合 [a",
+    "nameInclude=[*, [a] 且 pathExclude=source，预览根被排除的计划。",
+    "扫描前 FILTER_PATTERN；早期匹配与排除不能掩盖配置错误。"
+  ],
+  "fs.filter.glob.invalid-[z-a]": [
+    "畸形字符集合 [z-a]",
+    "nameInclude=[*, [z-a]] 且 pathExclude=source，预览根被排除的计划。",
+    "扫描前 FILTER_PATTERN；早期匹配与排除不能掩盖配置错误。"
+  ],
+  "fs.filter.glob.invalid-[^]": [
+    "畸形字符集合 [^]",
+    "nameInclude=[*, [^]] 且 pathExclude=source，预览根被排除的计划。",
+    "扫描前 FILTER_PATTERN；早期匹配与排除不能掩盖配置错误。"
+  ],
+  "fs.filter.glob.literal-directory-boundary": [
+    "字面目录边界",
+    "pathInclude=SOURCE\\EMPTY；建立 empty/file.txt 与 empty-other/file.txt。",
+    "仅前者命中和恢复，不误匹配相似目录前缀。"
+  ],
+  "fs.filter.glob.star-crosses-path-separator": [
+    "星号跨目录",
+    "pathInclude=source/*only.txt，建立 source/empty/deep/only.txt。",
+    "fileCount=1，保留三层祖先，entries=4。"
+  ],
+  "fs.filter.glob.pattern-length-limit": [
+    "规则长度上限",
+    "nameInclude 设 32001 个 a。",
+    "FILTER_PATTERN，在匹配和分配大规则前拒绝。"
+  ],
+  "fs.filter.glob.explicit-work-budget": [
+    "迭代匹配工作预算",
+    "建立三层各 200 个 a 的路径；pathInclude 为 *[ 加 31990 个 z 加 ]。",
+    "达到 8 Mi 操作限制后 FILTER_PATTERN_COMPLEXITY；无成功归档。"
+  ]
+}

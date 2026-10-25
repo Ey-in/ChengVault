@@ -1,0 +1,1248 @@
+{
+    "cases": [
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 29,
+            "name": "fs.adversarial.manifest.unsupported-version",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:57.718Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 24,
+            "name": "fs.adversarial.manifest.entries-not-array",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:57.743Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 25,
+            "name": "fs.adversarial.manifest.non-object-entry",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:57.768Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 25,
+            "name": "fs.adversarial.manifest.negative-file-size",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:57.793Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 24,
+            "name": "fs.adversarial.manifest.bad-filetime",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:57.818Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 26,
+            "name": "fs.adversarial.manifest.missing-main-stream",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:57.844Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 22,
+            "name": "fs.adversarial.manifest.main-stream-size-mismatch",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:57.868Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 20,
+            "name": "fs.adversarial.manifest.invalid-stream-name",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:57.887Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 30,
+            "name": "fs.adversarial.manifest.duplicate-stream",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:57.917Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 27,
+            "name": "fs.adversarial.manifest.directory-main-stream",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:57.946Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 35,
+            "name": "fs.adversarial.manifest.empty-chunk-id",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:57.980Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 33,
+            "name": "fs.adversarial.manifest.oversized-chunk-id",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:58.014Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 28,
+            "name": "fs.adversarial.manifest.invalid-chunk-digest",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:58.043Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 33,
+            "name": "fs.adversarial.manifest.negative-chunk-offset",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:58.076Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 26,
+            "name": "fs.adversarial.manifest.zero-chunk-length",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:58.103Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 31,
+            "name": "fs.adversarial.manifest.chunk-over-one-mib",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:58.135Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 28,
+            "name": "fs.adversarial.manifest.overlapping-chunks",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:58.163Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 28,
+            "name": "fs.adversarial.manifest.non-sparse-gap",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:58.191Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 26,
+            "name": "fs.adversarial.manifest.non-sparse-tail-missing",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:58.218Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 26,
+            "name": "fs.adversarial.manifest.parent-not-directory",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:58.245Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 24,
+            "name": "fs.adversarial.manifest.hardlink-missing-target",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:58.269Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 27,
+            "name": "fs.adversarial.manifest.symlink-empty-target",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:58.297Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 28,
+            "name": "fs.adversarial.manifest.junction-short-reparse",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:58.325Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 22,
+            "name": "fs.restore.unknown-selection-no-output",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:58.348Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 52,
+            "name": "fs.restore.file-directory-type-conflict",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:58.401Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 30,
+            "name": "fs.restore.existing-directory-ads-protected",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:58.431Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 58,
+            "name": "fs.restore.chunk-changes-after-preflight",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:58.490Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 33,
+            "name": "fs.restore.cancel-after-preflight",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:58.524Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 28,
+            "name": "fs.capture.no-source",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:58.552Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 31,
+            "name": "fs.capture.colliding-source-roots",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:58.584Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 39,
+            "name": "fs.capture.sink-empty-id",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:58.623Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 37,
+            "name": "fs.filter.string-name-exclusion",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:58.661Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 28,
+            "name": "fs.filter.attribute-exclusion",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:58.689Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 28,
+            "name": "fs.filter.time-upper-past",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:58.718Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 24,
+            "name": "fs.filter.content-too-long",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:58.743Z"
+        },
+        {
+            "category": "系统功能",
+            "detail": "",
+            "durationMs": 57,
+            "name": "fs.ntfs.selected-hardlink-brings-canonical-data",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:58.800Z"
+        },
+        {
+            "category": "系统功能",
+            "detail": "",
+            "durationMs": 69,
+            "name": "fs.ntfs.empty-and-all-hole-sparse",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:58.870Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 63,
+            "name": "fs.metadata.invalid-ownerSid-preserves-file",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:58.934Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 51,
+            "name": "fs.metadata.invalid-groupSid-preserves-file",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:58.985Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 48,
+            "name": "fs.metadata.invalid-daclBase64-preserves-file",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:59.034Z"
+        },
+        {
+            "category": "系统功能",
+            "detail": "",
+            "durationMs": 73,
+            "name": "fs.metadata.null-dacl-roundtrip",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:59.107Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 54,
+            "name": "fs.metadata.foreign-owner-strict",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:59.162Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 47,
+            "name": "fs.metadata.foreign-owner-warning",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:59.210Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 62,
+            "name": "fs.filter.hardlink-type-selects-both-names",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:59.272Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 93,
+            "name": "archive.adversarial.index.magic",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:59.366Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 98,
+            "name": "archive.adversarial.index.manifest-too-large",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:59.465Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 99,
+            "name": "archive.adversarial.index.manifest-json-array",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:59.565Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 281,
+            "name": "archive.adversarial.index.chunk-count-limit",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:59.846Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 69,
+            "name": "archive.adversarial.index.chunk-id-syntax",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:59.916Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 79,
+            "name": "archive.adversarial.index.chunk-zero-length",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:46:59.996Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 83,
+            "name": "archive.adversarial.index.chunk-size-limit",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:00.079Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 67,
+            "name": "archive.adversarial.index.trailing-bytes",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:00.146Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 68,
+            "name": "archive.adversarial.index.duplicate-block-id",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:00.214Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 62,
+            "name": "archive.adversarial.index.missing-index-block",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:00.276Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 55,
+            "name": "archive.adversarial.index.unknown-index-block",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:00.332Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 68,
+            "name": "archive.adversarial.index.block-content-corrupt",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:00.401Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 98,
+            "name": "archive.adversarial.pax.bad-checksum",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:00.498Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 132,
+            "name": "archive.adversarial.pax.bad-octal",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:00.631Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 114,
+            "name": "archive.adversarial.pax.bad-pax-length",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:00.747Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 97,
+            "name": "archive.adversarial.pax.bad-pax-newline",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:00.845Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 103,
+            "name": "archive.adversarial.pax.missing-pax-key",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:00.948Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 98,
+            "name": "archive.adversarial.pax.duplicate-pax-key",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:01.047Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 110,
+            "name": "archive.adversarial.pax.consecutive-pax",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:01.157Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 103,
+            "name": "archive.adversarial.pax.missing-pax-header",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:01.261Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 89,
+            "name": "archive.adversarial.pax.manifest-not-first",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:01.350Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 95,
+            "name": "archive.adversarial.pax.manifest-duplicate",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:01.447Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 99,
+            "name": "archive.adversarial.pax.member-unregistered",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:01.545Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 98,
+            "name": "archive.adversarial.pax.member-type-mismatch",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:01.644Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 93,
+            "name": "archive.adversarial.pax.member-duplicate",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:01.738Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 89,
+            "name": "archive.adversarial.pax.member-missing",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:01.828Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 103,
+            "name": "archive.adversarial.pax.manifest-padding-nonzero",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:01.931Z"
+        },
+        {
+            "category": "安全",
+            "detail": "expected error TAR_PADDING",
+            "durationMs": 132,
+            "name": "archive.adversarial.pax.pax-padding-nonzero",
+            "result": "FAIL",
+            "timestamp": "2026-10-17T12:47:02.065Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 92,
+            "name": "archive.adversarial.pax.one-terminator-only",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:02.157Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 112,
+            "name": "archive.adversarial.pax.terminator-then-member",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:02.270Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 103,
+            "name": "archive.adversarial.pax.trailing-after-terminator",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:02.372Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 42,
+            "name": "archive.adversarial.frame.sequence",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:02.415Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 66,
+            "name": "archive.adversarial.frame.header-binding",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:02.482Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 54,
+            "name": "archive.adversarial.frame.record-kind",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:02.536Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 60,
+            "name": "archive.adversarial.frame.record-short-body",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:02.596Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 80,
+            "name": "archive.adversarial.frame.decoded-size-limit",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:02.678Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 61,
+            "name": "archive.adversarial.frame.decoded-digest",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:02.739Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 59,
+            "name": "archive.adversarial.frame.decoded-size-mismatch",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:02.798Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 46,
+            "name": "archive.adversarial.frame.final-length",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:02.845Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 46,
+            "name": "archive.adversarial.frame.final-digest",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:02.892Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 43,
+            "name": "archive.adversarial.frame.missing-final",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:02.936Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 40,
+            "name": "archive.adversarial.frame.duplicate-final",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:02.977Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 36,
+            "name": "archive.adversarial.header.ARCHIVE_VERSION",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:03.014Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 40,
+            "name": "archive.adversarial.header.ARCHIVE_FORMAT",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:03.055Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 47,
+            "name": "archive.adversarial.header.CIPHER_UNSUPPORTED",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:03.102Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 53,
+            "name": "archive.adversarial.header.KDF_PARAMETERS",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:03.156Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 381,
+            "name": "archive.pax-alias-ntfs-streams-hardlinks-sparse",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:03.537Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 135,
+            "name": "archive.pax-link-target-mismatch",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:03.673Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 417,
+            "name": "archive.cipher-alias-and-missing-password",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:04.091Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 106,
+            "name": "archive.cancel-during-wrap-preserves-existing",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:04.197Z"
+        },
+        {
+            "category": "系统功能",
+            "detail": "",
+            "durationMs": 99,
+            "name": "fs.roundtrip.files-empty-unicode",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:04.298Z"
+        },
+        {
+            "category": "系统功能",
+            "detail": "",
+            "durationMs": 100,
+            "name": "fs.metadata.owner-group-times-dacl",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:04.399Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 31,
+            "name": "fs.filter.path-exclusion-wins",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:04.431Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 39,
+            "name": "fs.filter.name-glob-ancestor",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:04.470Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 33,
+            "name": "fs.filter.object-type-and-extension",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:04.504Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 24,
+            "name": "fs.filter.size-inclusive",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:04.528Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 49,
+            "name": "fs.filter.owner-sid",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:04.577Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 42,
+            "name": "fs.filter.owner-account-name",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:04.620Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 37,
+            "name": "fs.filter.time-bounds",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:04.658Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 26,
+            "name": "fs.filter.invalid-time-rejected",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:04.686Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 28,
+            "name": "fs.filter.depth",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:04.714Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 22,
+            "name": "fs.filter.attributes",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:04.737Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 75,
+            "name": "fs.filter.content-boundary",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:04.812Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 60,
+            "name": "fs.filter.changed-since",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:04.873Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 50,
+            "name": "fs.restore.no-overwrite-preflight",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:04.923Z"
+        },
+        {
+            "category": "系统功能",
+            "detail": "",
+            "durationMs": 305,
+            "name": "fs.restore.explicit-overwrite",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:05.228Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 72,
+            "name": "fs.restore.disk-full-write-boundary-injection",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:05.300Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 29,
+            "name": "fs.capture.denied-dacl-restricted-token",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:05.330Z"
+        },
+        {
+            "category": "系统功能",
+            "detail": "",
+            "durationMs": 49,
+            "name": "fs.restore.selection",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:05.381Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 36,
+            "name": "fs.restore.corruption-no-destination",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:05.417Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 20,
+            "name": "fs.capture.cancelled",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:05.438Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 18,
+            "name": "fs.capture.source-target-overlap",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:05.457Z"
+        },
+        {
+            "category": "并发稳定性",
+            "detail": "",
+            "durationMs": 61,
+            "name": "fs.capture.exclusively-locked-source",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:05.518Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 79,
+            "name": "fs.manifest.reject-../escape",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:05.597Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 48,
+            "name": "fs.manifest.reject-C:/escape",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:05.646Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 61,
+            "name": "fs.manifest.reject-source/../escape",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:05.707Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 37,
+            "name": "fs.manifest.reject-source/CON.txt",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:05.745Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 30,
+            "name": "fs.manifest.reject-source/a.",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:05.775Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 32,
+            "name": "fs.manifest.reject-source/a:b",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:05.808Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 46,
+            "name": "fs.manifest.reject-source/CONIN$",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:05.854Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 44,
+            "name": "fs.manifest.reject-source/CONOUT$",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:05.899Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 29,
+            "name": "fs.manifest.reject-source/COM¹.txt",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:05.928Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 47,
+            "name": "fs.manifest.case-collision",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:05.975Z"
+        },
+        {
+            "category": "系统功能",
+            "detail": "",
+            "durationMs": 86,
+            "name": "fs.ntfs.hardlinks-shared-identity",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:06.062Z"
+        },
+        {
+            "category": "系统功能",
+            "detail": "",
+            "durationMs": 133,
+            "name": "fs.ntfs.file-and-directory-ads",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:06.195Z"
+        },
+        {
+            "category": "性能",
+            "detail": "",
+            "durationMs": 96,
+            "name": "fs.ntfs.sparse-over-4gib",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:06.292Z"
+        },
+        {
+            "category": "系统功能",
+            "detail": "",
+            "durationMs": 70,
+            "name": "fs.ntfs.junction-no-recursion",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:06.362Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 35,
+            "name": "fs.restore.reparse-escape-rejected",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:06.398Z"
+        },
+        {
+            "category": "环境权限",
+            "detail": "Windows 未授予创建符号链接权限；未计为通过",
+            "name": "fs.ntfs.symbolic-file-and-directory-links",
+            "result": "SKIP"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 126,
+            "name": "archive.roundtrip.indexed.none.none",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:06.540Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 749,
+            "name": "archive.roundtrip.indexed.none.aes256",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:07.290Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 768,
+            "name": "archive.roundtrip.indexed.none.chacha20",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:08.059Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 201,
+            "name": "archive.roundtrip.indexed.huffman.none",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:08.261Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 830,
+            "name": "archive.roundtrip.indexed.huffman.aes256",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:09.092Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 796,
+            "name": "archive.roundtrip.indexed.huffman.chacha20",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:09.889Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 153,
+            "name": "archive.roundtrip.indexed.lz77.none",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:10.042Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 860,
+            "name": "archive.roundtrip.indexed.lz77.aes256",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:10.902Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 895,
+            "name": "archive.roundtrip.indexed.lz77.chacha20",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:11.798Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 175,
+            "name": "archive.roundtrip.tar.none.none",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:11.973Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 859,
+            "name": "archive.roundtrip.tar.none.aes256",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:12.834Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 903,
+            "name": "archive.roundtrip.tar.none.chacha20",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:13.737Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 150,
+            "name": "archive.roundtrip.tar.huffman.none",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:13.887Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 801,
+            "name": "archive.roundtrip.tar.huffman.aes256",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:14.689Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 829,
+            "name": "archive.roundtrip.tar.huffman.chacha20",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:15.518Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 168,
+            "name": "archive.roundtrip.tar.lz77.none",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:15.687Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 839,
+            "name": "archive.roundtrip.tar.lz77.aes256",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:16.526Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 829,
+            "name": "archive.roundtrip.tar.lz77.chacha20",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:17.357Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 391,
+            "name": "archive.wrong-password-no-output",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:17.747Z"
+        },
+        {
+            "category": "部署兼容性",
+            "detail": "",
+            "durationMs": 141,
+            "name": "archive.pax-independent-reader",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:17.895Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 104,
+            "name": "archive.tampered-final-record",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:17.999Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 100,
+            "name": "archive.truncation-detected",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:47:18.100Z"
+        }
+    ],
+    "date": "2026-10-17T12:47:18Z",
+    "failed": 1,
+    "passed": 153,
+    "platform": "Windows 11 Version 25H2",
+    "qt": "6.11.2",
+    "skipped": 1
+}

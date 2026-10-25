@@ -1,0 +1,1117 @@
+{
+  "status": "PASS",
+  "checkedAtUtc": "2026-10-17T14:37:13.345340+00:00",
+  "document": {
+    "path": "D:\\soft-project\\报告文档\\澄匣备份ChengVault实验报告.docx",
+    "sha256": "96af88d5b6c6667ac384873d08e6af9e120f7a4eccb625083df5a9a17d2e9285",
+    "bytes": 1549403
+  },
+  "pdf": {
+    "path": "D:\\soft-project\\报告文档\\澄匣备份ChengVault实验报告.pdf",
+    "sha256": "797f3a8e2db4da2c3216d5243f49b5a748dd15fa5214444917f99ad0cb627af6",
+    "bytes": 5915901,
+    "pages": 61,
+    "extractableTextCharacters": 46182
+  },
+  "rendering": {
+    "method": "Installed Microsoft Word COM ExportAsFixedFormat + Poppler pdftoppm PNG",
+    "nativeWordReadOnlyExport": true,
+    "scaleToPixels": 1100,
+    "libreOfficeRenderer": "Attempted before authoring; unavailable in this environment. See .cache/artifact.md.",
+    "reviewedEveryPage": true
+  },
+  "template": {
+    "path": "D:\\soft-project\\文档\\小组提交文档-实验报告模板.docx",
+    "sha256": "3323e15ccfa3445483575fd6b77a1606c8b7c64cbdc30cca69cdea858913a2e0",
+    "expectedSha256": "3323e15ccfa3445483575fd6b77a1606c8b7c64cbdc30cca69cdea858913a2e0",
+    "unmodified": true,
+    "outerRows": 18,
+    "cover23ParagraphXmlIdentical": true,
+    "teacherRegionXmlIdentical": true,
+    "sectionXmlIdentical": true,
+    "preserveOnlyParts": [
+      {
+        "path": "_rels/",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytesIdentical": true
+      },
+      {
+        "path": "_rels/.rels",
+        "sha256": "514e1846381cb6bcfff105a4b0a17d666cf0ed1f0c120bff73b82226ab7ed977",
+        "bytesIdentical": true
+      },
+      {
+        "path": "docProps/",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytesIdentical": true
+      },
+      {
+        "path": "docProps/app.xml",
+        "sha256": "10bf838e84f2b56178332a1c583d9149e9c9845a1d344776d1ff4d07a2ad4219",
+        "bytesIdentical": true
+      },
+      {
+        "path": "docProps/core.xml",
+        "sha256": "2f484e0d9453b3d8d41081c579551c85d2b743f9e3267bcd8d832adab1191812",
+        "bytesIdentical": true
+      },
+      {
+        "path": "docProps/custom.xml",
+        "sha256": "9e2c4e86d6755248df0112186afa4766db2ded9d4b46cab81bd7279c36e5e37a",
+        "bytesIdentical": true
+      },
+      {
+        "path": "word/",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytesIdentical": true
+      },
+      {
+        "path": "word/_rels/",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytesIdentical": true
+      },
+      {
+        "path": "word/fontTable.xml",
+        "sha256": "40658cf12f56397698d93d9d468a482a145f93e8690d57f27ccdba809608e26b",
+        "bytesIdentical": true
+      },
+      {
+        "path": "word/numbering.xml",
+        "sha256": "da326aa798cf3b32452e23e14f4c11d5a9e1a18ac23426df5c37604731761aa4",
+        "bytesIdentical": true
+      },
+      {
+        "path": "word/settings.xml",
+        "sha256": "e52d2207868b5fade1a2c6f2b157a1c2923189ff1a3a517f2ef6ce16122dfda6",
+        "bytesIdentical": true
+      },
+      {
+        "path": "word/styles.xml",
+        "sha256": "16bb477aea731b652b60244a88c8a011b02aa885d6f3c4874633d355ad77cbb7",
+        "bytesIdentical": true
+      },
+      {
+        "path": "word/theme/",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytesIdentical": true
+      },
+      {
+        "path": "word/theme/theme1.xml",
+        "sha256": "20b1cf0f6bd861afd2ee727424bf2da47b72e5e70232e7477547132a50c1f809",
+        "bytesIdentical": true
+      }
+    ]
+  },
+  "traceability": {
+    "rows": 611,
+    "uniqueCaseIds": 611,
+    "results": {
+      "PASS": 610,
+      "SKIP": 1
+    },
+    "detailedCoreCasesInReport": 220,
+    "coreCases": 586,
+    "guiCases": 20,
+    "processCases": 5,
+    "metadataTimeChecksSeparate": 6,
+    "mappingRegressionChecks": {
+      "fs.filter.owner-account-name": "E08",
+      "fs.roundtrip.files-empty-unicode": "B01",
+      "fs.filter.glob.one-codepoint": "E05",
+      "fs.filter.glob.literal-directory-boundary": "E03",
+      "SCH-40 rename and delete both request real-time rescan": "E18",
+      "network.existing-session-invalidated-by-account-disable": "E20",
+      "network.existing-session-revoked-after-device-key-rotation": "E20",
+      "repository.list-lock-protects-snapshot-lifetime": "E23"
+    }
+  },
+  "currentGuiScreenshots": [
+    {
+      "path": "evidence\\gui\\backup.png",
+      "sha256": "99548060a4730dbb702ac8e25c774ff56774f622552bbd6564b1cdcc4e92a14c",
+      "embeddedCurrentBytes": true
+    },
+    {
+      "path": "evidence\\gui\\restore.png",
+      "sha256": "21d2817a6511b862dc6e4498493c4793beae77eca74ab644403a5d9f73c92b08",
+      "embeddedCurrentBytes": true
+    },
+    {
+      "path": "evidence\\gui\\repair.png",
+      "sha256": "4ebbfad787c06b946138e5339df9f888693925314215ddbc1604649f8c109755",
+      "embeddedCurrentBytes": true
+    },
+    {
+      "path": "evidence\\gui\\network.png",
+      "sha256": "5c2f588b60aa798d1ea4c27b6831e1066ff0f724714ccd852cbd454e18418209",
+      "embeddedCurrentBytes": true
+    },
+    {
+      "path": "evidence\\gui\\automation.png",
+      "sha256": "0f36c6da19546fa731a1cf62afa30aacab6779d40522a590a7cada3ecfd6ce4a",
+      "embeddedCurrentBytes": true
+    }
+  ],
+  "evidenceInputs": [
+    {
+      "path": "evidence/test-results.json",
+      "sha256": "e092e56a07581c9031f354f737b4a034b01fcc6840b3766d4cf2543e9b0e9232"
+    },
+    {
+      "path": "evidence/gui-test-results.json",
+      "sha256": "1f035acbffa524c419d301973ea88d99e10fe3173e17aa1f58ce13d804cd6716"
+    },
+    {
+      "path": "evidence/background-test-results.json",
+      "sha256": "6f356489fa614dd0899ba87b0a67bd98efa29ed22c4185b82d9ad26a39131672"
+    },
+    {
+      "path": "evidence/metadata-times-results.json",
+      "sha256": "1bcf1fd41e24570e551897796494de956eb09f9c777eaa4dd197de1486baeb3f"
+    },
+    {
+      "path": "evidence/benchmark-results.json",
+      "sha256": "46e741ced6682525e96460996b0d2acccc6335c948d2463186547f1ad636cd71"
+    },
+    {
+      "path": "evidence/network-smoke-results.json",
+      "sha256": "e78d14e97e827faeae23b51ec095e25fb1be58507135e87ea8f5ccb259a93051"
+    },
+    {
+      "path": "evidence/coverage/summary.json",
+      "sha256": "f21661472a28a3e51a1d04e60c4ba19630da0f13d608e0c779c433f38b8219c9"
+    },
+    {
+      "path": "evidence/coverage/auxiliary-summary.json",
+      "sha256": "1a4176aa976e800f69bbc07c2b0c60ce96d653d214c3a89b7d502f9aecd89a78"
+    },
+    {
+      "path": "evidence/quality/summary.json",
+      "sha256": "5771501c3f2bd2b8997b63acf9d0ee63b4a2a175708b23062288c8dc4de7447f"
+    },
+    {
+      "path": "evidence/deployment-results.json",
+      "sha256": "b896199d657c021f583c3969f29cab62f01b836d4acb066d5ba37e45b46ddb89"
+    },
+    {
+      "path": "evidence/demo/latest.json",
+      "sha256": "2e9477141be37765f87df1faad6be07fb48cc6301e4983c640901769fcbbc8e2"
+    },
+    {
+      "path": "evidence/uml-native/validation.json",
+      "sha256": "2341c9739fccfb3ab0fe4abc5b4746fd98bc799c337a2301f2530c8e0257f66e"
+    },
+    {
+      "path": "evidence/report-algorithm-case-descriptions.json",
+      "sha256": "0e7f9b5de824ff8daf8c3486d056906d0a1c23bcc7f64a0cdecc4b554c7b3125"
+    },
+    {
+      "path": "evidence/report-filesystem-case-descriptions.json",
+      "sha256": "33d4168dd7d77a4b2f651cad21cdf57a706e86532e2c62d8cfa0a8809347ad40"
+    },
+    {
+      "path": "evidence/report-network-case-descriptions.json",
+      "sha256": "84f2ec9782ecaac655cb172fc20d529a80857c272a1a2e49ce2400d8da672520"
+    }
+  ],
+  "contentChecks": {
+    "obsoleteExamplesAbsent": true,
+    "actualCoverageAndLimitationsPresent": true,
+    "humanIdentityAndSignaturesNotInvented": true,
+    "independentMachineNotClaimed": true,
+    "nativeStarUmlLoadAndRenderVerifiedWithVendorWatermarkLimitation": true,
+    "independentWildcardImplementationAndUnicodeBoundaryDocumented": true,
+    "latestRealUiScreenshotsEmbedded": true,
+    "latestDemoRunAndDuration": true,
+    "threeMemberExistingModuleResponsibilityNotHistoricalAuthorship": true,
+    "rawBranchTargetNotClaimedMet": true
+  },
+  "pages": [
+    {
+      "page": 1,
+      "image": "evidence\\report\\pages\\page-01.png",
+      "sha256": "5bf27cd2b9ef6133c184de3e4a31dc867835885bc8b2b8b7d60bfcb049bc4b36",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 1",
+      "baselinePage": 1
+    },
+    {
+      "page": 2,
+      "image": "evidence\\report\\pages\\page-02.png",
+      "sha256": "5a6ad3e5df00382d811d1874a59862be4aa700daa0b42f9414e6106df1e843ee",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Final UI-refresh page image viewed at original rendered size"
+    },
+    {
+      "page": 3,
+      "image": "evidence\\report\\pages\\page-03.png",
+      "sha256": "25f5a9ab548ee2c8e771beb153b3251bd7fb5226ced23e72e0a1fe8856676ce0",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 3",
+      "baselinePage": 3
+    },
+    {
+      "page": 4,
+      "image": "evidence\\report\\pages\\page-04.png",
+      "sha256": "61b37ad656bf2be684af0489e92d05709ca67c616fa392cc585e1c4500634816",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 4",
+      "baselinePage": 4
+    },
+    {
+      "page": 5,
+      "image": "evidence\\report\\pages\\page-05.png",
+      "sha256": "4cdd7ca4650589201ebfd1a06759b5bfae4c24ab7258cd82b6b232171eab63a9",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 5",
+      "baselinePage": 5
+    },
+    {
+      "page": 6,
+      "image": "evidence\\report\\pages\\page-06.png",
+      "sha256": "fd609af717955184a6ef4420a9c6aaf8ee4740a7fcbde4923733eecedf6c42d4",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Final UI-refresh page image viewed at original rendered size"
+    },
+    {
+      "page": 7,
+      "image": "evidence\\report\\pages\\page-07.png",
+      "sha256": "195c7dc27358b804679a850ca82d03dbd672783b38fd21ca9590f32d0c826d24",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Final UI-refresh page image viewed at original rendered size"
+    },
+    {
+      "page": 8,
+      "image": "evidence\\report\\pages\\page-08.png",
+      "sha256": "4058bc1f970813f66e82fbffc72cbb2ee66e51a9ef7577627fef989544e20dc2",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 8",
+      "baselinePage": 8
+    },
+    {
+      "page": 9,
+      "image": "evidence\\report\\pages\\page-09.png",
+      "sha256": "9f5f599f7dd9db428d62bc3528f612df583213e78045fb27d644b0ff67ff4d8f",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 9",
+      "baselinePage": 9
+    },
+    {
+      "page": 10,
+      "image": "evidence\\report\\pages\\page-10.png",
+      "sha256": "ef075418854758c761ae02271c7cfde2f937e1ee63664225b745f3245ac7a46e",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 10",
+      "baselinePage": 10
+    },
+    {
+      "page": 11,
+      "image": "evidence\\report\\pages\\page-11.png",
+      "sha256": "fad71862e522fe47a23feacd97c722f3ee096de9add579c7e9c197c66e861c8a",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 11",
+      "baselinePage": 11
+    },
+    {
+      "page": 12,
+      "image": "evidence\\report\\pages\\page-12.png",
+      "sha256": "d1fc704df10813b010a75e38b1d0b4be2c3d432bc66c7fdb4edd7740ea3b1312",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Final UI-refresh page image viewed at original rendered size"
+    },
+    {
+      "page": 13,
+      "image": "evidence\\report\\pages\\page-13.png",
+      "sha256": "f941bab0585b90717bfb3b7800490749c77b3a268119773c40593d5a1c50e541",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 13",
+      "baselinePage": 13
+    },
+    {
+      "page": 14,
+      "image": "evidence\\report\\pages\\page-14.png",
+      "sha256": "5fc8eab5945cd4d80484e617f82700d3063cb95784333b645873bcf0f01c3ac9",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 14",
+      "baselinePage": 14
+    },
+    {
+      "page": 15,
+      "image": "evidence\\report\\pages\\page-15.png",
+      "sha256": "977dd5e5b6189dca1554b843c211a611116400abfe367c13e48ff69f2420b709",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 15",
+      "baselinePage": 15
+    },
+    {
+      "page": 16,
+      "image": "evidence\\report\\pages\\page-16.png",
+      "sha256": "cd52a51e7c83fcea7812dbbc8e13695c742f98e9015ba0cf77658a11f22f4c96",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 16",
+      "baselinePage": 16
+    },
+    {
+      "page": 17,
+      "image": "evidence\\report\\pages\\page-17.png",
+      "sha256": "bd74fbd2ffe67fba96aaa8f7d6fa927fbbf16a8dc75908dfa1ed39ad427bf615",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 17",
+      "baselinePage": 17
+    },
+    {
+      "page": 18,
+      "image": "evidence\\report\\pages\\page-18.png",
+      "sha256": "91ed61f5ccf0e4f49f7adffbbd92d65edbcddc153e03eb0876b4d5d7fdd39393",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 18",
+      "baselinePage": 18
+    },
+    {
+      "page": 19,
+      "image": "evidence\\report\\pages\\page-19.png",
+      "sha256": "87ce1e5dd04a81f92b86f6a60e0d3caf74068e4627986bc2eca2eadcd5ee6b98",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 19",
+      "baselinePage": 19
+    },
+    {
+      "page": 20,
+      "image": "evidence\\report\\pages\\page-20.png",
+      "sha256": "d0a1d64227e0da6bb68de864664c64a5d404e05f77c9d8e6d70c1abd034aaefc",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 20",
+      "baselinePage": 20
+    },
+    {
+      "page": 21,
+      "image": "evidence\\report\\pages\\page-21.png",
+      "sha256": "6f46e21bc355ea19347a7b6d8733fa0415dc3c80ac2a6c9c4bee5aec4e14a33c",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 21",
+      "baselinePage": 21
+    },
+    {
+      "page": 22,
+      "image": "evidence\\report\\pages\\page-22.png",
+      "sha256": "5900c0289823595940d59c09f8406e6d4e54e8b3092fdd3ddc70dd7c7e0b19eb",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 22",
+      "baselinePage": 22
+    },
+    {
+      "page": 23,
+      "image": "evidence\\report\\pages\\page-23.png",
+      "sha256": "453fa2d44f68c9aed22ccf9332fd90e35ddeb4bd249c27cf392924e89137129b",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Final UI-refresh page image viewed at original rendered size"
+    },
+    {
+      "page": 24,
+      "image": "evidence\\report\\pages\\page-24.png",
+      "sha256": "033ac2cc2d0d347af9da9e44e99438297e7b429fdfe8742aa387d7c22f4f8c82",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 24",
+      "baselinePage": 24
+    },
+    {
+      "page": 25,
+      "image": "evidence\\report\\pages\\page-25.png",
+      "sha256": "91c76bba0769ee3161b0c6be6cfa79d65483d40ad8a511b0291e7a1d298d4538",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 25",
+      "baselinePage": 25
+    },
+    {
+      "page": 26,
+      "image": "evidence\\report\\pages\\page-26.png",
+      "sha256": "f532a756ce9a706bf693bef822675234cc200ade23e7ba1018c37b13cc75e66d",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 26",
+      "baselinePage": 26
+    },
+    {
+      "page": 27,
+      "image": "evidence\\report\\pages\\page-27.png",
+      "sha256": "c4a4bf298b85967ccf64abd822e1c775ebc23e411d17e33f50461855901d5a08",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 27",
+      "baselinePage": 27
+    },
+    {
+      "page": 28,
+      "image": "evidence\\report\\pages\\page-28.png",
+      "sha256": "a5c09514603000154f19cbc2626d0b50c5d61f2e99e21ad40bbaf91182e95030",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 28",
+      "baselinePage": 28
+    },
+    {
+      "page": 29,
+      "image": "evidence\\report\\pages\\page-29.png",
+      "sha256": "a0df7d3c659924e6de6c1f89f6fe24ce18671e49da8cdea6104e0a04f457c543",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 29",
+      "baselinePage": 29
+    },
+    {
+      "page": 30,
+      "image": "evidence\\report\\pages\\page-30.png",
+      "sha256": "398a3244e121ff7571e7cb8b4362575765e31db92a351de92d78c753590b5b03",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 30",
+      "baselinePage": 30
+    },
+    {
+      "page": 31,
+      "image": "evidence\\report\\pages\\page-31.png",
+      "sha256": "f98fe87e4f6eec269d1b9ee569b22206cb5ce5798a0fc3d7b46a6d19e4a0d743",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 31",
+      "baselinePage": 31
+    },
+    {
+      "page": 32,
+      "image": "evidence\\report\\pages\\page-32.png",
+      "sha256": "8f446d4539b6f8ef827d8b04878eb98c8726699c1e3e25043c881ef8904451f1",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 32",
+      "baselinePage": 32
+    },
+    {
+      "page": 33,
+      "image": "evidence\\report\\pages\\page-33.png",
+      "sha256": "f69b87f3bdd941bb5ca78b829217e8ead27b7d03f94e6cb6223b97b0d590c9be",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 33",
+      "baselinePage": 33
+    },
+    {
+      "page": 34,
+      "image": "evidence\\report\\pages\\page-34.png",
+      "sha256": "50935f8502903729e6e94e1359838a7449d15aa5ac598f61ad33c80fa6fdc4fa",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 34",
+      "baselinePage": 34
+    },
+    {
+      "page": 35,
+      "image": "evidence\\report\\pages\\page-35.png",
+      "sha256": "b0fddc492c7cf2812995a3e7a41353dc44aabad76a1a44b72e8ff9c60c4bee0a",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 35",
+      "baselinePage": 35
+    },
+    {
+      "page": 36,
+      "image": "evidence\\report\\pages\\page-36.png",
+      "sha256": "9df7ee9edd3fa50a7fd2812ac1e233f07c0de3c7befd1632287b65d08f158aa1",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 36",
+      "baselinePage": 36
+    },
+    {
+      "page": 37,
+      "image": "evidence\\report\\pages\\page-37.png",
+      "sha256": "3409b1acd1bdd436322a88d4567893a9d135997e925959233a6472c1b9c5201e",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 37",
+      "baselinePage": 37
+    },
+    {
+      "page": 38,
+      "image": "evidence\\report\\pages\\page-38.png",
+      "sha256": "22ee8421a9189bc977b8bd7fa7aea39bf8c3b1ed1bf6f5b74c51bb6a961e7f9b",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 38",
+      "baselinePage": 38
+    },
+    {
+      "page": 39,
+      "image": "evidence\\report\\pages\\page-39.png",
+      "sha256": "46cd93982e06d81dc4c5200b46e10140833d853f26b3ac1a0dcd8459cf5d96d3",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 39",
+      "baselinePage": 39
+    },
+    {
+      "page": 40,
+      "image": "evidence\\report\\pages\\page-40.png",
+      "sha256": "54eaa9c9a98cdfbc913179e23663d3fda4e3e589675f32a1e404fb53947bf023",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 40",
+      "baselinePage": 40
+    },
+    {
+      "page": 41,
+      "image": "evidence\\report\\pages\\page-41.png",
+      "sha256": "5ac4e41c660e445e1e6ce6470abba987d4c866f469865e4a2e74bcadada9a913",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 41",
+      "baselinePage": 41
+    },
+    {
+      "page": 42,
+      "image": "evidence\\report\\pages\\page-42.png",
+      "sha256": "d9f32da54be0393b643ba3c9c390b786b09949ccdfab23585a57e9fe22890df3",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 42",
+      "baselinePage": 42
+    },
+    {
+      "page": 43,
+      "image": "evidence\\report\\pages\\page-43.png",
+      "sha256": "93db916d7ff395b139f406f08b4bd91aeb0bddd5fdb85f46774c7d6dc851100a",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 43",
+      "baselinePage": 43
+    },
+    {
+      "page": 44,
+      "image": "evidence\\report\\pages\\page-44.png",
+      "sha256": "a21fb00644f86d1fbeb2f864f43ec30643a1567dc739210c9a17d38d00098ca7",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 44",
+      "baselinePage": 44
+    },
+    {
+      "page": 45,
+      "image": "evidence\\report\\pages\\page-45.png",
+      "sha256": "2566852749b5ef89fb26f3e530f5128fbc0a3309ba736d6550ea64928c23c88f",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 45",
+      "baselinePage": 45
+    },
+    {
+      "page": 46,
+      "image": "evidence\\report\\pages\\page-46.png",
+      "sha256": "c50eb76041172a9bdd58fa8b3d63612dd2814b086e6547429d658f47e1378c3f",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 46",
+      "baselinePage": 46
+    },
+    {
+      "page": 47,
+      "image": "evidence\\report\\pages\\page-47.png",
+      "sha256": "4d367e341e8fced4c1a16fff7fcf61b4795e0e383c64a14a06216be427b5caf7",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 47",
+      "baselinePage": 47
+    },
+    {
+      "page": 48,
+      "image": "evidence\\report\\pages\\page-48.png",
+      "sha256": "45725616a2ea1336acd830757ae178ebccfff492b90419d890d2d00623d93342",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 48",
+      "baselinePage": 48
+    },
+    {
+      "page": 49,
+      "image": "evidence\\report\\pages\\page-49.png",
+      "sha256": "372b5d8be0b9ae79faee1d1245ba10116e80bbafb547e837b1eeac55c77a119e",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 49",
+      "baselinePage": 49
+    },
+    {
+      "page": 50,
+      "image": "evidence\\report\\pages\\page-50.png",
+      "sha256": "73de062b3aef1d02dea35dec63f575e5c7a2782945e8c69db22a4289ba3771c0",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Final UI-refresh page image viewed at original rendered size"
+    },
+    {
+      "page": 51,
+      "image": "evidence\\report\\pages\\page-51.png",
+      "sha256": "2a1cc38143deb907949a68de75b48612b14200c1963073abfa33dd76a2b8309c",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 51",
+      "baselinePage": 51
+    },
+    {
+      "page": 52,
+      "image": "evidence\\report\\pages\\page-52.png",
+      "sha256": "ae9ddac700a7f339c331f92cdec38cc19bb62a400953c440517a7d8b2b88ccfd",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 52",
+      "baselinePage": 52
+    },
+    {
+      "page": 53,
+      "image": "evidence\\report\\pages\\page-53.png",
+      "sha256": "cce996a470b6ccb18d0c5c815b041f6f6a85852172a5667cfe9a23ad7913c70c",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 53",
+      "baselinePage": 53
+    },
+    {
+      "page": 54,
+      "image": "evidence\\report\\pages\\page-54.png",
+      "sha256": "bc5c57cab00d49cdb84b50a920a871b71c52bfcfdea26e7eda795bd6df35a3ac",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 54",
+      "baselinePage": 54
+    },
+    {
+      "page": 55,
+      "image": "evidence\\report\\pages\\page-55.png",
+      "sha256": "3b813e7b82971e4340084af3023b6f2ee9bebf6fdd28ed970644b1eff7c77d07",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Final UI-refresh page image viewed at original rendered size"
+    },
+    {
+      "page": 56,
+      "image": "evidence\\report\\pages\\page-56.png",
+      "sha256": "496f096b7cb999964081ec8eee6ca4c1a86c0863ff073cfd94ba21608ec3adf0",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Final UI-refresh page image viewed at original rendered size"
+    },
+    {
+      "page": 57,
+      "image": "evidence\\report\\pages\\page-57.png",
+      "sha256": "72165e7cdcb89fb22beaf5242b9c7bddc4c5c81bcd48f34f573fd9189a225cf8",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Final UI-refresh page image viewed at original rendered size"
+    },
+    {
+      "page": 58,
+      "image": "evidence\\report\\pages\\page-58.png",
+      "sha256": "ea8c551b9cdd5cf1312a420e9ba1c5646c2b868015d827debc0368457da2a432",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Final UI-refresh page image viewed at original rendered size"
+    },
+    {
+      "page": 59,
+      "image": "evidence\\report\\pages\\page-59.png",
+      "sha256": "c0c84b175ee5287270374ecc7582a8fda897c732146af4ce205c0ea6eadb7498",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 59",
+      "baselinePage": 59
+    },
+    {
+      "page": 60,
+      "image": "evidence\\report\\pages\\page-60.png",
+      "sha256": "18451c971774b66cec4c3b7f11c617d25573336331ad74c84895bb2c2e340849",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 60",
+      "baselinePage": 60
+    },
+    {
+      "page": 61,
+      "image": "evidence\\report\\pages\\page-61.png",
+      "sha256": "1203d0c47230fdee8a7a92937e05937aeccacc7979b5edf4aea6bb791fff1df6",
+      "visualReview": "PASS",
+      "checks": [
+        "legibility",
+        "no clipping or overlap",
+        "table continuation",
+        "image and caption placement"
+      ],
+      "visualReviewBasis": "Pixel-identical to fully reviewed pre-UI-refresh page 61",
+      "baselinePage": 61
+    }
+  ],
+  "layoutNotes": [
+    "Original outer table preserved; representative detailed cases are complemented by the complete traceability CSV.",
+    "Long tables may continue across pages; deliberate diagram and subsection whitespace retained. No blank pages.",
+    "Word ignores repeated headers inside the inherited outer table on some continuation pages; explicit short-table headers recur every eight cases with stable columns. This accepted template limitation does not hide any text.",
+    "Test subsection titles and their first short table share an unsplittable nested row, preventing orphan titles.",
+    "Teacher score and signature region remains blank."
+  ],
+  "visualComparison": {
+    "baselineQaSha256": "efe6452429a1d0d356f5135f8641e4d0b7f6bb380625c27063fc59c72d3f0f48",
+    "baselinePageCount": 61,
+    "unchangedPageCount": 51,
+    "changedPages": [
+      2,
+      6,
+      7,
+      12,
+      23,
+      50,
+      55,
+      56,
+      57,
+      58
+    ]
+  },
+  "authoringInputs": [
+    {
+      "path": "scripts/build_report.py",
+      "sha256": "9e6bd60907653b8ade3b10c7f0e9ea77dbf4aa38e311cdc70d4a924076ac03bf"
+    },
+    {
+      "path": "docs/requirements.md",
+      "sha256": "ec818685fe59f25c11daebadbd675e77712fe42964081f02d7ea1fff7b9ae0ca"
+    },
+    {
+      "path": "docs/traceability.csv",
+      "sha256": "21dbf178c4e3c9b740c51dac4751a530a084e8a0ca6aa3e67caf5078efec3156"
+    },
+    {
+      "path": "docs/team-work-plan.csv",
+      "sha256": "fda1498a1deccc13f89197759cb5c7dccbe22415c792fd809667a64e9d8f5911"
+    }
+  ]
+}

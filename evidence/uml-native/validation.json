@@ -1,0 +1,143 @@
+{
+  "checkedAtUtc": "2026-10-17T13:14:19.5168532Z",
+  "nativeStarUmlOpenVerified": true,
+  "nativeRenderingVerified": true,
+  "outcome": "NATIVE_LOAD_AND_RENDER_PASS",
+  "activeDesktopBefore": "Default",
+  "isolatedDesktop": "ChengVaultVerification-a0b524e0db7347248894906804d4014e",
+  "switchDesktopCalled": false,
+  "testProcesses": [
+    {
+      "purpose": "desktop identity probe",
+      "pid": 45588
+    },
+    {
+      "purpose": "native model and diagram rendering",
+      "pid": 44896
+    }
+  ],
+  "officialApi": "https://docs.staruml.io/user-guide/ai-integration-via-mcp",
+  "modelSha256": "73685575e1fcdc3fde415805cf030f4bb769f510035930971508610762c2c321",
+  "desktopProbe": {
+    "threadDesktop": "ChengVaultVerification-a0b524e0db7347248894906804d4014e",
+    "activeInputDesktop": "Default",
+    "pid": 45588
+  },
+  "desktopIsolationVerified": true,
+  "applicationSha256": "f50cc13209a56cc125e56389a9316c6bbdaed65a04582329609a467e154f4cb0",
+  "signature": "CN=\"MKLabs Co.,Ltd.\", O=\"MKLabs Co.,Ltd.\", L=Songpa District, S=Seoul, C=KR",
+  "version": "7.1.1.0",
+  "diagramResponse": [
+    {
+      "id": "CV_7905103c1d5c5a808b655869e4abb88a",
+      "type": "UMLUseCaseDiagram",
+      "name": "用例图｜用户目标与包含关系",
+      "description": ""
+    },
+    {
+      "id": "CV_e34c381de7fe5422bce0f079948c40ed",
+      "type": "UMLComponentDiagram",
+      "name": "构件图｜界面、核心与平台职责",
+      "description": ""
+    },
+    {
+      "id": "CV_fc782a0fd62b5a3a861e2712fc8eeb25",
+      "type": "UMLClassDiagram",
+      "name": "类图｜公共类型与主要协作",
+      "description": ""
+    },
+    {
+      "id": "CV_40cab7c53fd5512e8464b0d65f60d3f9",
+      "type": "UMLSequenceDiagram",
+      "name": "顺序图｜独立归档备份",
+      "description": ""
+    },
+    {
+      "id": "CV_ea47eb34d49657898c398f39a6873ddc",
+      "type": "UMLSequenceDiagram",
+      "name": "顺序图｜认证后解压解包并恢复",
+      "description": ""
+    },
+    {
+      "id": "CV_b2fdc1f1a3b55cbcb4f12b90599eb610",
+      "type": "UMLSequenceDiagram",
+      "name": "顺序图｜认证与可续传增量上传",
+      "description": ""
+    },
+    {
+      "id": "CV_37852be2efcb5c5d8bbfc63e4e0cad89",
+      "type": "UMLStatechartDiagram",
+      "name": "状态图｜自动任务执行与重试",
+      "description": ""
+    }
+  ],
+  "images": [
+    {
+      "id": "CV_7905103c1d5c5a808b655869e4abb88a",
+      "name": "用例图｜用户目标与包含关系",
+      "path": "D:\\soft-project\\ChengVault\\evidence\\uml-native\\native-01.png",
+      "bytes": 589964,
+      "sha256": "3db35b947ff8d1f6bfeafef7ebda771468162d6ba87e16ebb184171c2e80c98d"
+    },
+    {
+      "id": "CV_e34c381de7fe5422bce0f079948c40ed",
+      "name": "构件图｜界面、核心与平台职责",
+      "path": "D:\\soft-project\\ChengVault\\evidence\\uml-native\\native-02.png",
+      "bytes": 433034,
+      "sha256": "3398e8eaf900d34294091a383ff734e2df2bede7a7db113588622cfd6abdaa2c"
+    },
+    {
+      "id": "CV_fc782a0fd62b5a3a861e2712fc8eeb25",
+      "name": "类图｜公共类型与主要协作",
+      "path": "D:\\soft-project\\ChengVault\\evidence\\uml-native\\native-03.png",
+      "bytes": 535762,
+      "sha256": "45630235dfea4cb6c4ab40bd1f25f00feecf46bd57a64e5dbb1889b52739c2fe"
+    },
+    {
+      "id": "CV_40cab7c53fd5512e8464b0d65f60d3f9",
+      "name": "顺序图｜独立归档备份",
+      "path": "D:\\soft-project\\ChengVault\\evidence\\uml-native\\native-04.png",
+      "bytes": 406303,
+      "sha256": "8b2e14c48e0742e40790d9c4b1b6df2fa37040186e9d691cee6cae80dd88af79"
+    },
+    {
+      "id": "CV_ea47eb34d49657898c398f39a6873ddc",
+      "name": "顺序图｜认证后解压解包并恢复",
+      "path": "D:\\soft-project\\ChengVault\\evidence\\uml-native\\native-05.png",
+      "bytes": 438517,
+      "sha256": "f0f7d33235d5bff9056a6ecc8bc06e470dabc269b718f66a51f2ee6936018ece"
+    },
+    {
+      "id": "CV_b2fdc1f1a3b55cbcb4f12b90599eb610",
+      "name": "顺序图｜认证与可续传增量上传",
+      "path": "D:\\soft-project\\ChengVault\\evidence\\uml-native\\native-06.png",
+      "bytes": 397156,
+      "sha256": "344c85da23de804d041b401b4c974b2acb3f47d70600e94887258b1bc99a71e6"
+    },
+    {
+      "id": "CV_37852be2efcb5c5d8bbfc63e4e0cad89",
+      "name": "状态图｜自动任务执行与重试",
+      "path": "D:\\soft-project\\ChengVault\\evidence\\uml-native\\native-07.png",
+      "bytes": 316916,
+      "sha256": "5872ab461a8196db3c567e6e84a5bc1b4bc3a12e599dd65d969cd21e471b6955"
+    }
+  ],
+  "jobClosed": true,
+  "desktopClosed": true,
+  "settingsRestored": true,
+  "activeDesktopAfter": "Default",
+  "activeDesktopUnchanged": true,
+  "visualReview": {
+    "status": "LIMITED_BY_VENDOR_WATERMARK",
+    "reviewedImages": 7,
+    "sequenceNumbersCorrected": true,
+    "sequenceFix": "UMLSequenceDiagram.showSequenceNumber=false; native re-export verified one explicit number",
+    "nativeImagesPublicationReady": false,
+    "watermarkPreserved": true,
+    "detail": "All seven native PNGs were visually inspected. Native labels and node types load; dense UNREGISTERED watermark obscures connectors. Original report SVG/PNG remain the publication illustrations."
+  },
+  "installerSource": "https://staruml.io/api/download/releases-v7/StarUML%20Setup%207.1.1.exe",
+  "installerSha256": "633d8b8f6c508fcb2fa2dfa379ff981fe01a6aa6b1d925103da6eb6dd1467b89",
+  "installerSignature": "Valid: MKLabs Co.,Ltd.",
+  "remainingStarUmlProcesses": 0
+}

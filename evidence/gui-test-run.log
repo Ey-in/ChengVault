@@ -1,0 +1,20 @@
+PASS GUI-Page-1 renders at minimum size
+PASS GUI-Page-2 renders at minimum size
+PASS GUI-Page-3 renders at minimum size
+PASS GUI-Page-4 renders at minimum size
+PASS GUI-Page-5 renders at minimum size
+PASS GUI-Page-6 renders at minimum size
+PASS GUI-Page-7 renders at minimum size
+PASS GUI-Page-8 renders at minimum size
+PASS GUI-passwords use masked controls
+PASS GUI-create encrypted archive through real button
+PASS GUI-inspect decrypts and displays manifest
+PASS GUI-restore unpack decompress decrypt roundtrip
+PASS GUI-existing-file conflict reports failure
+PASS GUI-wrong-password reports authentication failure
+PASS GUI-generate repair sidecar using real button
+PASS GUI-damaged encrypted archive is rejected
+PASS GUI-repair damaged archive to new file
+PASS GUI-repaired encrypted archive restores with original password
+PASS GUI-compare restored file hashes in production workflow
+PASS GUI-real pages screenshot export

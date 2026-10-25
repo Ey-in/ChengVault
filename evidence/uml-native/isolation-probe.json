@@ -1,0 +1,28 @@
+{
+  "checkedAtUtc": "2026-10-17T13:07:29.1985568Z",
+  "nativeStarUmlOpenVerified": false,
+  "nativeRenderingVerified": false,
+  "outcome": "PROBE_ONLY_PASS",
+  "activeDesktopBefore": "Default",
+  "isolatedDesktop": "ChengVaultVerification-ec477b4560ea40b6a08916ddb97257db",
+  "switchDesktopCalled": false,
+  "testProcesses": [
+    {
+      "purpose": "desktop identity probe",
+      "pid": 41068
+    }
+  ],
+  "officialApi": "https://docs.staruml.io/user-guide/ai-integration-via-mcp",
+  "modelSha256": "d2b6760dafa212ee3cc9dab05be10d6562be500f62b1b83d93f591e4aa4f4a4b",
+  "desktopProbe": {
+    "threadDesktop": "ChengVaultVerification-ec477b4560ea40b6a08916ddb97257db",
+    "activeInputDesktop": "Default",
+    "pid": 41068
+  },
+  "desktopIsolationVerified": true,
+  "jobClosed": true,
+  "desktopClosed": true,
+  "settingsRestored": true,
+  "activeDesktopAfter": "Default",
+  "activeDesktopUnchanged": true
+}

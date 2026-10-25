@@ -1,0 +1,16 @@
+{
+  "timestampUtc": "2026-10-17T08:22:20.8551146Z",
+  "strictMetadata": true,
+  "backupExit": 0,
+  "restoreExit": 0,
+  "sourceSddl": "O:<redacted-user-sid>G:<redacted-group-sid>D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)",
+  "targetSddl": "O:<redacted-user-sid>G:<redacted-group-sid>D:AI(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)",
+  "sameSddl": false,
+  "directory": "D:\\soft-project\\ChengVault\\evidence\\metadata-recheck-da8c16f441144e5d9ac35136cb95777f",
+  "sameOwner": true,
+  "sameGroup": true,
+  "sameDaclProtected": true,
+  "sameAccessRules": true,
+  "warningCount": 0,
+  "note": "SetSecurityInfo normalizes the OS-managed AUTO_INHERITED flag; owner, group, DACL ACEs and protected inheritance state are compared separately."
+}

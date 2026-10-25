@@ -1,0 +1,30 @@
+{
+  "output": "D:\\soft-project\\报告文档\\澄匣备份ChengVault实验报告.docx",
+  "generatedChinaTime": "2026年10月17日 22:35",
+  "testEvidence": "D:\\soft-project\\ChengVault\\evidence\\test-results.json",
+  "testCounts": {
+    "PASS": 585,
+    "SKIP": 1
+  },
+  "detailedCases": 220,
+  "allCases": 586,
+  "preservedParts": [
+    "_rels/",
+    "_rels/.rels",
+    "docProps/",
+    "docProps/app.xml",
+    "docProps/core.xml",
+    "docProps/custom.xml",
+    "word/",
+    "word/_rels/",
+    "word/fontTable.xml",
+    "word/numbering.xml",
+    "word/settings.xml",
+    "word/styles.xml",
+    "word/theme/",
+    "word/theme/theme1.xml"
+  ],
+  "referenceSha256": "3323e15ccfa3445483575fd6b77a1606c8b7c64cbdc30cca69cdea858913a2e0",
+  "templateOuterRows": 18,
+  "referenceSectionCount": 1
+}
