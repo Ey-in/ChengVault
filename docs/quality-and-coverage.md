@@ -14,7 +14,7 @@
 | cppcheck | 0 错误、0 警告，5 条风格与 2 条性能建议经下文审查保留 |
 | 原创生产源码注释 | 1705 / 8433 物理行 = 20.22%，严格超过 20% |
 
-证据入口为 `evidence/coverage/index.html`、`core-tests.json`、`gui-tests.json`、`summary.json`、`auxiliary-summary.json` 和 `evidence/quality/summary.json`。
+证据入口为 `evidence/coverage/summary.json`、`auxiliary-summary.json`、`coverage.txt`、`core-tests.json`、`gui-tests.json` 和 `evidence/quality/summary.json`。
 `source-digests.json` 记录参与统计的最终源文件摘要。初始基线另存 `evidence/history/coverage-initial/`，不与本轮结论混用。
 相对于扩充前一轮的 95.0% 行覆盖、50.7% 原始分支和 70.0% decision，本轮实际提高到 97.6%、56.7% 和 75.6%。源码同时增加了自主通配匹配、修复校验及仓库列表同步，因此分母也发生真实变化；没有把辅助口径或 decision 的百分比当作原始分支覆盖率的替代证据。
 
@@ -31,7 +31,7 @@
 首次退出阶段的空状态观察者问题已修复并重新验证正常退出，原失败记录保留在 `evidence/history/ui-refresh-teardown/`。
 
 在项目根目录运行 `powershell -ExecutionPolicy Bypass -File scripts/coverage.ps1`。
-脚本重新构建覆盖率版本、清理该构建目录中的旧计数器、执行核心与 GUI 测试，然后生成 `evidence/coverage/index.html`、JSON 与文本报告。
+脚本重新构建覆盖率版本、清理该构建目录中的旧计数器、执行核心与 GUI 测试，然后生成 JSON 与文本报告；逐行 HTML 明细仅用于本地查看，不纳入交付证据。
 项目不再设置自选的覆盖率合格线；脚本只记录实测行覆盖率和原始 GCC 分支覆盖率，不把未达标数字改成通过。
 
 运行 `powershell -ExecutionPolicy Bypass -File scripts/quality.ps1` 检查格式、注释和静态分析。
