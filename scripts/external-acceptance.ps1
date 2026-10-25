@@ -1,0 +1,189 @@
+#requires -Version 7.2
+param(
+    [Parameter(Mandatory)][ValidateSet('Server','Client','Stop')][string]$Mode,
+    [string]$RuntimeDirectory='',
+    [string]$EvidenceDirectory=(Join-Path $PSScriptRoot '..\tmp\external-acceptance'),
+    [string]$ServerAddress,
+    [ValidateRange(0,65535)][int]$Port=48484,
+    [string]$ConnectionFile,
+    [string]$ServerSession,
+    [string]$OriginFile=(Join-Path $PSScriptRoot '..\docs\validation-origin.json'),
+    [switch]$AllowSameMachineSelfTest
+)
+$ErrorActionPreference='Stop'
+if(-not $IsWindows) { throw 'This acceptance runner requires Windows and an NTFS work directory.' }
+# The shipped copy lives in runtime/verification; the source copy lives in
+# project/scripts. Detect by an actual application, preserving explicit paths.
+if([string]::IsNullOrWhiteSpace($RuntimeDirectory)) {
+    $portableRoot=[IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'))
+    $RuntimeDirectory=if(Test-Path -LiteralPath (Join-Path $portableRoot 'ChengVaultCli.exe') -PathType Leaf) { $portableRoot } else { Join-Path $portableRoot 'dist\ChengVault-1.0-windows-x64' }
+}
+$runtime=[IO.Path]::GetFullPath($RuntimeDirectory)
+$evidence=[IO.Path]::GetFullPath($EvidenceDirectory)
+[IO.Directory]::CreateDirectory($evidence)|Out-Null
+$identity=(Get-ItemProperty -LiteralPath 'HKLM:\SOFTWARE\Microsoft\Cryptography' -Name MachineGuid).MachineGuid
+$machineId=[Convert]::ToHexString([Security.Cryptography.SHA256]::HashData([Text.Encoding]::UTF8.GetBytes($identity))).ToLowerInvariant()
+$hostInfo=[ordered]@{machineIdSha256=$machineId;hostName=[Environment]::MachineName;os=[Environment]::OSVersion.VersionString;fileSystem=[IO.DriveInfo]::new([IO.Path]::GetPathRoot($evidence)).DriveFormat}
+if($hostInfo.fileSystem -ne 'NTFS') { throw 'Use an NTFS evidence directory for metadata restoration acceptance.' }
+$systemPath=$env:SystemRoot+';'+(Join-Path $env:SystemRoot 'System32')
+$records=[Collections.Generic.List[object]]::new()
+$backupPassword=[Guid]::NewGuid().ToString('N')
+$run=Join-Path $evidence ($Mode.ToLowerInvariant()+'-'+(Get-Date -Format 'yyyyMMdd-HHmmss')+'-'+[Guid]::NewGuid().ToString('N').Substring(0,8))
+[IO.Directory]::CreateDirectory($run)|Out-Null
+$origin=if(Test-Path -LiteralPath $OriginFile) { Get-Content -LiteralPath $OriginFile -Raw | ConvertFrom-Json } else { $null }
+function New-StartInfo([string]$Executable,[string[]]$Arguments,[string]$LoginPassword='') {
+    $info=[Diagnostics.ProcessStartInfo]::new($Executable)
+    $info.UseShellExecute=$false; $info.CreateNoWindow=$true
+    $info.WorkingDirectory=$run
+    $info.RedirectStandardOutput=$true; $info.RedirectStandardError=$true
+    $info.StandardOutputEncoding=[Text.UTF8Encoding]::new($false)
+    $info.StandardErrorEncoding=[Text.UTF8Encoding]::new($false)
+    $info.Environment['PATH']=$systemPath
+    $info.Environment['CHENGVAULT_DATA_HOME']=Join-Path $run 'state'
+    $info.Environment['CHENGVAULT_PASSWORD']=$backupPassword
+    $info.Environment['CHENGVAULT_LOGIN_PASSWORD']=$LoginPassword
+    foreach($environmentName in @('QT_PLUGIN_PATH','QT_QPA_PLATFORM_PLUGIN_PATH','QML2_IMPORT_PATH','QML_IMPORT_PATH','QT_QPA_PLATFORM')) { $null=$info.Environment.Remove($environmentName) }
+    foreach($argument in $Arguments) { $info.ArgumentList.Add($argument) }
+    return $info
+}
+function Invoke-Case([string]$Name,[string]$Executable,[string[]]$Arguments,[string]$LoginPassword='',[string]$ExpectedCode='') {
+    $process=[Diagnostics.Process]::new()
+    $process.StartInfo=New-StartInfo $Executable $Arguments $LoginPassword
+    $timer=[Diagnostics.Stopwatch]::StartNew()
+    if(-not $process.Start()) { throw "Cannot start $Name" }
+    $outTask=$process.StandardOutput.ReadToEndAsync(); $errTask=$process.StandardError.ReadToEndAsync()
+    if(-not $process.WaitForExit(180000)) { $process.Kill($true); throw "$Name timed out" }
+    $timer.Stop()
+    $output=$outTask.GetAwaiter().GetResult(); $errorText=$errTask.GetAwaiter().GetResult()
+    [IO.File]::WriteAllText((Join-Path $run ($Name+'.stdout.txt')),$output,[Text.UTF8Encoding]::new($false))
+    [IO.File]::WriteAllText((Join-Path $run ($Name+'.stderr.txt')),$errorText,[Text.UTF8Encoding]::new($false))
+    $result=$null; $failure=$null
+    try { $result=$output | ConvertFrom-Json } catch { }
+    try { $failure=$errorText | ConvertFrom-Json } catch { }
+    $passed=if($ExpectedCode) { $process.ExitCode -ne 0 -and $failure.code -eq $ExpectedCode } else { $process.ExitCode -eq 0 }
+    $records.Add([ordered]@{name=$Name;passed=$passed;exitCode=$process.ExitCode;expectedError=$ExpectedCode;actualError=$failure.code;durationMs=$timer.ElapsedMilliseconds;result=$result})
+    Write-Host "$Name : $(if($passed){'PASS'}else{'FAIL'})"
+    if(-not $passed) { throw "$Name failed; inspect the captured stderr in $run" }
+    return $result
+}
+if($Mode -eq 'Stop') {
+    if(-not $ServerSession) { throw '-ServerSession must name the server-session.json generated by Server mode.' }
+    $session=Get-Content -LiteralPath $ServerSession -Raw | ConvertFrom-Json
+    if($session.host.machineIdSha256 -ne $machineId) { throw 'Stop must run on the machine that started this server.' }
+    $process=Get-Process -Id $session.processId -ErrorAction SilentlyContinue
+    if($null -ne $process) {
+        # PowerShell versions may deserialize ISO timestamps as either strings
+        # or DateTime values. Compare UTC ticks, never display-format strings.
+        $recordedStart=([DateTime]$session.processStartUtc).ToUniversalTime()
+        if($process.Path -ne $session.executable -or $process.StartTime.ToUniversalTime().Ticks -ne $recordedStart.Ticks) { throw 'PID identity changed; refusing to stop an unrelated process.' }
+        $process.Kill(); $process.WaitForExit(10000)
+    }
+    Write-Host 'The recorded acceptance server is stopped.'
+    exit 0
+}
+$cli=Join-Path $runtime 'ChengVaultCli.exe'
+$serverExe=Join-Path $runtime 'ChengVaultServer.exe'
+$gui=Join-Path $runtime 'ChengVault.exe'
+foreach($program in @($cli,$serverExe,$gui)) { if(-not (Test-Path -LiteralPath $program -PathType Leaf)) { throw "Missing portable application $program" } }
+$applicationHashes=foreach($name in @('ChengVault.exe','ChengVaultCli.exe','ChengVaultAgent.exe','ChengVaultServer.exe')) { [ordered]@{name=$name;sha256=(Get-FileHash -LiteralPath (Join-Path $runtime $name)).Hash.ToLowerInvariant()} }
+$buildInfo=Get-Content -LiteralPath (Join-Path $runtime 'build-info.json') -Raw | ConvertFrom-Json
+if($Mode -eq 'Server') {
+    $address=$null
+    if(-not $ServerAddress -or -not [Net.IPAddress]::TryParse($ServerAddress,[ref]$address)) { throw '-ServerAddress must be this server machine''s concrete LAN IP address.' }
+    if($address.Equals([Net.IPAddress]::Any) -or $address.Equals([Net.IPAddress]::IPv6Any)) { throw 'Use a concrete interface address, not an unspecified wildcard.' }
+    if([Net.IPAddress]::IsLoopback($address) -and -not $AllowSameMachineSelfTest) { throw 'Loopback is permitted only with -AllowSameMachineSelfTest and never counts as LAN verification.' }
+    $accounts=[Collections.Generic.List[object]]::new()
+    foreach($label in @('alice','bob')) {
+        $password=[Guid]::NewGuid().ToString('N')
+        $passwordFile=Join-Path $run ($label+'.password')
+        $keyFile=Join-Path $run ($label+'.key')
+        [IO.File]::WriteAllText($passwordFile,$password,[Text.UTF8Encoding]::new($false))
+        try {
+            $null=Invoke-Case ($label+'-create') $serverExe @('user-add','--root',(Join-Path $run 'storage'),'--user',$label,'--password-file',$passwordFile)
+            $null=Invoke-Case ($label+'-device') $serverExe @('device-add','--root',(Join-Path $run 'storage'),'--user',$label,'--device','acceptance','--key-file',$keyFile)
+            $accounts.Add([ordered]@{user=$label;password=$password;deviceId='acceptance';deviceKeyHex=([IO.File]::ReadAllText($keyFile).Trim())})
+        } finally {
+            foreach($created in @($passwordFile,$keyFile)) { if(Test-Path -LiteralPath $created) { Remove-Item -LiteralPath $created } }
+        }
+    }
+    $serverProcess=[Diagnostics.Process]::new()
+    $serverProcess.StartInfo=New-StartInfo $serverExe @('serve','--root',(Join-Path $run 'storage'),'--listen',$ServerAddress,'--port',"$Port")
+    if(-not $serverProcess.Start()) { throw 'Server process could not start.' }
+    $ready=$serverProcess.StandardOutput.ReadLineAsync()
+    if(-not $ready.Wait(10000) -or $ready.Result -notmatch '^READY (\d+) ') { if(-not $serverProcess.HasExited) { $serverProcess.Kill() }; throw 'Server failed to announce a listening port.' }
+    $actualPort=[int]$Matches[1]
+    $session=[ordered]@{timestampUtc=[DateTime]::UtcNow.ToString('o');host=$hostInfo;sourceCommit=$buildInfo.sourceCommit;applicationHashes=$applicationHashes;processId=$serverProcess.Id;processStartUtc=$serverProcess.StartTime.ToUniversalTime().ToString('o');executable=$serverExe;serverAddress=$ServerAddress;port=$actualPort;selfTestOnly=[bool]$AllowSameMachineSelfTest}
+    $session | ConvertTo-Json -Depth 10 | Set-Content -LiteralPath (Join-Path $run 'server-session.json') -Encoding utf8
+    $connection=[ordered]@{protocolVersion=1;server=$session;accounts=$accounts}
+    $privateFile=Join-Path $run 'connection-private.json'
+    $connection | ConvertTo-Json -Depth 12 | Set-Content -LiteralPath $privateFile -Encoding utf8
+    Write-Host "Server ready at ${ServerAddress}:$actualPort"
+    Write-Host "Copy only this private pairing file to the client through your chosen private channel: $privateFile"
+    Write-Host "Stop later with -Mode Stop -ServerSession $(Join-Path $run 'server-session.json')"
+    exit 0
+}
+if(-not $ConnectionFile) { throw 'Client mode requires the pairing file created on the server machine.' }
+$connection=Get-Content -LiteralPath $ConnectionFile -Raw | ConvertFrom-Json
+if($connection.protocolVersion -ne 1) { throw 'Unsupported acceptance pairing format.' }
+$remote=$connection.server
+$remoteAddress=[Net.IPAddress]::Parse($remote.serverAddress)
+$differentMachines=$remote.host.machineIdSha256 -ne $machineId
+$isNonLoopback=-not [Net.IPAddress]::IsLoopback($remoteAddress)
+$independentFromOrigin=$null -ne $origin -and $origin.machineIdSha256 -ne $machineId
+if(((-not $differentMachines) -or (-not $isNonLoopback)) -and -not $AllowSameMachineSelfTest) { throw 'A real two-machine LAN check requires different machine identifiers and a non-loopback server address. Same-machine runs require -AllowSameMachineSelfTest and are explicitly recorded as self-tests.' }
+$privateConfigs=[Collections.Generic.List[string]]::new()
+try {
+    $null=Invoke-Case 'portable-gui' $gui @('--screenshot-dir',(Join-Path $run 'screens'))
+    if(@(Get-ChildItem -LiteralPath (Join-Path $run 'screens') -Filter '*.png').Count -ne 8) { throw 'GUI did not render all eight pages.' }
+    $source=Join-Path $run 'source'; [IO.Directory]::CreateDirectory($source)|Out-Null
+    [IO.Directory]::CreateDirectory((Join-Path $source '空目录'))|Out-Null
+    $file=Join-Path $source '中文-data.bin'
+    $bytes=[byte[]]::new(8*1024*1024); [Random]::new(17002026).NextBytes($bytes)
+    [IO.File]::WriteAllBytes($file,$bytes)
+    $archive=Join-Path $run 'portable-aes-pax.cva'
+    $null=Invoke-Case 'portable-pax-aes-huffman-backup' $cli @('backup','--source',$source,'--output',$archive,'--format','pax','--compression','huffman','--cipher','aes256')
+    $null=Invoke-Case 'portable-archive-verify' $cli @('verify','--input',$archive)
+    $restored=Join-Path $run 'local-restored'
+    $localRestore=Invoke-Case 'portable-archive-restore' $cli @('restore','--input',$archive,'--output',$restored)
+    if(-not $localRestore.details.metadataStrict -or $localRestore.warnings.Count -ne 0 -or (Get-FileHash -LiteralPath $file).Hash -ne (Get-FileHash -LiteralPath (Join-Path $restored 'source\中文-data.bin')).Hash) { throw 'Portable archive content or strict metadata verification failed.' }
+    $configs=@{}
+    foreach($account in $connection.accounts) {
+        $config=Join-Path $run ($account.user+'-client-private.json')
+        [ordered]@{host=$remote.serverAddress;port=$remote.port;user=$account.user;deviceId=$account.deviceId;deviceKeyHex=$account.deviceKeyHex;timeoutMs=60000} | ConvertTo-Json | Set-Content -LiteralPath $config -Encoding utf8
+        $privateConfigs.Add($config); $configs[$account.user]=$config
+    }
+    $alice=($connection.accounts | Where-Object user -eq 'alice'); $bob=($connection.accounts | Where-Object user -eq 'bob')
+    $repository=Join-Path $run 'repository'
+    $null=Invoke-Case 'local-initial-snapshot' $cli @('repo-backup','--source',$source,'--repo',$repository,'--compression','none','--cipher','chacha20')
+    $initial=Invoke-Case 'network-initial-upload' $cli @('remote-upload','--repo',$repository,'--remote-config',$configs.alice) $alice.password
+    $repeat=Invoke-Case 'network-repeat-upload' $cli @('remote-upload','--repo',$repository,'--remote-config',$configs.alice) $alice.password
+    if($repeat.bytes -ne 0 -or $repeat.details.uploadedObjects -ne 0) { throw 'Unchanged upload retransmitted data objects.' }
+    $stream=[IO.File]::Open($file,[IO.FileMode]::Open,[IO.FileAccess]::ReadWrite,[IO.FileShare]::None)
+    try { $stream.Position=1048655; $value=$stream.ReadByte(); $stream.Position=1048655; $stream.WriteByte($value -bxor 255) } finally { $stream.Dispose() }
+    $changed=Invoke-Case 'local-one-byte-changed-snapshot' $cli @('repo-backup','--source',$source,'--repo',$repository,'--compression','none')
+    if($changed.details.newChunks -ne 1) { throw 'One-byte change did not produce one new chunk.' }
+    $incremental=Invoke-Case 'network-incremental-upload' $cli @('remote-upload','--repo',$repository,'--remote-config',$configs.alice) $alice.password
+    if($incremental.details.uploadedObjects -ne 2 -or $incremental.bytes -ge $initial.bytes) { throw 'Network incremental payload was not one block plus manifest.' }
+    $bobList=Invoke-Case 'bob-list-isolated' $cli @('remote-list','--remote-config',$configs.bob) $bob.password
+    if(@($bobList.repositories).Count -ne 0) { throw 'Bob could see Alice repositories.' }
+    $remoteId=$initial.details.repositoryId
+    $null=Invoke-Case 'bob-download-rejected' $cli @('remote-download','--remote-id',$remoteId,'--output',(Join-Path $run 'forbidden'),'--remote-config',$configs.bob) $bob.password 'REMOTE_MISSING'
+    $download=Join-Path $run 'download'
+    $null=Invoke-Case 'alice-download' $cli @('remote-download','--remote-id',$remoteId,'--output',$download,'--remote-config',$configs.alice) $alice.password
+    $null=Invoke-Case 'downloaded-repository-verify' $cli @('repo-verify','--repo',$download)
+    $remoteRestore=Invoke-Case 'downloaded-snapshot-strict-restore' $cli @('repo-restore','--repo',$download,'--snapshot',$changed.details.snapshotId,'--output',(Join-Path $run 'remote-restored'))
+    if(-not $remoteRestore.details.metadataStrict -or $remoteRestore.warnings.Count -ne 0) { throw 'Remote strict metadata restore did not pass.' }
+    $sourceHash=(Get-FileHash -LiteralPath $file).Hash
+    if((Get-FileHash -LiteralPath (Join-Path $run 'remote-restored\source\中文-data.bin')).Hash -ne $sourceHash) { throw 'Downloaded and restored content differs.' }
+    $records.Add([ordered]@{name='restored-content-and-incremental-byte-counters';passed=$true;sha256=$sourceHash.ToLowerInvariant();initialPayloadBytes=$initial.bytes;repeatPayloadBytes=$repeat.bytes;incrementalPayloadBytes=$incremental.bytes;initialWireBytes=$initial.details.sentBytes;repeatWireBytes=$repeat.details.sentBytes;incrementalWireBytes=$incremental.details.sentBytes})
+} catch {
+    $records.Add([ordered]@{name='acceptance-failure';passed=$false;error=$_.Exception.Message})
+    throw
+} finally {
+    foreach($created in $privateConfigs) { if(Test-Path -LiteralPath $created) { Remove-Item -LiteralPath $created } }
+    $allPassed=@($records | Where-Object passed -eq $false).Count -eq 0 -and $records.Count -gt 0
+    $realLan=$allPassed -and $differentMachines -and $isNonLoopback -and -not $AllowSameMachineSelfTest -and -not $remote.selfTestOnly
+    $report=[ordered]@{timestampUtc=[DateTime]::UtcNow.ToString('o');result=$(if($allPassed){if($realLan){'PASS_TWO_MACHINE_LAN'}else{'PASS_SELFTEST_ONLY'}}else{'FAIL'});clientHost=$hostInfo;serverHost=$remote.host;serverAddress=$remote.serverAddress;port=$remote.port;differentMachines=$differentMachines;independentWindowsVerified=($allPassed -and $independentFromOrigin -and -not $AllowSameMachineSelfTest);realLanVerified=$realLan;originKnown=($null -ne $origin);clientSourceCommit=$buildInfo.sourceCommit;serverSourceCommit=$remote.sourceCommit;clientApplicationHashes=$applicationHashes;serverApplicationHashes=$remote.applicationHashes;cleanChildPath=$systemPath;records=$records}
+    $report | ConvertTo-Json -Depth 20 | Set-Content -LiteralPath (Join-Path $run 'acceptance-results.json') -Encoding utf8
+    Write-Host "Evidence: $(Join-Path $run 'acceptance-results.json')"
+}

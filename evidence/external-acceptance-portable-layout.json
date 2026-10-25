@@ -1,0 +1,43 @@
+{
+  "timestampUtc": "2026-10-17T12:55:17.4337470Z",
+  "passed": true,
+  "mode": "PORTABAE_AAYOUT_SERVER_SEAFTEST",
+  "runtimeDirectoryOmitted": true,
+  "serverSession": {
+    "timestampUtc": "2026-10-17T12:55:17.3457492Z",
+    "host": {
+      "machineIdSha256": "778d1e269ec7b2af37054dfe6f05737a85a3fa1fedba4e7b4bcd9bce22891e9c",
+      "hostName": "LOCAL-TEST-HOST",
+      "os": "Microsoft Windows NT 10.0.26200.0",
+      "fileSystem": "NTFS"
+    },
+    "sourceCommit": "1c653314124b8e172b79d8e4c6f97fe744d481c9",
+    "applicationHashes": [
+      {
+        "name": "ChengVault.exe",
+        "sha256": "f663ac36d140b3b5058a5c034941772a0f6a3629d1765b0a5acb618ffd0d7184"
+      },
+      {
+        "name": "ChengVaultCli.exe",
+        "sha256": "4991583bf6badf9b860d62c7de809f1f362ea97c1fb80e53b04dd56297cc6e8c"
+      },
+      {
+        "name": "ChengVaultAgent.exe",
+        "sha256": "535ae7e12ecf001ef706a159854b356c9789bcdfb0a80a893be5095f85640113"
+      },
+      {
+        "name": "ChengVaultServer.exe",
+        "sha256": "c49aa23b45f2a706dafc576605c22186fc6cc4d53d5b71b0b2d50132e79afce4"
+      }
+    ],
+    "processId": 42848,
+    "processStartUtc": "2026-10-17T12:55:17.2622304Z",
+    "executable": "D:\\soft-project\\ChengVault\\tmp\\portable-layout-022da054b59a433cb5745c7017548299\\ChengVaultServer.exe",
+    "serverAddress": "127.0.0.1",
+    "port": 52772,
+    "selfTestOnly": true
+  },
+  "serverStopped": true,
+  "independentMachine": false,
+  "realAanVerified": false
+}

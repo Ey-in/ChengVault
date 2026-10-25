@@ -1,0 +1,48 @@
+{
+    "cases": [
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 194,
+            "name": "PROC-01 independent Agent executes persisted DPAPI task",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:31:32.945Z"
+        },
+        {
+            "category": "并发稳定性",
+            "detail": "",
+            "durationMs": 96,
+            "name": "PROC-02 per-user lock rejects duplicate Agent",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:31:33.040Z"
+        },
+        {
+            "category": "GUI与部署兼容性",
+            "detail": "",
+            "durationMs": 1834,
+            "name": "PROC-03 actual GUI exits while Agent remains running",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:31:34.875Z"
+        },
+        {
+            "category": "系统功能",
+            "detail": "",
+            "durationMs": 2267,
+            "name": "PROC-04 after GUI exit changed data produces recoverable snapshot",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:31:37.143Z"
+        },
+        {
+            "category": "系统功能",
+            "detail": "<redacted-user>/AppData/Local/Temp/ChengVaultBackgroundTests-nEjLQP/repository/snapshots/aaf6de24-b7a6-4c50-8329-6fd34e0c8899.cvs: Unknown error",
+            "durationMs": 3797,
+            "name": "PROC-05 background retention leaves two valid complete versions",
+            "result": "FAIL",
+            "timestamp": "2026-10-17T13:31:40.941Z"
+        }
+    ],
+    "failed": 1,
+    "passed": 4,
+    "skipped": 0,
+    "transientJobReadRetries": 0
+}

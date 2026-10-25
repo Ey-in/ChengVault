@@ -1,0 +1,33 @@
+Warning: Translations will not be available due to the following error.
+Cannot open D:/soft-project/ChengVault/.toolchain/root/ucrt64/share/qt6/translations/catalogs.json
+D:\soft-project\ChengVault\dist\.package-stage-8cf3ce327ed04435b7c9fe17fcd89bf8\ChengVault.exe 64 bit, release executable
+Adding in plugin type generic for module: Qt6Gui
+Skipping plugin qtuiotouchplugin.dll due to skipped plugin type generic
+Adding in plugin type imageformats for module: Qt6Gui
+Adding in plugin type networkinformation for module: Qt6Network
+Skipping plugin qglib.dll due to skipped plugin type networkinformation
+Skipping plugin qnetworklistmanager.dll due to skipped plugin type networkinformation
+Adding in plugin type platforms for module: Qt6Gui
+Skipping plugin qdirect2d.dll due to exclusion option
+Skipping plugin qminimal.dll due to exclusion option
+Skipping plugin qoffscreen.dll due to exclusion option
+Adding in plugin type styles for module: Qt6Widgets
+Adding in plugin type tls for module: Qt6Network
+Skipping plugin qcertonlybackend.dll due to skipped plugin type tls
+Skipping plugin qopensslbackend.dll due to skipped plugin type tls
+Skipping plugin qschannelbackend.dll due to skipped plugin type tls
+Direct dependencies: Qt6Core Qt6Gui Qt6Network Qt6Widgets
+All dependencies   : Qt6Core Qt6Gui Qt6Network Qt6Widgets
+To be deployed     : Qt6Core Qt6Gui Qt6Network Qt6Widgets
+Updating Qt6Core.dll.
+Updating Qt6Gui.dll.
+Updating Qt6Network.dll.
+Updating Qt6Widgets.dll.
+Creating directory D:/soft-project/ChengVault/dist/.package-stage-8cf3ce327ed04435b7c9fe17fcd89bf8/plugins/imageformats.
+Updating qgif.dll.
+Updating qico.dll.
+Updating qjpeg.dll.
+Creating directory D:/soft-project/ChengVault/dist/.package-stage-8cf3ce327ed04435b7c9fe17fcd89bf8/plugins/platforms.
+Updating qwindows.dll.
+Creating directory D:/soft-project/ChengVault/dist/.package-stage-8cf3ce327ed04435b7c9fe17fcd89bf8/plugins/styles.
+Updating qmodernwindowsstyle.dll.

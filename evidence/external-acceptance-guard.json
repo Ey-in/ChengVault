@@ -1,0 +1,7 @@
+{
+  "timestampUtc": "2026-10-17T12:51:30.0045688Z",
+  "name": "reject-same-machine-without-selftest-flag",
+  "passed": true,
+  "exitCode": 1,
+  "actualExternalMachineTest": false
+}

@@ -1,0 +1,362 @@
+{
+    "cases": [
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "SCH-01 interval advances injected clock",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:20.160Z"
+        },
+        {
+            "category": "边界健壮性",
+            "detail": "",
+            "durationMs": 0,
+            "name": "SCH-02 zero interval clamps to one second",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:20.160Z"
+        },
+        {
+            "category": "边界健壮性",
+            "detail": "",
+            "durationMs": 0,
+            "name": "SCH-03 negative interval cannot loop immediately",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:20.160Z"
+        },
+        {
+            "category": "功能",
+            "detail": "",
+            "durationMs": 4,
+            "name": "SCH-04 daily future time stays same date",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:20.164Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 0,
+            "name": "SCH-05 daily elapsed time moves next date",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:20.164Z"
+        },
+        {
+            "category": "边界健壮性",
+            "detail": "",
+            "durationMs": 0,
+            "name": "SCH-06 exact boundary schedules next day",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:20.164Z"
+        },
+        {
+            "category": "功能",
+            "detail": "",
+            "durationMs": 0,
+            "name": "SCH-07 weekly weekday is correct",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:20.164Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "SCH-08 invalid weekday rejected",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:20.164Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "SCH-09 invalid clock rejected",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:20.164Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "SCH-10 unknown schedule mode rejected",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:20.164Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "SCH-11 task serialization omits password",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:20.165Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 0,
+            "name": "SCH-12 plan roundtrip retains filters",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:20.165Z"
+        },
+        {
+            "category": "并发稳定性",
+            "detail": "",
+            "durationMs": 0,
+            "name": "SCH-13 cancellation checkpoint aborts work",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:20.165Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 231,
+            "name": "SCH-14 real Windows write event is detected",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:20.395Z"
+        },
+        {
+            "category": "并发稳定性",
+            "detail": "",
+            "durationMs": 60,
+            "name": "SCH-15 monitor shutdown cancels pending I/O",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:20.456Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 18,
+            "name": "SCH-16 atomic JSON I/O and malformed JSON failure",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:20.474Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 18,
+            "name": "SCH-17 task key protected by current-user DPAPI",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:20.664Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 87,
+            "name": "SCH-18 persisted overdue job runs without GUI",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:20.752Z"
+        },
+        {
+            "category": "系统功能",
+            "detail": "",
+            "durationMs": 338,
+            "name": "SCH-19 missed execution catches up and retention keeps two",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:21.091Z"
+        },
+        {
+            "category": "系统功能",
+            "detail": "",
+            "durationMs": 21,
+            "name": "SCH-20 disabled job produces no snapshot",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:21.113Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 3122,
+            "name": "SCH-21 realtime write creates a new complete version",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:24.235Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 95,
+            "name": "SCH-22 missing source schedules bounded retry",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:24.331Z"
+        },
+        {
+            "category": "系统功能",
+            "detail": "",
+            "durationMs": 2,
+            "name": "SCH-23 task removal persists",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:24.333Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "SCH-24 job path traversal rejected",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:24.333Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 9,
+            "name": "SCH-25 malformed job remains visible and disabled",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:24.344Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 9,
+            "name": "SCH-26 mismatched persisted ID cannot overwrite another task",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:24.353Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "SCH-27 empty colon and excessive IDs rejected",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:24.353Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 0,
+            "name": "SCH-28 invalid plan cannot persist a job",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:24.354Z"
+        },
+        {
+            "category": "边界健壮性",
+            "detail": "",
+            "durationMs": 0,
+            "name": "SCH-29 invalid reference time and lower weekday rejected",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:24.354Z"
+        },
+        {
+            "category": "系统功能",
+            "detail": "",
+            "durationMs": 28,
+            "name": "SCH-30 future task is not admitted early",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:24.382Z"
+        },
+        {
+            "category": "系统功能",
+            "detail": "",
+            "durationMs": 135,
+            "name": "SCH-31 invalid due timestamp gets one catch-up run",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:24.518Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 147,
+            "name": "SCH-32 invalid schedule does not starve a valid job",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:24.666Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 89,
+            "name": "SCH-33 corrupt protected key produces retry not success",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:24.755Z"
+        },
+        {
+            "category": "边界健壮性",
+            "detail": "",
+            "durationMs": 92,
+            "name": "SCH-34 excessive retry count saturates without overflow",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:24.847Z"
+        },
+        {
+            "category": "并发稳定性",
+            "detail": "",
+            "durationMs": 41,
+            "name": "SCH-35 completion does not recreate a deleted task",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:24.889Z"
+        },
+        {
+            "category": "并发稳定性",
+            "detail": "",
+            "durationMs": 61,
+            "name": "SCH-36 corrupt in-flight job is preserved and logged",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:24.951Z"
+        },
+        {
+            "category": "并发稳定性",
+            "detail": "",
+            "durationMs": 57,
+            "name": "SCH-37 pause releases real-time watch without snapshot",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:25.009Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 330,
+            "name": "SCH-38 selected file watches parent and consumes change flag",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:25.339Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 29,
+            "name": "SCH-39 missing watched directory requests failure rescan",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:25.369Z"
+        },
+        {
+            "category": "系统功能",
+            "detail": "",
+            "durationMs": 328,
+            "name": "SCH-40 rename and delete both request real-time rescan",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:25.697Z"
+        },
+        {
+            "category": "部署兼容性",
+            "detail": "",
+            "durationMs": 1,
+            "name": "SCH-41 missing autostart binary leaves registry unchanged",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:25.699Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 28,
+            "name": "SCH-42 inaccessible profile does not escape timer callback",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:25.727Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 46,
+            "name": "SCH-43 profile lost during completion does not crash agent",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:25.774Z"
+        },
+        {
+            "category": "边界健壮性",
+            "detail": "",
+            "durationMs": 80,
+            "name": "SCH-44 negative retry counter cannot schedule a busy loop",
+            "result": "PASS",
+            "timestamp": "2026-10-17T12:51:25.855Z"
+        }
+    ],
+    "date": "2026-10-17T12:51:25Z",
+    "failed": 0,
+    "passed": 44,
+    "platform": "Windows 11 Version 25H2",
+    "qt": "6.11.2",
+    "skipped": 0
+}

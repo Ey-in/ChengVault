@@ -1,0 +1,23 @@
+-- Configuring done (0.4s)
+-- Generating done (0.6s)
+-- Build files have been written to: D:/soft-project/ChengVault/build-release
+[0/2] Re-checking globbed directories...
+[1/23] Automatic MOC for target chengvault_core
+[2/22] Building CXX object CMakeFiles/chengvault_core.dir/src/core/repository.cpp.obj
+[3/22] Building CXX object CMakeFiles/chengvault_core.dir/src/core/scheduler.cpp.obj
+[4/22] Linking CXX static library libchengvault_core.a
+[5/22] Automatic MOC for target ChengVaultTests
+[6/21] Automatic MOC for target ChengVaultBackgroundTests
+[7/20] Building CXX object CMakeFiles/ChengVaultCli.dir/src/apps/cli_main.cpp.obj
+[8/20] Building CXX object CMakeFiles/ChengVaultTests.dir/tests/scheduler_tests.cpp.obj
+[9/20] Building CXX object CMakeFiles/ChengVault.dir/src/gui/main_window.cpp.obj
+[10/20] Linking CXX executable ChengVaultCli.exe
+[11/20] Building CXX object CMakeFiles/ChengVaultGuiTests.dir/src/gui/main_window.cpp.obj
+[12/20] Linking CXX executable ChengVaultAgent.exe
+[13/20] Linking CXX executable ChengVaultServer.exe
+[14/20] Linking CXX executable ChengVault.exe
+[15/20] Linking CXX executable ChengVaultGuiTests.exe
+[16/20] Building CXX object CMakeFiles/ChengVaultBackgroundTests.dir/tests/background_process.cpp.obj
+[17/20] Linking CXX executable ChengVaultBackgroundTests.exe
+[18/20] Building CXX object CMakeFiles/ChengVaultTests.dir/tests/network_repository_tests.cpp.obj
+[19/20] Linking CXX executable ChengVaultTests.exe

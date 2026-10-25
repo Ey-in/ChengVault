@@ -1,0 +1,5 @@
+PASS PROC-01 independent Agent executes persisted DPAPI task
+PASS PROC-02 per-user lock rejects duplicate Agent
+PASS PROC-03 actual GUI exits while Agent remains running
+PASS PROC-04 after GUI exit changed data produces recoverable snapshot
+PASS PROC-05 background retention leaves two valid complete versions

@@ -1,0 +1,12 @@
+{
+  "status": "NOT_PUBLISHED",
+  "reason": "The .NET window-title readiness check timed out after 15 seconds; the 30.58-second video began after initial backup steps. Actual captured pixels were visible, but a complete replacement was requested.",
+  "decodedFramesReviewed": [
+    "video-frames/frame-01.png",
+    "video-frames/frame-03.png",
+    "video-frames/frame-05.png",
+    "video-frames/frame-08.png"
+  ],
+  "blackFramesObserved": false,
+  "requiresRerecording": true
+}

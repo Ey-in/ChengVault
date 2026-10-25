@@ -1,0 +1,12 @@
+{
+  "timestampUtc": "2026-10-17T13:00:12.3994088Z",
+  "validatedExistingCommit": "1c653314124b8e172b79d8e4c6f97fe744d481c9",
+  "validRuntimeAndSourceAccepted": true,
+  "runtimeFiles": 153,
+  "gitBlobFiles": 260,
+  "alteredExecutableRejected": true,
+  "alteredSourceArchiveRejected": true,
+  "fixture": "D:\\soft-project\\ChengVault\\tmp\\package-check-3c7ba9a928904e4c97e1aa64e60e746f",
+  "duplicateZipMemberRejected": true,
+  "thinGitBundleRejected": true
+}

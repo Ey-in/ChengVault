@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "reviewedFrames": [1, 2, 3, 4, 5, 6, 7, 8],
+  "method": "All eight full-size PNG captures were opened and visually reviewed.",
+  "observations": [
+    "The actual Qt interface shows backup configuration and successful encrypted archive creation.",
+    "RS(12,10) redundancy generation and authentication rejection of the damaged copy are visible.",
+    "Damage localization identifies data shard 0; repair publishes a new archive with the original SHA-256.",
+    "The repaired archive is opened with the original password, then restored; the final source and restored SHA-256 values match."
+  ],
+  "videoSha256": "43ff3aab0d3d4840b80edd87f2c51e4acc6c0e9a6bcdd2596b8638de768b1684"
+}

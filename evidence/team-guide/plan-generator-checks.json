@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "fixture": "D:\\soft-project\\ChengVault\\.cache\\guide-plan-safety-ere3aanw",
+  "productionCsvUnchanged": true,
+  "checks": [
+    "default preserves exact user bytes",
+    "explicit reset backs up exact bytes inside docs",
+    "initial 16-task plan written only on explicit reset",
+    "successive backups have unique names",
+    "real project CSV unchanged"
+  ],
+  "productionCsvSha256": "31094139546a5aa7b5c927e44267bb1fcf8f0d9b1f401c7b06341a02022378f3",
+  "generatorSha256": "0d1e0e7a636c2fa9283b05ef1ada262efa19e74a2446079f166e2f9d697331d8",
+  "documentRegenerated": false
+}

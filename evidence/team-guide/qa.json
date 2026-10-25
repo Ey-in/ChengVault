@@ -1,0 +1,130 @@
+{
+  "status": "PASS",
+  "checkedAtUtc": "2026-10-17T14:26:42.684973+00:00",
+  "document": {
+    "path": "D:\\soft-project\\报告文档\\ChengVault三人分工与提交指南.docx",
+    "sha256": "e0eacf097d9412668042794cb7952f0267bddb75e8249ed67f77c49af976de79",
+    "bytes": 47095
+  },
+  "pdf": {
+    "path": "D:\\soft-project\\报告文档\\ChengVault三人分工与提交指南.pdf",
+    "sha256": "c68f5922260e9ac0c0de1ef684ae47d1a28bef5c6e9daa1619c9cce70eef67cf",
+    "bytes": 548400,
+    "pages": 7
+  },
+  "pages": [
+    {
+      "page": 1,
+      "path": "evidence\\team-guide\\pages\\page-1.png",
+      "sha256": "1796f8d5910d9418b551e7bafbcd2bfaa8fdc849b8dadd636598a4b155ae222a",
+      "visualReview": "PASS",
+      "reviewBasis": "Final ownership-revision page viewed at full rendered size; no clipping overlap or orphan headings"
+    },
+    {
+      "page": 2,
+      "path": "evidence\\team-guide\\pages\\page-2.png",
+      "sha256": "530e90dda96cabbe452c4ad02f6669841acb17b50bae0a91b846d89e7f03e306",
+      "visualReview": "PASS",
+      "reviewBasis": "Final ownership-revision page viewed at full rendered size; no clipping overlap or orphan headings"
+    },
+    {
+      "page": 3,
+      "path": "evidence\\team-guide\\pages\\page-3.png",
+      "sha256": "83d7d7f6854319bb04aaf3dc5213b99a412d1b1bba407faf42658b5e74c7151c",
+      "visualReview": "PASS",
+      "reviewBasis": "Final ownership-revision page viewed at full rendered size; no clipping overlap or orphan headings"
+    },
+    {
+      "page": 4,
+      "path": "evidence\\team-guide\\pages\\page-4.png",
+      "sha256": "946a9f7775c50615350a81736de4587b2cc3ff672cd7e641d23a19c1fac9814f",
+      "visualReview": "PASS",
+      "reviewBasis": "Final ownership-revision page viewed at full rendered size; no clipping overlap or orphan headings"
+    },
+    {
+      "page": 5,
+      "path": "evidence\\team-guide\\pages\\page-5.png",
+      "sha256": "3e1a156b67009e50472a089207029a809f4a45b4dfa38a624050da251e6aad05",
+      "visualReview": "PASS",
+      "reviewBasis": "Final ownership-revision page viewed at full rendered size; no clipping overlap or orphan headings"
+    },
+    {
+      "page": 6,
+      "path": "evidence\\team-guide\\pages\\page-6.png",
+      "sha256": "717765d9611dacc07937338c606e0e82df20c09b7176e12982b5d8e502efee55",
+      "visualReview": "PASS",
+      "reviewBasis": "Final ownership-revision page viewed at full rendered size; no clipping overlap or orphan headings"
+    },
+    {
+      "page": 7,
+      "path": "evidence\\team-guide\\pages\\page-7.png",
+      "sha256": "88e5d1f654c2d1b3359da806c67217a85a19add0497d8c893f3709459d0f70a7",
+      "visualReview": "PASS",
+      "reviewBasis": "Final ownership-revision page viewed at full rendered size; no clipping overlap or orphan headings"
+    }
+  ],
+  "rendering": {
+    "method": "Microsoft Word COM ExportAsFixedFormat then bundled Poppler PNG",
+    "scaleToPixels": 1400,
+    "reviewedEveryPage": true,
+    "packagedRendererAttempt": "LibreOffice soffice.exe absent; original failure log retained",
+    "artifactMarkerExecutedOnceForThisGuide": true
+  },
+  "scope": {
+    "members": [
+      "A",
+      "B",
+      "C"
+    ],
+    "taskCount": 16,
+    "existingModuleResponsibilityNotHistoricalAuthorship": true,
+    "takeoverNotClaimedAsCompleted": true,
+    "uploadsExecuted": false,
+    "newGitWorkflowCommandsExecuted": false,
+    "originalCourseReportArtifactModified": false
+  },
+  "contentChecks": {
+    "titleStyleAndNoDecorativeRule": true,
+    "independentMachineAndLanRemainPending": true,
+    "symlink1314NotPassed": true,
+    "rawBranchTargetNotClaimedMet": true,
+    "threeMembersHaveCodeTestAndDefenseResponsibilities": true,
+    "ntfsOwnerAReviewerBConsistent": true,
+    "exactSourceAndDocumentPathsExist": 65,
+    "existingModulesArePrimaryDivision": true,
+    "teacherCodeRecordNeedsRealMemberChanges": true
+  },
+  "planUpdate": {
+    "authorizedPurpose": "User clarified allocation of existing completed product modules",
+    "previousCsvBackup": {
+      "path": "D:\\soft-project\\ChengVault\\docs\\team-work-plan.backup-20261017T142447Z-cf7468dd.csv",
+      "sha256": "31094139546a5aa7b5c927e44267bb1fcf8f0d9b1f401c7b06341a02022378f3",
+      "bytes": 3917
+    },
+    "backupMatchesPriorQaInput": true,
+    "defaultRegenerationPreservesCsv": true
+  },
+  "inputs": [
+    {
+      "path": "scripts/build_team_guide.py",
+      "sha256": "8387b3729c6dc4ca5a8fe4d02157916e2963da95e127c0e1bd534b335f11999c"
+    },
+    {
+      "path": "docs/team-work-plan.csv",
+      "sha256": "fda1498a1deccc13f89197759cb5c7dccbe22415c792fd809667a64e9d8f5911"
+    },
+    {
+      "path": "evidence/coverage/summary.json",
+      "sha256": "f21661472a28a3e51a1d04e60c4ba19630da0f13d608e0c779c433f38b8219c9"
+    },
+    {
+      "path": "evidence/coverage/auxiliary-summary.json",
+      "sha256": "1a4176aa976e800f69bbc07c2b0c60ce96d653d214c3a89b7d502f9aecd89a78"
+    }
+  ],
+  "technicalReferences": [
+    "https://git-scm.com/docs/git-bundle",
+    "https://git-scm.com/docs/git-config",
+    "https://git-scm.com/docs/git-merge"
+  ]
+}

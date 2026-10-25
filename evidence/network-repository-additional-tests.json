@@ -1,0 +1,586 @@
+{
+    "cases": [
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 186,
+            "name": "repository.initialize.random-master",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:38.682Z"
+        },
+        {
+            "category": "系统功能",
+            "detail": "",
+            "durationMs": 93,
+            "name": "repository.first-snapshot",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:38.776Z"
+        },
+        {
+            "category": "性能",
+            "detail": "",
+            "durationMs": 60,
+            "name": "repository.unchanged-blocks-reused",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:38.837Z"
+        },
+        {
+            "category": "系统功能",
+            "detail": "",
+            "durationMs": 50,
+            "name": "repository.local-modification-one-chunk",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:38.888Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 110,
+            "name": "repository.snapshot-full-restore",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:38.999Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "repository.manifest-encrypted",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:39.000Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 169,
+            "name": "repository.wrong-password",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:39.169Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 16,
+            "name": "repository.dpapi-master-unlock",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:39.185Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 472,
+            "name": "repository.password-change-rewrap-only",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:39.657Z"
+        },
+        {
+            "category": "白盒单元",
+            "detail": "",
+            "durationMs": 39,
+            "name": "repository.verify-all-snapshots",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:39.696Z"
+        },
+        {
+            "category": "并发稳定性",
+            "detail": "",
+            "durationMs": 22,
+            "name": "repository.concurrent-task-lock",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:39.719Z"
+        },
+        {
+            "category": "并发稳定性",
+            "detail": "",
+            "durationMs": 40,
+            "name": "repository.list-lock-protects-snapshot-lifetime",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:39.760Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 201,
+            "name": "repository.prune-shared-blocks",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:39.961Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "repository.path-traversal-rejected",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:39.961Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 21,
+            "name": "repository.cancel-no-new-snapshot",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:39.983Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 28,
+            "name": "repository.tampered-object-rejected",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:40.012Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 362,
+            "name": "network.setup-two-users",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:40.376Z"
+        },
+        {
+            "category": "系统功能",
+            "detail": "",
+            "durationMs": 324,
+            "name": "network.first-upload-real-tcp",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:40.701Z"
+        },
+        {
+            "category": "性能",
+            "detail": "",
+            "durationMs": 202,
+            "name": "network.unchanged-zero-payload",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:40.903Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 510,
+            "name": "network.account-isolation-list",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:41.414Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 343,
+            "name": "network.account-isolation-download",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:41.758Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 554,
+            "name": "network.full-download-restore",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:42.313Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 4,
+            "name": "network.download-no-overwrite",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:42.317Z"
+        },
+        {
+            "category": "系统功能",
+            "detail": "",
+            "durationMs": 280,
+            "name": "network.changed-upload-incremental",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:42.598Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 186,
+            "name": "network.wrong-login-password",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:42.784Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 30,
+            "name": "network.wrong-device-key",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:42.815Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 30,
+            "name": "network.device-bound-to-user",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:42.846Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 296,
+            "name": "network.nonadmin-management-denied",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:43.142Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 186,
+            "name": "network.admin-lists-no-secrets",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:43.329Z"
+        },
+        {
+            "category": "系统功能",
+            "detail": "",
+            "durationMs": 513,
+            "name": "network.disable-user",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:43.842Z"
+        },
+        {
+            "category": "系统功能",
+            "detail": "",
+            "durationMs": 825,
+            "name": "network.reset-login-password",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:44.668Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 638,
+            "name": "network.quota-enforced",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:45.306Z"
+        },
+        {
+            "category": "系统功能",
+            "detail": "",
+            "durationMs": 980,
+            "name": "network.admin-create-register-device",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:46.287Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 809,
+            "name": "network.interrupted-upload-resumes-offset",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:47.097Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 185,
+            "name": "network.replayed-frame-rejected",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:47.283Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 202,
+            "name": "network.ciphertext-tamper-rejected",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:47.485Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 31,
+            "name": "network.oversized-frame-rejected",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:47.517Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 11,
+            "name": "network.server-stores-no-master-or-password",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:47.529Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 0,
+            "name": "network.reject-user-path-traversal",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:47.529Z"
+        },
+        {
+            "category": "集成",
+            "detail": "",
+            "durationMs": 277,
+            "name": "repository.auto-init-none-and-intrasnapshot-dedup",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:47.823Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 6,
+            "name": "repository.initialization-refuses-existing-and-foreign-directory",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:47.829Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 384,
+            "name": "repository.closed-operations-and-empty-aes-repository",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:48.213Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 91,
+            "name": "repository.config-rejects-unsupported-version-and-cipher",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:48.306Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 174,
+            "name": "repository.config-kdf-work-limit-and-invalid-id",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:48.481Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 34,
+            "name": "repository.config-identity-is-bound-to-master-proof",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:48.516Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 28,
+            "name": "repository.config-invalid-password-salt",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:48.545Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 90,
+            "name": "repository.authenticated-manifest-json-and-identity-rejected",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:48.635Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 158,
+            "name": "repository.corrupt-retained-block-prevents-prune-and-new-snapshot",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:48.794Z"
+        },
+        {
+            "category": "系统功能",
+            "detail": "",
+            "durationMs": 502,
+            "name": "repository.age-retention-protects-newest-expired-version",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:49.298Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 1223,
+            "name": "network.download-cancel-resume-reuses-completed-and-partial-objects",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:50.522Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 763,
+            "name": "network.download-restarts-invalid-full-part-and-cleans-stale-artifacts",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:51.286Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 827,
+            "name": "network.download-refuses-unknown-staging-file-without-publication",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:52.113Z"
+        },
+        {
+            "category": "并发稳定性",
+            "detail": "",
+            "durationMs": 596,
+            "name": "network.download-destination-changed-before-publish-is-preserved",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:52.710Z"
+        },
+        {
+            "category": "并发稳定性",
+            "detail": "",
+            "durationMs": 20,
+            "name": "network.download-lock-prevents-parallel-materialization",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:52.730Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 304,
+            "name": "network.corrupt-server-blob-reupload-repairs-one-object",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:53.034Z"
+        },
+        {
+            "category": "系统功能",
+            "detail": "",
+            "durationMs": 341,
+            "name": "network.commit-cleans-orphan-blobs-but-retains-resumable-parts",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:53.377Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 775,
+            "name": "network.inventory-empty-duplicate-and-missing-config-rejected",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:54.152Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 1135,
+            "name": "network.inventory-path-hash-size-and-prefix-checked",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:55.288Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 296,
+            "name": "network.inventory-same-hash-different-length-rejected",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:55.584Z"
+        },
+        {
+            "category": "系统功能",
+            "detail": "",
+            "durationMs": 232,
+            "name": "network.inventory-deduplicates-identical-ciphertext-hashes",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:55.817Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 1006,
+            "name": "network.upload-state-incomplete-commit-and-unknown-operation",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:56.824Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 868,
+            "name": "network.put-rejects-foreign-hash-invalid-range-and-digest",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:57.692Z"
+        },
+        {
+            "category": "并发稳定性",
+            "detail": "",
+            "durationMs": 478,
+            "name": "network.active-upload-and-competing-session-locks",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:58.171Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 369,
+            "name": "network.get-rejects-foreign-object-and-out-of-range-offset",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:58.541Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 855,
+            "name": "network.admin-refuses-self-disable-unknown-action-and-zero-quota",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:59.396Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 200,
+            "name": "network.existing-session-revoked-after-device-key-rotation",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:59.597Z"
+        },
+        {
+            "category": "异常健壮性",
+            "detail": "",
+            "durationMs": 176,
+            "name": "network.account-configuration-validates-credentials",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:39:59.772Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 907,
+            "name": "network.existing-session-invalidated-by-password-reset",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:40:00.680Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 634,
+            "name": "network.existing-session-invalidated-by-account-disable",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:40:01.315Z"
+        },
+        {
+            "category": "系统功能",
+            "detail": "",
+            "durationMs": 1442,
+            "name": "network.default-user-quota-and-multiple-repository-accounting",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:40:02.757Z"
+        },
+        {
+            "category": "安全",
+            "detail": "",
+            "durationMs": 400,
+            "name": "network.authenticated-malformed-json-and-session-binding",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:40:03.158Z"
+        },
+        {
+            "category": "并发稳定性",
+            "detail": "",
+            "durationMs": 741,
+            "name": "network.connection-limit-rejects-excess-and-recovers",
+            "result": "PASS",
+            "timestamp": "2026-10-17T13:40:03.900Z"
+        }
+    ],
+    "date": "2026-10-17T13:40:04Z",
+    "failed": 0,
+    "passed": 72,
+    "platform": "Windows 11 Version 25H2",
+    "qt": "6.11.2",
+    "skipped": 0
+}
