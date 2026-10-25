@@ -1,28 +1,2 @@
 [0/2] Re-checking globbed directories...
-[1/28] Automatic MOC for target chengvault_core
-[2/28] Building CXX object CMakeFiles/chengvault_core.dir/chengvault_core_autogen/mocs_compilation.cpp.obj
-[3/28] Building CXX object CMakeFiles/chengvault_core.dir/src/core/compression.cpp.obj
-[4/28] Building CXX object CMakeFiles/chengvault_core.dir/src/core/common.cpp.obj
-[5/28] Building CXX object CMakeFiles/chengvault_core.dir/src/core/archive.cpp.obj
-[6/28] Building CXX object CMakeFiles/chengvault_core.dir/src/core/crypto.cpp.obj
-[7/28] Building CXX object CMakeFiles/chengvault_core.dir/src/core/network.cpp.obj
-[8/28] Building CXX object CMakeFiles/chengvault_core.dir/src/core/repair.cpp.obj
-[9/28] Building CXX object CMakeFiles/chengvault_core.dir/src/core/repository.cpp.obj
-[10/28] Building CXX object CMakeFiles/chengvault_core.dir/src/core/scheduler.cpp.obj
-[11/28] Building CXX object CMakeFiles/chengvault_core.dir/src/platform/filesystem.cpp.obj
-[12/28] Linking CXX static library libchengvault_core.a
-[13/28] Automatic MOC for target ChengVaultTests
-[14/28] Automatic MOC for target ChengVaultGuiTests
-[15/28] Building CXX object CMakeFiles/ChengVaultTests.dir/ChengVaultTests_autogen/mocs_compilation.cpp.obj
-[16/28] Building CXX object CMakeFiles/ChengVaultTests.dir/tests/test_main.cpp.obj
-[17/28] Building CXX object CMakeFiles/ChengVaultTests.dir/tests/algorithms_tests.cpp.obj
-[18/28] Building CXX object CMakeFiles/ChengVaultTests.dir/tests/filesystem_tests.cpp.obj
-[19/28] Building CXX object CMakeFiles/ChengVaultTests.dir/tests/filesystem_adversarial_tests.cpp.obj
-[20/28] Building CXX object CMakeFiles/ChengVaultGuiTests.dir/ChengVaultGuiTests_autogen/mocs_compilation.cpp.obj
-[21/28] Building CXX object CMakeFiles/ChengVaultTests.dir/tests/scheduler_tests.cpp.obj
-[22/28] Building CXX object CMakeFiles/ChengVaultGuiTests.dir/tests/gui_smoke.cpp.obj
-[23/28] Building CXX object CMakeFiles/ChengVaultGuiTests.dir/src/gui/theme.cpp.obj
-[24/28] Building CXX object CMakeFiles/ChengVaultGuiTests.dir/src/gui/main_window.cpp.obj
-[25/28] Linking CXX executable ChengVaultGuiTests.exe
-[26/28] Building CXX object CMakeFiles/ChengVaultTests.dir/tests/network_repository_tests.cpp.obj
-[27/28] Linking CXX executable ChengVaultTests.exe
+ninja: no work to do.

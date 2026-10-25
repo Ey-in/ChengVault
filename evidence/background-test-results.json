@@ -3,42 +3,42 @@
         {
             "category": "集成",
             "detail": "",
-            "durationMs": 228,
+            "durationMs": 126,
             "name": "PROC-01 independent Agent executes persisted DPAPI task",
             "result": "PASS",
-            "timestamp": "2026-10-25T16:12:24.894Z"
+            "timestamp": "2026-10-25T17:38:55.941Z"
         },
         {
             "category": "并发稳定性",
             "detail": "",
-            "durationMs": 75,
+            "durationMs": 78,
             "name": "PROC-02 per-user lock rejects duplicate Agent",
             "result": "PASS",
-            "timestamp": "2026-10-25T16:12:24.970Z"
+            "timestamp": "2026-10-25T17:38:56.022Z"
         },
         {
             "category": "GUI与部署兼容性",
             "detail": "",
-            "durationMs": 1535,
+            "durationMs": 1439,
             "name": "PROC-03 actual GUI exits while Agent remains running",
             "result": "PASS",
-            "timestamp": "2026-10-25T16:12:26.505Z"
+            "timestamp": "2026-10-25T17:38:57.461Z"
         },
         {
             "category": "系统功能",
             "detail": "",
-            "durationMs": 2462,
+            "durationMs": 2491,
             "name": "PROC-04 after GUI exit changed data produces recoverable snapshot",
             "result": "PASS",
-            "timestamp": "2026-10-25T16:12:28.966Z"
+            "timestamp": "2026-10-25T17:38:59.953Z"
         },
         {
             "category": "系统功能",
             "detail": "",
-            "durationMs": 3955,
+            "durationMs": 3998,
             "name": "PROC-05 background retention leaves two valid complete versions",
             "result": "PASS",
-            "timestamp": "2026-10-25T16:12:32.924Z"
+            "timestamp": "2026-10-25T17:39:03.950Z"
         }
     ],
     "failed": 0,

@@ -3,5 +3,5 @@
   "branchActual": 56.7,
   "primaryBranchMetric": "All GCC CFG arcs, including exception-handling arcs",
   "scope": "All src/core/*.cpp and src/platform/*.cpp",
-  "generatedAtUtc": "2026-10-25T11:52:48.7467541Z"
+  "generatedAtUtc": "2026-10-25T17:41:35.6071829Z"
 }
