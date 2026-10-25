@@ -1,0 +1,9 @@
+{
+  "preservedAtUtc": "2026-10-17T13:34:45.2943283Z",
+  "reason": "Public Repository::list() was not locked against Agent prune; upcoming corrected production core requires fresh full coverage counters.",
+  "previousCorePass": 584,
+  "previousCoreSkip": 1,
+  "previousLinePercent": 97.4,
+  "previousRawBranchPercent": 56.4,
+  "rawCountersExcluded": "Raw gcov text remains in prior ignored directory until final collection; compact coverage.json and complete HTML preserve previous measurements."
+}

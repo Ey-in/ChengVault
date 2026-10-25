@@ -1,0 +1,11 @@
+{
+  "lineTarget": 85.0,
+  "branchTarget": 75.0,
+  "lineActual": 97.5,
+  "branchActual": 56.4,
+  "linePass": true,
+  "branchPass": false,
+  "primaryBranchMetric": "All GCC CFG arcs, including exception-handling arcs",
+  "scope": "All src/core/*.cpp and src/platform/*.cpp",
+  "generatedAtUtc": "2026-10-17T13:46:38.7725726Z"
+}

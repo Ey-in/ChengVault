@@ -1,0 +1,38 @@
+[
+  {
+    "file": "src/core/archive.cpp",
+    "sha256": "6448ad88448f2945e4b47ba9fae0858d34df67be50e7fb13ffb65af3305a8928"
+  },
+  {
+    "file": "src/core/common.cpp",
+    "sha256": "a41fdc04744fecb4e2668cd6baf54070b2614e7c3d7f7a9b6b2703ff8def5eb1"
+  },
+  {
+    "file": "src/core/compression.cpp",
+    "sha256": "b0701334fa6034b2e6ffe320dc7f51c6ee9a51c9f45847a67cf4dc831d1dce59"
+  },
+  {
+    "file": "src/core/crypto.cpp",
+    "sha256": "2fcf8f81569ce25bd3fba4f0991853e73bedcc11c0e85cd701cbcb3770ed578e"
+  },
+  {
+    "file": "src/core/network.cpp",
+    "sha256": "783d93b2f5af73918d18e2a3e6c4978993de8e7240be32a98a00f8ffea52af66"
+  },
+  {
+    "file": "src/core/repair.cpp",
+    "sha256": "4698cd9a3a1af1af988b1d518127d58ce6e3bbf6924ad3e48cef8cd87a96bbcc"
+  },
+  {
+    "file": "src/core/repository.cpp",
+    "sha256": "3826909789f91cb04854f3cd40f97e51d937a131c8c510decbc97013de8c50e3"
+  },
+  {
+    "file": "src/core/scheduler.cpp",
+    "sha256": "871c7befadae1fe0087d55a22720330c7fdfef4453572e372908b9a76784ea35"
+  },
+  {
+    "file": "src/platform/filesystem.cpp",
+    "sha256": "59e27425a6b78ec13695822a422c5dc8db41755b34f27dcc039549a6ff6628bd"
+  }
+]

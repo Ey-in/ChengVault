@@ -1,0 +1,11 @@
+{
+  "status": "INTERRUPTED_NOT_FINAL_EVIDENCE",
+  "reason": "Parent requested stopping this coverage-only executable before the independent wildcard implementation, then rebuilding and resetting all counters.",
+  "stoppedPid": 39308,
+  "stoppedExecutable": "D:\\soft-project\\ChengVault\\build-coverage\\ChengVaultTests.exe",
+  "completedPassLines": 470,
+  "completedFailureLines": 0,
+  "fullSuiteCompleted": false,
+  "coverageCollected": false,
+  "generatedAtUtc": "2026-10-17T12:55:53.4328680Z"
+}

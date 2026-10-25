@@ -1,0 +1,8 @@
+{
+  "status": "FAILED_GUI_ATTEMPT_PRESERVED",
+  "coreSuite": "584 PASS / 0 FAIL / 1 SKIP",
+  "guiSuite": "18 PASS / 2 FAIL",
+  "diagnosis": "Awaited output file appearance before Qt worker completion; following operation was rejected as busy.",
+  "scope": "GUI harness wait synchronization; production core source unchanged at this point",
+  "generatedAtUtc": "2026-10-17T13:11:19.0615263Z"
+}

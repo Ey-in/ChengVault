@@ -1,0 +1,302 @@
+{
+  "Crypto/independent-parameter-lengths": [
+    "密码接口分别校验各参数长度",
+    "分别传入合法32字节AES密钥配短IV、合法12字节ChaCha nonce配短密钥、open短主密钥、PBKDF2输出1048577字节和随机输出67108865字节；另比较两个空标签。",
+    "依次收到CIPHER_PARAMETERS、CIPHER_PARAMETERS、KEY_SIZE、KDF_PARAMETERS、RANDOM_SIZE；空标签比较为真。"
+  ],
+  "KDF/partial-block-and-HKDF-maximum": [
+    "KDF部分摘要块与最大HKDF输出",
+    "以password/salt、迭代2请求17字节PBKDF2；以22个0x0b和空salt/info请求8160字节HKDF。",
+    "PBKDF2为ae4d0c95af6b46d32d0adff928f06dd02a；HKDF长度8160，其前42字节等于RFC5869已有已知向量。"
+  ],
+  "Envelope/AES-alias-aes-256": [
+    "AES别名aes-256",
+    "以32字节密钥、aes-256算法名封装文本alias contract后打开。",
+    "封装算法标识为1，解密返回原始文本。"
+  ],
+  "Envelope/AES-alias-aes256-ctr": [
+    "AES别名aes256-ctr",
+    "以32字节密钥、aes256-ctr算法名封装文本alias contract后打开。",
+    "封装算法标识为1，解密返回原始文本。"
+  ],
+  "Envelope/AES-alias-aes": [
+    "AES别名aes",
+    "以32字节密钥、aes算法名封装文本alias contract后打开。",
+    "封装算法标识为1，解密返回原始文本。"
+  ],
+  "Envelope/authenticated-reserved-nonce-rejected": [
+    "有效HMAC不能绕过nonce保留位约束",
+    "生成ChaCha20封装，将nonce保留区第一个字节设为1，再用合法密钥重新计算HMAC。",
+    "open返回ENVELOPE；结构错误不能因认证标签有效而被接受。"
+  ],
+  "Compression/short-header-wrong-magic-and-raw-length": [
+    "压缩外层结构边界",
+    "依次解码仅CVC1的短头、魔数首字节改为X的块、负载3字节但声明原长2字节的raw块。",
+    "三种输入均返回COMPRESSED_FORMAT。"
+  ],
+  "Compression/hard-block-limit-independent-of-caller-bound": [
+    "64MiB硬上限独立于调用者解码上限",
+    "将声明原长设为67108865字节并以128MiB上限解码；另向encoder传入真实67108865字节数据。",
+    "解码与编码均返回BLOCK_SIZE，不因调用者提高上限而允许超规格块。"
+  ],
+  "Huffman/empty-nonraw-and-trailing-byte": [
+    "Huffman空字母表与频数表边界",
+    "手工构造1024字节全零频数表、原长0的codec1块；再测试附加一个字节和频数表缩短到1023字节。",
+    "合法空表在输出上限0时返回空串；多余或缺失字节均返回COMPRESSED_FORMAT。"
+  ],
+  "Huffman/single-symbol-extra-stream-rejected": [
+    "单符号Huffman不需要位流",
+    "构造仅A频数1的表，先不附加位流，再附加一个零字节；外层长度与摘要均按对应输入设置。",
+    "无位流返回A；额外位流返回COMPRESSED_FORMAT。"
+  ],
+  "Huffman/two-symbol-valid-padding": [
+    "双符号Huffman合法终端填充",
+    "手工构造A和B各出现1次的频数表，位流为0x40，声明明文AB。",
+    "解码得到AB，低6个零填充位被接受。"
+  ],
+  "Huffman/truncated-bits": [
+    "Huffman位流缺失",
+    "A与B频数均为1，声明原长2，但1024字节频数表后不提供位流。",
+    "返回COMPRESSED_FORMAT，不能读取频数表外不存在的位。"
+  ],
+  "Huffman/wrong-frequencies": [
+    "Huffman观察频数必须匹配表",
+    "A与B频数均为1，位流改为0x00使实际符号分布与表不符。",
+    "在最终明文摘要之前以COMPRESSED_FORMAT拒绝该分布。"
+  ],
+  "Huffman/nonzero-padding": [
+    "Huffman未使用位必须为零",
+    "A与B频数均为1、合法高位仍表示AB，但位流由0x40改为0x41。",
+    "因低位填充非零返回COMPRESSED_FORMAT。"
+  ],
+  "Huffman/extra-byte": [
+    "Huffman整字节尾随数据拒绝",
+    "A与B频数均为1，在合法0x40位流后附加0x00，外层负载长度同步更新。",
+    "返回COMPRESSED_FORMAT，不将尾随字节当作可忽略填充。"
+  ],
+  "LZ77/handwritten-literal-and-overlapping-match": [
+    "手工LZ77字面量与重叠引用",
+    "解码0241000100；再解码一个零标志字节加abcdefgh，以及原长0且负载为空的codec2块。",
+    "分别得到AAAA、abcdefgh与空串；距离1的重叠引用正确扩展。"
+  ],
+  "LZ77/missing-flags": [
+    "LZ77缺少标志组",
+    "声明明文A、原长1，codec2负载为空。",
+    "返回COMPRESSED_FORMAT。"
+  ],
+  "LZ77/missing-literal": [
+    "LZ77缺少字面量",
+    "声明明文A，负载只有0x00标志字节，没有字面量。",
+    "返回COMPRESSED_FORMAT。"
+  ],
+  "LZ77/short-match": [
+    "LZ77引用字段被截断",
+    "声明原长3，负载010001只有匹配标志和两个引用字节，少于所需3字节。",
+    "返回COMPRESSED_FORMAT。"
+  ],
+  "LZ77/distance-after-output": [
+    "LZ77非零距离仍不得超已有输出",
+    "声明AAAA，负载0241000200先输出A，再请求距离2、长度3的引用。",
+    "因已有输出仅1字节返回COMPRESSED_FORMAT。"
+  ],
+  "LZ77/match-exceeds-remaining": [
+    "LZ77引用长度不得超剩余原长",
+    "声明AAA，负载0241000100先输出A，再请求距离1、长度3的引用。",
+    "因仅剩2字节空间返回COMPRESSED_FORMAT。"
+  ],
+  "LZ77/unused-flags": [
+    "LZ77未使用标志位检查",
+    "声明明文A，负载0241中的bit1为1，但只需要第一个字面量标志。",
+    "返回COMPRESSED_FORMAT。"
+  ],
+  "LZ77/trailing-payload": [
+    "LZ77完成输出后的多余负载",
+    "声明明文A，负载004100在已完成的字面量A后还有一个零字节。",
+    "返回COMPRESSED_FORMAT。"
+  ],
+  "LZ77/empty-with-payload": [
+    "空LZ77块不得携带负载",
+    "声明原长0但提供一个0x00负载字节。",
+    "返回COMPRESSED_FORMAT。"
+  ],
+  "RS12-10/zero-length-shards-and-survivor-length": [
+    "RS空分片与幸存片形状",
+    "编码并恢复10个零长数据片；将12片正常码字的最后一片缩短1字节，再测试仅11片却提供12个状态。",
+    "空分片编码恢复一致；长度不一致和数量不一致均返回REPAIR_SHARDS。"
+  ],
+  "Repair/two-stripes-independent-erasure-budgets": [
+    "两个分组分别使用纠错额度",
+    "生成10MiB+17字节归档及sidecar；第一组损坏两个数据片，第二组损坏一个数据片与一个校验片。",
+    "检查报告2个损坏组、4个损坏片且可修复；恢复报告修复4片，所有字节与原归档相同。"
+  ],
+  "Repair/unsupported-index-version": [
+    "修复索引版本必须受支持",
+    "把合法空归档索引的version从1改为2，重新生成两份JSON摘要与locator。",
+    "返回REPAIR_METADATA，不能仅凭有效摘要接受未知版本。"
+  ],
+  "Repair/unsupported-index-shardSize": [
+    "修复索引分片尺寸必须受支持",
+    "把shardSize从1048576改为1048577，重新计算头尾索引SHA-256。",
+    "返回REPAIR_METADATA。"
+  ],
+  "Repair/unsupported-index-dataShards": [
+    "修复索引数据片数量固定",
+    "把dataShards从10改为11，重新计算头尾索引SHA-256。",
+    "返回REPAIR_METADATA。"
+  ],
+  "Repair/unsupported-index-parityShards": [
+    "修复索引校验片数量固定",
+    "把parityShards从2改为3，重新计算头尾索引SHA-256。",
+    "返回REPAIR_METADATA。"
+  ],
+  "Repair/index-negative-size": [
+    "索引原长不得为负数",
+    "把originalSize字符串设为-1，并重新计算两份索引摘要。",
+    "返回REPAIR_METADATA。"
+  ],
+  "Repair/index-leading-zero-size": [
+    "索引原长使用规范十进制",
+    "把originalSize字符串设为01，并重新计算两份索引摘要。",
+    "返回REPAIR_METADATA，数值可转换也不能忽略前导零约束。"
+  ],
+  "Repair/index-signed-overflow-size": [
+    "索引原长不得超有符号文件偏移范围",
+    "把originalSize设为字符串9223372036854775808，重新计算两份索引摘要。",
+    "返回REPAIR_METADATA，不向有符号文件偏移转换该长度。"
+  ],
+  "Repair/index-nondecimal-size": [
+    "索引原长不得为小数",
+    "把originalSize字符串设为1.5，并重新计算两份索引摘要。",
+    "返回REPAIR_METADATA。"
+  ],
+  "Repair/index-numeric-size": [
+    "索引原长必须是字符串字段",
+    "把originalSize从十进制字符串改为JSON数值0，并重新计算两份索引摘要。",
+    "返回REPAIR_METADATA，避免接受可能损失64位精度的数字表示。"
+  ],
+  "Repair/index-index-capacity": [
+    "修复分组数上限",
+    "将originalSize设为1048576000001，即需要100001个分组的长度；只构造索引，不分配对应归档。",
+    "返回REPAIR_METADATA，拒绝超过100000组的索引。"
+  ],
+  "Repair/index-groups-not-array": [
+    "修复分组字段类型",
+    "将groups设置为JSON对象而非数组，保持头尾摘要有效。",
+    "返回REPAIR_METADATA。"
+  ],
+  "Repair/index-extra-group": [
+    "修复分组数量与原长一致",
+    "原长为0，却把groups设为包含一个空数组的数组，重新计算头尾摘要。",
+    "返回REPAIR_METADATA。"
+  ],
+  "Repair/index-short-hash": [
+    "修复索引摘要长度",
+    "将archiveSha256设为ab，重新计算两份索引外部摘要。",
+    "返回REPAIR_METADATA，内层摘要必须为64个十六进制字符。"
+  ],
+  "Repair/index-nonhex-hash": [
+    "修复索引摘要字符范围",
+    "将archiveSha256设为64个g，重新计算两份索引外部摘要。",
+    "返回REPAIR_METADATA。"
+  ],
+  "Repair/index-uppercase-hash": [
+    "修复索引摘要小写规范",
+    "将archiveSha256设为64个大写A，重新计算两份索引外部摘要。",
+    "返回REPAIR_METADATA，不使用宽松fromHex规则绕过格式约束。"
+  ],
+  "Repair/checksummed-index-malformed-json": [
+    "有效索引摘要不等于合法JSON",
+    "用单个左花括号作为JSON字节，为头尾副本生成正确SHA-256和长度字段。",
+    "返回REPAIR_METADATA，JSON语法解析失败。"
+  ],
+  "Repair/checksummed-index-nonobject-json": [
+    "修复索引必须为JSON对象",
+    "用合法JSON数组[]作为索引，生成正确的两份摘要和locator。",
+    "返回REPAIR_METADATA。"
+  ],
+  "Repair/index-shard-row-and-digest-validation": [
+    "每组12个严格摘要",
+    "声明原长1并提供空分组行；再提供12个摘要但最后一个字符串为wrong。两次均重算索引SHA-256。",
+    "分片数错误与分片摘要格式错误均返回REPAIR_METADATA。"
+  ],
+  "Repair/locator-invalid-lengths-and-checksum": [
+    "修复locator与副本完整性",
+    "分别将两份locator长度设为0、128MiB+1、整个sidecar长度；另分别破坏两份digest、截短为47字节、在完整sidecar后附加1字节。",
+    "所有结构都返回REPAIR_METADATA，拒绝越界定位、双副本失效或插入字节。"
+  ],
+  "Repair/whole-digest-inconsistent-with-valid-shards": [
+    "分片正确但整包摘要冲突",
+    "保持全部数据和校验片及其摘要不变，只把archiveSha256改为64个0并重算头尾索引摘要；执行check和recover。",
+    "check报告0个坏片但healthy与recoverable均为false；recover返回REPAIR_CHECKSUM，不发布目标，原归档不变。"
+  ],
+  "Repair/reconstructed-shard-hash-must-match-index": [
+    "RS重建后仍须校验每片摘要",
+    "保持真实数据与校验片不变，将第一个数据片期望摘要改为64个0并重新计算两份索引SHA-256；执行恢复。",
+    "RS重建出真实分片后仍因期望摘要不符返回REPAIR_CHECKSUM；无输出，原归档不变。"
+  ],
+  "Repair/missing-inputs-and-invalid-output-parent": [
+    "修复输入与新目标路径验证",
+    "分别缺失归档或sidecar；另指定不存在父目录的目标、与缺失输入同名的目标。",
+    "缺输入返回READ；无效父目录或与输入重合返回PATH；没有创建成功目标。"
+  ],
+  "Repair/source-changed-length": [
+    "生成冗余时检测源长度变化",
+    "在生成进度回调中用真实文件句柄向源归档末尾追加一个字节并flush。",
+    "create返回SOURCE_CHANGED，不发布sidecar。"
+  ],
+  "Repair/source-changed-timestamp": [
+    "生成冗余时检测仅修改时间变化",
+    "在进度回调中通过QFile设置源归档mtime增加60秒，保持长度不变。",
+    "create返回SOURCE_CHANGED，不发布sidecar。"
+  ],
+  "Repair/cancel-after-work-recover": [
+    "恢复完成一组后取消",
+    "取消标志初始为false，在recover已处理字节数大于0的进度回调中置true。",
+    "返回CANCELLED，未发布目标，原归档保持不变。"
+  ],
+  "Repair/concurrent-output-preserved-recover": [
+    "恢复过程中另一写入者先提交目标",
+    "recover进度回调向同一目标路径提交文本another writer committed first。",
+    "recover返回EXISTS，保留另一写入者文本，原归档不变。"
+  ],
+  "Repair/cancel-after-work-create": [
+    "生成冗余完成一组后取消",
+    "取消标志初始为false，在create已处理字节数大于0的进度回调中置true。",
+    "返回CANCELLED，未发布sidecar，原归档保持不变。"
+  ],
+  "Repair/concurrent-output-preserved-create": [
+    "生成冗余过程中另一写入者先提交目标",
+    "create进度回调向sidecar目标路径提交文本another writer committed first。",
+    "create返回EXISTS，保留另一写入者文本，原归档不变。"
+  ],
+  "HashFile/missing-file-and-cancel-after-read": [
+    "文件摘要缺输入及读后取消",
+    "先对不存在的文件求摘要；再对真实归档求摘要，并在已读取字节数大于0的进度回调中取消。",
+    "分别返回READ和CANCELLED，不返回部分文件摘要冒充完整结果。"
+  ],
+  "Common/plan-defaults-and-password-serialization": [
+    "配置默认值与密码显式序列化",
+    "解析空对象；序列化含中文路径、过滤器、AES密码及strictMetadata=false的计划，分别使用默认与includePassword=true。",
+    "缺省值为indexed/lz77/none/严格元数据；默认JSON无password且重读密码为空，显式包含密码的JSON可完整往返。"
+  ],
+  "Common/atomic-write-parent-blocked-keeps-original": [
+    "原子写入的父路径与目标类型失败",
+    "先建立包含原字节的普通文件，再以其子路径作为写入目标；另把已存在目录直接作为文件目标。",
+    "分别返回MKDIR_FAILED和WRITE_FAILED；原父文件内容与目标目录均保持。"
+  ],
+  "Common/atomic-commit-sharing-denial-keeps-original": [
+    "Windows共享锁使原子提交失败",
+    "用真实CreateFileW句柄以允许读写但不允许FILE_SHARE_DELETE锁住现有目标，再atomicWrite替换；随后释放锁重试。",
+    "受锁时返回COMMIT_FAILED且原字节完整；解锁后替换成功。"
+  ],
+  "Repair/invalid-Windows-output-name-cleans-up": [
+    "Windows无效输出名称与临时文件清理",
+    "分别以invalid*name.cv为recover和create目标，目标父目录有效。",
+    "两者返回WRITE；原归档不变，目录中不遗留.chengvault-parity-*临时文件。"
+  ],
+  "Common/app-data-directory-invalid-override": [
+    "应用数据目录覆盖值验证",
+    "保存原环境变量，将CHENGVAULT_DATA_HOME指向已有普通文件，再改为临时目录；用析构恢复环境变量。",
+    "文件路径返回MKDIR_FAILED且原字节不变；目录路径被创建并返回，测试结束恢复原进程配置。"
+  ]
+}
