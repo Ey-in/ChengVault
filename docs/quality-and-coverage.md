@@ -1,6 +1,6 @@
 ﻿# 代码质量与覆盖率的可复核口径
 
-## 2026-10-17 最终实测
+## 2026-10-25 最终实测
 
 | 检查 | 结果 |
 |---|---|
@@ -10,9 +10,9 @@
 | 原始 GCC 分支覆盖率 | 8184 / 14446 = 56.7% |
 | 去编译器异常/不可达边的辅助分支 | 7454 / 8614 = 86.5%，不可替代上一行口径 |
 | 函数覆盖率 / gcovr decision | 99.2% / 75.6% |
-| clang-format | 36 个 C++ 文件通过 |
+| clang-format | 36 个 C++ 文件检查，2 个测试文件存在格式差异（见 `evidence/quality/format.log`） |
 | cppcheck | 0 错误、0 警告，5 条风格与 2 条性能建议经下文审查保留 |
-| 原创生产源码注释 | 1705 / 8433 物理行 = 20.22%，严格超过 20% |
+| 原创生产源码注释 | 1716 / 8472 物理行 = 20.25%，严格超过 20% |
 
 证据入口为 `evidence/coverage/summary.json`、`auxiliary-summary.json`、`coverage.txt`、`core-tests.json`、`gui-tests.json` 和 `evidence/quality/summary.json`。
 `source-digests.json` 记录参与统计的最终源文件摘要。初始基线另存 `evidence/history/coverage-initial/`，不与本轮结论混用。
