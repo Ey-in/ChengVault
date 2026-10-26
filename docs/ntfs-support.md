@@ -3,7 +3,7 @@
 ChengVault面向 Windows 10/11 x64 与 NTFS。Windows 系统调用负责读取或建立
 文件系统对象；对象枚举、筛选、元数据序列化、块存储与恢复顺序由项目代码实现。
 Linux FIFO、块设备和字符设备节点不是 NTFS 目录树中可按同类方式恢复的对象，
-ChengVault不把 Windows 命名管道误称为磁盘文件，也不支持恢复 Linux 设备节点。
+Windows 命名管道和 Linux 设备节点不作为 NTFS 文件恢复。
 
 | 对象 | 保存与恢复 | 验证方式与权限条件 |
 |---|---|---|
@@ -53,11 +53,11 @@ Windows 用户的有效访问能力决定。默认 strictMetadata=true，权限/
 2. 查看 `fs.ntfs.*`、`fs.metadata.*`、`fs.restore.reparse-escape-rejected`
    用例；SKIP 仅表示环境权限不足，不计入 PASS。
 3. 若符号链接用例被跳过，在有创建符号链接权限的账号/开发者模式环境重新运行，
-   保留两个环境的原始结果。不要把第一次 SKIP 修改成 PASS。
+   保留两个环境的原始结果，第一次 SKIP 的原始记录不改写。
 4. 手动准备含隐藏文件、只读文件、中文目录、硬链、目录 ADS 和稀疏文件的数据集。
    备份并恢复到新的独占 NTFS 目录，分别检查内容、链接身份、流及 ACL。
 5. 对非当前用户的属主/DACL 做受控权限测试：无权限运行应明确失败；有权限环境
-   才验证成功恢复。测试中不得用“忽略错误”代替属主/权限恢复证据。
+   才验证成功恢复。属主/权限恢复必须读取实际结果，不能只记录忽略错误。
 6. 运行 `verification\symlink-acceptance.ps1`（源码入口 `scripts\symlink-acceptance.ps1`），
    只有 `result` 为 `PASS` 才算通过；重点看 `linkAttributesMatch`、
    `targetAttributesUnchanged`、`restoredTargetAttributesMatch`、`payloadMatch` 四项。
@@ -71,7 +71,7 @@ Windows 用户的有效访问能力决定。默认 strictMetadata=true，权限/
 
 `fs.restore.disk-full-write-boundary-injection` 在第一块数据已写到临时文件后，由
 进度回调注入 `DISK_FULL_SIMULATED` 异常，验证当前临时文件被清理、既有目标文件
-保持原字节。它属于可控 I/O 中途故障测试，不是“已在真实满盘上通过”的声明。
+保持原字节。它属于可控 I/O 中途故障测试，不等同于真实满盘测试。
 真实 `WriteFile` 短写/失败和 `FlushFileBuffers` 失败走同一异常清理路径；独立满盘
 复验应在可丢弃的小容量测试卷进行，不能填满用户工作磁盘来制造测试条件。
 
@@ -85,8 +85,7 @@ DACL，避免最后设置父目录权限时覆盖已经恢复的子对象权限�
 恢复前读回当前属主与组：SID 已相同则不重复设置，避免在拥有修改和 WRITE_DAC、
 但没有 WRITE_OWNER 的目录中误报权限失败；不同 SID 的设置仍须实际授权。
 Windows 可能在设置 DACL 后自动添加 SE_DACL_AUTO_INHERITED 标志，完整 SDDL 字符串
-因此可能多出 AI。验收比较实际 ACE 字节、属主和组、DACL 保护状态，不能把这一
-系统管理的来源标志变化描述为逐位安全描述符完全相同。
+因此可能多出 AI。验收比较实际 ACE 字节、属主和组、DACL 保护状态，该来源标志变化不代表逐位安全描述符完全相同。
 
 真实 D 盘严格复验记录位于
 `evidence/metadata-recheck-da8c16f441144e5d9ac35136cb95777f/result.json`：

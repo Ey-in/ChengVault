@@ -1,9 +1,6 @@
 {
   "formatCheckedFiles": 36,
   "formatNoncompliantFiles": [
-    "src\\apps\\cli_main.cpp",
-    "src\\platform\\filesystem.cpp",
-    "include\\chengvault\\common.hpp",
     "tests\\filesystem_tests.cpp",
     "tests\\network_repository_tests.cpp"
   ],
@@ -18,5 +15,5 @@
   "commentPercentNonblank": 20.51,
   "commentThresholdExclusive": 20,
   "commentPass": true,
-  "generatedAtUtc": "2026-10-25T16:15:06.0855515Z"
+  "generatedAtUtc": "2026-10-25T17:41:37.7854448Z"
 }
